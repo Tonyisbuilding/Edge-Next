@@ -24,9 +24,10 @@ import "./component.css";
   };
 
   return (
-    <div className="flex items-center justify-center lg:min-h-screen bg-gray-100 p-4">
-      <div className="lg:w-full max-w-md bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold text-center mb-6 text-black">Send us your query</h2>
+    <div className="flex items-center justify-center lg:min-h-screen bg-gray-100 p-4 
+     ">
+      <div className="lg:w-full max-w-md bg-white rounded-[1rem] shadow-md p-8 border-black border-2">
+        <h2 className="text-2xl font-bold text-left mb-6 text-black">Send us your query</h2>
         <form 
         onSubmit={(e)=>handleSubmit(e)}
          className="space-y-4">

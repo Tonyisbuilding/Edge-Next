@@ -35,7 +35,7 @@ const Presentation = () => {
           <video
             // width="320"
             // height="240"
-            className=" lg:w-[40vw] lg:h-[70vh] md:h-[50vh] h-[41.7vh]  rounded-3xl border-2 border-black"
+            className=" lg:w-[40vw] lg:h-[70vh] md:h-[50vh] h-[41.7vh]   rounded-3xl"
             controls
             // Add these optimizations
             preload="metadata" // Reduces initial load
