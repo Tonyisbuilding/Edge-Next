@@ -30,7 +30,8 @@ const TheTeamYouCanTrust = () => {
           </div>
         </div>
 
-        <h1 className=" md:text-[48px] text-[30px] font-semibold text-center montserrat text-black py-[2rem]">
+        <h1 className=" md:text-[48px] text-[21px] font-semibold text-left md:text-center 
+        montserrat text-black py-[2rem] md:px-0 px-[1rem]">
           The Team you can Trust
         </h1>
         <div className=" md:flex justify-center items-center relative left-[1.2rem] md:left-[3rem] lg:left-0">
