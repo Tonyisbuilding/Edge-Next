@@ -77,7 +77,8 @@ import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8
+       md:justify-center items-center">
         {/* Left Section */}
         <div>
           <h2 className="text-white text-xl font-semibold">Edge Capital</h2>
@@ -93,7 +94,7 @@ const Footer = () => {
 
 
 
-        <div className=" lg:block flex justify-between">
+        <div className="  flex justify-between lg:ml-[10rem] lg:w-[30rem] ">
         {/* Navigation */}
         <div>
           <h3 className="text-white text-lg font-medium mb-3">Home</h3>
@@ -121,7 +122,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media */}
-        <div>
+        <div className='lg:ml-[30rem]'>
           <h3 className="text-white text-lg font-medium mb-3">Social</h3>
           <div className="space-y-2 flex justify-between lg:block">
             <a href="#" className="flex items-center justify-center gap-3 bg-[#000000] hover:bg-gray-700 w-[7rem] md:w-[10rem] py-2 rounded-md text-sm">
