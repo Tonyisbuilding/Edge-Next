@@ -1,4 +1,4 @@
-import heroSection from "../../src/assets/images/landingPage/Home-left.png";
+import heroSection from "../../src/assets/images/landingPage/Home-left.jpg";
 import handshake from "../../src/assets/images/landingPage/handshake.png";
 import schedule from "../../src/assets/images/landingPage/schedule.png";
 import dots_one from "../../src/assets/images/landingPage/dots_one.png";
@@ -8,6 +8,7 @@ import teagan from "../../src/assets/images/landingPage/teagan.png";
 import paul from "../../src/assets/images/landingPage/paul.png";
 import scale from "../../src/assets/images/landingPage/scale.png";
 import money_briefcase from "../../src/assets/images/landingPage/money-briefcase.png";
+import herosectionforabout from "../../src/assets/images/about/herosectionforabout.png";
 import ECLogo from "../../src/assets/images/ECLogo.png";
 import arrow_down from "../../src/assets/icons/arrow-down.png";
 import check_circle from "../../src/assets/icons/check-circle.png";
@@ -36,7 +37,10 @@ const images = {
         location,
         strategy,
         bolt,
-        dots_one
+        dots_one,
+    },
+    about:{
+        herosectionforabout,
     },
 }
 

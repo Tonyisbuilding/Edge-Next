@@ -14,8 +14,12 @@ const LandingPage = () => {
   return (
     <>
         <div>
+          <div className=" 
+        ">
+
             <NavBar />
             <HeroSection />
+          </div>
             <EdgeCapital />
             <WhyEdgeCapital />
             <TheTeamYouCanTrust />

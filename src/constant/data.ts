@@ -2,6 +2,7 @@ import images from "./images";
 
 
 
+
 export 
 interface whyEdgeCapitalType {
     icon: string;
@@ -15,6 +16,19 @@ interface theTeamYouCanTrustDataType {
     avatar: string;
     name: string;
     id:number; 
+}
+export 
+interface teamMemberCardstDataType {
+    name: string;
+    position: string;
+    bio: string;
+    linkedin: string;
+    image: string;
+}
+export 
+interface timelineDataType {
+    year: string;
+    content: string;
 }
 
 
@@ -70,3 +84,47 @@ export const theTeamYouCanTrustData:  theTeamYouCanTrustDataType[] = [
         name: "Paul Lamain"
     },
 ];
+
+export  const timelineData: timelineDataType[] = [
+    {
+      year: "2015",
+      content: "Paul Lamain establishes Algorithmic Services B.V., a company specializing in developing and optimizing algorithms for financial enterprises."
+    },
+    {
+      year: "2016",
+      content: "The company expands its client base across Europe, introducing new algorithmic trading solutions that enhance market efficiency."
+    },
+    {
+      year: "2019",
+      content: "Launch of proprietary risk management platform, allowing institutional investors to optimize portfolios with quantitative methods."
+    },
+    {
+      year: "2022",
+      content: "Strategic partnership with major financial institutions to implement AI-driven market analysis tools across global markets."
+    },
+    {
+      year: "2023",
+      content: "Acquisition of DataTech Solutions, strengthening the company's position in data analytics and financial technology integration."
+    },
+    {
+      year: "Future",
+      content: "Planned global expansion with innovative blockchain-based solutions for decentralized finance and institutional cryptocurrency adoption."
+    }
+  ];
+
+  export  const teamMembers = [
+    {
+      name: "Teagan de Groot",
+      position: "Chief Technology Officer",
+      bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
+      linkedin: "https://linkedin.com/in/teagandegroot",
+      image: images.landingPage.teagan
+    },
+    {
+      name: "Paul Lamain",
+      position: "Lead Designer",
+      bio: "Paul brings creative vision to our projects with his expertise in UI/UX design and brand development.",
+      linkedin: "https://linkedin.com/in/paullamain",
+      image: images.landingPage.paul
+    }
+  ];
