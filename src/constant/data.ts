@@ -112,19 +112,44 @@ export  const timelineData: timelineDataType[] = [
     }
   ];
 
-  export  const teamMembers = [
+  export  const teamMembers: teamMemberCardstDataType[] = [
     {
       name: "Teagan de Groot",
-      position: "Chief Technology Officer",
+      position: "Partner and Board of Directors",
       bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
       linkedin: "https://linkedin.com/in/teagandegroot",
       image: images.landingPage.teagan
     },
     {
       name: "Paul Lamain",
-      position: "Lead Designer",
+      position: "Founder and Board of Directors",
       bio: "Paul brings creative vision to our projects with his expertise in UI/UX design and brand development.",
       linkedin: "https://linkedin.com/in/paullamain",
       image: images.landingPage.paul
     }
+  ];
+  export  const advisoryBoard: teamMemberCardstDataType[] = [
+    {
+      name: "Henk van der Heijden",
+      position: "Partner and Board of Directors",
+      bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
+      linkedin: "https://linkedin.com/in/teagandegroot",
+      image: images.landingPage.Henk
+    },
+    {
+      name: "Michiel van Drunen",
+      position: "Partner and Board of Directors",
+      bio: "Paul brings creative vision to our projects with his expertise in UI/UX design and brand development.",
+      linkedin: "https://linkedin.com/in/paullamain",
+      image: images.landingPage.Michiel
+    }
+  ];
+  export  const SupportAndCommercial: teamMemberCardstDataType[] = [
+    {
+      name: "Brahim Bouzerrade",
+      position: "Business Development Manager",
+      bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
+      linkedin: "https://linkedin.com/in/teagandegroot",
+      image: images.landingPage.Brahim
+    },
   ];

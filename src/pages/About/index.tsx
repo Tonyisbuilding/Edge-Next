@@ -8,6 +8,7 @@ import React from "react";
 import Footer from "@/common/Footer";
 import Contact from "@/component/landingPage/Contact";
 // import EdgeCapitalFooter from "@/common/EgdeCapitalFooter";
+import { teamMembers } from "@/constant/data";
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
       <EdgeCapitalHero />
       <WhatSetsUsApart />
       <CompanyTimeline />
-      <TeamMemberCards />
+      <TeamMemberCards teamMembers={teamMembers} />
       <Contact />
       <Footer />
       {/* <EdgeCapitalFooter /> */}
