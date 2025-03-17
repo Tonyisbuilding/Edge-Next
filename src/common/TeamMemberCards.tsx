@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { teamMembers, teamMemberCardstDataType } from "@/constant/data";
+import { teamMemberCardstDataType } from "@/constant/data";
 import images from "@/constant/images";
+import "../component/landingPage/component.css";
+import { ChevronRight } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const TeamCard = ({
   name,
@@ -16,19 +19,24 @@ const TeamCard = ({
     setIsFlipped(!isFlipped);
   };
 
+  const { pathname } = useLocation();
+  console.log(pathname.slice(1), "Location");
+
   return (
     <div
       className="relative w-full h-[22.211rem] md:h-[30.375rem] cursor-pointer"
       onClick={handleFlip}
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      // onMouseEnter={() => setIsFlipped(true)}
+      // onMouseLeave={() => setIsFlipped(false)}
     >
       <motion.div
-        className="absolute w-full h-full rounded-lg overflow-hidden"
+        className="absolute w-full h-full rounded-tr-[1rem] rounded-bl-[1rem] overflow-hidden"
         initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
         style={{ backfaceVisibility: "hidden" }}
+        onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
       >
         <div className="w-full h-full bg-black">
           <img
@@ -36,12 +44,42 @@ const TeamCard = ({
             alt={name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 p-4 text-white text-xl font-medium
+          <div
+            className={`absolute bottom-0 left-0 p-4 text-white text-xl font-medium
           bg-[#26252521]  rounded-bl-3xl lg:w-[15vw] text-center rounded-tr-[.5rem]
-                  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
+            bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 
+            ${pathname.slice(1) === "team" ? "hidden" : "block"}`}
+          >
             {name}
           </div>
         </div>
+      </motion.div>
+
+      <motion.div
+        className={` bg-amber-50 w-full absolute bottom-[0rem] md:bottom-[-2rem] rounded-bl-[1rem] p-5
+       shadow-lg shadow-[#9e9d9d54] text-[#192227] flex items-center justify-between
+        ${pathname.slice(1) !== "team" ? "hidden" : "block"}`}
+        initial={false}
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        style={{ backfaceVisibility: "hidden" }}
+      >
+        <div>
+          <h1 className="inter text-[13.14px] md:text-[22.58px] font-medium">
+            {name}
+          </h1>
+          <h1 className="inter text-[8.15px] md:text-[14px] font-medium">
+            {position}
+          </h1>
+        </div>
+        <button className="flex items-center hover:cursor-pointer"
+        onClick={()=> alert('bro')}
+        >
+          <h1 className="inter text-[8.15px] md:text-[14px] font-medium text-[#206A7C]">
+            About
+          </h1>
+          <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-left text-[#206A7C]" />
+        </button>
       </motion.div>
 
       <motion.div
@@ -50,6 +88,8 @@ const TeamCard = ({
         animate={{ rotateY: isFlipped ? 0 : -180 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
         style={{ backfaceVisibility: "hidden" }}
+        onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
       >
         <div className="h-full flex flex-col justify-between">
           <div>
@@ -81,10 +121,18 @@ const TeamCard = ({
   );
 };
 
-const TeamMemberCards = () => {
+type TeamMemberCardsProps = {
+  teamMembers: teamMemberCardstDataType[];
+  department?: string;
+};
+
+const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
+  const { pathname } = useLocation();
+
   return (
     <>
-      <div className=" bg-[#EEF4F5] py-[2rem] relative">
+      <div className={`bg-[#EEF4F5] py-[2rem] relative overflow-hidden
+        `}>
         <div>
           <div>
             <img
@@ -109,8 +157,18 @@ const TeamMemberCards = () => {
           </div>
         </div>
         {/* ........ */}
-        <div className="w-full max-w-6xl mx-auto px-4 py-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-black">
+        <div className={`w-full max-w-6xl mx-auto px-4  ${pathname.slice(1) === "team" ? "py-0 md:py-5" : "py-12"}`}>
+          <div
+            className={`text-[27.1px] md:[60.23px] inter font-semibold text-left mb-3 text-black
+          ${pathname.slice(1) !== "team" ? "hidden" : "block"} inter`}
+          >
+            <h1>{department}</h1>
+            <div className=" bg-[#F9A600] h-[2px] w-[5rem]"></div>
+          </div>
+          <h2
+            className={`text-3xl md:text-5xl font-bold text-center mb-12 text-black
+             ${pathname.slice(1) === "team" ? "hidden" : "block"}`}
+          >
             The Team you can Trust
           </h2>
 
@@ -120,7 +178,7 @@ const TeamMemberCards = () => {
             ))}
           </div>
 
-          <div className="flex justify-center mt-10">
+          <div className={`flex justify-center mt-10 ${pathname.slice(1) === "team" ? "hidden" : "block"}`}>
             <button className="bg-gray-900 text-white py-3 px-6 rounded-full hover:bg-gray-800 transition-colors duration-300">
               Meet our entire team
             </button>

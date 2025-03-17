@@ -7,8 +7,13 @@ import presentationVid from "../../src/assets/images/landingPage/presentation.mp
 import teagan from "../../src/assets/images/landingPage/teagan.png";
 import paul from "../../src/assets/images/landingPage/paul.png";
 import scale from "../../src/assets/images/landingPage/scale.png";
+import Henk from "../../src/assets/images/landingPage/Henk.png";
+import Michiel from "../../src/assets/images/landingPage/Michiel.png";
+import Brahim from "../../src/assets/images/landingPage/Brahim.png";
 import money_briefcase from "../../src/assets/images/landingPage/money-briefcase.png";
 import herosectionforabout from "../../src/assets/images/about/herosectionforabout.png";
+import edgehero from "../../src/assets/images/edgefund/edgehero.png";
+import effect from "../../src/assets/images/edgefund/effect.png";
 import ECLogo from "../../src/assets/images/ECLogo.png";
 import arrow_down from "../../src/assets/icons/arrow-down.png";
 import check_circle from "../../src/assets/icons/check-circle.png";
@@ -38,9 +43,16 @@ const images = {
         strategy,
         bolt,
         dots_one,
+        Henk,
+        Michiel,
+        Brahim,
     },
     about:{
         herosectionforabout,
+    },
+    edgefund:{
+        edgehero,
+        effect
     },
 }
 
