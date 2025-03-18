@@ -1,0 +1,93 @@
+import React from "react";
+import { motion } from "framer-motion";
+import images from "@/constant/images";
+
+const EdgeConnectHero = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const buttonVariants = {
+    initial: { scale: 1 },
+    hover: { scale: 1.05, transition: { duration: 0.2 } },
+    tap: { scale: 0.98, transition: { duration: 0.1 } },
+  };
+
+
+
+  return (
+    <motion.div
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        {/* Left content */}
+        <motion.div
+          className="w-full md:w-1/2 md:pr-12 mb-10 md:mb-0 py-12 md:py-16"
+          variants={itemVariants}
+        >
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"
+            variants={itemVariants}
+          >
+            Edge Connect is the first step in our Edge Impact initiative. As our
+            company continues to grow, we believe in giving back.
+          </motion.h2>
+
+          <motion.div className="mb-8" variants={itemVariants}>
+            <h3 className="text-xl font-bold mb-2">Earn & Give Back</h3>
+            <p className="text-gray-700">
+              We reward you for introducing new clients. Keep your reward or
+              donate part (or all) to a charity selected by our team—making an
+              impact where it matters most.
+            </p>
+          </motion.div>
+
+          <motion.button
+            className="px-6 py-3 bg-gray-800 text-white rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            variants={buttonVariants}
+            initial="initial"
+            whileHover="hover"
+            whileTap="tap"
+            aria-label="Speak to our team about the Edge Connect program"
+          >
+            Speak to our team
+          </motion.button>
+        </motion.div>
+
+        {/* Right content - Edge Connect logo and icons */}
+        <motion.div
+          className="w-full md:w-1/2 relative top-[-5rem]"
+          variants={itemVariants}
+        >
+          <div className="relative h-64 md:h-96">
+            <div>
+              <img src={images.edgeConnect.Edge_Connect} alt="" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default EdgeConnectHero;
