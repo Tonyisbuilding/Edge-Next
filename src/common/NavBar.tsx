@@ -5,9 +5,15 @@ import { faPhone, faBars, faXmark, faChevronDown, faChevronUp } from '@fortaweso
 import "./common.css";
 import images from "@/constant/images";
 
+
+interface DropdownState {
+  [key: number]: boolean;
+}
+
+
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
-  const [activeDropdowns, setActiveDropdowns] = useState<any>({});
+  const [activeDropdowns, setActiveDropdowns] = useState<DropdownState>({});
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,7 +32,7 @@ const Navbar = () => {
   };
 
 
-  const toggleDropdown = (index:number, e) => {
+  const toggleDropdown = (index:number, e:  React.MouseEvent<HTMLAnchorElement>) => {
     if (window.innerWidth <= 992) {
       e.preventDefault();
       setActiveDropdowns({

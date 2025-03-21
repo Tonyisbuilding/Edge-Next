@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-interface formDataType{
-    firstname: string;
-    lastName: string;
-    phone: string;
-    email: string;
-    message: string;
+// Define form data interface
+interface FormDataType {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  message: string;
 }
+
+// Define errors type based on FormDataType keys
+type FormErrors = Partial<Record<keyof FormDataType, string>>;
+
 const ContactInformation = () => {
-  const [formData, setFormData] = useState<formDataType>({
+  const [formData, setFormData] = useState<FormDataType>({
     firstName: '',
     lastName: '',
     phone: '',
@@ -18,17 +23,17 @@ const ContactInformation = () => {
     message: ''
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<FormErrors>({});
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    } as FormDataType));
     
     // Clear error when user types
-    if (errors[name]) {
+    if (errors[name as keyof FormDataType]) {
       setErrors(prev => ({
         ...prev,
         [name]: ''
@@ -36,8 +41,8 @@ const ContactInformation = () => {
     }
   };
 
-  const validateForm = () => {
-    const newErrors = {};
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
     
     if (!formData.firstName.trim()) {
       newErrors.firstName = 'First name is required';
@@ -57,13 +62,11 @@ const ContactInformation = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (validateForm()) {
-      // Form submission logic here
       console.log('Form submitted:', formData);
-      // Reset form
       setFormData({
         firstName: '',
         lastName: '',
@@ -239,14 +242,14 @@ const ContactInformation = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Enter your company name"
+                placeholder="Enter your phone number"
                 className="w-full p-3 border border-gray-300 rounded-md"
               />
             </div>
             
             <div>
               <label htmlFor="email" className="block text-gray-700 mb-1">
-                Email
+                Email<span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -256,6 +259,7 @@ const ContactInformation = () => {
                 onChange={handleChange}
                 placeholder="Enter your work email address"
                 className={`w-full p-3 border rounded-md ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+                aria-required="true"
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
@@ -269,10 +273,10 @@ const ContactInformation = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Enter your work email address"
-                rows="5"
+                placeholder="Enter your message"
+                rows={5}
                 className="w-full p-3 border border-gray-300 rounded-md"
-              ></textarea>
+              />
             </div>
             
             <div>

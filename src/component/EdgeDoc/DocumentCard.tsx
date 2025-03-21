@@ -1,8 +1,28 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Define types for document data
+interface DocumentItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: IconType;
+  category: CategoryType;
+}
+
+type CategoryType = 'fund' | 'bond' | 'privacy';
+type IconType = 'document' | 'person' | 'building' | 'form' | 'privacy' | 'rights';
+type DocumentCategory = 'all' | 'fund' | 'bond' | 'privacy';
+
+interface Documents {
+  all: DocumentItem[];
+  fund: DocumentItem[];
+  bond: DocumentItem[];
+  privacy: DocumentItem[];
+}
+
 // Document data
-const documents = {
+const documents: Documents = {
   all: [
     {
       id: 'edgefund-kid',
@@ -140,7 +160,7 @@ const documents = {
 };
 
 // Icons component
-const Icon = ({ type }) => {
+const Icon = ({ type }: { type: IconType }) => {
   switch (type) {
     case 'document':
       return (
@@ -202,7 +222,7 @@ const Icon = ({ type }) => {
 };
 
 // Document Card component
-const DocumentCard = ({ document }) => {
+const DocumentCard = ({ document }: { document: DocumentItem }) => {
   return (
     <motion.div 
       className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4"
@@ -238,9 +258,9 @@ const DocumentCard = ({ document }) => {
 
 // Main component
 const DocumentCardSections = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState<DocumentCategory>('all');
   
-  const tabs = [
+  const tabs: { id: DocumentCategory; label: string }[] = [
     { id: 'all', label: 'All Documents' },
     { id: 'fund', label: 'Fund Documents' },
     { id: 'bond', label: 'Bond Documents' },
@@ -260,8 +280,8 @@ const DocumentCardSections = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                 activeTab === tab.id
-                ? 'bg-white shadow-sm text-gray-900'
-                : 'text-gray-500 hover:text-gray-900'
+                  ? 'bg-white shadow-sm text-gray-900'
+                  : 'text-gray-500 hover:text-gray-900'
               }`}
               aria-current={activeTab === tab.id ? 'page' : undefined}
             >

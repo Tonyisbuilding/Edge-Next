@@ -1,8 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Define types for principle data
+interface Principle {
+  id: number;
+  title: string;
+  description: string;
+  icon: IconType;
+}
+
+type IconType = 'chart' | 'balance' | 'calculator' | 'handshake' | 'award';
+
 // Principle data
-const principles = [
+const principles: Principle[] = [
   {
     id: 1,
     title: "Volatility Premium Strategy",
@@ -35,17 +45,19 @@ const principles = [
   }
 ];
 
-const PrinciplesSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const sectionRef = useRef(null);
-  const principleRefs = useRef([]);
+const PrinciplesSection: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const principleRefs = useRef<Array<{ current: HTMLDivElement | null }>>([]);
 
   // Setup observer for scroll detection
   useEffect(() => {
     if (!sectionRef.current) return;
     
     // Initialize refs array
-    principleRefs.current = Array(principles.length).fill().map((_, i) => principleRefs.current[i] || React.createRef());
+    principleRefs.current = Array(principles.length)
+      .fill(null)
+      .map((_, i) => principleRefs.current[i] || { current: null });
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 3;
@@ -74,7 +86,7 @@ const PrinciplesSection = () => {
   }, []);
 
   // Render appropriate icon based on principle type
-  const renderIcon = (iconType) => {
+  const renderIcon = (iconType: IconType): JSX.Element | null => {
     switch (iconType) {
       case 'chart':
         return (
@@ -129,13 +141,12 @@ const PrinciplesSection = () => {
   return (
     <section ref={sectionRef} className="max-w-6xl mx-auto px-4 md:px-6 py-16 relative">
       <div className="text-center mb-16">
-        <h3 className="text-teal-600 text-lg font-medium mb-2">Edge Capital Principles</h3>
+        <h3 className="text-teal-600 text-3xl font-medium mb-2">Edge Capital Principles</h3>
         <h2 className="text-4xl font-bold mb-2">6 Principles That</h2>
         <h2 className="text-4xl font-bold">Drive Our Success</h2>
       </div>
 
       <div className="relative flex flex-col md:flex-row">
-
         <div className="w-full md:w-1/2 relative">
           {/* Vertical timeline line */}
           <div className="hidden md:block absolute left-0 top-0 bottom-0 w-1 bg-gray-200">
@@ -187,31 +198,26 @@ const PrinciplesSection = () => {
         </div>
 
         {/* Fixed icon card for desktop view */}
-        <div className={`hidden md:block md:w-1/3 relative`}
-        style={{ top: `${window.scrollY}`}}
-        >
-          <div className="">
-            <motion.div 
-              className="w-full h-64 bg-gray-900 rounded-lg flex items-center 
-              justify-center text-white p-8 "
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full h-full flex items-center justify-center"
-                >
-                  {renderIcon(principles[activeIndex].icon)}
-                </motion.div>
-              </AnimatePresence>
-            </motion.div>
-          </div>
+        <div className="hidden md:block md:w-1/3 sticky top-20">
+          <motion.div 
+            className="w-full h-64 bg-gray-900 rounded-lg flex items-center justify-center text-white p-8"
+            initial={{ scale: 0.95 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
+                className="w-full h-full flex items-center justify-center"
+              >
+                {renderIcon(principles[activeIndex].icon)}
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
         </div>
       </div>
     </section>
