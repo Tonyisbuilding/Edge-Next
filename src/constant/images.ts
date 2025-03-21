@@ -30,6 +30,11 @@ import jant from "../../src/assets/images/edgeconnect/jant.png";
 import kika from "../../src/assets/images/edgeconnect/kika.png";
 import clini from "../../src/assets/images/edgeconnect/kika.png";
 import edgecarehero from "../../src/assets/images/edgecare/edgecarehero.png";
+import heroImageinstitution from "../../src/assets/images/institution/heroImageinstitution.png";
+import researchdevelopment from "../../src/assets/images/institution/researchdevelopment.png";
+import inHouse from "../../src/assets/images/institution/inHouse.svg";
+import ml from "../../src/assets/images/institution/ml.svg";
+import proprietary from "../../src/assets/images/institution/proprietary.svg";
 
 const images = {
     landingPage:{
@@ -73,6 +78,13 @@ const images = {
     },
     edgeCare:{
         edgecarehero,
+    },
+    institution:{
+        heroImageinstitution,
+        researchdevelopment,
+        inHouse,
+        ml,
+        proprietary,
     },
 }
 

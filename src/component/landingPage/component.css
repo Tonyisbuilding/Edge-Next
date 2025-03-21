@@ -16,3 +16,62 @@
     /* font-weight: <weight>;
     font-style: normal; */
   }
+
+
+
+
+  /* About Section Styles */
+
+.scroll-text-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.8;
+  font-size: 2.5rem;
+  height: 90vh;
+}
+
+.word-span {
+  display: inline-block;
+  color: #c0c0c0;
+  /* Initial gray color */
+  transition: color 0.3s ease;
+  margin-right: 0.3em;
+}
+
+.word-span.active {
+  color: #000000;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+  /* About section Styles */
+
+  .scroll-text-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.8;
+      font-size: 24px;
+      height: 100vh;
+      font-weight: 600;
+
+  }
+
+  .word-span {
+      display: inline-block;
+      color: #c0c0c0;
+      /* Initial gray color */
+      transition: color 0.3s ease;
+      margin-right: 0.3em;
+  }
+
+  .word-span.active {
+      color: #000000;
+  }
+
+}
