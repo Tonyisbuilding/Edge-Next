@@ -1,212 +1,95 @@
-// const Footer = () => {
-//     return (
-//       <footer className="bg-gray-900 text-gray-300 py-10 px-6 md:px-16">
-//         <div className="max-w-7xl mx-auto grid grid-cols-2   md:grid-cols-4 gap-8">
-//           {/* Left Section */}
-//           <div>
-//             <h2 className="text-white text-xl font-semibold">Edge Capital</h2>
-//             <p className="text-sm mt-2">Investing with an edge</p>
-//             <div className="mt-4 flex items-center gap-2 border border-gray-600 px-4 py-2 rounded-md w-fit">
-//               <span className="text-gray-400">📩</span>
-//               <a href="mailto:hello@edgec.com" className="text-gray-300 text-sm">
-//                 hello@edgec.com
-//               </a>
-//             </div>
-//           </div>
+import "./common.css";
 
-//           {/* Navigation */}
-//           <div>
-//             <h3 className="text-white text-lg font-medium mb-3">Home</h3>
-//             <ul className="space-y-2 text-sm">
-//               <li><a href="#" className="hover:text-white">About Us</a></li>
-//               <li><a href="#" className="hover:text-white">Edge Fund</a></li>
-//               <li><a href="#" className="hover:text-white">Edge Impact</a></li>
-//               <li><a href="#" className="hover:text-white">Institutional</a></li>
-//               <li><a href="#" className="hover:text-white">Contact</a></li>
-//               <li><a href="#" className="hover:text-white">FAQs</a></li>
-//             </ul>
-//           </div>
-
-//           {/* Help Center */}
-//           <div>
-//             <h3 className="text-white text-lg font-medium mb-3">Help Center</h3>
-//             <ul className="space-y-2 text-sm">
-//               <li><a href="#" className="hover:text-white">Knowledge Base</a></li>
-//               <li><a href="#" className="hover:text-white">Support</a></li>
-//               <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-//               <li><a href="#" className="hover:text-white">404</a></li>
-//             </ul>
-//           </div>
-
-//           {/* Social Media */}
-//           <div>
-//             <h3 className="text-white text-lg font-medium mb-3">Social</h3>
-//             <div className="space-y-2">
-//               <a href="#" className="block bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md text-sm text-center">
-//                 LinkedIn
-//               </a>
-//               <a href="#" className="block bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md text-sm text-center">
-//                 Twitter / X
-//               </a>
-//               <a href="#" className="block bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md text-sm text-center">
-//                 Instagram
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Footer Bottom */}
-//         <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
-//           <p>© 2024 edgecapital. All rights reserved.</p>
-//           <div className="flex items-center gap-2 bg-gray-800 px-3 py-1 rounded-full text-green-400 text-xs">
-//             <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-//             All Systems Operational
-//           </div>
-//           <a href="#" className="hover:text-white">Privacy Policy</a>
-//         </div>
-//       </footer>
-//     );
-//   };
-
-//   export default Footer;
-
-import React, { useState } from "react";
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
-import { ArrowRight, Mail } from "lucide-react";
 
 const Footer = () => {
-  const [emailHovered, setEmailHovered] = useState(false);
-
   return (
-    <footer className="bg-gray-900 text-gray-400 py-16 px-6 md:px-12 lg:px-24">
-      <div
-        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8
-       md:justify-center items-center"
-      >
-        {/* Left Section */}
-        <div className="space-y-8">
-          <div className="space-y-1">
-            <h2 className="text-white text-3xl font-semibold">Edge Capital</h2>
-            <p className="text-gray-500">Investing with an edge</p>
+    <footer className="footer">
+      <div className="footer-container">
+        {/* Left Section - Brand */}
+        <div className="footer-brand">
+          <div className="brand-content">
+            <h2>Edge Capital</h2>
+            <p>Investing with an edge</p>
           </div>
 
-          <div
-            className="inline-flex items-center border border-gray-700 rounded-md px-4 py-2 transition-colors duration-300 hover:border-gray-500 cursor-pointer group"
-            onMouseEnter={() => setEmailHovered(true)}
-            onMouseLeave={() => setEmailHovered(false)}
-          >
-            <Mail size={18} className="mr-2 opacity-70" />
-            <span>hello@edgec.com</span>
-            <ArrowRight
-              size={18}
-              className={`ml-2 transform transition-transform duration-300 ${
-                emailHovered ? "translate-x-1" : ""
-              }`}
-            />
+          <div className="footer-email">
+            <a href="mailto:hello@edgec.com">hello@edgec.com</a>
+            <span className="arrow">→</span>
           </div>
         </div>
 
-        <div className="  flex justify-between lg:ml-[10rem] lg:w-[30rem] ">
-          {/* Navigation */}
-          <div>
-            <h3 className="text-white text-lg font-medium mb-3">Home</h3>
-            <ul className="space-y-3 ">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Edge Fund
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Edge Impact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Institutional
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  FAQs
-                </a>
-              </li>
+        {/* Middle Section - Navigation */}
+        <div className="middle-middle">
+          <div className="footer-nav">
+            <h3>Home</h3>
+            <ul>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/fund">Edge Fund</a></li>
+              <li><a href="/impact">Edge Impact</a></li>
+              <li><a href="/institutional">Institutional</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/faqs">FAQ's</a></li>
             </ul>
           </div>
 
-          {/* Help Center */}
-          <div>
-            <h3 className="text-white text-lg font-medium mb-3">Help Center</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Knowledge Base
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Support
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  404
-                </a>
-              </li>
+          <div className="footer-nav">
+            <h3>Help center</h3>
+            <ul>
+              <li><a href="/knowledge-base">Knowledge Base</a></li>
+              <li><a href="/support">Support</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/404">404</a></li>
             </ul>
           </div>
         </div>
 
-        {/* Social Media */}
-        <div className="lg:ml-[30rem]">
-          <h3 className="text-white text-lg font-medium mb-3">Social</h3>
-          <div className="space-y-2 flex justify-between lg:block">
-            <a
-              href="#"
-              className="flex items-center justify-center gap-3 bg-[#000000] hover:bg-gray-700 w-[7rem] md:w-[10rem] py-2 rounded-md text-sm"
-            >
-              <FaLinkedin className="text-lg" />
-              <span>LinkedIn</span>
+        {/* Right Section - Social */}
+        <div className="footer-social">
+          <h3>Social</h3>
+          <div className="social-icons">
+            <a href="#" className="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M6 9H2V21H6V9Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              LinkedIn
             </a>
-            <a
-              href="#"
-              className="flex items-center justify-center gap-3 bg-[#000000] hover:bg-gray-700 w-[7rem] md:w-[10rem] py-2 rounded-md text-sm"
-            >
-              <FaTwitter className="text-lg" />
-              <span>Twitter / X</span>
+            <a href="#" className="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 4C22 4 21.3 6.1 20 7.4C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.6 3 5C5.2 7.6 8.6 9.1 12 9C11.1 4.8 16 2.4 19 5.2C20.1 5.2 22 4 22 4Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              X
             </a>
-            <a
-              href="#"
-              className="flex items-center justify-center gap-3 bg-[#000000] hover:bg-gray-700 w-[7rem] md:w-[10rem] py-2 rounded-md text-sm"
-            >
-              <FaInstagram className="text-lg" />
-              <span>Instagram</span>
+            <a href="#" className="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M17.5 6.5H17.51" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              Instagram
             </a>
           </div>
         </div>
       </div>
 
-      {/* Footer Bottom */}
-      <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-sm gap-4">
-        <p>© 2024 edgecapital. All rights reserved.</p>
-        <a href="#" className="hover:text-white order-last sm:order-none">
-          Privacy Policy
-        </a>
+      {/* Disclaimer Section */}
+      <div className="footer-disclaimer">
+        <h3>General Disclaimer:</h3>
+        <p>The information on this website is solely intended for general informational purposes. 
+         The information is provided by the administrator, and while we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability concerning the website or the information, products, services, or related graphics on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
+
+Edge Capital Management BV is registered with the Dutch Authority for the Financial Markets (AFM) as an AIFM (Alternative Investment Fund Manager) under the AIFMD registration regime of Article 2:66a Wft and is listed in the register for exempt managers of investment institutions on the AFM website, as referred to in Article 1:107 Wft with registration number 50027774.</p>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="footer-bottom">
+        <div className="footer-copyright">© 2024 edgecapital. All rights reserved.</div>
+        <div className="footer-status">
+          <span className="status-dot"></span>
+          <span>All Systems Operational</span>
+        </div>
+        <a href="/privacy" className="footer-policy">Privacy Policy</a>
       </div>
     </footer>
   );

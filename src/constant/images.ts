@@ -22,6 +22,19 @@ import call from "../../src/assets/icons/call.png";
 import location from "../../src/assets/icons/location.png";
 import strategy from "../../src/assets/icons/scale.png";
 import bolt from "../../src/assets/icons/bolt.png";
+import Edge_Connect from "../../src/assets/images/edgeconnect/Edge_Connect.png";
+import panda from "../../src/assets/images/edgeconnect/panda.png";
+import hartstiching from "../../src/assets/images/edgeconnect/hartstiching.png";
+import fork from "../../src/assets/images/edgeconnect/fork.png";
+import jant from "../../src/assets/images/edgeconnect/jant.png";
+import kika from "../../src/assets/images/edgeconnect/kika.png";
+import clini from "../../src/assets/images/edgeconnect/kika.png";
+import edgecarehero from "../../src/assets/images/edgecare/edgecarehero.png";
+import heroImageinstitution from "../../src/assets/images/institution/heroImageinstitution.png";
+import researchdevelopment from "../../src/assets/images/institution/researchdevelopment.png";
+import inHouse from "../../src/assets/images/institution/inHouse.svg";
+import ml from "../../src/assets/images/institution/ml.svg";
+import proprietary from "../../src/assets/images/institution/proprietary.svg";
 
 const images = {
     landingPage:{
@@ -53,6 +66,25 @@ const images = {
     edgefund:{
         edgehero,
         effect
+    },
+    edgeConnect:{
+        Edge_Connect,
+        hartstiching,
+        fork,
+        jant,
+        kika,
+        clini,
+        panda
+    },
+    edgeCare:{
+        edgecarehero,
+    },
+    institution:{
+        heroImageinstitution,
+        researchdevelopment,
+        inHouse,
+        ml,
+        proprietary,
     },
 }
 

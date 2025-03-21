@@ -5,6 +5,8 @@ import AboutEdgeFund from "@/component/EdgeFund/AboutEdgeFund";
 import Target from "@/component/EdgeFund/Target";
 import WhatSetsUsApart from "@/component/EdgeFund/WhatSetUsApart";
 import StrategySection from "@/component/EdgeFund/Strategy";
+import Feature from "@/component/EdgeFund/Features";
+import FundCostStructure from "@/component/EdgeFund/FundCostStructure";
 
 const EdgeFund = () => {
   return (
@@ -14,6 +16,8 @@ const EdgeFund = () => {
       <Target />
       <WhatSetsUsApart />
       <StrategySection />
+      <Feature />
+      <FundCostStructure />
       <Contact />
       <Footer />
     </>

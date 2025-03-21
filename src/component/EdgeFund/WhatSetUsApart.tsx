@@ -71,7 +71,7 @@ const WhatSetsUsApart = () => {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What set us apart</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">What set us apart</h2>
           <div className="w-24 h-1 bg-yellow-400"></div>
         </motion.div>
         

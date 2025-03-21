@@ -1,5 +1,5 @@
 import images from "./images";
-
+// import { ReactNode } from "react";
 
 
 
@@ -29,6 +29,16 @@ export
 interface timelineDataType {
     year: string;
     content: string;
+}
+
+
+export 
+interface charitiesDataType {
+    image: string;
+    name: string;
+    organization: string;
+    organizationColor: string;
+    description: string;
 }
 
 
@@ -153,3 +163,51 @@ export  const timelineData: timelineDataType[] = [
       image: images.landingPage.Brahim
     },
   ];
+
+
+  
+  export const charities: charitiesDataType[] = [
+    {
+      image: images.edgeConnect.panda,
+      name: 'Pascal',
+      organization: 'World Wildlife Fund',
+      organizationColor: 'text-yellow-500',
+      description: 'Protects nature and the environment worldwide.'
+    },
+    {
+      image: images.edgeConnect.hartstiching,
+      name: 'Henk',
+      organization: 'Heart Foundation',
+      organizationColor: 'text-yellow-500',
+      description: 'Supports research and treatment of heart diseases.'
+    },
+    {
+      image: images.edgeConnect.fork,
+      name: 'Michiel',
+      organization: 'Food Bank Netherlands',
+      organizationColor: 'text-yellow-500',
+      description: 'Provides food to people in need.'
+    },
+    {
+      image: images.edgeConnect.jant,
+      name: 'Paul',
+      organization: 'Jantje Beton',
+      organizationColor: 'text-yellow-500',
+      description: 'Ensures that children play outside more.'
+    },
+    {
+      image: images.edgeConnect.kika,
+      name: 'Teagan',
+      organization: 'KiKa Foundation',
+      organizationColor: 'text-yellow-500',
+      description: 'Supports research into childhood cancer.'
+    },
+    {
+      image: images.edgeConnect.clini,
+      name: 'Brahim',
+      organization: 'CliniClowns',
+      organizationColor: 'text-yellow-500',
+      description: 'Brings joy to children in hospitals and care facilities.'
+    }
+  ];
+

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChartColumnIncreasing } from 'lucide-react';
 
 const StrategySection = () => {
-  const [activePopup, setActivePopup] = useState(null);
+  const [activePopup, setActivePopup] = useState<string | null>(null);
 
   const strategies = [
     {
@@ -42,7 +42,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
     }
   ];
 
-  const openPopup = (id:any) => {
+  const openPopup = (id:string) => {
     setActivePopup(id);
     document.body.style.overflow = 'hidden';
   };
@@ -79,7 +79,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                         strokeWidth="2" 
                         fill="none" />
                     </svg> */}
-                    <ChartColumnIncreasing size={28} className="text-black" />
+                    <ChartColumnIncreasing size={38} className="text-black" />
                   </motion.div>
                 </div>
                 <p className="text-gray-600 mb-6">{strategy.description}</p>
@@ -87,7 +87,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
               <div className="text-right">
                 <button 
                   onClick={() => openPopup(strategy.id)}
-                  className="text-blue-500 hover:text-blue-700 font-medium"
+                  className="text-blue-500 hover:text-blue-700 font-medium hover:cursor-pointer"
                 >
                   Learn More
                 </button>
@@ -106,16 +106,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                   whileHover={{ scale: 1.05 }}
                   className="w-12 h-10"
                 >
-                  <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 50 L20 40 L30 35 L40 30 L50 20 L60 15 L70 10 L80 5" 
-                      stroke="black" 
-                      strokeWidth="2" 
-                      fill="none" />
-                    <path d="M70 10 L90 10 L90 30" 
-                      stroke="black" 
-                      strokeWidth="2" 
-                      fill="none" />
-                  </svg>
+                  <ChartColumnIncreasing size={38} className="text-black" />
                 </motion.div>
               </div>
               <p className="text-gray-600 text-sm mb-4">{strategy.description}</p>
