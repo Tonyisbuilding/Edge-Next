@@ -43,13 +43,15 @@ const HeroSection = () => {
           <div className=" mt-8 md:mt-16 gap-8 relative">
             {/* Hero Section - 40% width on medium+ screens */}
             <motion.div
-              className="md:w-2/5 flex flex-col justify-center mt-6 md:mt-0 absolute bottom-[-115vh] right-0"
+              className="md:w-2/5 flex flex-col justify-center mt-6 md:mt-0 absolute
+               bottom-[-115vh] right-0 "
               initial="hidden"
               whileInView="visible"
               variants={staggerChildren}
             >
+              {/* <div className="blur-xl absolute h-[30%] w-full bg-[#206A7C] top-[15rem]"></div> */}
               <motion.div
-                className="bg-teal-700 text-white p-6 md:p-8 rounded-lg shadow-lg"
+                className="bg-[#206A7C] text-white p-6 md:p-8 rounded-lg shadow-lg"
                 variants={fadeIn}
                 initial="hidden"
                 whileInView="visible"
@@ -73,32 +75,25 @@ const HeroSection = () => {
                 </motion.p>
 
                 <motion.button
-                  className="bg-teal-900 hover:bg-teal-800 text-white font-medium py-2 px-6 rounded-md transition duration-300"
+                  className="bg-[#192227] hover:bg-teal-800 text-white font-medium 
+                  py-2 px-6 rounded-md transition duration-300 relative z-10"
                   variants={fadeIn}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Contact us
                 </motion.button>
+                <div className="blur-sm absolute h-[30%] w-full bg-[#206a7c3a] lg:top-[17rem] top-[14rem] left-0
+                 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 
+                "></div>
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Slogan Section */}
-          {/* <motion.div
-            className="mt-12 md:mt-16 mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">
-              Where Finance, Mathematics & Technology Converge
-            </h2>
-          </motion.div> */}
         </main>
       </div>
       <motion.div
-        className="mt-12 md:mt-16 mb-12 md:w-1/2 mx-[2rem] md:relative absolute bottom-[1rem]"
+        className="mt-12 md:mt-16 mb-12 md:w-1/2 mx-[2rem] md:relative absolute md:bottom-[1rem] bottom-[-28rem]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.6 }}

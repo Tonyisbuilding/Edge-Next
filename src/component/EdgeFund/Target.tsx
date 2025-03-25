@@ -13,7 +13,7 @@ export type metricCardType = {
 const MetricCard = ({ title, value, icon }: metricCardType) => {
   return (
     <motion.div
-      className="bg-[#206A7C0F] rounded-xl p-6 flex flex-col items-center hover:cursor-pointer 
+      className="bg-[#EEF4F5] rounded-xl p-6 flex flex-col items-center hover:cursor-pointer 
       relative border-[1px] border-[#367B8C1A]"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ const Target = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16">
+    <div className="max-w-7xl mx-auto px-4 md:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {metrics.map((metric) => (
           <MetricCard

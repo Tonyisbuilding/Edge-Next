@@ -1,140 +1,106 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { BarChart, Settings, DollarSign, Search, Laptop, PieChart } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  BarChart3, 
+  ShieldCheck, 
+  Monitor, 
+  Search, 
+  Laptop, 
+  PieChart ,
+  LucideIcon
+} from 'lucide-react';
+
+interface TradingApproachCardProps {
+  icon: LucideIcon; // Use LucideIcon type for icon components
+  title: string;
+  description: string;
+}
+
+const TradingApproachCard: React.FC<TradingApproachCardProps> = ({ icon: Icon, title, description }) => {
+  return (
+    <motion.div 
+      className="bg-[#327D90] p-6 rounded-lg shadow-lg lg:h-[26rem]"
+      whileHover={{ 
+        scale: 1.05,
+        transition: { duration: 0.3 }
+      }}
+    >
+      <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4">
+        <Icon className="text-white w-6 h-6" />
+      </div>
+      <h3 className="text-[19.81px] lg:text-[23.1px] font-semibold text-white mb-3">{title}</h3>
+      <p className="text-white text-opacity-80 font-normal text-[14.71px] lg:text-[17.45px]">{description}</p>
+    </motion.div>
+  );
+};
 
 const TradingApproachSection = () => {
-  const controls = useAnimation();
-  
-  useEffect(() => {
-    controls.start('visible');
-  }, [controls]);
-
-  // Card data with proper icons and descriptions
-  const cards = [
+  const tradingApproachData = [
     {
-      id: 1,
-      icon: <BarChart className="text-white" />,
-      title: "Market-Neutral Trading",
-      description: ""
+      icon: BarChart3,
+      title: 'Market-Neutral Trading',
+      description: 'Our strategy focuses on 0DTE options on the S&P 500 and Nasdaq, allowing us to capitalize on short-term market movements while minimizing overnight exposure. By maintaining a market-neutral approach, we generate returns in both rising and falling markets, ensuring consistent performance regardless of volatility shifts.'
     },
     {
-      id: 2,
-      icon: <Settings className="text-white" />,
-      title: "Automated Risk Management",
-      description: ""
+      icon: ShieldCheck,
+      title: 'Automated Risk Management',
+      description: 'Risk is dynamically managed through delta-hedging, which adjusts positions in real-time based on market conditions. Our proprietary algorithms, enhanced by machine learning, analyze volatility and execute trades with precision, ensuring optimal risk-reward balance across all market environments.'
     },
     {
-      id: 3,
-      icon: <DollarSign className="text-white" />,
-      title: "Scalability & No Overnight Risk",
-      description: ""
+      icon: Monitor,
+      title: 'Scalability & No Overnight Risk',
+      description: 'With deep liquidity and institutional-grade execution, our model can scale seamlessly up to €100 million without performance degradation. By exclusively trading 0DTE options, we eliminate overnight risk, ensuring capital efficiency and reducing exposure to unpredictable after-hours market swings.'
     },
     {
-      id: 4,
-      icon: <Search className="text-white" />,
-      title: "In-House Research & Development",
-      description: ""
+      icon: Search,
+      title: 'In-House Research & Development',
+      description: 'We continuously refine our strategies through rigorous research and real-time market testing. Our in-house development team integrates the latest advancements in quantitative finance, volatility modeling, and machine learning, ensuring our trading systems remain adaptive and resilient in ever-changing market conditions.'
     },
     {
-      id: 5,
-      icon: <Laptop className="text-white" />,
-      title: "Multi-Broker Integration",
-      description: ""
+      icon: Laptop,
+      title: 'Multi-Broker Integration',
+      description: 'Our technology seamlessly connects with leading brokers, including Interactive Brokers, TastyTrade, Exante, and Swissquote, providing institutional clients with flexible execution solutions. Through API-based trading, our strategies can be integrated into existing fund structures, ensuring a smooth and efficient trading experience.'
     },
     {
-      id: 6,
-      icon: <PieChart className="text-white" />,
-      title: "Proven Performance & Risk Metrics",
-      description: ""
+      icon: PieChart,
+      title: 'Proven Performance & Risk Metrics',
+      description: 'Backed by real-world execution data, our strategy delivers an average daily return of 0.18% gross (0.12% net) with a win ratio of 1.82 net and 2.41 gross. Our systematic, research-backed approach ensures consistent returns while maintaining strict risk controls.'
     }
   ];
 
-  // Animation variants
-  const headerVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.7,
-        ease: "easeOut"
-      }
-    }
-  };
-  
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
-
   return (
-    <section 
-      className="bg-[#206A7C] text-white py-12 px-4 sm:py-16 sm:px-6 md:px-8 lg:px-16 rounded-[4rem] mx-[2rem]" 
-      aria-labelledby="trading-approach-title"
-    >
-      <div className="max-w-6xl mx-auto md:flex">
-        <motion.div
-          initial="hidden"
-          animate={controls}
-          variants={headerVariants}
-          className="mb-10 sm:mb-16 md:w-1/2"
+    <div className="bg-[#206A7C] min-h-screen py-12 px-4 sm:px-6 lg:px-8 rounded-[20px]">
+      <div className="max-w-7xl mx-auto">
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-[26.68px] sm:text-4xl lg:text-[62.09px] font-normal text-left text-white mb-12"
         >
-          <h2 
-            id="trading-approach-title"
-            className="text-3xl sm:text-4xl md:text-[62.09px] font-normal"
-          >
-            Our Trading Approach
-          </h2>
-        </motion.div>
+          Our Trading Approach
+        </motion.h1>
         
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:w-1/2"
-          initial="hidden"
-          animate={controls}
-          variants={containerVariants}
-        >
-          {cards.map((card) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tradingApproachData.map((approach, index) => (
             <motion.div
-              key={card.id}
-              className="border border-teal-500/40 rounded-3xl overflow-hidden bg-[#99EBFF26]
-               backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-teal-900/30
-                hover:bg-[#99ebffbb] py-[2rem]"
-              variants={cardVariants}
-              whileHover={{ 
-                y: -5,
-                transition: { duration: 0.2 }
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.2 
               }}
             >
-              <div className="p-3 sm:p-4 border-b border-teal-500/40 flex items-center">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  {card.icon}
-                </div>
-              </div>
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-medium">{card.title}</h3>
-                {card.description && <p className="mt-2 text-teal-100 text-sm sm:text-base">{card.description}</p>}
-              </div>
+              <TradingApproachCard 
+                icon={approach.icon}
+                title={approach.title}
+                description={approach.description}
+              />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

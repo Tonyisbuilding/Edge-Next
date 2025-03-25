@@ -136,7 +136,7 @@ const HowDoesItWork = () => {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="bg-gray-50 rounded-lg p-6 shadow-sm"
+              className="bg-[#F3F4F6] rounded-lg p-6 shadow-sm border border-[#E5E7EB]"
               variants={{
                 hidden: { y: 50, opacity: 0 },
                 visible: { 
@@ -150,8 +150,8 @@ const HowDoesItWork = () => {
                 }
               }}
             >
-              <div className="p-3 bg-white rounded-lg shadow-sm inline-flex mb-4">
-                <div className="text-teal-600">
+              <div className="p-3  inline-flex mb-4">
+                <div className="text-[#000000]">
                   {card.icon}
                 </div>
               </div>
@@ -181,7 +181,7 @@ const HowDoesItWork = () => {
               </div>
               
               <motion.button
-                className="w-full py-3 px-4 bg-teal-600 text-white rounded-md font-medium transition-colors hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                className="w-full py-3 px-4 bg-[#0E7490] text-white rounded-md font-medium transition-colors hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

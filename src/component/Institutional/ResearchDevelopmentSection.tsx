@@ -25,7 +25,7 @@ const ResearchDevelopmentSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[#EEF4F5C2] lg:p-[58px]">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Text content column */}
@@ -59,9 +59,9 @@ const ResearchDevelopmentSection = () => {
                 className="flex items-start space-x-4"
                 variants={itemVariants}
               >
-                <div className="flex-shrink-0 w-12 h-12  flex items-center justify-center text-blue-500">
+                <div className="flex-shrink-0   flex items-center justify-center text-blue-500">
                   <img
-                    src={images.institution.inHouse}
+                    src={images.institution.researchIcon}
                     alt="Research team analyzing market data"
                     className="w-full h-full object-cover"
                   />
@@ -83,9 +83,9 @@ const ResearchDevelopmentSection = () => {
                 className="flex items-start space-x-4"
                 variants={itemVariants}
               >
-                <div className="flex-shrink-0 w-12 h-12  flex items-center justify-center text-blue-500">
+                <div className="flex-shrink-0  flex items-center justify-center text-blue-500">
                   <img
-                    src={images.institution.ml}
+                    src={images.institution.MLIcon}
                     alt="Research team analyzing market data"
                     className="w-full h-full object-cover"
                   />
@@ -107,9 +107,9 @@ const ResearchDevelopmentSection = () => {
                 className="flex items-start space-x-4"
                 variants={itemVariants}
               >
-                <div className="flex-shrink-0 w-12 h-12  flex items-center justify-center text-blue-500">
+                <div className="flex-shrink-0  flex items-center justify-center text-blue-500">
                   <img
-                    src={images.institution.proprietary}
+                    src={images.institution.tradingEngineIcon}
                     alt="Research team analyzing market data"
                     className="w-full h-full object-cover"
                   />
@@ -141,11 +141,12 @@ const ResearchDevelopmentSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <div className="relative h-full min-h-[300px] md:min-h-[400px] bg-gray-100 rounded-lg overflow-hidden">
+            <div className="relative h-full min-h-[300px] md:min-h-[400px] bg-gray-100 
+            overflow-hidden">
               <img
                 src={images.institution.researchdevelopment}
                 alt="Research team analyzing market data"
-                className="w-full h-full object-cover"
+                className="w-full h-[70%] object-cover rounded-md"
               />
             </div>
           </motion.div>

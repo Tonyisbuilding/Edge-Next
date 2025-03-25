@@ -15,9 +15,9 @@ const TeamCard = ({
 }: teamMemberCardstDataType) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
+  // const handleFlip = () => {
+  //   setIsFlipped(!isFlipped);
+  // };
 
   const { pathname } = useLocation();
   console.log(pathname.slice(1), "Location");
@@ -25,7 +25,7 @@ const TeamCard = ({
   return (
     <div
       className="relative w-full h-[22.211rem] md:h-[30.375rem] cursor-pointer"
-      onClick={handleFlip}
+      // onClick={handleFlip}
       // onMouseEnter={() => setIsFlipped(true)}
       // onMouseLeave={() => setIsFlipped(false)}
     >
@@ -131,7 +131,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
 
   return (
     <>
-      <div className={`bg-[#EEF4F5] py-[2rem] relative overflow-hidden
+      <div className={`bg-[#EEF4F5] py-[2rem] relative overflow-hidden mt-[5rem]
         `}>
         <div>
           <div>
@@ -162,7 +162,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
             className={`text-[27.1px] md:[60.23px] inter font-semibold text-left mb-3 text-black
           ${pathname.slice(1) !== "team" ? "hidden" : "block"} inter`}
           >
-            <h1>{department}</h1>
+            <h1 className=" font-semibold md:text-[60.23px] text-[35.05px]">{department}</h1>
             <div className=" bg-[#F9A600] h-[2px] w-[5rem]"></div>
           </div>
           <h2
@@ -179,7 +179,8 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
           </div>
 
           <div className={`flex justify-center mt-10 ${pathname.slice(1) === "team" ? "hidden" : "block"}`}>
-            <button className="bg-gray-900 text-white py-3 px-6 rounded-full hover:bg-gray-800 transition-colors duration-300">
+            <button className="bg-[#206A7C] text-white py-3 px-6 rounded-full hover:bg-gray-800 
+            transition-colors duration-300">
               Meet our entire team
             </button>
           </div>

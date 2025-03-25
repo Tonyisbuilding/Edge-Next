@@ -21,7 +21,7 @@ const ContactInfo = () => {
         <div>
           <ContactInput
             placeholder="example.email@edgecapital.com"
-            CTAButton="Suscribe"
+            CTAButton="Subscribe"
             icon={images.landingPage.email}
           />
           <ContactInput

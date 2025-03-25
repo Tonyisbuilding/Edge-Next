@@ -7,31 +7,31 @@ const OurCoreValues = () => {
 const values = [
     {
       title: "Sustainability",
-      icon: <Recycle size={32} className='text-black' />,
+      icon: <Recycle size={32} className='text-[#192227]' />,
       description: "The inability to easily exit a position due to the lack of liquidity of the investment instrument being used.",
       measures: "Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers."
     },
     {
       title: "Transparency",
-      icon: <BookOpen size={32} className='text-black' />,
+      icon: <BookOpen size={32} className='text-[#192227]' />,
       description: "The risk of your order not being fully or not executed at all due to a technical issue.",
       measures: "Measures: Automated risk management scenarios, 24/7 human monitoring, backups, testing periods."
     },
     {
       title: "Social Impact",
-      icon: <Users size={32} className='text-black' />,
+      icon: <Users size={32} className='text-[#192227]' />,
       description: "The probability that a particular exchange will not be able to make the required payments for their debt obligations.",
       measures: "Measures: Diversification across the largest and safest exchanges."
     },
     {
       title: "Innovation",
-      icon: <Rocket size={32} className='text-black' />,
+      icon: <Rocket size={32} className='text-[#192227]' />,
       description: "The probability that a particular exchange will not be able to make the required payments for their debt obligations.",
       measures: "Measures: Diversification across the largest and safest exchanges."
     },
     {
       title: "Ethical Practices",
-      icon: <Shield size={32} className='text-black' />,
+      icon: <Shield size={32} className='text-[#192227]' />,
       description: "The probability that a particular exchange will not be able to make the required payments for their debt obligations.",
       measures: "Measures: Diversification across the largest and safest exchanges."
     }
@@ -86,20 +86,20 @@ const values = [
           {values.map((value, index) => (
             <motion.div
               key={index}
-              className="bg-blue-50 rounded-lg p-6 h-full"
+              className="bg-[#DDE6E9] rounded-lg p-6 h-full"
               variants={itemVariants}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
               <div className="mb-4">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-xl font-semibold text-[#192227] mb-3">
                 {value.title}
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-[#1A1A1A] mb-4">
                 {value.description}
               </p>
-              <p className="text-gray-600 text-sm">
+              <p className="text-[#1A1A1A] text-sm">
                 {value.measures}
               </p>
             </motion.div>

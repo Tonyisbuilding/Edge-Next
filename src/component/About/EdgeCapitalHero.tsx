@@ -53,7 +53,7 @@ const EdgeCapitalHero = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 mt-[5rem]">
       <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
         <div className="lg:w-1/2 space-y-6 mb-8 lg:mb-0">
           <motion.div
@@ -78,7 +78,7 @@ const EdgeCapitalHero = () => {
             animate={buttonInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
-            <button className="mt-4 px-6 py-3 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transition-colors">
+            <button className="mt-4 px-6 py-3 bg-[#206A7C] text-white font-medium rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transition-colors">
               Get to know our team
             </button>
           </motion.div>

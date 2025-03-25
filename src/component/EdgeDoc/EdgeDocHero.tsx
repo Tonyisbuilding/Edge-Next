@@ -31,17 +31,17 @@ const EdgeDocuments = () => {
 
   return (
     <section 
-      className="w-full bg-white py-20 px-4 md:px-6 lg:px-8 overflow-hidden"
+      className="w-full bg-white py-20 px-4 md:px-6 lg:px-8 overflow-hidden mt-[5rem]"
       aria-labelledby="edge-documents-heading"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-[20%]">
           
           {/* Text content */}
           <div className="lg:max-w-xl z-10">
             <motion.h2 
               id="edge-documents-heading"
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-teal-700 mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#206A7C] mb-6"
               initial="hidden"
               animate="visible"
               variants={textVariants}

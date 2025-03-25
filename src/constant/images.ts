@@ -1,4 +1,5 @@
 import heroSection from "../../src/assets/images/landingPage/Home-left.jpg";
+import management from "../../src/assets/images/landingPage/management.svg";
 import handshake from "../../src/assets/images/landingPage/handshake.png";
 import schedule from "../../src/assets/images/landingPage/schedule.png";
 import dots_one from "../../src/assets/images/landingPage/dots_one.png";
@@ -15,6 +16,8 @@ import herosectionforabout from "../../src/assets/images/about/herosectionforabo
 import edgehero from "../../src/assets/images/edgefund/edgehero.png";
 import effect from "../../src/assets/images/edgefund/effect.png";
 import ECLogo from "../../src/assets/images/ECLogo.png";
+import ECLogoSVG from "../../src/assets/images/ECLogo.svg";
+import profit from "../../src/assets/images/landingPage/profit.svg";
 import arrow_down from "../../src/assets/icons/arrow-down.png";
 import check_circle from "../../src/assets/icons/check-circle.png";
 import email from "../../src/assets/icons/email.png";
@@ -32,6 +35,17 @@ import clini from "../../src/assets/images/edgeconnect/kika.png";
 import edgecarehero from "../../src/assets/images/edgecare/edgecarehero.png";
 import heroImageinstitution from "../../src/assets/images/institution/heroImageinstitution.png";
 import researchdevelopment from "../../src/assets/images/institution/researchdevelopment.png";
+import researchIcon from "../../src/assets/images/institution/research.png";
+import MLIcon from "../../src/assets/images/institution/MLIcon.png";
+import tradingEngineIcon from "../../src/assets/images/institution/tradingEngineIcon.png";
+import directFundIcon from "../../src/assets/images/institution/directFund.png";
+import apiIcon from "../../src/assets/images/institution/apiIcon.png";
+import performance_basedIcon from "../../src/assets/images/institution/performance_basedIcon.png";
+import inbox from "../../src/assets/images/form/inbox.png";
+import send_mail from "../../src/assets/images/form/send_mail.png";
+import flare from "../../src/assets/images/form/flare.png";
+import download from "../../src/assets/images/form/download.png";
+import career from "../../src/assets/images/form/career.png";
 import inHouse from "../../src/assets/images/institution/inHouse.svg";
 import ml from "../../src/assets/images/institution/ml.svg";
 import proprietary from "../../src/assets/images/institution/proprietary.svg";
@@ -59,6 +73,9 @@ const images = {
         Henk,
         Michiel,
         Brahim,
+        management,
+        ECLogoSVG,
+        profit
     },
     about:{
         herosectionforabout,
@@ -85,6 +102,19 @@ const images = {
         inHouse,
         ml,
         proprietary,
+        researchIcon,
+        MLIcon,
+        tradingEngineIcon,
+        directFundIcon,
+        apiIcon,
+        performance_basedIcon,
+    },
+    form:{
+        inbox,
+        send_mail,
+        flare,
+        download,
+        career,
     },
 }
 

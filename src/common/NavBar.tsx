@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faBars, faXmark, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import "./common.css";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faBars,
+  faXmark,
+  faChevronDown,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
 import images from "@/constant/images";
-
 
 interface DropdownState {
   [key: number]: boolean;
 }
-
 
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
@@ -20,92 +23,425 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleNav = () => {
-    setIsNavActive(!isNavActive);
-  };
+  const toggleNav = () => setIsNavActive(!isNavActive);
 
-
-  const toggleDropdown = (index:number, e:  React.MouseEvent<HTMLAnchorElement>) => {
+  const toggleDropdown = (
+    index: number,
+    e: React.MouseEvent<HTMLAnchorElement>
+  ) => {
     if (window.innerWidth <= 992) {
       e.preventDefault();
       setActiveDropdowns({
         ...activeDropdowns,
-        [index]: !activeDropdowns[index]
+        [index]: !activeDropdowns[index],
       });
     }
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container nav-container">
-        <Link to="/" className="logo-container">
-          <img src={images.landingPage.ECLogo} alt="Edge Fund Logo" className="logo" />
+    <nav
+      className={`fixed top-0 w-full bg-[rgba(238,244,245,0.8)] backdrop-blur-md border-b
+     border-white z-50 ${isScrolled ? "shadow-md" : ""}`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center py-4">
+        <Link to="/" className="flex-shrink-0">
+          <img
+            src={images.landingPage.ECLogoSVG}
+            alt="Edge Capital"
+            className="w-[202px] h-[34px]"
+          />
         </Link>
 
-        <ul className={`nav-links ${isNavActive ? 'active' : ''}`}>
-          <li className="nav-item"><Link to="/">Home</Link></li>
-          <li className="nav-item">
-            <a href="#" className={`dropdown-toggle ${activeDropdowns[1] ? 'active' : ''}`} onClick={(e) => toggleDropdown(1, e)}>
-              About Us
-              <FontAwesomeIcon icon={activeDropdowns[1] ? faChevronUp : faChevronDown} style={{ marginLeft: '5px', fontSize: '0.8em' }} />
-            </a>
-            <ul className={`dropdown-menu ${activeDropdowns[1] ? 'show' : ''}`}>
-              <li><Link to="/about">About</Link></li> {/* Updated Link */}
-              <li><Link to="/team">Team</Link></li>   {/* Updated Link */}
-            </ul>
-          </li>
-          <li className="nav-item"><Link to="/edge-fund">Edge Fund</Link></li>
-          <li className="nav-item">
-            <a href="#" className={`dropdown-toggle ${activeDropdowns[2] ? 'active' : ''}`} onClick={(e) => toggleDropdown(2, e)}>
-              Edge Impact
-              <FontAwesomeIcon icon={activeDropdowns[2] ? faChevronUp : faChevronDown} style={{ marginLeft: '5px', fontSize: '0.8em' }} />
-            </a>
-            <ul className={`dropdown-menu ${activeDropdowns[2] ? 'show' : ''}`}>
-              <li><Link to="/edge-cares">Edge Cares</Link></li>
-              <li><Link to="/edge-foundation">Edge Foundation</Link></li>
-              <li><Link to="/edge-horizon">Edge Horizon Foundation</Link></li>
-            </ul>
-          </li>
-          <li className="nav-item"><Link to="/institutional">Institutional</Link></li>
-          <li className="nav-item">
-            <a href="#" className={`dropdown-toggle ${activeDropdowns[3] ? 'active' : ''}`} onClick={(e) => toggleDropdown(3, e)}>
-              Company
-              <FontAwesomeIcon icon={activeDropdowns[3] ? faChevronUp : faChevronDown} style={{ marginLeft: '5px', fontSize: '0.8em' }} />
-            </a>
-            <ul className={`dropdown-menu ${activeDropdowns[3] ? 'show' : ''}`}>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/media">Media</Link></li>
-              <li><Link to="/documents">Documents</Link></li>
-              <li><Link to="/careers">Careers</Link></li>
-            </ul>
-          </li>
-
-          <div className="nav-actions-mobile">
-            <div className="phone">
-              <FontAwesomeIcon icon={faPhone} />
-              <span>+31 6 13 484 484</span>
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-300 ${
+            isNavActive ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex justify-between items-center p-4 border-b">
+            <div className="flex-shrink-0">
+              <Link to="/" onClick={toggleNav}>
+                <img
+                  src={images.landingPage.ECLogoSVG}
+                  alt="Edge Capital"
+                  className="w-[202px] h-[34px]"
+                />
+              </Link>
             </div>
-            <button className="nav-cta">Contact Us</button>
+            <button className="text-2xl text-black" onClick={toggleNav}>
+              <FontAwesomeIcon icon={faXmark} />
+            </button>
           </div>
-        </ul>
 
-        <div className="nav-actions">
-          <div className="phone">
-            <FontAwesomeIcon icon={faPhone} />
-            <span>+31 6 13 484 484</span>
+          <div className="overflow-y-auto h-[calc(100vh-70px)]">
+            <ul className="px-4">
+              <li className="py-4 border-b border-gray-100">
+                <Link
+                  to="/"
+                  className="text-[#192227] font-semibold block"
+                  onClick={toggleNav}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="py-4 border-b border-gray-100">
+                <a
+                  href="#"
+                  className="text-[#192227] font-semibold flex justify-between items-center w-full"
+                  onClick={(e) => toggleDropdown(1, e)}
+                >
+                  About Us
+                  <FontAwesomeIcon
+                    icon={activeDropdowns[1] ? faChevronUp : faChevronDown}
+                    className="text-xs"
+                  />
+                </a>
+                {activeDropdowns[1] && (
+                  <ul className="ml-4 mt-2">
+                    <li className="py-2">
+                      <Link
+                        to="/about"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        About
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/team"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Team
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+              <li className="py-4 border-b border-gray-100">
+                <Link
+                  to="/edge-fund"
+                  className="text-[#192227] font-semibold block"
+                  onClick={toggleNav}
+                >
+                  Edge Fund
+                </Link>
+              </li>
+              <li className="py-4 border-b border-gray-100">
+                <a
+                  href="#"
+                  className="text-[#192227] font-semibold flex justify-between items-center w-full"
+                  onClick={(e) => toggleDropdown(2, e)}
+                >
+                  Edge Impact
+                  <FontAwesomeIcon
+                    icon={activeDropdowns[2] ? faChevronUp : faChevronDown}
+                    className="text-xs"
+                  />
+                </a>
+                {activeDropdowns[2] && (
+                  <ul className="ml-4 mt-2">
+                    <li className="py-2">
+                      <Link
+                        to="/edge-connect"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Edge Connect
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/edge-impact-fund"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Edge Impact Fund
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/edge-cares"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Edge Cares
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/edge-foundation"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Edge Foundation
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/edge-horizon"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Edge Horizon Foundation
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+              <li className="py-4 border-b border-gray-100">
+                <Link
+                  to="/institutional"
+                  className="text-[#192227] font-semibold block"
+                  onClick={toggleNav}
+                >
+                  Institutional
+                </Link>
+              </li>
+              <li className="py-4 border-b border-gray-100">
+                <a
+                  href="#"
+                  className="text-[#192227] font-semibold flex justify-between items-center w-full"
+                  onClick={(e) => toggleDropdown(3, e)}
+                >
+                  Company
+                  <FontAwesomeIcon
+                    icon={activeDropdowns[3] ? faChevronUp : faChevronDown}
+                    className="text-xs"
+                  />
+                </a>
+                {activeDropdowns[3] && (
+                  <ul className="ml-4 mt-2">
+                    <li className="py-2">
+                      <Link
+                        to="/contact"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Contact
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/media"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Media
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/documents"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Documents
+                      </Link>
+                    </li>
+                    <li className="py-2">
+                      <Link
+                        to="/careers"
+                        className="block text-[#192227]"
+                        onClick={toggleNav}
+                      >
+                        Careers
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+            </ul>
+
+            <div className="px-4 py-6 border-t border-gray-100 mt-4">
+              <div className="flex items-center mb-4">
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  className="mr-2 text-[#206A7C]"
+                />
+                <a href="tel:+31613484484" className="font-semibold text-black">
+                  +31 6 13 484 484
+                </a>
+              </div>
+              <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold w-full">
+                Contact Us
+              </button>
+            </div>
           </div>
-          <button className="nav-cta">Contact Us</button>
         </div>
 
-        <div className="nav-toggle" onClick={toggleNav}>
-          <FontAwesomeIcon icon={isNavActive ? faXmark : faBars} />
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex lg:gap-5 lg:items-center">
+          <li>
+            <Link
+              to="/"
+              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
+            >
+              Home
+            </Link>
+          </li>
+          <li className="relative group">
+            <a
+              href="#"
+              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
+            >
+              About Us
+              <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
+            </a>
+            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
+              <li className="p-3">
+                <Link
+                  to="/about"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  About
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/team"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Team
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link
+              to="/edge-fund"
+              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
+            >
+              Edge Fund
+            </Link>
+          </li>
+          <li className="relative group">
+            <a
+              href="#"
+              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
+            >
+              Edge Impact
+              <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
+            </a>
+            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0
+             invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
+              <li className="p-3">
+                <Link
+                  to="/edge-connect"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Edge Connect
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/edge-impact-fund"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Edge Impact Fund
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/edge-cares"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Edge Cares
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/edge-foundation"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Edge Foundation
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/edge-horizon"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Edge Horizon Foundation
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link
+              to="/institutional"
+              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
+            >
+              Institutional
+            </Link>
+          </li>
+          <li className="relative group">
+            <a
+              href="#"
+              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
+            >
+              Company
+              <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
+            </a>
+            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
+              <li className="p-3">
+                <Link
+                  to="/contact"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/media"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Media
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/documents"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Documents
+                </Link>
+              </li>
+              <li className="p-3">
+                <Link
+                  to="/careers"
+                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                >
+                  Careers
+                </Link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        {/* Desktop Contact */}
+        <div className="hidden lg:flex items-center border border-white rounded-[15px] p-3">
+          <div className="flex items-center mr-4">
+            <FontAwesomeIcon icon={faPhone} className="mr-2 text-[#206A7C]" />
+            <span className="font-semibold text-black">+31 6 13 484 484</span>
+          </div>
+          <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold hover:bg-[#0e1417] transition-colors">
+            Contact Us
+          </button>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <div
+          className="lg:hidden text-2xl cursor-pointer text-black mr-[.5rem]"
+          onClick={toggleNav}
+        >
+          <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
     </nav>
