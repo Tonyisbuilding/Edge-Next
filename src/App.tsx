@@ -26,7 +26,7 @@ function App(): JSX.Element {
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Teams />} />
         <Route path="/edge-fund" element={<EdgeFund />} />
-        <Route path="/connect" element={<EdgeConnect />} />
+        <Route path="/edge-connect" element={<EdgeConnect />} />
         <Route path="/edge-cares" element={<EdgeCare />} />
         <Route path="/institutional" element={<Institutional />} />
         <Route path="/careers" element={<Careers />} />

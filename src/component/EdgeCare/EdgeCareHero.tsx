@@ -5,7 +5,7 @@ import images from '@/constant/images';
 
 const EdgeCareHero = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden md:mt-[5rem]">
         <div className="w-full h-full  bg-[#0000008e] absolute z-10" />
       {/* Background Image */}
       <div className="absolute inset-0 bg-green-800 bg-opacity-20">

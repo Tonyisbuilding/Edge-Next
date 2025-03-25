@@ -12,15 +12,17 @@ const Teams = () => {
   return (
     <>
       <NavBar />
-      <TeamMemberCards teamMembers={teamMembers} department={"Management"} />
-      <TeamMemberCards
-        teamMembers={advisoryBoard}
-        department={"Advisory Board"}
-      />
-      <TeamMemberCards
-        teamMembers={SupportAndCommercial}
-        department={"Support and commercial"}
-      />
+      <div className="bg-[#EEF4F5]">
+        <TeamMemberCards teamMembers={teamMembers} department={"Management"} />
+        <TeamMemberCards
+          teamMembers={advisoryBoard}
+          department={"Advisory Board"}
+        />
+        <TeamMemberCards
+          teamMembers={SupportAndCommercial}
+          department={"Support and commercial"}
+        />
+      </div>
       <Contact />
       <Footer />
     </>

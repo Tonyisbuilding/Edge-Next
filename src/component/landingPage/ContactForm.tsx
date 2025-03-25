@@ -31,7 +31,7 @@ import "./component.css";
         <form 
         onSubmit={(e)=>handleSubmit(e)}
          className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             <div>
               <label htmlFor="name" className="text-[16.73px] font-normal montserrat text-black">Name</label>
               <input

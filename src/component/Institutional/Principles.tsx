@@ -142,8 +142,8 @@ const PrinciplesSection: React.FC = () => {
     <section ref={sectionRef} className="max-w-6xl mx-auto px-4 md:px-6 py-16 relative">
       <div className="text-center mb-16">
         <h3 className="text-teal-600 text-3xl font-medium mb-2">Edge Capital Principles</h3>
-        <h2 className="text-4xl font-bold mb-2">6 Principles That</h2>
-        <h2 className="text-4xl font-bold">Drive Our Success</h2>
+        <h2 className="text-4xl font-bold mb-2 text-[#192227]">6 Principles That</h2>
+        <h2 className="text-4xl font-bold text-[#192227]">Drive Our Success</h2>
       </div>
 
       <div className="relative flex flex-col md:flex-row">

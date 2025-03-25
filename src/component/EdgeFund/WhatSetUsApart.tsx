@@ -15,7 +15,7 @@ type RiskCardType ={
 const RiskCard = ({ title, description, measures, icon, index }: RiskCardType) => {
   return (
     <motion.div 
-      className="bg-[#DDE6E9] rounded-3xl p-6 md:p-8"
+      className="bg-[#DDE6E9] rounded-[11px] p-6 md:p-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -63,7 +63,7 @@ const WhatSetsUsApart = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 md:py-24">
+    <section className="bg-[#EEF4F5] py-16 md:py-14">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -10 }}

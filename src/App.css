@@ -4,12 +4,17 @@
 
 
 #root {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
   background-color: white;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
+}
+
+
+* {
+  font-family: 'Inter', sans-serif;
 }
 

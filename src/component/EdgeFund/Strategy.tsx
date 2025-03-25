@@ -53,15 +53,16 @@ This strategy is designed to be market-neutral, with returns driven by the conve
   };
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#EEF4F5C2] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">Our strategy</h2>
         <div className="h-1 w-36 bg-yellow-400 mb-8"></div>
 
         {/* Desktop layout */}
-        <div className="hidden lg:grid grid-cols-2 gap-6">
-          {strategies.map((strategy) => (
-            <div key={strategy.id} className="bg-white rounded-lg shadow-md p-8 border border-gray-200 flex flex-col justify-between">
+        <div className="hidden lg:grid grid-cols-2">
+          {strategies.map((strategy, index) => (
+            <div key={strategy.id} className={`bg-[#EEF4F5C2] ${ index === 0 ? 'rounded-l-lg' : 'rounded-r-lg'} 
+             p-8 border-1 border-[#206A7C] flex flex-col justify-between`}>
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <h3 className="text-xl font-semibold text-gray-900">{strategy.title}</h3>
@@ -69,16 +70,6 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                     whileHover={{ scale: 1.05 }}
                     className="w-16 h-12"
                   >
-                    {/* <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 50 L20 40 L30 35 L40 30 L50 20 L60 15 L70 10 L80 5" 
-                        stroke="black" 
-                        strokeWidth="2" 
-                        fill="none" />
-                      <path d="M70 10 L90 10 L90 30" 
-                        stroke="black" 
-                        strokeWidth="2" 
-                        fill="none" />
-                    </svg> */}
                     <ChartColumnIncreasing size={38} className="text-black" />
                   </motion.div>
                 </div>
@@ -87,7 +78,8 @@ This strategy is designed to be market-neutral, with returns driven by the conve
               <div className="text-right">
                 <button 
                   onClick={() => openPopup(strategy.id)}
-                  className="text-blue-500 hover:text-blue-700 font-medium hover:cursor-pointer"
+                  className="text-[#0E7490] hover:text-[#0e7490b7] font-medium 
+                  hover:cursor-pointer underline"
                 >
                   Learn More
                 </button>
@@ -97,9 +89,10 @@ This strategy is designed to be market-neutral, with returns driven by the conve
         </div>
 
         {/* Mobile layout */}
-        <div className="lg:hidden flex flex-col space-y-6">
-          {strategies.map((strategy) => (
-            <div key={strategy.id} className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+        <div className="lg:hidden flex flex-col ">
+          {strategies.map((strategy, index) => (
+            <div key={strategy.id} className={`bg-[#EEF4F5C2]  p-6 border border-[#206A7C]
+             ${ index === 0 ? 'rounded-t-lg' : 'rounded-b-lg'} `}>
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-lg font-semibold text-gray-900">{strategy.title}</h3>
                 <motion.div 
@@ -113,7 +106,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
               <div className="text-right">
                 <button 
                   onClick={() => openPopup(strategy.id)}
-                  className="text-blue-500 hover:text-blue-700 font-medium text-sm"
+                  className="text-[#0E7490] hover:text-[#0e7490b7] font-medium text-sm underline"
                 >
                   Learn More
                 </button>
@@ -129,7 +122,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              className="fixed inset-0 bg-[#00000098] bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
               onClick={closePopup}
             >
               <motion.div 

@@ -98,7 +98,7 @@ const FundCostStructure = () => {
         "Ideal for established investors and medium-sized institutions.",
       investment: "€250K-€500K",
       buttonText: "Book a consultation",
-      buttonClass: "bg-slate-600 hover:bg-slate-700",
+      buttonClass: "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
       features: [
         "Everything in Class I +",
         "1.25% Management Fee (per year)",
@@ -296,7 +296,7 @@ const FundCostStructure = () => {
                 ></path>
               </svg>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 items-center justify-center">
               <h4 className="text-lg font-semibold text-gray-900">
                 High Watermark Principle Explained
               </h4>
@@ -305,7 +305,8 @@ const FundCostStructure = () => {
                 Watermark principle
               </p>
             </div>
-            <button className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">
+            <button className="text-[#002731] hover:text-[#002731c0] font-medium transition-colors
+             duration-300 shadow-md rounded-md p-3 flex items-center justify-center">
               Learn more
             </button>
           </motion.div>

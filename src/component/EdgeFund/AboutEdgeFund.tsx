@@ -5,7 +5,7 @@ import "../landingPage/component.css";
 
 const AboutEdgeFund = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-0 py-16 md:py-24">
+    <section className="w-full max-w-7xl mx-auto px-0 py-16 md:py-24 md:mt-[5rem]">
       <motion.div
         className="flex flex-col md:flex-row gap-8 md:gap-3  overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ const AboutEdgeFund = () => {
         transition={{ duration: 0.6 }}
       >
         {/* Content Side */}
-        <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-gray-50 rounded-2xl">
+        <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-[#EEF4F5] rounded-2xl">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ const AboutEdgeFund = () => {
             </p>
 
             <motion.button
-              className="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
+              className="bg-[#206A7C] text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -57,7 +57,7 @@ const AboutEdgeFund = () => {
             <img
               src={images.edgefund.edgehero}
               alt="Edge Capital team meeting"
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-cover rounded-[10px]"
             />
           </div>
         </motion.div>

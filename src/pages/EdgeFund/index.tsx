@@ -7,6 +7,7 @@ import WhatSetsUsApart from "@/component/EdgeFund/WhatSetUsApart";
 import StrategySection from "@/component/EdgeFund/Strategy";
 import Feature from "@/component/EdgeFund/Features";
 import FundCostStructure from "@/component/EdgeFund/FundCostStructure";
+import InvestmentPerformance from "@/component/EdgeFund/InvestmentPerformance";
 
 const EdgeFund = () => {
   return (
@@ -18,6 +19,7 @@ const EdgeFund = () => {
       <StrategySection />
       <Feature />
       <FundCostStructure />
+      <InvestmentPerformance />
       <Contact />
       <Footer />
     </>
