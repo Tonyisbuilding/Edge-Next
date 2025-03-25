@@ -15,6 +15,7 @@ import money_briefcase from "../../src/assets/images/landingPage/money-briefcase
 import herosectionforabout from "../../src/assets/images/about/herosectionforabout.png";
 import edgehero from "../../src/assets/images/edgefund/edgehero.png";
 import effect from "../../src/assets/images/edgefund/effect.png";
+import scaleUp from "../../src/assets/images/edgefund/scale.png";
 import ECLogo from "../../src/assets/images/ECLogo.png";
 import ECLogoSVG from "../../src/assets/images/ECLogo.svg";
 import profit from "../../src/assets/images/landingPage/profit.svg";
@@ -82,7 +83,8 @@ const images = {
     },
     edgefund:{
         edgehero,
-        effect
+        effect,
+        scaleUp
     },
     edgeConnect:{
         Edge_Connect,

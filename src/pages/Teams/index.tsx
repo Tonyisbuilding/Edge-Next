@@ -12,7 +12,7 @@ const Teams = () => {
   return (
     <>
       <NavBar />
-      <div className="bg-[#EEF4F5]">
+      <div className="bg-[#EEF4F5] pt-[5rem]">
         <TeamMemberCards teamMembers={teamMembers} department={"Management"} />
         <TeamMemberCards
           teamMembers={advisoryBoard}

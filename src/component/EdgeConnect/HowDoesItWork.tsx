@@ -53,7 +53,7 @@ const HowDoesItWork = () => {
       ),
       title: "Earn tiered rewards",
       content: [
-        { tier: "1-3 Referred Clients:", reward: "Receive 0.75% of the referred AUM" },
+        { tier: "1-3 Referred Clients:", reward: `Receive 0.75% of the referred AUM` },
         { tier: "4-6 Referred Clients:", reward: "Receive 1.00% of the referred AUM" },
         { tier: "7+ Referred Clients:", reward: "Receive 1.25% of the referred AUM" }
       ]

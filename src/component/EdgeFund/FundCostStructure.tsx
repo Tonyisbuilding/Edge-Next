@@ -280,7 +280,8 @@ const FundCostStructure = () => {
             variants={noteVariants}
             className="bg-white rounded-lg shadow-sm p-6 flex items-start space-x-4 mt-8"
           >
-            <div className="flex-shrink-0 w-10 h-10 bg-teal-50 rounded-full flex items-center justify-center">
+            <div className="flex-shrink-0 w-10 h-10 bg-teal-50 rounded-full flex 
+            items-center justify-center relative top-[5rem] md:top-[.5rem]">
               <svg
                 className="w-6 h-6 text-teal-600"
                 fill="none"
@@ -306,7 +307,8 @@ const FundCostStructure = () => {
               </p>
             </div>
             <button className="text-[#002731] hover:text-[#002731c0] font-medium transition-colors
-             duration-300 shadow-md rounded-md p-3 flex items-center justify-center">
+             duration-300 shadow-sm rounded-md p-3 flex items-center justify-center relative top-[5rem] 
+             md:top-[.4rem]">
               Learn more
             </button>
           </motion.div>
