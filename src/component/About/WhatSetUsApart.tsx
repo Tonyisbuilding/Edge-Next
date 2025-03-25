@@ -15,11 +15,14 @@ const FeatureCard = ({
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
     <div
-      className="relative w-full md:h-[60vh] h-full perspective-1000"
-      // onMouseEnter={() => setIsFlipped(true)}
-      // onMouseLeave={() => setIsFlipped(false)}
+      className="relative w-full md:h-[60vh] h-[45vh] perspective-1000"
+      onClick={handleFlip}
       key={index}
     >
       {/* Front Card */}
@@ -106,7 +109,8 @@ const WhatSetsUsApart = () => {
 
         <div className="mt-12 flex justify-center">
           <motion.button
-            className="bg-[#206A7C] text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+            className="bg-[#206A7C] text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800
+             transition-colors"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.3 }}

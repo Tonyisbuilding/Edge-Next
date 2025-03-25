@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChartColumnIncreasing } from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import images from "@/constant/images";
 
 const StrategySection = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
 
   const strategies = [
     {
-      id: 'liquidity-risk',
-      title: 'Liquidity Risk',
-      description: 'The inability to easily exit a position due to the lack of liquidity of the investment instrument being used. Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers.',
-      popupTitle: 'Volatility Risk Premium',
+      id: "liquidity-risk",
+      title: "Liquidity Risk",
+      description:
+        "The inability to easily exit a position due to the lack of liquidity of the investment instrument being used. Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers.",
+      popupTitle: "Volatility Risk Premium",
       popupContent: `The Volatility Risk Premium (VRP) is the compensation that investors demand for providing protection against potential market downturns. 
 
 It exists because market participants are generally risk-averse and willing to pay a premium for protection against negative events. This premium manifests as an overpricing of options relative to their historical realized volatility.
@@ -22,13 +23,14 @@ Our strategy systematically harvests this premium by:
 3. Managing tail risk through diversification and position sizing
 4. Utilizing proprietary volatility forecasting models
 
-This approach generates consistent returns with low correlation to traditional asset classes, making it an excellent portfolio diversifier.`
+This approach generates consistent returns with low correlation to traditional asset classes, making it an excellent portfolio diversifier.`,
     },
     {
-      id: 'interest-rate-arbitrage',
-      title: 'Interest Rate Arbitrage',
-      description: 'Identifying interest rate differentials: We identify price differences or discrepancies between interest rates. These differences can arise due to factors such as changes in interest rates, market expectations, or credit conditions.',
-      popupTitle: 'Market-Neutral Swap Arbitrage',
+      id: "interest-rate-arbitrage",
+      title: "Interest Rate Arbitrage",
+      description:
+        "Identifying interest rate differentials: We identify price differences or discrepancies between interest rates. These differences can arise due to factors such as changes in interest rates, market expectations, or credit conditions.",
+      popupTitle: "Market-Neutral Swap Arbitrage",
       popupContent: `Our Market-Neutral Swap Arbitrage strategy exploits inefficiencies in the interest rate swap market by identifying and capitalizing on temporary mispricing between related instruments.
 
 Key components of this strategy include:
@@ -38,18 +40,18 @@ Key components of this strategy include:
 3. Capitalizing on cross-currency basis swap opportunities
 4. Leveraging our proprietary term structure models to identify relative value opportunities
 
-This strategy is designed to be market-neutral, with returns driven by the convergence of pricing anomalies rather than by directional market movements. The strategy employs moderate leverage and sophisticated risk management techniques to ensure consistent performance across various market regimes.`
-    }
+This strategy is designed to be market-neutral, with returns driven by the convergence of pricing anomalies rather than by directional market movements. The strategy employs moderate leverage and sophisticated risk management techniques to ensure consistent performance across various market regimes.`,
+    },
   ];
 
-  const openPopup = (id:string) => {
+  const openPopup = (id: string) => {
     setActivePopup(id);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closePopup = () => {
     setActivePopup(null);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -61,22 +63,35 @@ This strategy is designed to be market-neutral, with returns driven by the conve
         {/* Desktop layout */}
         <div className="hidden lg:grid grid-cols-2">
           {strategies.map((strategy, index) => (
-            <div key={strategy.id} className={`bg-[#EEF4F5C2] ${ index === 0 ? 'rounded-l-lg' : 'rounded-r-lg'} 
-             p-8 border-1 border-[#206A7C] flex flex-col justify-between`}>
+            <div
+              key={strategy.id}
+              className={`bg-[#EEF4F5C2] ${
+                index === 0 ? "rounded-l-lg" : "rounded-r-lg"
+              } 
+             p-8 border-1 border-[#206A7C] flex flex-col justify-between`}
+            >
               <div>
                 <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900">{strategy.title}</h3>
-                  <motion.div 
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {strategy.title}
+                  </h3>
+                  <motion.div
                     whileHover={{ scale: 1.05 }}
                     className="w-16 h-12"
                   >
-                    <ChartColumnIncreasing size={38} className="text-black" />
+                    <div className="flex-shrink-0   flex items-center justify-center relative top-[-1rem]">
+                      <img
+                        src={images.edgefund.scaleUp}
+                        alt="Research team analyzing market data"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </motion.div>
                 </div>
                 <p className="text-gray-600 mb-6">{strategy.description}</p>
               </div>
               <div className="text-right">
-                <button 
+                <button
                   onClick={() => openPopup(strategy.id)}
                   className="text-[#0E7490] hover:text-[#0e7490b7] font-medium 
                   hover:cursor-pointer underline"
@@ -91,20 +106,30 @@ This strategy is designed to be market-neutral, with returns driven by the conve
         {/* Mobile layout */}
         <div className="lg:hidden flex flex-col ">
           {strategies.map((strategy, index) => (
-            <div key={strategy.id} className={`bg-[#EEF4F5C2]  p-6 border border-[#206A7C]
-             ${ index === 0 ? 'rounded-t-lg' : 'rounded-b-lg'} `}>
+            <div
+              key={strategy.id}
+              className={`bg-[#EEF4F5C2]  p-6 border border-[#206A7C]
+             ${index === 0 ? "rounded-t-lg" : "rounded-b-lg"} `}
+            >
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">{strategy.title}</h3>
-                <motion.div 
-                  whileHover={{ scale: 1.05 }}
-                  className="w-12 h-10"
-                >
-                  <ChartColumnIncreasing size={38} className="text-black" />
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {strategy.title}
+                </h3>
+                <motion.div whileHover={{ scale: 1.05 }} className="w-12 h-10">
+                  <div className="flex-shrink-0   flex items-center justify-center relative top-[-1rem]">
+                    <img
+                      src={images.edgefund.scaleUp}
+                      alt="Research team analyzing market data"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </motion.div>
               </div>
-              <p className="text-gray-600 text-sm mb-4">{strategy.description}</p>
+              <p className="text-gray-600 text-sm mb-4">
+                {strategy.description}
+              </p>
               <div className="text-right">
-                <button 
+                <button
                   onClick={() => openPopup(strategy.id)}
                   className="text-[#0E7490] hover:text-[#0e7490b7] font-medium text-sm underline"
                 >
@@ -118,14 +143,14 @@ This strategy is designed to be market-neutral, with returns driven by the conve
         {/* Popup */}
         <AnimatePresence>
           {activePopup && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-[#00000098] bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
               onClick={closePopup}
             >
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
@@ -133,35 +158,54 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                 className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
               >
-                {strategies.filter(s => s.id === activePopup).map((strategy) => (
-                  <div key={strategy.id} className="p-6 sm:p-8">
-                    <div className="flex justify-between items-center mb-6">
-                      <h3 className="text-2xl font-bold text-gray-900">{strategy.popupTitle}</h3>
-                      <button 
-                        onClick={closePopup}
-                        className="text-gray-400 hover:text-gray-600 p-2"
-                        aria-label="Close popup"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
+                {strategies
+                  .filter((s) => s.id === activePopup)
+                  .map((strategy) => (
+                    <div key={strategy.id} className="p-6 sm:p-8">
+                      <div className="flex justify-between items-center mb-6">
+                        <h3 className="text-2xl font-bold text-gray-900">
+                          {strategy.popupTitle}
+                        </h3>
+                        <button
+                          onClick={closePopup}
+                          className="text-gray-400 hover:text-gray-600 p-2"
+                          aria-label="Close popup"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M6 18L18 6M6 6l12 12"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                      <div className="prose max-w-none">
+                        {strategy.popupContent
+                          .split("\n\n")
+                          .map((paragraph, index) => (
+                            <p key={index} className="mb-4 text-gray-600">
+                              {paragraph}
+                            </p>
+                          ))}
+                      </div>
+                      <div className="mt-8 text-right">
+                        <button
+                          onClick={closePopup}
+                          className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                        >
+                          Close
+                        </button>
+                      </div>
                     </div>
-                    <div className="prose max-w-none">
-                      {strategy.popupContent.split('\n\n').map((paragraph, index) => (
-                        <p key={index} className="mb-4 text-gray-600">{paragraph}</p>
-                      ))}
-                    </div>
-                    <div className="mt-8 text-right">
-                      <button
-                        onClick={closePopup}
-                        className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-colors"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </motion.div>
             </motion.div>
           )}

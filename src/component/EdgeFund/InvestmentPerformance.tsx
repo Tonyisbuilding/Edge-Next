@@ -107,7 +107,7 @@ const InvestmentPerformance = () => {
           transition={{ duration: 0.3 }}
           className="bg-[#206A7C] text-white px-9 py-4.5 rounded-[40px] font-semibold flex items-center gap-3 shadow-md max-w-md w-full justify-center"
         >
-          <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm">ℹ</span>
+          {/* <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm">ℹ</span> */}
           Receive the information memorandum
         </motion.button>
       </div>

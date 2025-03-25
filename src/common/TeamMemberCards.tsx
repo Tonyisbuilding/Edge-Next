@@ -15,9 +15,9 @@ const TeamCard = ({
 }: teamMemberCardstDataType) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // const handleFlip = () => {
-  //   setIsFlipped(!isFlipped);
-  // };
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
 
   const { pathname } = useLocation();
   console.log(pathname.slice(1), "Location");
@@ -25,7 +25,7 @@ const TeamCard = ({
   return (
     <div
       className="relative w-full h-[22.211rem] md:h-[30.375rem] cursor-pointer"
-      // onClick={handleFlip}
+      onClick={handleFlip}
       // onMouseEnter={() => setIsFlipped(true)}
       // onMouseLeave={() => setIsFlipped(false)}
     >
@@ -56,7 +56,7 @@ const TeamCard = ({
       </motion.div>
 
       <motion.div
-        className={` bg-amber-50 w-full absolute bottom-[0rem] md:bottom-[-2rem] rounded-bl-[1rem] p-5
+        className={` bg-white w-full absolute bottom-[0rem] md:bottom-[-2rem] rounded-bl-[1rem] p-5
        shadow-lg shadow-[#9e9d9d54] text-[#192227] flex items-center justify-between
         ${pathname.slice(1) !== "team" ? "hidden" : "block"}`}
         initial={false}
@@ -75,7 +75,7 @@ const TeamCard = ({
         <button className="flex items-center hover:cursor-pointer"
         onClick={()=> alert('bro')}
         >
-          <h1 className="inter text-[8.15px] md:text-[14px] font-medium text-[#206A7C]">
+          <h1 className="inter text-[14px] md:text-[14px] font-medium text-[#206A7C]">
             About
           </h1>
           <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-left text-[#206A7C]" />
@@ -131,7 +131,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
 
   return (
     <>
-      <div className={`bg-[#EEF4F5] py-[2rem] relative overflow-hidden mt-[5rem]
+      <div className={`bg-[#EEF4F5] py-[2rem] relative overflow-hidden
         `}>
         <div>
           <div>

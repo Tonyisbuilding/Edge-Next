@@ -22,13 +22,13 @@ const OurCharities = () => {
   return (
     <section className="py-12 px-4 md:px-8 bg-gray-100 relative">
       {/* Dotted background pattern */}
-      <div className="absolute inset-0 grid grid-cols-16 md:grid-cols-24 lg:grid-cols-32 grid-rows-12 pointer-events-none">
+      {/* <div className="absolute inset-0 grid grid-cols-16 md:grid-cols-24 lg:grid-cols-32 grid-rows-12 pointer-events-none">
         {Array.from({ length: 384 }).map((_, i) => (
           <div key={i} className="flex items-center justify-center">
             <div className="h-1 w-1 rounded-full bg-teal-300 opacity-30"></div>
           </div>
         ))}
-      </div>
+      </div> */}
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-6">
@@ -50,7 +50,7 @@ const OurCharities = () => {
           {charities.map((charity, index) => (
             <motion.div 
               key={index} 
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white rounded-lg shadow-md overflow-hidden py-[2rem]"
               variants={item}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
@@ -59,7 +59,7 @@ const OurCharities = () => {
                   <img 
                     src={charity.image} 
                     alt={charity.organization}
-                    className="h-16 object-contain"
+                    className="h-30 object-contain"
                   />
                 </div>
                 <div className="text-gray-500 text-sm mb-1">{charity.name}</div>

@@ -123,7 +123,8 @@ const Presentation = () => {
   };
 
   return (
-    <section className="max-w-[1200px] w-[100%] md:w-full mx-auto px-[1rem] my-10 rounded-lg overflow-hidden shadow-lg pb-[1rem]">
+    <section className="max-w-[1200px] w-[100%] md:w-full mx-auto px-[1rem] my-10 
+    rounded-lg overflow-hidden shadow-lg pb-[1rem]">
       <div className="flex flex-col md:flex-row gap-[2rem]">
         {/* Video Section */}
         <div className="relative flex-1 min-h-[250px] sm:min-h-[300px] md:min-h-full md:rounded-lg">
@@ -150,7 +151,7 @@ const Presentation = () => {
           {/* Custom play button overlay - only shown when not playing */}
           {!isPlaying && (
             <div 
-              className="absolute top-0 left-0 w-full h-full bg-black/10 flex justify-center items-center cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer"
               onClick={handlePlayClick}
             >
               <div className="bg-[#206A7C] w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-full flex justify-center
@@ -164,8 +165,9 @@ const Presentation = () => {
         </div>
 
         {/* Content Section */}
-        <div className="flex-1 p-4 sm:p-8 md:p-2">
-          <h2 className="text-2xl sm:text-[26px] md:text-[28px] font-bold text-[#1e293b] mb-4 sm:mb-5 tracking-tight">Secure Your Exclusive Presentation</h2>
+        <div className="flex-1 p-1 sm:p-8 md:p-2">
+          <h2 className="text-2xl sm:text-[26px] md:text-[28px] font-bold text-[#1e293b] 
+          mb-4 sm:mb-5 tracking-tight">Secure Your Exclusive Presentation</h2>
           <p className="text-[#64748b] mb-6 sm:mb-7 md:mb-8 text-[0.95rem] sm:text-base md:text-[1.05rem]">
             Starting a new investment is a significant step! Before you make that decision, it's important to
             get well-informed. Through an online presentation (duration: approximately 30 minutes), we provide

@@ -5,7 +5,7 @@ import "../landingPage/component.css";
 
 const AboutEdgeFund = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-0 py-16 md:py-24 md:mt-[5rem]">
+    <section className="w-full max-w-7xl mx-auto px-0 py-16 md:py-16 md:mt-[5rem] mt-[3rem]">
       <motion.div
         className="flex flex-col md:flex-row gap-8 md:gap-3  overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ const AboutEdgeFund = () => {
             </h2>
             <div className="w-24 h-[1.2px] bg-yellow-400 mb-6"></div>
 
-            <p className="text-gray-800 mb-8 inter font-medium md:text-[20px] text-[11.91px]">
+            <p className="text-gray-800 mb-8 inter font-medium md:text-[20px] text-[14.91px]">
               EdgeFund uses an automated, volatility-driven strategy focused on
               selling options while minimizing risk through delta hedging.
               Futures are used for hedging, with the S&P 500 as the primary
@@ -48,7 +48,7 @@ const AboutEdgeFund = () => {
 
         {/* Image Side */}
         <motion.div
-          className="w-full md:w-1/2 h-64 md:h-auto "
+          className="w-full md:w-1/2 h-64 md:h-auto relative bottom-[1.5rem] md:bottom-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
