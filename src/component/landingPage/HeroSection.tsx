@@ -1,5 +1,6 @@
 import images from "@/constant/images";
 import "./HeroSection.css";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -59,8 +60,22 @@ const HeroSection = () => {
             </ul>
 
             <div className="hero-buttons">
-              <button className="btn btn-primary">Get in Touch</button>
-              <button className="btn btn-secondary">Request Brochure</button>
+              <button className="btn btn-primary">
+                <Link
+                  to="/contact"
+                  className="block "
+                  // onClick={toggleNav}
+                >
+                  Get in Touch
+                </Link>
+              </button>
+              <button className="btn btn-secondary">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
+                target='_blank'
+                >
+                  Request Brochure
+                </a>
+              </button>
             </div>
           </div>
 

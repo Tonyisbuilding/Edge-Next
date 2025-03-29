@@ -7,11 +7,19 @@ import DocumentCardSections from "@/component/EdgeDoc/DocumentCard";
 const EdgeDoc = () => {
   return (
     <>
-      <NavBar />
-      <EdgeDocuments />
-      <DocumentCardSections />
-      <Contact />
-      <Footer />
+      <div
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
+        <DocumentCardSections />
+        <EdgeDocuments />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };

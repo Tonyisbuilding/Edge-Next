@@ -5,6 +5,7 @@ import images from "@/constant/images";
 import "../component/landingPage/component.css";
 import { ChevronRight } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TeamCard = ({
   name,
@@ -36,7 +37,7 @@ const TeamCard = ({
         transition={{ duration: 0.6, ease: "easeInOut" }}
         style={{ backfaceVisibility: "hidden" }}
         onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+        onMouseLeave={() => setIsFlipped(false)}
       >
         <div className="w-full h-full bg-black">
           <img
@@ -72,8 +73,9 @@ const TeamCard = ({
             {position}
           </h1>
         </div>
-        <button className="flex items-center hover:cursor-pointer"
-        onClick={()=> alert('bro')}
+        <button
+          className="flex items-center hover:cursor-pointer"
+          onClick={() => alert("bro")}
         >
           <h1 className="inter text-[14px] md:text-[14px] font-medium text-[#206A7C]">
             About
@@ -89,7 +91,7 @@ const TeamCard = ({
         transition={{ duration: 0.6, ease: "easeInOut" }}
         style={{ backfaceVisibility: "hidden" }}
         onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+        onMouseLeave={() => setIsFlipped(false)}
       >
         <div className="h-full flex flex-col justify-between">
           <div>
@@ -131,8 +133,10 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
 
   return (
     <>
-      <div className={`bg-[#EEF4F5] py-[2rem] relative overflow-hidden
-        `}>
+      <div
+        className={`bg-[#EEF4F5] py-[2rem] relative overflow-hidden
+        `}
+      >
         <div>
           <div>
             <img
@@ -157,12 +161,18 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
           </div>
         </div>
         {/* ........ */}
-        <div className={`w-full max-w-6xl mx-auto px-4  ${pathname.slice(1) === "team" ? "py-0 md:py-5" : "py-12"}`}>
+        <div
+          className={`w-full max-w-6xl mx-auto px-4  ${
+            pathname.slice(1) === "team" ? "py-0 md:py-5" : "py-12"
+          }`}
+        >
           <div
             className={`text-[27.1px] md:[60.23px] inter font-semibold text-left mb-3 text-black
           ${pathname.slice(1) !== "team" ? "hidden" : "block"} inter`}
           >
-            <h1 className=" font-semibold md:text-[60.23px] text-[35.05px]">{department}</h1>
+            <h1 className=" font-semibold md:text-[60.23px] text-[35.05px]">
+              {department}
+            </h1>
             <div className=" bg-[#F9A600] h-[2px] w-[5rem]"></div>
           </div>
           <h2
@@ -178,10 +188,16 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
             ))}
           </div>
 
-          <div className={`flex justify-center mt-10 ${pathname.slice(1) === "team" ? "hidden" : "block"}`}>
-            <button className="bg-[#206A7C] text-white py-3 px-6 rounded-full hover:bg-gray-800 
-            transition-colors duration-300">
-              Meet our entire team
+          <div
+            className={`flex justify-center mt-10 ${
+              pathname.slice(1) === "team" ? "hidden" : "block"
+            }`}
+          >
+            <button
+              className="bg-[#206A7C] text-white py-3 px-6 rounded-full hover:bg-gray-800 
+            transition-colors duration-300"
+            >
+              <Link to='/team'>Meet our entire team</Link>
             </button>
           </div>
         </div>

@@ -7,10 +7,10 @@ const StrategySection = () => {
 
   const strategies = [
     {
-      id: "liquidity-risk",
-      title: "Liquidity Risk",
+      id: "Volatility Risk Premium",
+      title: "Volatility Risk Premium",
       description:
-        "The inability to easily exit a position due to the lack of liquidity of the investment instrument being used. Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers.",
+        "EdgeFund aims to exploit the volatility risk premium in globally developed equity and bond markets by writing call and put options to buyers seeking financial insurance in exchange for a premium. To implement this strategy, EdgeFund will sell put and call options with various strike prices and expiration dates on various equity and bond reference assets, including indices, in globally developed markets.",
       popupTitle: "Volatility Risk Premium",
       popupContent: `The Volatility Risk Premium (VRP) is the compensation that investors demand for providing protection against potential market downturns. 
 
@@ -29,7 +29,7 @@ This approach generates consistent returns with low correlation to traditional a
       id: "interest-rate-arbitrage",
       title: "Interest Rate Arbitrage",
       description:
-        "Identifying interest rate differentials: We identify price differences or discrepancies between interest rates. These differences can arise due to factors such as changes in interest rates, market expectations, or credit conditions.",
+        "Market-neutral interest rate arbitrage is an investment strategy aimed at generating profit by exploiting price inefficiencies between interest rates, while simultaneously minimizing exposure to overall market movements. The goal is to create a position that is not overly influenced by broader market trends, hence the term “market-neutral.",
       popupTitle: "Market-Neutral Swap Arbitrage",
       popupContent: `Our Market-Neutral Swap Arbitrage strategy exploits inefficiencies in the interest rate swap market by identifying and capitalizing on temporary mispricing between related instruments.
 

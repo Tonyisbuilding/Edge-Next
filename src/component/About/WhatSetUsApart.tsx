@@ -107,7 +107,7 @@ const WhatSetsUsApart = () => {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        {/* <div className="mt-12 flex justify-center">
           <motion.button
             className="bg-[#206A7C] text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800
              transition-colors"
@@ -119,7 +119,7 @@ const WhatSetsUsApart = () => {
           >
             Meet our entire team
           </motion.button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

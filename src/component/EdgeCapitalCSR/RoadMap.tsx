@@ -66,10 +66,13 @@ const RoadmapSection = () => {
         <h2 
           id="roadmap-title" 
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 relative
-           inline-block mx-auto text-black"
+            mx-auto text-black flex justify-center underline"
         >
           Our Roadmap
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400 rounded"></div>
+          {/* <div className="w-full"> */}
+
+          {/* <div className="absolute bottom-0 left-0 w-[30%] h-1 bg-yellow-400 rounded mx-auto"></div> */}
+          {/* </div> */}
         </h2>
 
         {/* Timeline container */}

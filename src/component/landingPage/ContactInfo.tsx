@@ -5,7 +5,7 @@ import images from "@/constant/images";
 const ContactInfo = () => {
   return (
     <>
-      <div className="md:p-[5rem] p-[1rem]">
+      <div className="md:p-[5rem] p-[1rem] relative">
         <div className=" bg-white w-[5rem] h-[2.5rem] flex items-center justify-center rounded-3xl">
           <button className=" text-black hover:cursor-pointer text-[1rem]">Contact</button>
         </div>
@@ -18,19 +18,19 @@ const ContactInfo = () => {
             or feedback. We're here to assist you every step of the way.
           </p>
         </div>
-        <div>
+        <div className="">
           <ContactInput
-            placeholder="example.email@edgecapital.com"
+            placeholder="example@gmail.com"
             CTAButton="Subscribe"
             icon={images.landingPage.email}
           />
           <ContactInput
-            placeholder="+00 0000 000 00"
+            placeholder="+31613484484"
             CTAButton="Call Us"
             icon={images.landingPage.email}
           />
           <ContactInput
-            placeholder="Office"
+            placeholder="Walserij 15-I2211 SJ, Noordwijkerhout"
             CTAButton="Get Direction"
             icon={images.landingPage.email}
           />

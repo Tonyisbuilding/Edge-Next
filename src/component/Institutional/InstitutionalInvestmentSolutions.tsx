@@ -45,7 +45,7 @@ const InstitutionalInvestmentSolutions = () => {
           aria-labelledby="direct-fund-title"
         >
           <div className="flex justify-start mb-4">
-            <div className="flex-shrink-0   flex items-center justify-center text-blue-500">
+            <div className="flex-shrink-0   flex items-center justify-center">
               <img
                 src={images.institution.directFundIcon}
                 alt="Research team analyzing market data"

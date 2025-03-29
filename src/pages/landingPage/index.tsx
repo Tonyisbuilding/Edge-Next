@@ -15,22 +15,22 @@ const LandingPage = () => {
   return (
     <>
       <div>
-        <NavBar />
         <div
           style={{
-            maxWidth: "1400px",
+            maxWidth: "1550px",
             margin: "0 auto",
             width: "100%",
           }}
         >
+          <NavBar />
           <HeroSection />
           <EdgeCapital />
           <WhyEdgeCapital />
           <TeamMemberCards teamMembers={theTeamYouCanTrustData} />
           <Presentation />
           <Contact />
-        </div>
         <Footer />
+        </div>
       </div>
     </>
   );

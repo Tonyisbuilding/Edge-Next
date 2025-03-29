@@ -61,6 +61,7 @@ const OpenPositions = () => {
   return (
     <section
       className="w-full max-w-5xl mx-auto px-4 py-12"
+      id='open'
       aria-labelledby="positions-heading"
     >
       <div className="mb-10 text-center">

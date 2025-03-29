@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   // Animation variants
@@ -24,7 +25,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="h-[150vh]">
+    <div className="h-[150vh] ">
       <div className="relative min-h-screen font-sans">
         {/* Background image with overlay */}
         <div
@@ -44,7 +45,7 @@ const HeroSection = () => {
             {/* Hero Section - 40% width on medium+ screens */}
             <motion.div
               className="md:w-2/5 flex flex-col justify-center mt-6 md:mt-0 absolute
-               bottom-[-115vh] right-0 "
+               bottom-[-115vh] right-[3rem] "
               initial="hidden"
               whileInView="visible"
               variants={staggerChildren}
@@ -75,25 +76,28 @@ const HeroSection = () => {
                 </motion.p>
 
                 <motion.button
-                  className="bg-[#192227] hover:bg-teal-800 text-white font-medium 
+                  className="bg-[#192227] hover:bg-[#1922279d] text-white font-medium 
                   py-2 px-6 rounded-md transition duration-300 relative z-10"
                   variants={fadeIn}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Contact us
+                  <Link to="/contact" className="block ">
+                    Contact us
+                  </Link>
                 </motion.button>
-                <div className="blur-sm absolute h-[30%] w-full bg-[#206a7c3a] lg:top-[17rem] top-[14rem] left-0
+                <div
+                  className="blur-sm absolute h-[30%] w-full bg-[#206a7c3a] lg:top-[16rem] top-[13.5rem] left-0
                  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 
-                "></div>
+                "
+                ></div>
               </motion.div>
             </motion.div>
           </div>
-
         </main>
       </div>
       <motion.div
-        className="mt-12 md:mt-16 mb-12 md:w-1/2 mx-[2rem] md:relative absolute md:bottom-[1rem] bottom-[-28rem]"
+        className="md:w-1/2 mx-[2rem]  absolute md:top-[110%] bottom-[-50vh]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.6 }}

@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full bg-[rgba(238,244,245,0.8)] backdrop-blur-md border-b
+      className={`fixed top-0 w-full bg-[#eef4f5cc] backdrop-blur-md border-b
      border-white z-50 ${isScrolled ? "shadow-md" : ""}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
@@ -155,7 +155,7 @@ const Navbar = () => {
                         Edge Connect
                       </Link>
                     </li>
-                    <li className="py-2">
+                    {/* <li className="py-2">
                       <Link
                         to="/edge-impact-fund"
                         className="block text-[#192227]"
@@ -163,7 +163,7 @@ const Navbar = () => {
                       >
                         Edge Impact Fund
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="py-2">
                       <Link
                         to="/edge-cares"
@@ -179,16 +179,16 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Edge Foundation
+                        Edge Horizon Foundation
                       </Link>
                     </li>
                     <li className="py-2">
                       <Link
-                        to="/edge-horizon"
+                        to="/edge-capitla-csr"
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Edge Horizon Foundation
+                        Edge Capital CSR
                       </Link>
                     </li>
                   </ul>
@@ -269,7 +269,7 @@ const Navbar = () => {
                 </a>
               </div>
               <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold w-full">
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
               </button>
             </div>
           </div>
@@ -328,8 +328,10 @@ const Navbar = () => {
               Edge Impact
               <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
             </a>
-            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0
-             invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
+            <ul
+              className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0
+             invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all"
+            >
               <li className="p-3">
                 <Link
                   to="/edge-connect"
@@ -338,14 +340,14 @@ const Navbar = () => {
                   Edge Connect
                 </Link>
               </li>
-              <li className="p-3">
+              {/* <li className="p-3">
                 <Link
                   to="/edge-impact-fund"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
                   Edge Impact Fund
                 </Link>
-              </li>
+              </li> */}
               <li className="p-3">
                 <Link
                   to="/edge-cares"
@@ -359,15 +361,15 @@ const Navbar = () => {
                   to="/edge-foundation"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Edge Foundation
+                  Edge Horizon Foundation
                 </Link>
               </li>
               <li className="p-3">
                 <Link
-                  to="/edge-horizon"
+                  to="/edge-capitla-csr"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Edge Horizon Foundation
+                  Edge Capital CSR
                 </Link>
               </li>
             </ul>
@@ -432,7 +434,7 @@ const Navbar = () => {
             <span className="font-semibold text-black">+31 6 13 484 484</span>
           </div>
           <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold hover:bg-[#0e1417] transition-colors">
-            Contact Us
+            <Link to="/contact">Contact Us</Link>
           </button>
         </div>
 

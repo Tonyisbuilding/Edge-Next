@@ -73,8 +73,9 @@ const JoinTheTeam = () => {
               of tomorrow.
             </motion.p>
             <motion.a
-              href="#positions"
-              className="inline-flex items-center justify-center px-6 py-3 bg-teal-700 text-white rounded-full hover:bg-teal-800 transition-colors duration-300"
+              href="#open"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#206A7C] text-white rounded-full
+               hover:bg-[#1922279d] transition-colors duration-300"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

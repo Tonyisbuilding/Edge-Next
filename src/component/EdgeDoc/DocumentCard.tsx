@@ -9,16 +9,17 @@ interface DocumentItem {
   description: string;
   icon: IconType;
   category: CategoryType;
+  pdf: string;
 }
 
 type CategoryType = "fund" | "bond" | "privacy";
 type IconType =
   | "document"
   | "person"
-  | "building"
-  | "form"
-  | "privacy"
-  | "rights";
+  | "discount_email"
+  | "form_submission"
+  | "security";
+// | "rights";
 type DocumentCategory = "all" | "fund" | "bond" | "privacy";
 
 interface Documents {
@@ -38,6 +39,7 @@ const documents: Documents = {
         "Key investor information document with all the essential details about EdgeFund investment opportunities and risk factors.",
       icon: "document",
       category: "fund",
+      pdf:'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "subscription-natural",
@@ -46,22 +48,25 @@ const documents: Documents = {
         "Complete subscription forms for individual investors looking to participate in EdgeFund opportunities.",
       icon: "person",
       category: "fund",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "subscription-bvs",
       title: "Subscription Forms (BVs)",
       description:
         "Subscription forms for private limited companies (BVs) interested in EdgeFund investment opportunities.",
-      icon: "building",
+      icon: "discount_email",
       category: "fund",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "edgefund-change",
       title: "EdgeFund Change Form",
       description:
         "Update your EdgeFund account details, investment preferences, or personal information with this change form.",
-      icon: "form",
+      icon: "form_submission",
       category: "fund",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "edge-capital-kid",
@@ -70,6 +75,7 @@ const documents: Documents = {
         "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
       icon: "document",
       category: "bond",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "bond-subscription-natural",
@@ -78,30 +84,34 @@ const documents: Documents = {
         "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
       icon: "person",
       category: "bond",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "bond-subscription-bvs",
       title: "Bond Subscription (BVs)",
       description:
         "Subscription forms for private limited companies (BVs) interested in Edge Capital Bond investments.",
-      icon: "building",
+      icon: "discount_email",
       category: "bond",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "privacy-cookies",
       title: "Privacy and Cookies Policy",
       description:
         "Comprehensive overview of how Edge Capital handles your personal data and information privacy.",
-      icon: "privacy",
+      icon: "security",
       category: "privacy",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "data-rights",
       title: "Data and Rights",
       description:
         "Information about your rights regarding your personal data and how to exercise those rights with Edge Capital.",
-      icon: "rights",
+      icon: "discount_email",
       category: "privacy",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
   ],
   fund: [
@@ -112,14 +122,16 @@ const documents: Documents = {
         "Complete subscription forms for individual investors looking to participate in EdgeFund opportunities.",
       icon: "person",
       category: "fund",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "subscription-bvs",
       title: "Subscription Forms (BVs)",
       description:
         "Subscription forms for private limited companies (BVs) interested in EdgeFund investment opportunities.",
-      icon: "building",
+      icon: "discount_email",
       category: "fund",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "edgefund-kid",
@@ -128,14 +140,16 @@ const documents: Documents = {
         "Key investor information document with all the essential details about EdgeFund investment opportunities and risk factors.",
       icon: "document",
       category: "fund",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "edgefund-change",
       title: "EdgeFund Change Form",
       description:
         "Update your EdgeFund account details, investment preferences, or personal information with this change form.",
-      icon: "form",
+      icon: "form_submission",
       category: "fund",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
   ],
   bond: [
@@ -146,14 +160,16 @@ const documents: Documents = {
         "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
       icon: "person",
       category: "bond",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "bond-subscription-bvs",
       title: "Bond Subscription (BVs)",
       description:
         "Subscription forms for private limited companies (BVs) interested in Edge Capital Bond investments.",
-      icon: "building",
+      icon: "discount_email",
       category: "bond",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "edge-capital-kid",
@@ -162,6 +178,7 @@ const documents: Documents = {
         "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
       icon: "document",
       category: "bond",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
   ],
   privacy: [
@@ -170,16 +187,18 @@ const documents: Documents = {
       title: "Privacy and Cookies Policy",
       description:
         "Comprehensive overview of how Edge Capital handles your personal data and information privacy.",
-      icon: "privacy",
+      icon: "security",
       category: "privacy",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
     {
       id: "data-rights",
       title: "Data and Rights",
       description:
         "Information about your rights regarding your personal data and how to exercise those rights with Edge Capital.",
-      icon: "rights",
+      icon: "discount_email",
       category: "privacy",
+      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
     },
   ],
 };
@@ -190,85 +209,63 @@ const Icon = ({ type }: { type: IconType }) => {
     case "document":
       return (
         <div className="bg-amber-100 w-12 h-12 rounded-lg flex items-center justify-center">
-          <svg
-            className="w-6 h-6 text-amber-500"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1v5h5v10H6V3h7z" />
-          </svg>
+          {/* <div className="flex-shrink-0   flex items-center justify-center"> */}
+          <img
+            src={images.edgeDoc.document}
+            alt="Research team analyzing market data"
+            className="w-full h-full object-cover"
+          />
+          {/* </div> */}
         </div>
       );
     case "person":
       return (
         <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center">
-          <svg
-            className="w-6 h-6 text-purple-500"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-          </svg>
+          <img
+            src={images.edgeDoc.person}
+            alt="Research team analyzing market data"
+            className="w-full h-full object-cover"
+          />
         </div>
       );
-    case "building":
+    case "discount_email":
       return (
         <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center">
-          <svg
-            className="w-6 h-6 text-blue-500"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
-          </svg>
+           <img
+            src={images.edgeDoc.discount_email}
+            alt="Research team analyzing market data"
+            className="w-full h-full object-cover"
+          />
         </div>
       );
-    case "form":
+    case "form_submission":
       return (
         <div className="bg-teal-100 w-12 h-12 rounded-lg flex items-center justify-center">
-          <svg
-            className="w-6 h-6 text-teal-500"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2v-2h2v2zm0-4h-2V7h2v6z" />
-          </svg>
+          <img
+            src={images.edgeDoc.form_submission}
+            alt="Research team analyzing market data"
+            className="w-full h-full object-cover"
+          />
         </div>
       );
-    case "privacy":
+    case "security":
       return (
         <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center">
-          <svg
-            className="w-6 h-6 text-emerald-500"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
-          </svg>
-        </div>
-      );
-    case "rights":
-      return (
-        <div className="bg-amber-100 w-12 h-12 rounded-lg flex items-center justify-center">
-          <svg
-            className="w-6 h-6 text-amber-500"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
+          <img
+            src={images.edgeDoc.security}
+            alt="Research team analyzing market data"
+            className="w-full h-full object-cover"
+          />
         </div>
       );
     default:
       return (
         <div className="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center">
-          <svg
-            className="w-6 h-6 text-gray-500"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
-          </svg>
+          <img
+            src={images.edgeDoc.document}
+            alt="Research team analyzing market data"
+            className="w-full h-full object-cover"
+          />
         </div>
       );
   }
@@ -278,40 +275,42 @@ const Icon = ({ type }: { type: IconType }) => {
 const DocumentCard = ({ document }: { document: DocumentItem }) => {
   return (
     <motion.div
-      className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4 lg:h-[13rem]"
+      className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4 lg:h-[19rem] reltaive"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex-shrink-0">
-          <Icon type={document.icon} />
-        </div>
+      <div className="flex-shrink-0">
+        <Icon type={document.icon} />
+      </div>
+      <div className="flex flex-col md:flex-row gap-4 mt-5">
         <div className="flex-grow">
           <h3 className="text-lg font-medium text-gray-900 mb-1">
             {document.title}
           </h3>
           <p className="text-sm text-gray-600 mb-4">{document.description}</p>
-          <div className="flex justify-between items-center">
-            <span className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded">
-              PDF
-            </span>
-            <button
-              className="flex items-center text-sm text-gray-700 hover:text-blue-600"
-              aria-label={`Download ${document.title}`}
-            >
-              <div className="flex-shrink-0  flex items-center justify-center">
-                <img
-                  src={images.form.download}
-                  alt="Research team analyzing market data"
-                  className="w-full h-full object-cover"
-                />
-              </div>{" "}
-              &nbsp; Download
-            </button>
-          </div>
         </div>
+      </div>
+      <div className="flex justify-between items-center relative md:top-[20%]">
+        <span className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded">
+          PDF
+        </span>
+        <a
+         href={document.pdf} target="_blank"
+          className="flex items-center text-sm text-gray-700 hover:text-blue-600"
+          aria-label={`Download ${document.title}`}
+        >
+          {/* <a href=""></a> */}
+          <div className="flex-shrink-0  flex items-center justify-center">
+            <img
+              src={images.form.download}
+              alt="Research team analyzing market data"
+              className="w-full h-full object-cover"
+            />
+          </div>{" "}
+          &nbsp; Download
+        </a>
       </div>
     </motion.div>
   );
@@ -330,7 +329,7 @@ const DocumentCardSections = () => {
 
   return (
     <section
-      className="py-8 px-4 max-w-7xl mx-auto"
+      className="py-8 w-screen px-4 md:px-[5rem] bg-white"
       aria-labelledby="documents-heading"
     >
       <h2 id="documents-heading" className="sr-only">
@@ -338,15 +337,15 @@ const DocumentCardSections = () => {
       </h2>
 
       {/* Tabs */}
-      <div className="flex overflow-x-auto pb-4 mb-6 scrollbar-hide w-full">
-        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg w-full">
+      <div className="flex overflow-x-scroll md:overflow-x-auto pb-4 mb-6 scrollbar-hide w-full">
+        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg md:w-full w-[150%]">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-2 text-sm font-medium rounded-md transition-colors w-[25%] ${
                 activeTab === tab.id
-                  ? "bg-white shadow-sm text-gray-900"
+                  ? "bg-white shadow-md text-gray-900"
                   : "text-gray-500 hover:text-gray-900"
               }`}
               aria-current={activeTab === tab.id ? "page" : undefined}

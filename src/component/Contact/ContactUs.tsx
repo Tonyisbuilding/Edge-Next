@@ -116,8 +116,8 @@ const ContactInformation = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto my-12 px-4 md:px-0 relative">
-      <div className="flex flex-col md:flex-row rounded-[25px] overflow-hidden shadow-lg relative lg:top-[-5rem]">
+    <section className="max-w-6xl mx-auto my-12 px-1 md:px-0 relative">
+      <div className="flex flex-col md:flex-row rounded-[25px] overflow-hidden shadow-lg relative top-[-5rem] ">
         {/* Contact Information Panel */}
         <motion.div
           className="bg-gradient-to-br from-[#206D80] from-20%  to-[#219EB2] to-50% text-white p-8 md:w-1/2"

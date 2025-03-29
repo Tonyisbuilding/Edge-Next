@@ -8,12 +8,20 @@ import Footer from "@/common/Footer";
 const Careers = () => {
   return (
     <>
-      <NavBar />
-      <JoinTheTeam />
-      <WhyWorkWithUs />
-      <OpenPositions />
-      <Contact />
-      <Footer />
+      <div
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
+        <JoinTheTeam />
+        <WhyWorkWithUs />
+        <OpenPositions />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };

@@ -12,16 +12,24 @@ import InvestmentPerformance from "@/component/EdgeFund/InvestmentPerformance";
 const EdgeFund = () => {
   return (
     <>
-      <NavBar />
-      <AboutEdgeFund />
-      <Target />
-      <WhatSetsUsApart />
-      <StrategySection />
-      <Feature />
-      <FundCostStructure />
-      <InvestmentPerformance />
-      <Contact />
-      <Footer />
+      <div
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
+        <AboutEdgeFund />
+        <Target />
+        <WhatSetsUsApart />
+        <StrategySection />
+        <Feature />
+        <FundCostStructure />
+        <InvestmentPerformance />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };

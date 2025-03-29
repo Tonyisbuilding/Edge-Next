@@ -69,7 +69,7 @@ const TradingApproachSection = () => {
   ];
 
   return (
-    <div className="bg-[#206A7C] min-h-screen py-12 px-4 sm:px-6 lg:px-8 rounded-[20px]">
+    <div className="bg-[#206A7C] min-h-screen py-12 px-4 sm:px-6 lg:px-8 rounded-[20px] relative">
       <div className="max-w-7xl mx-auto">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}

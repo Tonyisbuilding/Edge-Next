@@ -76,15 +76,17 @@ export const theTeamYouCanTrustData: teamMemberCardstDataType[] = [
   {
     name: "Teagan de Groot",
     position: "Partner and Board of Directors",
-    bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
-    linkedin: "https://linkedin.com/in/teagandegroot",
+    bio: `Teagan de Groot has been the director of Edge Capital since 2021.
+Teagan has years of experience in investing, as an active trader he has been involved in developing successful trading strategies. In addition, Teagan has held various management positions, and his typical helicopter view makes him extremely suitable to take on the daily management of the company.`,
+    linkedin: "https://www.linkedin.com/in/teagan-de-groot-9b512616a/",
     image: images.landingPage.teagan,
   },
   {
     name: "Paul Lamain",
     position: "Founder and Board of Directors",
-    bio: "Paul brings creative vision to our projects with his expertise in UI/UX design and brand development.",
-    linkedin: "https://linkedin.com/in/paullamain",
+    bio: `Paul Lamain is the founder of Edge Capital.
+Before founding Edge Capital, he worked at several renowned companies, including a large online broker with global operations and a European institutional asset manager, where he gained valuable knowledge and experience. Alongside Teagan, Paul is responsible for Edge Capital's policies and is closely involved in all aspects of the company.`,
+    linkedin: "https://www.linkedin.com/in/paul-lamain-72a079135/",
     image: images.landingPage.paul,
   },
 ];
@@ -98,27 +100,27 @@ export const timelineData: timelineDataType[] = [
   {
     year: "2016",
     content:
-      "The company expands its client base across Europe, introducing new algorithmic trading solutions that enhance market efficiency.",
+      "Tradealot B.V. launched a low-cost trading platform and completed a fully subscribed bond issuance in 83 days, aiming to disrupt major brokerages.",
   },
   {
     year: "2019",
     content:
-      "Launch of proprietary risk management platform, allowing institutional investors to optimize portfolios with quantitative methods.",
+      "In partnership with JFD Bank, Tradealot becomes the first entity in the Netherlands to introduce free stock trading, allowing investors to trade physical shares without transaction costs.",
   },
   {
     year: "2022",
     content:
-      "Strategic partnership with major financial institutions to implement AI-driven market analysis tools across global markets.",
+      "Tradealot expands its offerings by launching Tradealot EdgeFund, its first AFM-registered investment fund. Additionally, it initiates Tradealot Bond Issuance III, further strengthening its financial product lineup.",
   },
   {
     year: "2023",
     content:
-      "Acquisition of DataTech Solutions, strengthening the company's position in data analytics and financial technology integration.",
+      "Tradealot rebrands as Edge Capital, a name that better reflects its mission and vision. The new identity aligns with the company’s goal of empowering investors—true to its motto: Investing with an edge!",
   },
   {
     year: "Future",
     content:
-      "Planned global expansion with innovative blockchain-based solutions for decentralized finance and institutional cryptocurrency adoption.",
+      "Edge Capital remains committed to innovation and growth. In 2024, the company will focus on obtaining a full AFM license, enabling it to serve a broader audience and compete more effectively in the investment industry.",
   },
 ];
 
@@ -126,30 +128,34 @@ export const teamMembers: teamMemberCardstDataType[] = [
   {
     name: "Teagan de Groot",
     position: "Partner and Board of Directors",
-    bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
-    linkedin: "https://linkedin.com/in/teagandegroot",
+    bio: `Teagan de Groot has been the director of Edge Capital since 2021.
+Teagan has years of experience in investing, as an active trader he has been involved in developing successful trading strategies. In addition, Teagan has held various management positions, and his typical helicopter view makes him extremely suitable to take on the daily management of the company.`,
+    linkedin: "https://www.linkedin.com/in/teagan-de-groot-9b512616a/",
     image: images.landingPage.teagan,
   },
   {
     name: "Paul Lamain",
     position: "Founder and Board of Directors",
-    bio: "Paul brings creative vision to our projects with his expertise in UI/UX design and brand development.",
-    linkedin: "https://linkedin.com/in/paullamain",
+    bio:  `Paul Lamain is the founder of Edge Capital.
+Before founding Edge Capital, he worked at several renowned companies, including a large online broker with global operations and a European institutional asset manager, where he gained valuable knowledge and experience. Alongside Teagan, Paul is responsible for Edge Capital's policies and is closely involved in all aspects of the company.`,
+    linkedin: "https://www.linkedin.com/in/paul-lamain-72a079135/",
     image: images.landingPage.paul,
   },
 ];
 export const advisoryBoard: teamMemberCardstDataType[] = [
   {
     name: "Henk van der Heijden",
-    position: "Partner and Board of Directors",
-    bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
-    linkedin: "https://linkedin.com/in/teagandegroot",
+    position: "Advisor and Chairman of the Trust Bonds Foundation Edge Capital",
+    bio: `Henk van der Heijden has over 30 years of experience in (project) management, with the last 14 years spent at ASML in Veldhoven. He holds a bachelor's degree in Computer Science from Fontys University of Applied Sciences and an Executive Master of Business Administration (MBA) in Strategic Change Management from Maastricht University.
+His interests mainly lie in the crypto domain and investing in and mentoring startups. He has been an investor in the company since 2017, taking on the role of Chairman of the Trust Bonds Foundation Edge Capital since August 2022 and the role of advisor since March 2023.`,
+    linkedin: "https://www.linkedin.com/in/mvandrunen/",
     image: images.landingPage.Henk,
   },
   {
     name: "Michiel van Drunen",
-    position: "Partner and Board of Directors",
-    bio: "Paul brings creative vision to our projects with his expertise in UI/UX design and brand development.",
+    position: "Member of the Advisory Board",
+    bio: `Since 2024, Michiel van Drunen has been a member of the Advisory Board of Edge Capital.
+He has been active in the financial (securities) world since 1988 and has extensive experience as an entrepreneur. He serves on the advisory boards of various companies across different industries and holds several executive positions. He is also involved in various charitable organizations, including serving as a fundraiser for the FoodBank.`,
     linkedin: "https://linkedin.com/in/paullamain",
     image: images.landingPage.Michiel,
   },
@@ -158,7 +164,7 @@ export const SupportAndCommercial: teamMemberCardstDataType[] = [
   {
     name: "Brahim Bouzerrade",
     position: "Business Development Manager",
-    bio: "With over 10 years of experience in software development, Teagan leads our technical strategy and innovation initiatives.",
+    bio: `Brahim is responsible for identifying, developing, and realizing growth opportunities for the company. His focus is on expanding the customer base and developing strategic partnerships. With years of experience, Brahim is regarded as a seasoned sales professional within our team.`,
     linkedin: "https://linkedin.com/in/teagandegroot",
     image: images.landingPage.Brahim,
   },

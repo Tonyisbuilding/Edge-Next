@@ -30,7 +30,7 @@ const ReachOut = () => {
           >
             <motion.h2
               id="contact-heading"
-              className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
+              className="text-[19.47px] md:text-4xl font-bold mb-4 leading-tight text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -39,7 +39,7 @@ const ReachOut = () => {
             </motion.h2>
 
             <motion.p
-              className="text-base md:text-lg opacity-90 leading-relaxed"
+              className="text-[8.76px] md:text-lg opacity-90 leading-relaxed mx-[1.5rem] md:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -52,7 +52,7 @@ const ReachOut = () => {
 
           {/* Email icon/graphic */}
           <motion.div
-            className="w-32 md:w-64 lg:w-72 flex-shrink-0"
+            className="w-[18rem] md:w-64 lg:w-72 flex-shrink-0 mx-auto"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{

@@ -7,13 +7,20 @@ import ContactInformation from "@/component/Contact/ContactUs";
 const ContactPage = () => {
   return (
     <>
-      <NavBar />
-      <div className="relative">
+      <div
+        className="relative"
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
         <ReachOut />
         <ContactInformation />
+        <Contact />
+        <Footer />
       </div>
-      <Contact />
-      <Footer />
     </>
   );
 };
