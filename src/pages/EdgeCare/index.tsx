@@ -1,20 +1,23 @@
 import NavBar from "@/common/NavBar";
-import Contact from "@/component/landingPage/Contact";
 import Footer from "@/common/Footer";
-import EdgeCareHero from "@/component/EdgeCare/EdgeCareHero";
-import OurCoreValues from "@/component/EdgeCare/OurCoreValue";
-import RoadmapSection from "@/component/EdgeCare/RoadMap";
-
+import Contact from "@/component/landingPage/Contact";
+import EdgeCareSection from "@/component/EdgeCare/EdgeCareSection";
 
 const EdgeCare = () => {
   return (
     <>
-      <NavBar />
-      <EdgeCareHero />
-      <OurCoreValues />
-      <RoadmapSection />
-      <Contact />
-      <Footer />
+      <div
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
+        <EdgeCareSection />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };

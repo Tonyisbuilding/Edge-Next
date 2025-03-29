@@ -11,13 +11,21 @@ import { teamMembers } from "@/constant/data";
 const About = () => {
   return (
     <>
-      <NavBar />
-      <EdgeCapitalHero />
-      <WhatSetsUsApart />
-      <CompanyTimeline />
-      <TeamMemberCards teamMembers={teamMembers} />
-      <Contact />
+      <div
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
+        <EdgeCapitalHero />
+        <WhatSetsUsApart />
+        <CompanyTimeline />
+        <TeamMemberCards teamMembers={teamMembers} />
+        <Contact />
       <Footer />
+      </div>
       {/* <EdgeCapitalFooter /> */}
     </>
   );

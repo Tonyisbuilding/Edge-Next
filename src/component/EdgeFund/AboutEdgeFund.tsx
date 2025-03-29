@@ -19,7 +19,7 @@ const AboutEdgeFund = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <h2 className="text-3xl font-semibold md:text-[30px] text-[17.86px] text-gray-900 mb-4">
+            <h2 className="text-3xl font-semibold md:text-[35px] text-[20.86px] text-gray-900 mb-4">
               About Edge Fund
             </h2>
             <div className="w-24 h-[1.2px] bg-yellow-400 mb-6"></div>
@@ -41,7 +41,11 @@ const AboutEdgeFund = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              Participate
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_hr7H_50tSS2s_Zu-9SwUxFuBNhVKNv3Qcsq03gpWyVaZCw/viewform?usp=header"
+              target="_blank"
+              >
+                Participate
+              </a>
             </motion.button>
           </motion.div>
         </div>

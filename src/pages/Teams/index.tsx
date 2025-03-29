@@ -11,8 +11,15 @@ import Footer from "@/common/Footer";
 const Teams = () => {
   return (
     <>
-      <NavBar />
-      <div className="bg-[#EEF4F5] pt-[5rem]">
+      <div
+        className="bg-[#EEF4F5] pt-[5rem]"
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
         <TeamMemberCards teamMembers={teamMembers} department={"Management"} />
         <TeamMemberCards
           teamMembers={advisoryBoard}
@@ -22,9 +29,9 @@ const Teams = () => {
           teamMembers={SupportAndCommercial}
           department={"Support and commercial"}
         />
+        <Contact />
+        <Footer />
       </div>
-      <Contact />
-      <Footer />
     </>
   );
 };

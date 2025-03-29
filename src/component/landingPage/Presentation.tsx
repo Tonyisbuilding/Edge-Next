@@ -124,8 +124,8 @@ const Presentation = () => {
 
   return (
     <section className="max-w-[1200px] w-[100%] md:w-full mx-auto px-[1rem] my-10 
-    rounded-lg overflow-hidden shadow-lg pb-[1rem]">
-      <div className="flex flex-col md:flex-row gap-[2rem]">
+    rounded-lg overflow-hidden  pb-[1rem]">
+      <div className="flex flex-col md:flex-row gap-[2rem] justify-center">
         {/* Video Section */}
         <div className="relative flex-1 min-h-[250px] sm:min-h-[300px] md:min-h-full md:rounded-lg">
           <video

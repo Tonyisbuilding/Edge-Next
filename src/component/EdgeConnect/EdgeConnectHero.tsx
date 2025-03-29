@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
+import { Link } from "react-router-dom";
 
 const EdgeConnectHero = () => {
   // Animation variants
@@ -54,7 +55,7 @@ const EdgeConnectHero = () => {
           </motion.h2>
 
           <motion.div className="mb-8" variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-2">Earn & Give Back</h3>
+            <h3 className="text-xl font-bold mb-2 text-black">Earn & Give Back</h3>
             <p className="text-gray-700">
               We reward you for introducing new clients. Keep your reward or
               donate part (or all) to a charity selected by our team—making an
@@ -70,7 +71,9 @@ const EdgeConnectHero = () => {
             whileTap="tap"
             aria-label="Speak to our team about the Edge Connect program"
           >
+            <Link to="/team" className="block ">
             Speak to our team
+              </Link>
           </motion.button>
         </motion.div>
 

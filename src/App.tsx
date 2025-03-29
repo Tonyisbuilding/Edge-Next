@@ -6,11 +6,13 @@ import About from "./pages/About";
 import Teams from "./pages/Teams";
 import EdgeFund from "./pages/EdgeFund";
 import EdgeConnect from "./pages/EdgeConnect";
-import EdgeCare from "./pages/EdgeCare";
+import EdgeCapitalCSR from "./pages/EdgeCapitalCSR";
 import Institutional from "./pages/Institutional";
 import Careers from "./pages/Careers";
 import EdgeDoc from "./pages/EdgeDoc";
 import ContactPage from "./pages/Contact";
+import EdgeHorizon from "./pages/EdgeHorizon";
+import EdgeCare from "./pages/EdgeCare";
 
 
 
@@ -27,11 +29,13 @@ function App(): JSX.Element {
         <Route path="/team" element={<Teams />} />
         <Route path="/edge-fund" element={<EdgeFund />} />
         <Route path="/edge-connect" element={<EdgeConnect />} />
-        <Route path="/edge-cares" element={<EdgeCare />} />
+        <Route path="/edge-capitla-csr" element={<EdgeCapitalCSR />} />
         <Route path="/institutional" element={<Institutional />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/documents" element={<EdgeDoc />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/edge-foundation" element={<EdgeHorizon />} />
+        <Route path="/edge-cares" element={<EdgeCare />} />
       </Routes>
     </>
   );

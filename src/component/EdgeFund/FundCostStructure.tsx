@@ -207,7 +207,11 @@ const FundCostStructure = () => {
                   <button
                     className={`mt-4 w-full py-3 px-4 rounded-md text-white font-medium ${fundClass.buttonClass} transition-colors duration-300`}
                   >
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
+                    target="_blank"
+                    >
                     {fundClass.buttonText}
+                    </a>
                   </button>
 
                   <div className="mt-6 space-y-3">
@@ -278,9 +282,9 @@ const FundCostStructure = () => {
             initial="hidden"
             whileInView={"visible"}
             variants={noteVariants}
-            className="bg-white rounded-lg shadow-sm p-6 flex items-start space-x-4 mt-8"
+            className="bg-white rounded-lg shadow-sm p-6 flex items-start space-x-4 mt-8 "
           >
-            <div className="flex-shrink-0 w-10 h-10 bg-teal-50 rounded-full flex 
+            <div className="flex-shrink-0 w-10 h-10  rounded-full flex 
             items-center justify-center relative top-[5rem] md:top-[.5rem]">
               <svg
                 className="w-6 h-6 text-teal-600"
@@ -306,12 +310,12 @@ const FundCostStructure = () => {
                 Watermark principle
               </p>
             </div>
-            <button className="text-[#002731] hover:text-[#002731c0] font-medium transition-colors
+          </motion.div>
+            {/* <button className="text-[#002731] hover:text-[#002731c0] font-medium transition-colors
              duration-300 shadow-sm rounded-md p-3 flex items-center justify-center relative top-[5rem] 
              md:top-[.4rem]">
               Learn more
-            </button>
-          </motion.div>
+            </button> */}
         </motion.div>
       </div>
     </div>

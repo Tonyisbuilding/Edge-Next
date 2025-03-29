@@ -5,6 +5,7 @@ import { timelineData } from "@/constant/data";
 
 
 
+
 const CompanyTimeline = () => {
   
 
@@ -47,7 +48,7 @@ const CompanyTimeline = () => {
         <div className="relative flex items-center mb-16">
           <button 
             onClick={handlePrevYear}
-            className="absolute left-0 bg-teal-700 text-white p-2 rounded-md hover:bg-teal-800 transition-colors z-10"
+            className="absolute left-0 bg-[#206A7C] text-white p-2 rounded-md hover:bg-teal-800 transition-colors z-10"
             aria-label="Previous year"
           >
             <ChevronLeft size={20} />
@@ -56,7 +57,7 @@ const CompanyTimeline = () => {
           <div className="w-full overflow-hidden mx-10">
             <div className="relative">
               {/* Timeline Bar */}
-              <div className="h-1 bg-teal-700 w-full absolute top-1/2 -translate-y-1/2"></div>
+              <div className="h-1 bg-[#206A7C] w-full absolute top-1/2 -translate-y-1/2"></div>
               
               {/* Year Markers */}
               <div className="flex justify-between relative  mb-[1rem]">
@@ -66,7 +67,7 @@ const CompanyTimeline = () => {
                       onClick={() => handleYearClick(index)}
                       className={`relative z-10 transition-all duration-300 ${
                         index === activeYear 
-                          ? "text-teal-700 font-bold" 
+                          ? "text-[#206A7C] font-bold" 
                           : "text-gray-500 hover:text-teal-600"
                       }`}
                     >
@@ -89,7 +90,7 @@ const CompanyTimeline = () => {
           
           <button 
             onClick={handleNextYear}
-            className="absolute right-0 bg-teal-700 text-white p-2 rounded-md hover:bg-teal-800 transition-colors z-10"
+            className="absolute right-0 bg-[#206A7C] text-white p-2 rounded-md hover:bg-teal-800 transition-colors z-10"
             aria-label="Next year"
           >
             <ChevronRight size={20} />
@@ -101,7 +102,7 @@ const CompanyTimeline = () => {
           <AnimatePresence mode="wait">
             <motion.h3
               key={`year-${activeYear}`}
-              className="text-3xl font-bold text-teal-700 mb-6"
+              className="text-3xl font-bold text-[#206A7C] mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

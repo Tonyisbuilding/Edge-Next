@@ -90,7 +90,7 @@ const GetStartedSection = () => {
           
           {/* Right column - Cards */}
           <div className="w-1/2">
-            <div className="relative h-64">
+            <div className="relative h-[30rem] max-w-[37rem] w-[30rem] right-[-20%]">
               <AnimatePresence custom={slideDirection} initial={false}>
                 <motion.div
                   key={currentIndex}
@@ -103,11 +103,11 @@ const GetStartedSection = () => {
                     x: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.2 }
                   }}
-                  className="absolute w-full bg-white p-8 rounded-xl shadow-lg h-full"
+                  className="absolute w-full bg-white p-8 rounded-xl shadow-lg h-full border-2 border-[#E5E7EB]"
                 >
-                  <div className="text-4xl font-bold mb-4 text-black">{steps[currentIndex].number}</div>
-                  <h3 className="text-2xl font-bold mb-4 text-black">{steps[currentIndex].title}</h3>
-                  <p className="text-gray-600">{steps[currentIndex].content}</p>
+                  <div className="text-[78px] font-bold mb-4 text-black">{steps[currentIndex].number}</div>
+                  <h3 className="text-[35px] font-bold mb-4 text-black">{steps[currentIndex].title}</h3>
+                  <p className="text-gray-600 text-[25px]">{steps[currentIndex].content}</p>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -118,7 +118,7 @@ const GetStartedSection = () => {
         <div className="md:hidden">
           {/* Top section - Title and navigation */}
           <div className="mb-6">
-            <h2 className="text-3xl font-bold text-gray-800">How to Get Started</h2>
+            <h2 className="text-3xl lg:text-[60px] font-bold text-[#001B20]">How to Get Started</h2>
             <p className="text-lg text-gray-600 mt-1">Refer, earn and impact in three simple steps</p>
             
             <div className="flex items-center mt-4">
@@ -155,9 +155,9 @@ const GetStartedSection = () => {
                 }}
                 className="absolute w-full bg-white p-6 rounded-xl shadow-lg h-full"
               >
-                <div className="text-3xl font-bold mb-2">{steps[currentIndex].number}</div>
-                <h3 className="text-xl font-bold mb-3">{steps[currentIndex].title}</h3>
-                <p className="text-gray-600">{steps[currentIndex].content}</p>
+                <div className="text-3xl font-bold mb-2 text-black">{steps[currentIndex].number}</div>
+                <h3 className="text-xl font-bold mb-3 text-black">{steps[currentIndex].title}</h3>
+                <p className="text-gray-600 ">{steps[currentIndex].content}</p>
               </motion.div>
             </AnimatePresence>
           </div>

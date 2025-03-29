@@ -10,17 +10,23 @@ import InstitutionalInvestmentSolutions from "@/component/Institutional/Institut
 const Institutional = () => {
   return (
     <>
-    <div className="bg-white">
-
-      <NavBar />
+      <div
+        className="bg-white"
+        style={{
+          maxWidth: "1550px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <NavBar />
         <HeroSection />
         <ResearchDevelopmentSection />
         <PrinciplesSection />
         <TradingApproachSection />
         <InstitutionalInvestmentSolutions />
-      <Contact />
-      <Footer />
-    </div>
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };

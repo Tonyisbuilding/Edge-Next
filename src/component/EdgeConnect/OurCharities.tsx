@@ -50,23 +50,23 @@ const OurCharities = () => {
           {charities.map((charity, index) => (
             <motion.div 
               key={index} 
-              className="bg-white rounded-lg shadow-md overflow-hidden py-[2rem]"
+              className="bg-white rounded-lg shadow-md overflow-hidden py-[2rem] lg:h-[24.5rem]"
               variants={item}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
               <div className="p-6">
-                <div className="h-20 flex items-center justify-center mb-4">
+                <div className="h-20 flex items-center justify-center mb-[25%]">
                   <img 
                     src={charity.image} 
                     alt={charity.organization}
                     className="h-30 object-contain"
                   />
                 </div>
-                <div className="text-gray-500 text-sm mb-1">{charity.name}</div>
-                <div className={`font-medium mb-2 ${charity.organizationColor}`}>
+                <div className="text-gray-500 text-sm mb-1 md:text-[16px]">{charity.name}</div>
+                <div className={`font-bold mb-2 ${charity.organizationColor} md:text-[14px] mb-5`}>
                   {charity.organization}
                 </div>
-                <p className="text-gray-800">
+                <p className="text-gray-800 md:text-[22px]">
                   {charity.description}
                 </p>
               </div>
