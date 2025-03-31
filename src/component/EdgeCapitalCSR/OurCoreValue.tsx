@@ -8,31 +8,31 @@ const values = [
     {
       title: "Sustainability",
       icon: <Recycle size={32} className='text-[#192227]' />,
-      description: "The inability to easily exit a position due to the lack of liquidity of the investment instrument being used.",
+      description: "We integrate sustainable practices into all our processes and strive to minimize our ecological footprint. We invest in projects and initiatives that contribute to a greener future.",
       measures: "Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers."
     },
     {
       title: "Transparency",
       icon: <BookOpen size={32} className='text-[#192227]' />,
-      description: "The risk of your order not being fully or not executed at all due to a technical issue.",
+      description: "We believe in open communication about our activities and impact. We regularly report on our progress and the outcomes of our CSR initiatives to keep our stakeholders well-informed.",
       measures: "Measures: Automated risk management scenarios, 24/7 human monitoring, backups, testing periods."
     },
     {
       title: "Social Impact",
       icon: <Users size={32} className='text-[#192227]' />,
-      description: "The probability that a particular exchange will not be able to make the required payments for their debt obligations.",
+      description: "We are determined to make a positive contribution to the communities in which we operate. Through our Edge Impact label and initiatives, such as Edge Cares (mid-2025) and the Edge Horizon Foundation (2026), we support charities and projects that create impact both locally and globally.",
       measures: "Measures: Diversification across the largest and safest exchanges."
     },
     {
       title: "Innovation",
       icon: <Rocket size={32} className='text-[#192227]' />,
-      description: "The probability that a particular exchange will not be able to make the required payments for their debt obligations.",
+      description: "We embrace innovation as a means to develop sustainable solutions and enhance our impact. By utilizing advanced technologies and methods, we improve our processes and the services we provide to our clients.",
       measures: "Measures: Diversification across the largest and safest exchanges."
     },
     {
       title: "Ethical Practices",
       icon: <Shield size={32} className='text-[#192227]' />,
-      description: "The probability that a particular exchange will not be able to make the required payments for their debt obligations.",
+      description: "We conduct our operations with integrity and respect the rights of everyone affected by our activities. We promote fair working conditions and diversity within our organization and in our business relationships",
       measures: "Measures: Diversification across the largest and safest exchanges."
     }
   ];
@@ -99,7 +99,7 @@ const values = [
               <p className="text-[#1A1A1A] mb-4">
                 {value.description}
               </p>
-              <p className="text-[#1A1A1A] text-sm">
+              <p className="text-[#1A1A1A] text-sm hidden">
                 {value.measures}
               </p>
             </motion.div>
