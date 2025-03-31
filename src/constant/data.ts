@@ -42,8 +42,8 @@ export const whyEdgeCapitalData: whyEdgeCapitalType[] = [
   },
   {
     icon: images.landingPage.profit,
-    title: "Stable and Profitable",
-    desc: "We ensure stability through a market-neutral approach, minimizing volatility with advanced algorithms. Our goal is to provide above-average returns while maintaining acceptable risk. Your investments grow steadily with us.",
+    title: "Diversified and Risk-Conscious",
+    desc: "We employ a diversified strategy across multiple asset classes, ensuring risk-adjusted returns. By actively managing risk exposure, we create a balanced portfolio designed for steady, long-term growth.",
     id: 2,
   },
   {
@@ -60,8 +60,8 @@ export const whyEdgeCapitalData: whyEdgeCapitalType[] = [
   },
   {
     icon: images.landingPage.profit,
-    title: "Reliability First",
-    desc: "Trust is our priority. We uphold strict agreements and work with external advisors to refine our methods. This ensures accountability, transparency, and long-term relationships built on reliability.",
+    title: "Technology-Driven Edge",
+    desc: "Harnessing the power of data science and automation, we optimize trading decisions with precision. Our proprietary algorithms and AI-driven insights keep us ahead in dynamic market conditions.",
     id: 5,
   },
   {

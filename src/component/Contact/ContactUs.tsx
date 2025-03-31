@@ -145,7 +145,7 @@ const ContactInformation = () => {
               </div>
               <div>
                 <p className="text-sm text-teal-100">Call Us</p>
-                <p className="font-bold">01 89 70 82 98</p>
+                <p className="font-bold">+31613484484</p>
               </div>
             </motion.div>
 
@@ -155,7 +155,7 @@ const ContactInformation = () => {
               </div>
               <div>
                 <p className="text-sm text-teal-100">Email Us</p>
-                <p className="font-bold">contact@yourcompany.com</p>
+                <p className="font-bold">info@edge-capital.nl</p>
               </div>
             </motion.div>
 
@@ -166,7 +166,7 @@ const ContactInformation = () => {
               <div>
                 <p className="text-sm text-teal-100">Visit</p>
                 <p className="font-bold">
-                  123 Business Ave, Suits 100, Netherland
+                Walserij 15-I2211 SJ, Noordwijkerhout
                 </p>
               </div>
             </motion.div>

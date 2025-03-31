@@ -126,7 +126,7 @@ const HowDoesItWork = () => {
 
         {/* Cards Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 relative"
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -138,7 +138,7 @@ const HowDoesItWork = () => {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="bg-[#F3F4F6] rounded-lg p-6 shadow-sm border border-[#E5E7EB]"
+              className="bg-[#F3F4F6] rounded-lg p-6 shadow-sm border border-[#E5E7EB] relative lg:h-[70vh]"
               variants={{
                 hidden: { y: 50, opacity: 0 },
                 visible: {
@@ -189,7 +189,9 @@ const HowDoesItWork = () => {
               </div>
 
               <motion.button
-                className="w-full py-3 px-4 bg-[#0E7490] text-white rounded-md font-medium transition-colors hover:bg-[#0e7490d3] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                className="w-full py-3 px-4 bg-[#0E7490] text-white rounded-md font-medium 
+                transition-colors hover:bg-[#0e7490d3] focus:outline-none focus:ring-2 focus:ring-offset-2 
+                focus:ring-teal-500 absolute bottom-[1rem] lg:w-[87%]"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
