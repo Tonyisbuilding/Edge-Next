@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <>
     {/* bg-[#EEF4F5] */}
-      <section className="hero bg-white  mt-[4rem] md:h-[100vh]">
+      <section className="hero bg-[#EEF4F5]  mt-[4rem] md:h-[100vh]">
         <div className="container hero-container">
           <div className="hero-content">
             <h1 className="hero-title">
