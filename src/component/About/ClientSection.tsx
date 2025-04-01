@@ -1,0 +1,78 @@
+import React from 'react';
+import { Users, TrendingUp, Home, Clock, LucideIcon  } from 'lucide-react';
+
+interface ClientCardProps {
+    title: string;
+    description: string;
+    icon: LucideIcon; 
+  }
+
+const ClientCard = ({ title, description, icon: Icon }:ClientCardProps) => (
+  <div className="relative overflow-hidden bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+    <div className="absolute -right-8 -top-8 w-24 h-24 bg-[#206A7C]/10 rounded-full transition-transform duration-300 group-hover:scale-150"></div>
+    <div className="absolute -left-4 -bottom-4 w-16 h-16 bg-[#206A7C]/5 rounded-full transition-transform duration-500 group-hover:scale-150 delay-100"></div>
+    
+    <div className="flex flex-col h-full relative z-10">
+      <div className="mb-6">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#206A7C]/10 text-[#206A7C] mb-4 transition-all duration-300 group-hover:bg-[#206A7C]/20">
+          <Icon size={20} className="transition-all duration-300 group-hover:scale-110" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+      </div>
+      
+      <p className="text-gray-600 flex-grow">{description}</p>
+    </div>
+  </div>
+);
+
+const ClientsSection = () => {
+  const clients = [
+    {
+      title: "Hedge Funds and Asset Managers",
+      description: "If you want to diversify within your strategy or completely outsource the strategy.",
+      icon: TrendingUp
+    },
+    {
+      title: "Proprietary Trading Firms",
+      description: "For prop traders looking to enhance or diversify their strategy.",
+      icon: Users
+    },
+    {
+      title: "Family Offices",
+      description: "Market-neutral investing to reduce risk.",
+      icon: Home
+    },
+    {
+      title: "Factoring Companies",
+      description: "Park your idle funds for a favorable return.",
+      icon: Clock
+    }
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-to-br from-gray-50 to-[#206A7C]/5">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="inline-block px-3 py-1 rounded-full bg-[#206A7C]/10 text-[#206A7C] text-sm font-medium mb-4">Trusted Partners</div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Clients</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            We serve a broad spectrum of institutional clients with tailored solutions.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {clients.map((client, index) => (
+            <ClientCard 
+              key={index} 
+              title={client.title} 
+              description={client.description} 
+              icon={client.icon}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ClientsSection;
