@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <>
-      <section className="hero bg-[#EEF4F5] mt-[4rem] md:h-[100vh]">
+    {/* bg-[#EEF4F5] */}
+      <section className="hero bg-white  mt-[4rem] md:h-[100vh]">
         <div className="container hero-container">
           <div className="hero-content">
             <h1 className="hero-title">
@@ -80,9 +81,15 @@ const HeroSection = () => {
           </div>
 
           <div className="hero-image">
-            <img
-              src={images.landingPage.heroSection}
-              alt="Investment Illustration"
+            {/* Replace the img tag with a video tag */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              src={images.landingPage.heroSectionVideo} // Use the imported video file
+              // alt="Investment Illustration Video"
+              className="w-full h-full  object-cover opacity-75" // Ensure the video fits the container
             />
           </div>
         </div>

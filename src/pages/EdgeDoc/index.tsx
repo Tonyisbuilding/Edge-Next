@@ -15,8 +15,8 @@ const EdgeDoc = () => {
         }}
       >
         <NavBar />
-        <DocumentCardSections />
         <EdgeDocuments />
+        <DocumentCardSections />
         <Contact />
         <Footer />
       </div>

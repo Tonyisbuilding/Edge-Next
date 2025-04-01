@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./component.css";
+import emailjs from '@emailjs/browser';
+import { toast, ToastContainer } from "react-toastify";
+
 
 
  const ContactForm = () => {
@@ -21,11 +24,42 @@ import "./component.css";
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    const serviceId =  'service_ipftkif';
+    const templateId = 'template_ax7014z';
+    const publicKey = 'xUrVo0FDGQmrD88Dk';
+
+    emailjs.init({
+      publicKey: "YOUR_PUBLIC_KEY",
+    });
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      to_name: 'Oluwapelumi',
+      title: formData.subject,
+      message: formData.message,
+    }
+
+    emailjs.send( serviceId, templateId, templateParams, publicKey)
+    .then((response)=>{
+      toast('Email sent successfully');
+      console.log(response)
+    })
+    .catch((error)=>{
+      console.log('Error sending sending mail', error)
+    })
+    setFormData({
+      name: '',
+      subject: '',
+      email: '',
+      message: ''
+    })
   };
 
   return (
     <div className="flex items-center justify-center lg:min-h-screen bg-gray-100 p-4 relative
      ">
+      <ToastContainer />
       <div className="lg:w-full max-w-md bg-white rounded-[1rem] shadow-md p-8 border-black border-2">
         <h2 className="text-2xl font-bold text-left mb-6 text-black">Send us your query</h2>
         <form 
@@ -42,7 +76,7 @@ import "./component.css";
                 onChange={(e)=>handleChange(e)}
                 placeholder="Enter your name"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none 
-                focus:ring-2 focus:ring-blue-500"
+                focus:ring-2 focus:ring-blue-500 text-black"
                 required
               />
             </div>
@@ -55,7 +89,8 @@ import "./component.css";
                 value={formData.subject}
                 onChange={(e)=>handleChange(e)}
                 placeholder="Enter your subject"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
+                 focus:ring-blue-500 text-black"
                 required
               />
             </div>
@@ -70,7 +105,8 @@ import "./component.css";
               value={formData.email}
               onChange={(e)=>handleChange(e)}
               placeholder="Enter your email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
+               focus:ring-blue-500 text-black"
               required
             />
           </div>
@@ -84,7 +120,8 @@ import "./component.css";
               onChange={(e)=>handleChange(e)}
               placeholder="Enter your message"
               rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
+               focus:ring-blue-500 text-black"
               required
             ></textarea>
           </div>

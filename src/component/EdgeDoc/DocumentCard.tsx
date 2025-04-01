@@ -213,7 +213,7 @@ const Icon = ({ type }: { type: IconType }) => {
           <img
             src={images.edgeDoc.document}
             alt="Research team analyzing market data"
-            className="w-full h-full object-cover"
+            className="w-[70%] h-[70%] object-cover"
           />
           {/* </div> */}
         </div>
@@ -224,7 +224,7 @@ const Icon = ({ type }: { type: IconType }) => {
           <img
             src={images.edgeDoc.person}
             alt="Research team analyzing market data"
-            className="w-full h-full object-cover"
+            className="w-[60%] h-[60%] object-cover"
           />
         </div>
       );
@@ -234,7 +234,7 @@ const Icon = ({ type }: { type: IconType }) => {
            <img
             src={images.edgeDoc.discount_email}
             alt="Research team analyzing market data"
-            className="w-full h-full object-cover"
+            className="w-[60%] h-[60%] object-cover"
           />
         </div>
       );
@@ -244,7 +244,7 @@ const Icon = ({ type }: { type: IconType }) => {
           <img
             src={images.edgeDoc.form_submission}
             alt="Research team analyzing market data"
-            className="w-full h-full object-cover"
+            className="w-[70%] h-[70%] object-cover"
           />
         </div>
       );
@@ -254,7 +254,7 @@ const Icon = ({ type }: { type: IconType }) => {
           <img
             src={images.edgeDoc.security}
             alt="Research team analyzing market data"
-            className="w-full h-full object-cover"
+            className="w-[60%] h-[60%] object-cover"
           />
         </div>
       );
