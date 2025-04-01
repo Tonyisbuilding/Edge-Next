@@ -19,7 +19,7 @@
 //   return (
 //     <>
 //       <div
-//         className=" bg-[#EEF4F5] lg:flex flex flex-col-reverse lg:flex-row  justify-center 
+//         className=" bg-[#EEF4F5] lg:flex flex flex-col-reverse lg:flex-row  justify-center
 //        items-center lg:p-[5rem] md:p-[3rem] p-[1rem] relative"
 //       >
 //         <div>
@@ -95,45 +95,46 @@
 
 // export default Presentation;
 
-
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
 import images from "@/constant/images";
-import { Play } from 'lucide-react';
+// import { Play } from "lucide-react";
 
 const Presentation = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  
+  // const videoRef = useRef<HTMLVideoElement>(null);
+  // const [isPlaying, setIsPlaying] = useState(false);
+
   const benefits = [
     "Live Q&A to address your key concerns.",
     "Customized insights for your investment goals.",
     "Expert advisors with over 15 years of experience.",
   ];
 
-  const handlePlayClick = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play();
-        setIsPlaying(true);
-      } else {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      }
-    }
-  };
+  // const handlePlayClick = () => {
+  //   if (videoRef.current) {
+  //     if (videoRef.current.paused) {
+  //       videoRef.current.play();
+  //       setIsPlaying(true);
+  //     } else {
+  //       videoRef.current.pause();
+  //       setIsPlaying(false);
+  //     }
+  //   }
+  // };
 
   return (
-    <section className="max-w-[1200px] w-[100%] md:w-full mx-auto px-[1rem] my-10 
-    rounded-lg overflow-hidden  pb-[1rem]">
+    <section
+      className="max-w-[1200px] w-[100%] md:w-full mx-auto px-[1rem] my-10 
+    rounded-lg overflow-hidden  pb-[1rem]"
+    >
       <div className="flex flex-col md:flex-row gap-[2rem] justify-center">
         {/* Video Section */}
         <div className="relative flex-1 min-h-[250px] sm:min-h-[300px] md:min-h-full md:rounded-lg">
-          <video
+          {/* <video
             ref={videoRef}
             className="w-full h-full object-cover block rounded-lg"
             controls
             preload="metadata"
-            poster={'https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'}
+            poster={images.landingPage.presentationPreview}
             aria-label="Presentation Video"
             crossOrigin="anonymous"
           >
@@ -148,7 +149,6 @@ const Presentation = () => {
             Your browser does not support the video tag.
           </video>
           
-          {/* Custom play button overlay - only shown when not playing */}
           {!isPlaying && (
             <div 
               className="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer"
@@ -161,23 +161,40 @@ const Presentation = () => {
                 <Play className="text-white" size={24} />
               </div>
             </div>
-          )}
+          )} */}
+
+          <div className="flex-shrink-0 flex items-center justify-center">
+            <img
+              src={images.landingPage.presentationPreview}
+              alt="Research team analyzing market data"
+              className="w-full h-full lg:h-[38rem] object-cover rounded-md"
+            />
+          </div>
         </div>
 
         {/* Content Section */}
         <div className="flex-1 p-1 sm:p-8 md:p-2">
-          <h2 className="text-2xl sm:text-[26px] md:text-[28px] font-bold text-[#1e293b] 
-          mb-4 sm:mb-5 tracking-tight">Secure Your Exclusive Presentation</h2>
+          <h2
+            className="text-2xl sm:text-[26px] md:text-[28px] font-bold text-[#1e293b] 
+          mb-4 sm:mb-5 tracking-tight"
+          >
+            Secure Your Exclusive Presentation
+          </h2>
           <p className="text-[#64748b] mb-6 sm:mb-7 md:mb-8 text-[0.95rem] sm:text-base md:text-[1.05rem]">
-            Starting a new investment is a significant step! Before you make that decision, it's important to
-            get well-informed. Through an online presentation (duration: approximately 30 minutes), we provide
-            you with a clear and comprehensive overview of our organization and products.
+            Starting a new investment is a significant step! Before you make
+            that decision, it's important to get well-informed. Through an
+            online presentation (duration: approximately 30 minutes), we provide
+            you with a clear and comprehensive overview of our organization and
+            products.
           </p>
 
           {/* Benefits List */}
           <div className="mb-6 md:mb-8">
             {benefits.map((benefit, index) => (
-              <div className="flex items-start mb-4 md:mb-5 text-black" key={index}>
+              <div
+                className="flex items-start mb-4 md:mb-5 text-black"
+                key={index}
+              >
                 <span className="text-[#206A7C] mr-3 flex-shrink-0 bg-[#206A7C]/10 rounded-full p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -202,10 +219,12 @@ const Presentation = () => {
           {/* Testimonial Section */}
           <div className="bg-[#f8fafc] border-l-4 border-[#206A7C] p-4 sm:p-5 mb-6 sm:mb-7 md:mb-8 rounded-lg">
             <p className="italic text-[#475569] text-[0.95rem] sm:text-base">
-              "The presentation was incredibly valuable. It helped me make informed decisions about my
-              financial future."
+              "The presentation was incredibly valuable. It helped me make
+              informed decisions about my financial future."
             </p>
-            <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#206A7C] text-[0.9rem] sm:text-[0.95rem]">— Sarah M., Client since 2023</p>
+            <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#206A7C] text-[0.9rem] sm:text-[0.95rem]">
+              — Sarah M., Client since 2023
+            </p>
           </div>
 
           {/* Call-to-Action Buttons */}

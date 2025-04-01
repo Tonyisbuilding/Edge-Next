@@ -6,6 +6,8 @@ import ResearchDevelopmentSection from "@/component/Institutional/ResearchDevelo
 import PrinciplesSection from "@/component/Institutional/Principles";
 import TradingApproachSection from "@/component/Institutional/TradingApproach";
 import InstitutionalInvestmentSolutions from "@/component/Institutional/InstitutionalInvestmentSolutions";
+import ClientsSection from "@/component/Institutional/ClientSection";
+
 
 const Institutional = () => {
   return (
@@ -24,6 +26,7 @@ const Institutional = () => {
         <PrinciplesSection />
         <TradingApproachSection />
         <InstitutionalInvestmentSolutions />
+        <ClientsSection />
         <Contact />
         <Footer />
       </div>

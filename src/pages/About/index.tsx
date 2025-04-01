@@ -7,7 +7,6 @@ import React from "react";
 import Footer from "@/common/Footer";
 import Contact from "@/component/landingPage/Contact";
 import { teamMembers } from "@/constant/data";
-import ClientsSection from "@/component/About/ClientSection";
 
 const About = () => {
   return (
@@ -24,7 +23,6 @@ const About = () => {
         <WhatSetsUsApart />
         <CompanyTimeline />
         <TeamMemberCards teamMembers={teamMembers} />
-        <ClientsSection />
         <Contact />
       <Footer />
       </div>
