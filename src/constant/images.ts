@@ -1,4 +1,5 @@
 import heroSection from "../../src/assets/images/landingPage/Home-left.jpg";
+import heroSectionVideo from "../../src/assets/images/landingPage/Home-left.mp4";
 import management from "../../src/assets/images/landingPage/management.svg";
 import handshake from "../../src/assets/images/landingPage/handshake.png";
 import schedule from "../../src/assets/images/landingPage/schedule.png";
@@ -91,7 +92,8 @@ const images = {
         Brahim,
         management,
         ECLogoSVG,
-        profit
+        profit,
+        heroSectionVideo
     },
     about:{
         herosectionforabout,

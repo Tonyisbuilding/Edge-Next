@@ -239,8 +239,8 @@ const PrinciplesSection: React.FC = () => {
 
                   {/* Mobile Only Icon */}
                   <div
-                    className="md:hidden  bg-[#272727] rounded-lg 
-                  flex items-center justify-center text-white p-4 w-[22.358rem] h-[18.09rem]"
+                    className="md:hidden  bg-[#272727] rounded-lg mx-auto
+                  flex items-center justify-center text-white p-4 w-full h-[18.09rem]"
                   >
                     {renderIcon(principle.icon)}
                   </div>

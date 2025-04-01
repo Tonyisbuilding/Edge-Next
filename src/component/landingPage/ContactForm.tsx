@@ -42,7 +42,7 @@ import "./component.css";
                 onChange={(e)=>handleChange(e)}
                 placeholder="Enter your name"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none 
-                focus:ring-2 focus:ring-blue-500"
+                focus:ring-2 focus:ring-blue-500 text-black"
                 required
               />
             </div>
@@ -55,7 +55,8 @@ import "./component.css";
                 value={formData.subject}
                 onChange={(e)=>handleChange(e)}
                 placeholder="Enter your subject"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
+                 focus:ring-blue-500 text-black"
                 required
               />
             </div>
@@ -70,7 +71,8 @@ import "./component.css";
               value={formData.email}
               onChange={(e)=>handleChange(e)}
               placeholder="Enter your email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
+               focus:ring-blue-500 text-black"
               required
             />
           </div>
@@ -84,7 +86,8 @@ import "./component.css";
               onChange={(e)=>handleChange(e)}
               placeholder="Enter your message"
               rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
+               focus:ring-blue-500 text-black"
               required
             ></textarea>
           </div>

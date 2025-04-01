@@ -189,7 +189,7 @@ const HowDoesItWork = () => {
               </div>
 
               <motion.button
-                className="w-full py-3 px-4 bg-[#0E7490] text-white rounded-md font-medium 
+                className="w-[90%] py-3 px-4 bg-[#0E7490] text-white rounded-md font-medium 
                 transition-colors hover:bg-[#0e7490d3] focus:outline-none focus:ring-2 focus:ring-offset-2 
                 focus:ring-teal-500 absolute bottom-[1rem] lg:w-[87%]"
                 whileHover={{ scale: 1.02 }}
