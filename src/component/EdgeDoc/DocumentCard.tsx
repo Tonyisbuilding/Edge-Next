@@ -39,7 +39,7 @@ const documents: Documents = {
         "Key investor information document with all the essential details about EdgeFund investment opportunities and risk factors.",
       icon: "document",
       category: "fund",
-      pdf:'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf:'https://edge-capital.nl/media/2023/05/001_-EDGECAPITAL_EdgeFund_EID.pdf',
     },
     {
       id: "subscription-natural",
@@ -48,7 +48,7 @@ const documents: Documents = {
         "Complete subscription forms for individual investors looking to participate in EdgeFund opportunities.",
       icon: "person",
       category: "fund",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf',
     },
     {
       id: "subscription-bvs",
@@ -57,7 +57,7 @@ const documents: Documents = {
         "Subscription forms for private limited companies (BVs) interested in EdgeFund investment opportunities.",
       icon: "discount_email",
       category: "fund",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf',
     },
     {
       id: "edgefund-change",
@@ -66,7 +66,7 @@ const documents: Documents = {
         "Update your EdgeFund account details, investment preferences, or personal information with this change form.",
       icon: "form_submission",
       category: "fund",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/004_EDGECAPITAL_Obligatie_III_EID.pdf',
     },
     {
       id: "edge-capital-kid",
@@ -75,7 +75,7 @@ const documents: Documents = {
         "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
       icon: "document",
       category: "bond",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf',
     },
     {
       id: "bond-subscription-natural",
@@ -84,7 +84,7 @@ const documents: Documents = {
         "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
       icon: "person",
       category: "bond",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf',
     },
     {
       id: "bond-subscription-bvs",
@@ -93,7 +93,7 @@ const documents: Documents = {
         "Subscription forms for private limited companies (BVs) interested in Edge Capital Bond investments.",
       icon: "discount_email",
       category: "bond",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/007_EDGECAPITAL_Privacy_en_Cookies_Policy.pdf',
     },
     {
       id: "privacy-cookies",
@@ -102,7 +102,7 @@ const documents: Documents = {
         "Comprehensive overview of how Edge Capital handles your personal data and information privacy.",
       icon: "security",
       category: "privacy",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf',
     },
     {
       id: "data-rights",
@@ -111,7 +111,7 @@ const documents: Documents = {
         "Information about your rights regarding your personal data and how to exercise those rights with Edge Capital.",
       icon: "discount_email",
       category: "privacy",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf',
     },
   ],
   fund: [
@@ -122,7 +122,7 @@ const documents: Documents = {
         "Complete subscription forms for individual investors looking to participate in EdgeFund opportunities.",
       icon: "person",
       category: "fund",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf',
     },
     {
       id: "subscription-bvs",
@@ -131,7 +131,7 @@ const documents: Documents = {
         "Subscription forms for private limited companies (BVs) interested in EdgeFund investment opportunities.",
       icon: "discount_email",
       category: "fund",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf',
     },
     {
       id: "edgefund-kid",
@@ -140,7 +140,7 @@ const documents: Documents = {
         "Key investor information document with all the essential details about EdgeFund investment opportunities and risk factors.",
       icon: "document",
       category: "fund",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/001_-EDGECAPITAL_EdgeFund_EID.pdf',
     },
     {
       id: "edgefund-change",
@@ -149,7 +149,7 @@ const documents: Documents = {
         "Update your EdgeFund account details, investment preferences, or personal information with this change form.",
       icon: "form_submission",
       category: "fund",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/004_EDGECAPITAL_Obligatie_III_EID.pdf',
     },
   ],
   bond: [
@@ -160,7 +160,7 @@ const documents: Documents = {
         "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
       icon: "person",
       category: "bond",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf',
     },
     {
       id: "bond-subscription-bvs",
@@ -169,7 +169,7 @@ const documents: Documents = {
         "Subscription forms for private limited companies (BVs) interested in Edge Capital Bond investments.",
       icon: "discount_email",
       category: "bond",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf',
     },
     {
       id: "edge-capital-kid",
@@ -178,7 +178,7 @@ const documents: Documents = {
         "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
       icon: "document",
       category: "bond",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf',
     },
   ],
   privacy: [
@@ -189,7 +189,7 @@ const documents: Documents = {
         "Comprehensive overview of how Edge Capital handles your personal data and information privacy.",
       icon: "security",
       category: "privacy",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf',
     },
     {
       id: "data-rights",
@@ -198,7 +198,7 @@ const documents: Documents = {
         "Information about your rights regarding your personal data and how to exercise those rights with Edge Capital.",
       icon: "discount_email",
       category: "privacy",
-      pdf: 'https://acrobat.adobe.com/id/urn:aaid:sc:EU:36edba61-007b-4c8d-9788-67e4011386cf',
+      pdf: 'https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf',
     },
   ],
 };
