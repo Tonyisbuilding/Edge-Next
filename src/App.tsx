@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/landingPage";
@@ -13,17 +12,13 @@ import EdgeDoc from "./pages/EdgeDoc";
 import ContactPage from "./pages/Contact";
 import EdgeHorizon from "./pages/EdgeHorizon";
 import EdgeCare from "./pages/EdgeCare";
-
-
-
-
+import ScrollToTop from "./common/ScrollToTop";
 
 function App(): JSX.Element {
- 
-
   return (
     <>
-       <Routes>
+      <ScrollToTop />
+      <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Teams />} />

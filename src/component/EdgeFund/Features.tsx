@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Feature = () => {
   // Animation variants
@@ -217,8 +218,11 @@ const Feature = () => {
                               <p className="text-sm text-gray-500 mt-1">{item.description}</p>
                             )}
                             {item.hasLink && (
-                              <button className="text-sm text-primary-600 font-medium hover:text-primary-800 mt-1 underline focus:outline-none">
-                                these forms
+                              <button className="text-sm text-primary-600 font-medium hover:text-primary-800
+                               mt-1 underline focus:outline-none text-black hover:cursor-pointer">
+                                <Link to='/documents'>
+                                Click to show these forms
+                                </Link>
                               </button>
                             )}
                           </div>
