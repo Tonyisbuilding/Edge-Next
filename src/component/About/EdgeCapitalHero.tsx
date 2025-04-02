@@ -90,7 +90,7 @@ const EdgeCapitalHero = () => {
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
             <button className="mt-4 px-6 py-3 bg-[#206A7C] text-white font-medium rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transition-colors">
-              <Link to="/team" className="block ">
+              <Link to="/contact" className="block ">
                 Get in Touch
               </Link>
             </button>

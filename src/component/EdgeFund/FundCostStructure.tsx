@@ -206,6 +206,7 @@ const FundCostStructure = () => {
 
                   <button
                     className={`mt-4 w-full py-3 px-4 rounded-md text-white font-medium ${fundClass.buttonClass} transition-colors duration-300`}
+                    onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
                   >
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
                     target="_blank"
@@ -255,8 +256,13 @@ const FundCostStructure = () => {
 
                   <button
                     className={`mt-4 w-full py-3 px-4 rounded-md text-white font-medium ${fundClass.buttonClass} transition-colors duration-300`}
+                    onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
                   >
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
+                    target="_blank"
+                    >
                     {fundClass.buttonText}
+                    </a>
                   </button>
 
                   <div className="mt-6 space-y-3">

@@ -1,4 +1,9 @@
 import heroSection from "../../src/assets/images/landingPage/Home-left.jpg";
+import BELEGGERSFAIR_LOGO_HEADER from "../../src/assets/images/landingPage/BELEGGERSFAIR-LOGO-HEADER.png";
+import IEX from "../../src/assets/images/landingPage/IEX.png";
+import rtlz from "../../src/assets/images/landingPage/rtlz.png";
+import IEX_nl from "../../src/assets/images/landingPage/IEX_nl.png";
+import B_class from "../../src/assets/images/landingPage/class.png";
 import heroSectionVideo from "../../src/assets/images/landingPage/Home-left.mp4";
 import management from "../../src/assets/images/landingPage/management.svg";
 import handshake from "../../src/assets/images/landingPage/handshake.png";
@@ -70,6 +75,11 @@ import security from "../../src/assets/images/edgeDoc/security.png";
 const images = {
     landingPage:{
         heroSection,
+        BELEGGERSFAIR_LOGO_HEADER,
+        IEX,
+        rtlz,
+        IEX_nl,
+        B_class,
         ECLogo,
         arrow_down,
         handshake,

@@ -70,7 +70,9 @@ const HeroSection = () => {
                   Get in Touch
                 </Link>
               </button>
-              <button className="btn btn-secondary">
+              <button 
+              onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
+              className="btn btn-secondary">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
                 target='_blank'
                 >
@@ -81,15 +83,17 @@ const HeroSection = () => {
           </div>
 
           <div className="hero-image">
-            {/* Replace the img tag with a video tag */}
-            <video
+            {/* <video
               autoPlay
               loop
               muted
               playsInline
-              src={images.landingPage.heroSectionVideo} // Use the imported video file
-              // alt="Investment Illustration Video"
-              className="w-full h-full  object-cover opacity-75" // Ensure the video fits the container
+              src={images.landingPage.heroSectionVideo} 
+              className="w-full h-full  object-cover opacity-75" 
+            /> */}
+            <img
+              src={images.landingPage.heroSection}
+              alt="Investment Illustration"
             />
           </div>
         </div>

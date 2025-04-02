@@ -232,8 +232,14 @@ const Presentation = () => {
             <button className="bg-[#206A7C] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#206A7C]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#206A7C]/30">
               Schedule a presentation
             </button>
-            <button className="bg-transparent text-[#206A7C]  border-[#206A7C] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#206A7C]/5 hover:-translate-y-0.5">
-              Download brochure
+            <button 
+            onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
+            className="bg-transparent text-[#206A7C]  border-[#206A7C] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#206A7C]/5 hover:-translate-y-0.5">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
+                target='_blank'
+                >
+                  Request Brochure
+                </a>
             </button>
           </div>
 

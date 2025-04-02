@@ -120,9 +120,11 @@ const InvestmentPerformance = () => {
                 Download our factsheet for a detailed overview.
               </p>
               <motion.button
+              onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
                 variants={buttonVariants}
                 whileHover="hover"
-                className="w-full bg-[#206A7C] text-white px-6 py-3.5 rounded-full font-semibold text-sm shadow-sm"
+                className="w-full bg-[#206A7C] text-white px-6 py-3.5 rounded-full font-semibold 
+                text-sm shadow-sm hover:cursor-pointer"
               >
                 Request factsheet
               </motion.button>
