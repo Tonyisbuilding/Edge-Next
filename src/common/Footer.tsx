@@ -25,20 +25,20 @@ const Footer = () => {
             <ul>
               <li><a href="/about">About Us</a></li>
               <li><a href="/edge-fund">Edge Fund</a></li>
-              <li><a href="/impact">Edge Impact</a></li>
+              {/* <li><a href="/impact">Edge Impact</a></li> */}
               <li><a href="/institutional">Institutional</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><a href="/faqs">FAQ's</a></li>
+              {/* <li><a href="/faqs">FAQ's</a></li> */}
             </ul>
           </div>
 
           <div className="footer-nav">
             <h3>Help center</h3>
             <ul>
-              <li><a href="/knowledge-base">Knowledge Base</a></li>
-              <li><a href="/support">Support</a></li>
+              <li><a href="/media">Knowledge Base</a></li>
+              <li><a href="/contact">Support</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/404">404</a></li>
+              {/* <li><a href="/404">404</a></li> */}
             </ul>
           </div>
         </div>

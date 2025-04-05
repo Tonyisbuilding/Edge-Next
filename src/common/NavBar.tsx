@@ -14,6 +14,18 @@ interface DropdownState {
   [key: number]: boolean;
 }
 
+declare global {
+  interface Window {
+    googleTranslateElementInit: () => void;
+    google: {
+      translate: {
+        TranslateElement: new (options: object, containerId: string) => void;
+      };
+    };
+  }
+}
+
+
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [activeDropdowns, setActiveDropdowns] = useState<DropdownState>({});
@@ -25,6 +37,32 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Load Google Translate
+  useEffect(() => {
+    const scriptId = "google-translate-script";
+
+    // Prevent duplicate script injection
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    // Define the init function globally
+    window.googleTranslateElementInit = () => {
+      const translateElement = document.getElementById("google_translate_element");
+      if (translateElement && translateElement.children.length === 0) {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    };
+
   }, []);
 
   const toggleNav = () => setIsNavActive(!isNavActive);
@@ -55,6 +93,15 @@ const Navbar = () => {
             className="w-[202px] h-[34px]"
           />
         </Link>
+
+        {/* Google Translate Widget */}
+        <div
+          id="google_translate_element"
+          className="fixed top-[6rem] right-[1rem] p-[10px_6px] rounded-xl  z-[9999] animate-pulse
+            text-white text-sm font-inter w-[15remx] md:w-[20rem]  bg-gray-200 flex justify-center"
+            backdrop-blur-md
+          //  bg-white/15 border border-white/20 shadow-[0_8px_32px_rgba(31,38,135,0.2)]
+        />
 
         {/* Mobile Menu */}
         <div
