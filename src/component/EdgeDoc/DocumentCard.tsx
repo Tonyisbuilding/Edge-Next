@@ -338,12 +338,12 @@ const DocumentCardSections = () => {
 
       {/* Tabs */}
       <div className="flex overflow-x-scroll md:overflow-x-auto pb-4 mb-6 scrollbar-hide w-full">
-        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg md:w-full w-[150%]">
+        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg md:w-full w-auto">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors w-[25%] ${
+              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors w-[12rem] md:w-[25%] ${
                 activeTab === tab.id
                   ? "bg-white shadow-md text-gray-900"
                   : "text-gray-500 hover:text-gray-900"

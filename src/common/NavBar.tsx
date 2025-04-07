@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPhone,
+  // faPhone,
   faBars,
   faXmark,
   faChevronDown,
@@ -31,6 +31,18 @@ const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [activeDropdowns, setActiveDropdowns] = useState<DropdownState>({});
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Track screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // Tailwind lg breakpoint
+    };
+
+    handleResize(); // Check initially
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,38 +52,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Load Google Translate
-  // useEffect(() => {
-  //   const scriptId = "google-translate-script";
-
-  //   // Prevent duplicate script injection
-  //   if (!document.getElementById(scriptId)) {
-  //     const script = document.createElement("script");
-  //     script.id = scriptId;
-  //     script.src =
-  //       "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  //     script.async = true;
-  //     document.body.appendChild(script);
-  //   }
-
-  //   // Define the init function globally
-  //   window.googleTranslateElementInit = () => {
-  //     const translateElement = document.getElementById(
-  //       "google_translate_element"
-  //     );
-  //     if (translateElement && translateElement.children.length === 0) {
-  //       new window.google.translate.TranslateElement(
-  //         { pageLanguage: "en" },
-  //         "google_translate_element"
-  //       );
-  //     }
-  //   };
-  // }, []);
+ 
 
   useEffect(() => {
     const addGoogleTranslateScript = () => {
       if (document.getElementById("google-translate-script")) return;
-
       const script = document.createElement("script");
       script.id = "google-translate-script";
       script.src =
@@ -124,21 +109,13 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Google Translate Widget */}
-        {/* <div
-          id="google_translate_element"
-          className="fixed top-[6rem] right-[10rem] p-[10px_6px] rounded-xl  z-[9999] animate-pulse
-            text-white text-sm font-inter w-[15remx] md:w-[15rem]  bg-gray-200 flex justify-center"
-            backdrop-blur-md
-        /> */}
+ 
 
         
-        <div className={` ${!isNavActive ? 'block' : 'hidden' } lg:hidden`}>
-          <div
+          {/* <div
             id="google_translate_element"
-            className="text-sm  h-[3rem] flex w-auto mr-[1rem] fixed top-[4rem] left-[3%]"
-          ></div>
-        </div>
+            className="text-sm  h-[3rem] flex w-auto mr-[1rem] fixed top-[4.5rem] left-[3%] lg:top-[2rem] lg:left-[70%]"
+          ></div> */}
 
         {/* Mobile Menu */}
         <div
@@ -343,7 +320,7 @@ const Navbar = () => {
             </ul>
 
             <div className="px-4 py-6 border-t border-gray-100 mt-4">
-              <div className="flex items-center mb-4">
+              {/* <div className="flex items-center mb-4">
                 <FontAwesomeIcon
                   icon={faPhone}
                   className="mr-2 text-[#206A7C]"
@@ -351,7 +328,16 @@ const Navbar = () => {
                 <a href="tel:+31613484484" className="font-semibold text-black">
                   +31 6 13 484 484
                 </a>
-              </div>
+              </div> */}
+              {isMobile && (
+          <div className="lg:hidden">
+            <div
+              // ref={translateRef}
+              id="google_translate_element"
+              className="text-sm  h-[3rem] flex w-auto mr-[1rem] mb-5"
+            />
+          </div>
+        )}
               <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold w-full">
                 <Link to="/contact">Contact Us</Link>
               </button>
@@ -514,20 +500,25 @@ const Navbar = () => {
         {/* Desktop Contact */}
         <div
           className="hidden lg:flex items-center border border-white rounded-[15px] 
-        p-3 w-[21rem]  relative h-[5rem]"
+          p-3 w-auto  relative h-[5rem] gap-3"
         >
           {/* <div className="flex items-center mr-4">
             <FontAwesomeIcon icon={faPhone} className="mr-2 text-[#206A7C]" />
             <span className="font-semibold text-black">+31 6 13 484 484</span>
           </div> */}
-          <div
-            id="google_translate_element"
-            className="text-sm  h-[3rem] w-auto mr-[1rem]"
-          ></div>
+          {!isMobile && (
+            <div>
+              <div
+                // ref={translateRef}
+                id="google_translate_element"
+                className="text-sm  h-[3rem] flex w-auto mr-[1rem] relative"
+              />
+            </div>
+          )}
 
           <button
             className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold
-           hover:bg-[#0e1417] transition-colors absolute right-[1rem] w-auto"
+           hover:bg-[#0e1417] transition-colors relative right-[1rem] w-auto"
           >
             <Link to="/contact">Contact Us</Link>
           </button>

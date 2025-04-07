@@ -39,7 +39,7 @@ const EdgeCapital: React.FC = () => {
   const words = originalText.split(/\s+/);
 
   return (
-    <section className="about-txt bg-[#EEF4F5] lg:h-auto lg:py-[5rem]">
+    <section className="about-txt bg-[#EEF4F5] h-auto py-[3.5rem]  lg:h-auto lg:py-[5rem] relative">
       <div className="scroll-text-container h-auto" ref={containerRef}>
         {words.map((word, index) => (
           <span key={index} className="word-span">

@@ -25,7 +25,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="h-[150vh] ">
+    <div className="h-[150vh] relative">
       <div className="relative min-h-screen font-sans">
         {/* Background image with overlay */}
         <div
@@ -87,7 +87,7 @@ const HeroSection = () => {
                   </Link>
                 </motion.button>
                 <div
-                  className="blur-sm absolute h-[30%] w-full bg-[#206a7c3a] lg:top-[16rem] top-[13.5rem] left-0
+                  className="blur-sm absolute h-[30%] w-full bg-[#206a7c3a] lg:top-[16rem] top-[87%] left-0
                  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 
                 "
                 ></div>
@@ -97,7 +97,7 @@ const HeroSection = () => {
         </main>
       </div>
       <motion.div
-        className="md:w-1/2 mx-[2rem]  absolute md:top-[110%] bottom-[-50vh]"
+        className="md:w-1/2 mx-[2rem]  absolute left-0 md:top-[80%] bottom-[10vh]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.6 }}

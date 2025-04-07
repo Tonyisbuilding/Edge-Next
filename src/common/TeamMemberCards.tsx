@@ -75,7 +75,7 @@ const TeamCard = ({
         </div>
         <button
           className="flex items-center hover:cursor-pointer"
-          // onClick={() => alert("bro")}
+          onClick={() => window.open(`${linkedin}`,'_blank')}
         >
           <h1 className="inter text-[14px] md:text-[14px] font-medium text-[#206A7C]">
             About

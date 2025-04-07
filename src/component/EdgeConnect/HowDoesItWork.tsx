@@ -166,7 +166,7 @@ const HowDoesItWork = () => {
                 {card.title}
               </h4>
 
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-12">
                 {card.content.map((item, i) => (
                   <div key={i}>
                     {typeof item === "string" ? (

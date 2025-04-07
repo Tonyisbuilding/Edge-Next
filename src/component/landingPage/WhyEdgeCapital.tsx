@@ -5,7 +5,7 @@ import "./whyUs.css";
 const WhyEdgeCapital = () => {
   return (
     <>
-      <div className=" bg-[#192227] py-[1.5rem] md:rounded-[1rem] rounded-[1rem] px-[1rem]">
+      <div className=" bg-[#192227] py-[1.5rem] md:rounded-[1rem] rounded-[1rem] px-[1rem] relative my-auto">
         <div className=" p-[.1rem]">
           <h1 className=" text-[#FFFFFF] font-bold md:text-[48px] text-[25px] montserrat md:px-[.1rem]">
             Why Edge Capital?

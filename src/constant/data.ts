@@ -146,8 +146,7 @@ export const advisoryBoard: teamMemberCardstDataType[] = [
   {
     name: "Henk van der Heijden",
     position: "Advisor and Chairman of the Trust Bonds Foundation Edge Capital",
-    bio: `Henk van der Heijden has over 30 years of experience in (project) management, with the last 14 years spent at ASML in Veldhoven. He holds a bachelor's degree in Computer Science from Fontys University of Applied Sciences and an Executive Master of Business Administration (MBA) in Strategic Change Management from Maastricht University.
-His interests mainly lie in the crypto domain and investing in and mentoring startups. He has been an investor in the company since 2017, taking on the role of Chairman of the Trust Bonds Foundation Edge Capital since August 2022 and the role of advisor since March 2023.`,
+    bio: `Henk van der Heijden has 30+ years of (project) management experience, including 14 at ASML. He holds a BSc in Computer Science and an Executive MBA in Strategic Change Management. Active in crypto and startups, he’s been an investor since 2017, Chairman of the Trust Bonds Foundation since August 2022, and advisor since March 2023.`,
     linkedin: "https://www.linkedin.com/in/mvandrunen/",
     image: images.landingPage.Henk,
   },
@@ -165,7 +164,7 @@ export const SupportAndCommercial: teamMemberCardstDataType[] = [
     name: "Brahim Bouzerrade",
     position: "Business Development Manager",
     bio: `Brahim is responsible for identifying, developing, and realizing growth opportunities for the company. His focus is on expanding the customer base and developing strategic partnerships. With years of experience, Brahim is regarded as a seasoned sales professional within our team.`,
-    linkedin: "https://linkedin.com/in/teagandegroot",
+    linkedin: "",
     image: images.landingPage.Brahim,
   },
 ];
