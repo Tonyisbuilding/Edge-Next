@@ -334,7 +334,7 @@ const Navbar = () => {
             <div
               // ref={translateRef}
               id="google_translate_element"
-              className="text-sm  h-[3rem] flex w-full mr-[1rem] mb-5"
+              className="text-sm  h-[3rem] flex w-auto mr-[1rem] mb-5"
             />
           </div>
         )}

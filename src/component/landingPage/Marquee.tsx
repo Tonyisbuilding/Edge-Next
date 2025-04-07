@@ -33,7 +33,7 @@ const Marquee: React.FC<MarqueeProps> = ({ speed = 20 }) => {
             {logos.map((logo) => (
               <div
                 key={logo.id}
-                className="flex-shrink-0 mx-2 sm:mx-4 md:mx-6"
+                className="flex-shrink-0 sm:mx-4 md:mx-6 w-[9rem] md:w-[10rem]"
                 style={{ minWidth: '120px', height: '40px' }}
               >
                 <img

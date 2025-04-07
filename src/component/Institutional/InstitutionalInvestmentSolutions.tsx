@@ -28,7 +28,7 @@ const InstitutionalInvestmentSolutions = () => {
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+      <h2 className=" text-[1.8rem] md:text-4xl font-bold text-center mb-12 text-gray-800">
         Institutional Investment Solutions
       </h2>
 
