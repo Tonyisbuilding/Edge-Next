@@ -9,6 +9,8 @@ import {
   faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 import images from "@/constant/images";
+// import LanguageSwitcher from "@/common/LanguageSwitcher.tsx";
+import "../common/GoogleTranslate.css";
 
 interface DropdownState {
   [key: number]: boolean;
@@ -25,7 +27,6 @@ declare global {
   }
 }
 
-
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [activeDropdowns, setActiveDropdowns] = useState<DropdownState>({});
@@ -40,29 +41,58 @@ const Navbar = () => {
   }, []);
 
   // Load Google Translate
-  useEffect(() => {
-    const scriptId = "google-translate-script";
+  // useEffect(() => {
+  //   const scriptId = "google-translate-script";
 
-    // Prevent duplicate script injection
-    if (!document.getElementById(scriptId)) {
+  //   // Prevent duplicate script injection
+  //   if (!document.getElementById(scriptId)) {
+  //     const script = document.createElement("script");
+  //     script.id = scriptId;
+  //     script.src =
+  //       "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  //     script.async = true;
+  //     document.body.appendChild(script);
+  //   }
+
+  //   // Define the init function globally
+  //   window.googleTranslateElementInit = () => {
+  //     const translateElement = document.getElementById(
+  //       "google_translate_element"
+  //     );
+  //     if (translateElement && translateElement.children.length === 0) {
+  //       new window.google.translate.TranslateElement(
+  //         { pageLanguage: "en" },
+  //         "google_translate_element"
+  //       );
+  //     }
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    const addGoogleTranslateScript = () => {
+      if (document.getElementById("google-translate-script")) return;
+
       const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.id = "google-translate-script";
+      script.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
       document.body.appendChild(script);
-    }
 
-    // Define the init function globally
-    window.googleTranslateElementInit = () => {
-      const translateElement = document.getElementById("google_translate_element");
-      if (translateElement && translateElement.children.length === 0) {
-        new window.google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
-        );
-      }
+      const inlineScript = document.createElement("script");
+      inlineScript.innerHTML = `
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,nl',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+          }
+        `;
+      document.body.appendChild(inlineScript);
     };
 
+    addGoogleTranslateScript();
   }, []);
 
   const toggleNav = () => setIsNavActive(!isNavActive);
@@ -95,13 +125,20 @@ const Navbar = () => {
         </Link>
 
         {/* Google Translate Widget */}
-        <div
+        {/* <div
           id="google_translate_element"
-          className="fixed top-[6rem] right-[1rem] p-[10px_6px] rounded-xl  z-[9999] animate-pulse
-            text-white text-sm font-inter w-[15remx] md:w-[20rem]  bg-gray-200 flex justify-center"
+          className="fixed top-[6rem] right-[10rem] p-[10px_6px] rounded-xl  z-[9999] animate-pulse
+            text-white text-sm font-inter w-[15remx] md:w-[15rem]  bg-gray-200 flex justify-center"
             backdrop-blur-md
-          //  bg-white/15 border border-white/20 shadow-[0_8px_32px_rgba(31,38,135,0.2)]
-        />
+        /> */}
+
+        
+        <div className={` ${!isNavActive ? 'block' : 'hidden' } lg:hidden`}>
+          <div
+            id="google_translate_element"
+            className="text-sm  h-[3rem] flex w-auto mr-[1rem] fixed top-[4rem] left-[3%]"
+          ></div>
+        </div>
 
         {/* Mobile Menu */}
         <div
@@ -323,7 +360,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex lg:gap-5 lg:items-center">
+        <ul className="hidden lg:flex lg:gap-5 lg:items-center relative">
           <li>
             <Link
               to="/"
@@ -475,12 +512,23 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Contact */}
-        <div className="hidden lg:flex items-center border border-white rounded-[15px] p-3">
-          <div className="flex items-center mr-4">
+        <div
+          className="hidden lg:flex items-center border border-white rounded-[15px] 
+        p-3 w-[21rem]  relative h-[5rem]"
+        >
+          {/* <div className="flex items-center mr-4">
             <FontAwesomeIcon icon={faPhone} className="mr-2 text-[#206A7C]" />
             <span className="font-semibold text-black">+31 6 13 484 484</span>
-          </div>
-          <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold hover:bg-[#0e1417] transition-colors">
+          </div> */}
+          <div
+            id="google_translate_element"
+            className="text-sm  h-[3rem] w-auto mr-[1rem]"
+          ></div>
+
+          <button
+            className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold
+           hover:bg-[#0e1417] transition-colors absolute right-[1rem] w-auto"
+          >
             <Link to="/contact">Contact Us</Link>
           </button>
         </div>

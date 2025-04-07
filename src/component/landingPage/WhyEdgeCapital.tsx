@@ -26,7 +26,7 @@ const WhyEdgeCapital = () => {
           {whyEdgeCapitalData.map((feature, index) => (
             <div className="card" key={index}>
               <div className="icon">
-                <img src={feature.icon} alt={`${feature.title} icon`} />
+                <img src={feature.icon} alt={`${feature.title} icon`} className=' lg:w-[10rem]' />
               </div>
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>

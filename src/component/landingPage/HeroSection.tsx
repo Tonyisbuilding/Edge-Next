@@ -83,18 +83,18 @@ const HeroSection = () => {
           </div>
 
           <div className="hero-image">
-            {/* <video
+            <video
               autoPlay
               loop
               muted
               playsInline
               src={images.landingPage.heroSectionVideo} 
               className="w-full h-full  object-cover opacity-75" 
-            /> */}
-            <img
+            />
+            {/* <img
               src={images.landingPage.heroSection}
               alt="Investment Illustration"
-            />
+            /> */}
           </div>
         </div>
       </section>

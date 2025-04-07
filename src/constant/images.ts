@@ -1,5 +1,9 @@
 import heroSection from "../../src/assets/images/landingPage/Home-left.jpg";
 import BELEGGERSFAIR_LOGO_HEADER from "../../src/assets/images/landingPage/BELEGGERSFAIR-LOGO-HEADER.png";
+import risk from "../../src/assets/images/landingPage/risk.png";
+import access from "../../src/assets/images/landingPage/access.png";
+import server from "../../src/assets/images/landingPage/server.png";
+import briefcase from "../../src/assets/images/landingPage/briefcase.png";
 import IEX from "../../src/assets/images/landingPage/IEX.png";
 import rtlz from "../../src/assets/images/landingPage/rtlz.png";
 import IEX_nl from "../../src/assets/images/landingPage/IEX_nl.png";
@@ -75,6 +79,10 @@ import security from "../../src/assets/images/edgeDoc/security.png";
 const images = {
     landingPage:{
         heroSection,
+        risk,
+        access,
+        briefcase,
+        server,
         BELEGGERSFAIR_LOGO_HEADER,
         IEX,
         rtlz,
