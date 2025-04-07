@@ -54,8 +54,8 @@ Feature section styles
 }
 
 .card .icon {
-    width: 70px;
-    height: 70px;
+    /* width: 70px;
+    height: 70px; */
     background-color: #192227;
     border-radius: 50%;
     display: flex;
