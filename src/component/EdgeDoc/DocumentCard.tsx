@@ -105,9 +105,13 @@ const DocumentCard = ({
   downloadLabel: string;
   imageAlt: string;
 }) => {
+
+  const { language } = useChangeLanguageContext();
+
   return (
     <motion.div
-      className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4 lg:h-[19rem] reltaive"
+      className={`bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4 
+      reltaive ${language === 'nl' ? 'lg:h-[20rem] ' : 'lg:h-[19rem] ' }`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
@@ -124,7 +128,7 @@ const DocumentCard = ({
           <p className="text-sm text-gray-600 mb-4">{document.description}</p>
         </div>
       </div>
-      <div className="flex justify-between items-center relative md:top-[20%]">
+      <div className="flex justify-between items-center relative md:top-[20%] ">
         <span className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded">
           PDF
         </span>

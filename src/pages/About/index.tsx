@@ -6,9 +6,12 @@ import WhatSetsUsApart from "@/component/About/WhatSetUsApart";
 import React from "react";
 import Footer from "@/common/Footer";
 import Contact from "@/component/landingPage/Contact";
-import { teamMembers } from "@/constant/data";
+import { teamMembers, teamMembersDutch } from "@/constant/data";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const About = () => {
+
+  const { language } = useChangeLanguageContext();
   return (
     <>
       <NavBar />
@@ -22,7 +25,7 @@ const About = () => {
         <EdgeCapitalHero />
         <WhatSetsUsApart />
         <CompanyTimeline />
-        <TeamMemberCards teamMembers={teamMembers} />
+        <TeamMemberCards teamMembers={language  === 'nl' ? teamMembersDutch : teamMembers} />
         <Contact />
         <Footer />
       </div>

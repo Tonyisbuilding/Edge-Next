@@ -28,7 +28,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="h-[150vh] relative mt-[5rem]">
+    <div className="h-[150vh] relative mt-[5rem] bg-[#EEF4F5C2]">
       <div className="relative min-h-screen font-sans">
         {/* Background image with overlay */}
         <div

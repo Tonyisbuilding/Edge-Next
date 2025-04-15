@@ -70,7 +70,7 @@ stakeholders.`
               whileTap={{ scale: 0.95 }}
               aria-label="Partner with Edge Capital"
             >
-              <a href="mailto:info@edge-capital.nl">{ language === 'nl' ? 'Werk met ons samen' : 'Partner With Us'}Partner With Us</a>
+              <a href="mailto:info@edge-capital.nl">{ language === 'nl' ? 'Werk met ons samen' : 'Partner With Us'}</a>
             </motion.button>
           </motion.div>
         </div>
