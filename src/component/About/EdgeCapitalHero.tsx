@@ -2,12 +2,35 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
 import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const EdgeCapitalHero = () => {
   const [headingInView, setHeadingInView] = useState(false);
   const [buttonInView, setButtonInView] = useState(false);
   const headingRef = useRef(null);
   const buttonRef = useRef(null);
+  const { language } = useChangeLanguageContext();
+
+  // Translation dictionary
+  const translations = {
+    en: {
+      heading: "Our name is more than just a nod to 'hedge funds.' 'Edge' represents the advantage we provide our clients—staying ahead with strategies based on market facts rather than predictions.",
+      subheading: "Our strategies are built on arbitrage methods and market-neutral investing, giving us an edge over traditional wealth management products.",
+      getInTouch: "Get in Touch",
+      altText: "Edge Capital Team"
+    },
+    nl: {
+      heading: "Onze naam is meer dan alleen een knipoog naar 'hedge funds'. 'Edge' vertegenwoordigt het voordeel dat we onze klanten bieden—voorop blijven met strategieën gebaseerd op marktfeiten in plaats van voorspellingen.",
+      subheading: "Onze strategieën zijn gebouwd op arbitragemethoden en marktneutrale investeringen, wat ons een voorsprong geeft op traditionele vermogensbeheerproducten.",
+      getInTouch: "Neem Contact Op",
+      altText: "Edge Capital Team"
+    }
+  };
+
+  // Get translation based on current language
+  const t = (key: keyof typeof translations.en) => {
+    return translations[language][key];
+  };
 
   useEffect(() => {
     // Custom intersection observer implementation
@@ -67,15 +90,11 @@ const EdgeCapitalHero = () => {
             className="space-y-6"
           >
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              Our name is more than just a nod to 'hedge funds.' 'Edge'
-              represents the advantage we provide our clients—staying ahead with
-              strategies based on market facts rather than predictions.
+              {t("heading")}
             </h1>
 
             <p className="text-lg text-gray-600">
-              Our strategies are built on arbitrage methods and market-neutral
-              investing, giving us an edge over traditional wealth management
-              products.
+              {t("subheading")}
             </p>
           </motion.div>
 
@@ -91,7 +110,7 @@ const EdgeCapitalHero = () => {
           >
             <button className="mt-4 px-6 py-3 bg-[#206A7C] text-white font-medium rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transition-colors">
               <Link to="/contact" className="block ">
-                Get in Touch
+                {t("getInTouch")}
               </Link>
             </button>
           </motion.div>
@@ -112,7 +131,7 @@ const EdgeCapitalHero = () => {
                 ease: "easeOut",
               }}
               src={images.about.herosectionforabout}
-              alt="Edge Capital Team"
+              alt={t("altText")}
               className="w-full h-auto object-cover"
             />
           </motion.div>

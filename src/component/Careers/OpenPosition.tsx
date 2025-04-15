@@ -1,40 +1,87 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const OpenPositions = () => {
-  const jobs = [
-    {
-      id: 1,
-      title: "Trading & Quantitative Research",
-      description:
-        "We're looking for a mid-level quantitative researcher to join our team.",
-      remote: "100% Remote",
-      type: "Full-time",
+  const { language } = useChangeLanguageContext();
+
+  // Define translations for English and Dutch
+  const translations = {
+    en: {
+      heading: "Open Positions",
+      jobs: [
+        {
+          id: 1,
+          title: "Trading & Quantitative Research",
+          description: "We're looking for a mid-level quantitative researcher to join our team.",
+          remote: "100% Remote",
+          type: "Full-time",
+        },
+        {
+          id: 2,
+          title: "Investment Analyst",
+          description: "We're looking for a mid-level Investment Analyst to join our team.",
+          remote: "100% Remote",
+          type: "Full-time",
+        },
+        {
+          id: 3,
+          title: "Lead Designer",
+          description: "We're looking for a Senior Designer to join our team.",
+          remote: "100% Remote",
+          type: "Full-time",
+        },
+        {
+          id: 4,
+          title: "ML Engineer",
+          description: "We're looking for a mid-level ML engineer to join our team.",
+          remote: "100% Remote",
+          type: "Full-time",
+        },
+      ],
+      applyLabel: "Apply",
+      applyAriaLabel: (title: string) => `Apply for ${title} position`,
     },
-    {
-      id: 2,
-      title: "Investment Analyst",
-      description:
-        "We're looking for a mid-level Investment Analyst to join our team.",
-      remote: "100% Remote",
-      type: "Full-time",
+    nl: {
+      heading: "Open Posities",
+      jobs: [
+        {
+          id: 1,
+          title: "Handel & Kwantitatief Onderzoek",
+          description: "We zoeken een mid-level kwantitatieve onderzoeker om ons team te versterken.",
+          remote: "100% Op Afstand",
+          type: "Voltijds",
+        },
+        {
+          id: 2,
+          title: "Investeringsanalist",
+          description: "We zoeken een mid-level Investeringsanalist om ons team te versterken.",
+          remote: "100% Op Afstand",
+          type: "Voltijds",
+        },
+        {
+          id: 3,
+          title: "Hoofdontwerper",
+          description: "We zoeken een Senior Ontwerper om ons team te versterken.",
+          remote: "100% Op Afstand",
+          type: "Voltijds",
+        },
+        {
+          id: 4,
+          title: "ML Ingenieur",
+          description: "We zoeken een mid-level ML-ingenieur om ons team te versterken.",
+          remote: "100% Op Afstand",
+          type: "Voltijds",
+        },
+      ],
+      applyLabel: "Solliciteren",
+      applyAriaLabel: (title: string) => `Solliciteren voor de positie van ${title}`,
     },
-    {
-      id: 3,
-      title: "Lead Designer",
-      description: "We're looking for a Senior Designer to join our team.",
-      remote: "100% Remote",
-      type: "Full-time",
-    },
-    {
-      id: 4,
-      title: "ML Engineer",
-      description:
-        "We're looking for a mid-level ML engineer to join our team.",
-      remote: "100% Remote",
-      type: "Full-time",
-    },
-  ];
+  };
+
+  // Select the appropriate content based on language, with fallback to English
+  const content = translations[language] || translations.en;
+  const jobs = content.jobs;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -61,7 +108,7 @@ const OpenPositions = () => {
   return (
     <section
       className="w-full max-w-5xl mx-auto px-4 py-12"
-      id='open'
+      id="open"
       aria-labelledby="positions-heading"
     >
       <div className="mb-10 text-center">
@@ -69,9 +116,9 @@ const OpenPositions = () => {
           id="positions-heading"
           className="text-4xl font-bold text-gray-900 mb-2 inline-block"
         >
-          Open{" "}
+          {content.heading.split(" ")[0]}{" "}
           <span className="relative">
-            Positions
+            {content.heading.split(" ")[1]}
             <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400"></span>
           </span>
         </h2>
@@ -96,9 +143,9 @@ const OpenPositions = () => {
               <a
                 href="#"
                 className="text-teal-600 font-medium hover:text-teal-700 transition-colors inline-flex items-center mt-2 md:mt-0"
-                aria-label={`Apply for ${job.title} position`}
+                aria-label={content.applyAriaLabel(job.title)}
               >
-                Apply
+                {content.applyLabel}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4 ml-1"

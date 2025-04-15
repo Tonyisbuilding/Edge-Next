@@ -2,12 +2,34 @@ import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
 import "../landingPage/component.css";
+import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+
+
+// Translations object
+const translations = {
+  en: {
+    title: "About Edge Fund",
+    description: "EdgeFund uses an automated, volatility-driven strategy focused on selling options while minimizing risk through delta hedging. Futures are used for hedging, with the S&P 500 as the primary market due to its liquidity. Additionally, the fund employs interest rate and FX arbitrage to enhance returns.",
+    minimumInvestment: "Minimum investment: €100,000.",
+    participateButton: "Participate"
+  },
+  nl: {
+    title: "Over Edge Fund",
+    description: "EdgeFund maakt gebruik van een geautomatiseerde, volatiliteit-gedreven strategie gericht op het verkopen van opties terwijl het risico wordt geminimaliseerd door delta-hedging. Futures worden gebruikt voor hedging, met de S&P 500 als primaire markt vanwege de liquiditeit. Daarnaast past het fonds rente- en FX-arbitrage toe om rendementen te verbeteren.",
+    minimumInvestment: "Minimale investering: €100.000.",
+    participateButton: "Deelnemen"
+  }
+};
 
 const AboutEdgeFund = () => {
+  const { language } = useChangeLanguageContext();
+  const content = translations[language] || translations.en;
+
   return (
     <section className="w-full max-w-7xl mx-auto px-0 py-16 md:py-16 md:mt-[5rem] mt-[3rem]">
       <motion.div
-        className="flex flex-col md:flex-row gap-8 md:gap-3  overflow-hidden"
+        className="flex flex-col md:flex-row gap-8 md:gap-3 overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -20,33 +42,26 @@ const AboutEdgeFund = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <h2 className="text-3xl font-semibold md:text-[35px] text-[20.86px] text-gray-900 mb-4">
-              About Edge Fund
+              {content.title}
             </h2>
             <div className="w-24 h-[1.2px] bg-yellow-400 mb-6"></div>
 
             <p className="text-gray-800 mb-8 inter font-medium md:text-[20px] text-[14.91px]">
-              EdgeFund uses an automated, volatility-driven strategy focused on
-              selling options while minimizing risk through delta hedging.
-              Futures are used for hedging, with the S&P 500 as the primary
-              market due to its liquidity. Additionally, the fund employs
-              interest rate and FX arbitrage to enhance returns.
+              {content.description}
             </p>
 
-            <p className=" font-bold text-gray-900 mb-8 inter md:text-[18px] text-[10.72px]">
-              Minimum investment: €100,000.
+            <p className="font-bold text-gray-900 mb-8 inter md:text-[18px] text-[10.72px]">
+              {content.minimumInvestment}
             </p>
-
-            <motion.button
-              className="bg-[#206A7C] text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_hr7H_50tSS2s_Zu-9SwUxFuBNhVKNv3Qcsq03gpWyVaZCw/viewform?usp=header"
-              target="_blank"
+            <Link to="/participate">
+              <motion.button
+                className="bg-[#206A7C] text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
               >
-                Participate
-              </a>
-            </motion.button>
+                {content.participateButton}
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
 
@@ -57,7 +72,7 @@ const AboutEdgeFund = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          <div className="w-full h-full relative ">
+          <div className="w-full h-full relative">
             <img
               src={images.edgefund.edgehero}
               alt="Edge Capital team meeting"

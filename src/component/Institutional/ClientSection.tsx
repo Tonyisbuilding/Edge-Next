@@ -1,13 +1,14 @@
 import React from 'react';
-import { Users, TrendingUp, Home, Clock, LucideIcon  } from 'lucide-react';
+import { Users, TrendingUp, Home, Clock, LucideIcon } from 'lucide-react';
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 interface ClientCardProps {
-    title: string;
-    description: string;
-    icon: LucideIcon; 
-  }
+  title: string;
+  description: string;
+  icon: LucideIcon; 
+}
 
-const ClientCard = ({ title, description, icon: Icon }:ClientCardProps) => (
+const ClientCard = ({ title, description, icon: Icon }: ClientCardProps) => (
   <div className="relative overflow-hidden bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
     <div className="absolute -right-8 -top-8 w-24 h-24 bg-[#206A7C]/10 rounded-full transition-transform duration-300 group-hover:scale-150"></div>
     <div className="absolute -left-4 -bottom-4 w-16 h-16 bg-[#206A7C]/5 rounded-full transition-transform duration-500 group-hover:scale-150 delay-100"></div>
@@ -26,37 +27,80 @@ const ClientCard = ({ title, description, icon: Icon }:ClientCardProps) => (
 );
 
 const ClientsSection = () => {
-  const clients = [
-    {
-      title: "Hedge Funds and Asset Managers",
-      description: "If you want to diversify within your strategy or completely outsource the strategy.",
-      icon: TrendingUp
+  const { language } = useChangeLanguageContext();
+
+  // Define translations for English and Dutch
+  const translations = {
+    en: {
+      subheader: "Trusted Partners",
+      header: "Our Clients",
+      description: "We serve a broad spectrum of institutional clients with tailored solutions.",
+      clients: [
+        {
+          title: "Hedge Funds and Asset Managers",
+          description: "If you want to diversify within your strategy or completely outsource the strategy.",
+          icon: TrendingUp,
+        },
+        {
+          title: "Proprietary Trading Firms",
+          description: "For prop traders looking to enhance or diversify their strategy.",
+          icon: Users,
+        },
+        {
+          title: "Family Offices",
+          description: "Market-neutral investing to reduce risk.",
+          icon: Home,
+        },
+        {
+          title: "Factoring Companies",
+          description: "Park your idle funds for a favorable return.",
+          icon: Clock,
+        },
+      ],
     },
-    {
-      title: "Proprietary Trading Firms",
-      description: "For prop traders looking to enhance or diversify their strategy.",
-      icon: Users
+    nl: {
+      subheader: "Vertrouwde Partners",
+      header: "Onze Klanten",
+      description: "We bedienen een breed scala aan institutionele klanten met oplossingen op maat.",
+      clients: [
+        {
+          title: "Hedgefondsen en Vermogensbeheerders",
+          description: "Als u uw strategie wilt diversifiëren of de strategie volledig wilt uitbesteden.",
+          icon: TrendingUp,
+        },
+        {
+          title: "Propriëtaire Handelsbedrijven",
+          description: "Voor prop-handelaren die hun strategie willen verbeteren of diversifiëren.",
+          icon: Users,
+        },
+        {
+          title: "Familiekantoren",
+          description: "Marktneutraal beleggen om risico's te verminderen.",
+          icon: Home,
+        },
+        {
+          title: "Factoringbedrijven",
+          description: "Parkeer uw inactieve fondsen voor een gunstig rendement.",
+          icon: Clock,
+        },
+      ],
     },
-    {
-      title: "Family Offices",
-      description: "Market-neutral investing to reduce risk.",
-      icon: Home
-    },
-    {
-      title: "Factoring Companies",
-      description: "Park your idle funds for a favorable return.",
-      icon: Clock
-    }
-  ];
+  };
+
+  // Select the appropriate content based on language, with fallback to English
+  const content = translations[language] || translations.en;
+  const clients = content.clients;
 
   return (
     <section className="py-24 bg-gradient-to-br from-gray-50 to-[#206A7C]/5">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#206A7C]/10 text-[#206A7C] text-sm font-medium mb-4">Trusted Partners</div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Clients</h2>
+          <div className="inline-block px-3 py-1 rounded-full bg-[#206A7C]/10 text-[#206A7C] text-sm font-medium mb-4">
+            {content.subheader}
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">{content.header}</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We serve a broad spectrum of institutional clients with tailored solutions.
+            {content.description}
           </p>
         </div>
         

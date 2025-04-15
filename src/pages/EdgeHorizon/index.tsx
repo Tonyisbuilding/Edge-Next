@@ -6,6 +6,7 @@ import EdgeHorizonSection from "@/component/EdgeHorizon/EdgeHorizonSection";
 const EdgeHorizon = () => {
   return (
     <>
+          <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -13,7 +14,6 @@ const EdgeHorizon = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <EdgeHorizonSection />
         <Contact />
         <Footer />

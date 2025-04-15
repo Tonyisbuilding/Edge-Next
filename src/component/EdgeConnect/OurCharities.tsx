@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { charities } from "@/constant/data";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const OurCharities = () => {
   
+  const { language } = useChangeLanguageContext();
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -19,6 +22,21 @@ const OurCharities = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   };
 
+  // Translation text based on language
+  const translations = {
+    en: {
+      title: 'Our charities',
+      description: 'Our employees have thoughtfully chosen the six charities we support as part of the Edge Connect rewards system'
+    },
+    nl: {
+      title: 'Onze goede doelen',
+      description: 'Onze medewerkers hebben de zes goede doelen die we ondersteunen zorgvuldig gekozen als onderdeel van het Edge Connect beloningssysteem'
+    }
+  };
+
+  // Choose text based on current language
+  const text = translations[language] || translations.en;
+
   return (
     <section className="py-12 px-4 md:px-8 bg-gray-100 relative">
       {/* Dotted background pattern */}
@@ -32,11 +50,10 @@ const OurCharities = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-6">
-          <h2 className="text-4xl font-bold text-gray-800 mb-2">Our charities</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-2">{text.title}</h2>
           <div className="w-20 h-1 bg-yellow-400 mb-4"></div>
           <p className="text-lg text-gray-700 max-w-3xl">
-            Our employees have thoughtfully chosen the six charities 
-            we support as part of the Edge Connect rewards system
+            {text.description}
           </p>
         </div>
 
@@ -67,7 +84,7 @@ const OurCharities = () => {
                   {charity.organization}
                 </div>
                 <p className="text-gray-800 md:text-[22px]">
-                  {charity.description}
+                  {language === 'nl' && charity.descriptionNL ? charity.descriptionNL : charity.description}
                 </p>
               </div>
             </motion.div>

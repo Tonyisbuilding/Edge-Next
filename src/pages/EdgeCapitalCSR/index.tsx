@@ -8,6 +8,7 @@ import RoadmapSection from "@/component/EdgeCapitalCSR/RoadMap";
 const EdgeCapitalCSR = () => {
   return (
     <>
+          <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -15,7 +16,6 @@ const EdgeCapitalCSR = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <EdgeCareHero />
         <OurCoreValues />
         <RoadmapSection />

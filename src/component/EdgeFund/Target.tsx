@@ -4,12 +4,14 @@ import { Smartphone } from "lucide-react";
 import { ReactNode } from "react";
 import images from "@/constant/images";
 import "../landingPage/component.css";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 export type metricCardType = {
   title: string;
   value: string;
   icon: ReactNode;
 };
+
 const MetricCard = ({ title, value, icon }: metricCardType) => {
   return (
     <motion.div
@@ -67,18 +69,31 @@ const MetricCard = ({ title, value, icon }: metricCardType) => {
 };
 
 const Target = () => {
-  // Metrics data
-  const metrics = [
-    { title: "Annual Target", value: "24%", id: 1 },
-    { title: "Total cumulative result", value: "125.79%", id: 2 },
-    { title: "Monthly target", value: "2%", id: 3 },
-    { title: "Institutional Clients", value: "8.15%", id: 4 },
-  ];
+  const { language } = useChangeLanguageContext();
+
+  // Metrics data with translations
+  const metrics = {
+    en: [
+      { title: "Annual Target", value: "24%", id: 1 },
+      { title: "Total cumulative result", value: "125.79%", id: 2 },
+      { title: "Monthly target", value: "2%", id: 3 },
+      { title: "Institutional Clients", value: "8.15%", id: 4 },
+    ],
+    nl: [
+      { title: "Jaarlijks doel", value: "24%", id: 1 },
+      { title: "Totaal cumulatief resultaat", value: "125.79%", id: 2 },
+      { title: "Maandelijks doel", value: "2%", id: 3 },
+      { title: "Institutionele klanten", value: "8.15%", id: 4 },
+    ]
+  };
+
+  // Use the appropriate language
+  const currentMetrics = metrics[language] || metrics.en;
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:pb-16 pb-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        {metrics.map((metric) => (
+        {currentMetrics.map((metric) => (
           <MetricCard
             key={metric.id}
             title={metric.title}

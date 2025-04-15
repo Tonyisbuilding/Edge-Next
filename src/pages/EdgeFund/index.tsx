@@ -12,6 +12,7 @@ import InvestmentPerformance from "@/component/EdgeFund/InvestmentPerformance";
 const EdgeFund = () => {
   return (
     <>
+          <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -19,7 +20,6 @@ const EdgeFund = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <AboutEdgeFund />
         <Target />
         <WhatSetsUsApart />

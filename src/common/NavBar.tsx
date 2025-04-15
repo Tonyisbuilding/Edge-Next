@@ -2,15 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  // faPhone,
   faBars,
   faXmark,
   faChevronDown,
   faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 import images from "@/constant/images";
-// import LanguageSwitcher from "@/common/LanguageSwitcher.tsx";
 import "../common/GoogleTranslate.css";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 interface DropdownState {
   [key: number]: boolean;
@@ -31,18 +30,58 @@ const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [activeDropdowns, setActiveDropdowns] = useState<DropdownState>({});
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const { language, setLanguage } = useChangeLanguageContext();
 
-  // Track screen size
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024); // Tailwind lg breakpoint
-    };
+  // Translation dictionary
+  const translations = {
+    en: {
+      home: "Home",
+      aboutUs: "About Us",
+      about: "About",
+      team: "Team",
+      edgeFund: "Edge Fund",
+      edgeImpact: "Edge Impact",
+      edgeConnect: "Edge Connect",
+      edgeCares: "Edge Cares",
+      edgeHorizonFoundation: "Edge Horizon Foundation",
+      edgeCapitalCSR: "Edge Capital CSR",
+      institutional: "Institutional",
+      company: "Company",
+      contact: "Contact",
+      media: "Media",
+      documents: "Documents",
+      careers: "Careers",
+      contactUs: "Contact Us",
+      english: "English",
+      dutch: "Dutch",
+    },
+    nl: {
+      home: "Home",
+      aboutUs: "Over Ons",
+      about: "Over",
+      team: "Team",
+      edgeFund: "Edge Fonds",
+      edgeImpact: "Edge Impact",
+      edgeConnect: "Edge Connect",
+      edgeCares: "Edge Cares",
+      edgeHorizonFoundation: "Edge Horizon Stichting",
+      edgeCapitalCSR: "Edge Capital MVO",
+      institutional: "Institutioneel",
+      company: "Bedrijf",
+      contact: "Contact",
+      media: "Media",
+      documents: "Documenten",
+      careers: "Vacatures",
+      contactUs: "Neem Contact Op",
+      english: "Engels",
+      dutch: "Dutch",
+    }
+  };
 
-    handleResize(); // Check initially
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // Get translation based on current language
+  const t = (key: keyof typeof translations.en) => {
+    return translations[language][key];
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,34 +89,6 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
- 
-
-  useEffect(() => {
-    const addGoogleTranslateScript = () => {
-      if (document.getElementById("google-translate-script")) return;
-      const script = document.createElement("script");
-      script.id = "google-translate-script";
-      script.src =
-        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      document.body.appendChild(script);
-
-      const inlineScript = document.createElement("script");
-      inlineScript.innerHTML = `
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-              pageLanguage: 'en',
-              includedLanguages: 'en,nl',
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-          }
-        `;
-      document.body.appendChild(inlineScript);
-    };
-
-    addGoogleTranslateScript();
   }, []);
 
   const toggleNav = () => setIsNavActive(!isNavActive);
@@ -95,6 +106,10 @@ const Navbar = () => {
     }
   };
 
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(e.target.value as "en" | "nl");
+  };
+
   return (
     <nav
       className={`fixed top-0 w-full bg-[#eef4f5cc] backdrop-blur-md border-b
@@ -108,14 +123,6 @@ const Navbar = () => {
             className="w-[202px] h-[34px]"
           />
         </Link>
-
- 
-
-        
-          {/* <div
-            id="google_translate_element"
-            className="text-sm  h-[3rem] flex w-auto mr-[1rem] fixed top-[4.5rem] left-[3%] lg:top-[2rem] lg:left-[70%]"
-          ></div> */}
 
         {/* Mobile Menu */}
         <div
@@ -146,7 +153,7 @@ const Navbar = () => {
                   className="text-[#192227] font-semibold block"
                   onClick={toggleNav}
                 >
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li className="py-4 border-b border-gray-100">
@@ -155,7 +162,7 @@ const Navbar = () => {
                   className="text-[#192227] font-semibold flex justify-between items-center w-full"
                   onClick={(e) => toggleDropdown(1, e)}
                 >
-                  About Us
+                  {t("aboutUs")}
                   <FontAwesomeIcon
                     icon={activeDropdowns[1] ? faChevronUp : faChevronDown}
                     className="text-xs"
@@ -169,7 +176,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        About
+                        {t("about")}
                       </Link>
                     </li>
                     <li className="py-2">
@@ -178,7 +185,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Team
+                        {t("team")}
                       </Link>
                     </li>
                   </ul>
@@ -190,7 +197,7 @@ const Navbar = () => {
                   className="text-[#192227] font-semibold block"
                   onClick={toggleNav}
                 >
-                  Edge Fund
+                  {t("edgeFund")}
                 </Link>
               </li>
               <li className="py-4 border-b border-gray-100">
@@ -199,7 +206,7 @@ const Navbar = () => {
                   className="text-[#192227] font-semibold flex justify-between items-center w-full"
                   onClick={(e) => toggleDropdown(2, e)}
                 >
-                  Edge Impact
+                  {t("edgeImpact")}
                   <FontAwesomeIcon
                     icon={activeDropdowns[2] ? faChevronUp : faChevronDown}
                     className="text-xs"
@@ -213,25 +220,16 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Edge Connect
+                        {t("edgeConnect")}
                       </Link>
                     </li>
-                    {/* <li className="py-2">
-                      <Link
-                        to="/edge-impact-fund"
-                        className="block text-[#192227]"
-                        onClick={toggleNav}
-                      >
-                        Edge Impact Fund
-                      </Link>
-                    </li> */}
                     <li className="py-2">
                       <Link
                         to="/edge-cares"
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Edge Cares
+                        {t("edgeCares")}
                       </Link>
                     </li>
                     <li className="py-2">
@@ -240,7 +238,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Edge Horizon Foundation
+                        {t("edgeHorizonFoundation")}
                       </Link>
                     </li>
                     <li className="py-2">
@@ -249,7 +247,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Edge Capital CSR
+                        {t("edgeCapitalCSR")}
                       </Link>
                     </li>
                   </ul>
@@ -261,7 +259,7 @@ const Navbar = () => {
                   className="text-[#192227] font-semibold block"
                   onClick={toggleNav}
                 >
-                  Institutional
+                  {t("institutional")}
                 </Link>
               </li>
               <li className="py-4 border-b border-gray-100">
@@ -270,7 +268,7 @@ const Navbar = () => {
                   className="text-[#192227] font-semibold flex justify-between items-center w-full"
                   onClick={(e) => toggleDropdown(3, e)}
                 >
-                  Company
+                  {t("company")}
                   <FontAwesomeIcon
                     icon={activeDropdowns[3] ? faChevronUp : faChevronDown}
                     className="text-xs"
@@ -284,7 +282,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Contact
+                        {t("contact")}
                       </Link>
                     </li>
                     <li className="py-2">
@@ -293,7 +291,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Media
+                        {t("media")}
                       </Link>
                     </li>
                     <li className="py-2">
@@ -302,7 +300,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Documents
+                        {t("documents")}
                       </Link>
                     </li>
                     <li className="py-2">
@@ -311,7 +309,7 @@ const Navbar = () => {
                         className="block text-[#192227]"
                         onClick={toggleNav}
                       >
-                        Careers
+                        {t("careers")}
                       </Link>
                     </li>
                   </ul>
@@ -320,39 +318,52 @@ const Navbar = () => {
             </ul>
 
             <div className="px-4 py-6 border-t border-gray-100 mt-4">
-              {/* <div className="flex items-center mb-4">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  className="mr-2 text-[#206A7C]"
-                />
-                <a href="tel:+31613484484" className="font-semibold text-black">
-                  +31 6 13 484 484
-                </a>
-              </div> */}
-              {isMobile && (
-          <div className="lg:hidden">
-            <div
-              // ref={translateRef}
-              id="google_translate_element"
-              className="text-sm  h-[3rem] flex w-auto mr-[1rem] mb-5"
-            />
-          </div>
-        )}
+              <div className="relative w-auto my-2">
+                <select
+                  onChange={(e) => handleSelectChange(e)}
+                  name="selectLanguage"
+                  id="selectLanguage"
+                  className="bg-[#D4DFDF40] border-2 border-white h-auto w-full py-[.69rem]
+              rounded-lg px-3 outline-none text-black appearance-none pr-10 lg:text-[18px] font-bold"
+                  value={language}
+                >
+                  <option value="en" className="text-black">
+                    {translations.en.english}
+                  </option>
+                  <option value="nl" className="text-black">
+                    {translations.nl.dutch}
+                  </option>
+                </select>
+
+                {/* Custom Dropdown Arrow */}
+                <div
+                  className="pointer-events-none absolute right-3 top-1/2 transform -translate-y-1/2
+             text-black text-xl lg:mr-[.5rem]"
+                >
+                  <div className="flex-shrink-0 flex items-center justify-center">
+                    <img
+                      src={images.landingPage.vector}
+                      alt="Research team analyzing market data"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
               <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold w-full">
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact">{t("contactUs")}</Link>
               </button>
             </div>
           </div>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex lg:gap-5 lg:items-center relative">
+        <ul className="hidden lg:flex lg:gap-5 lg:items-center relative justify-center">
           <li>
             <Link
               to="/"
               className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
             >
-              Home
+              {t("home")}
             </Link>
           </li>
           <li className="relative group">
@@ -360,7 +371,7 @@ const Navbar = () => {
               href="#"
               className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
             >
-              About Us
+              {t("aboutUs")}
               <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
             </a>
             <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
@@ -369,7 +380,7 @@ const Navbar = () => {
                   to="/about"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  About
+                  {t("about")}
                 </Link>
               </li>
               <li className="p-3">
@@ -377,7 +388,7 @@ const Navbar = () => {
                   to="/team"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Team
+                  {t("team")}
                 </Link>
               </li>
             </ul>
@@ -387,7 +398,7 @@ const Navbar = () => {
               to="/edge-fund"
               className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
             >
-              Edge Fund
+              {t("edgeFund")}
             </Link>
           </li>
           <li className="relative group">
@@ -395,7 +406,7 @@ const Navbar = () => {
               href="#"
               className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
             >
-              Edge Impact
+              {t("edgeImpact")}
               <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
             </a>
             <ul
@@ -407,23 +418,15 @@ const Navbar = () => {
                   to="/edge-connect"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Edge Connect
+                  {t("edgeConnect")}
                 </Link>
               </li>
-              {/* <li className="p-3">
-                <Link
-                  to="/edge-impact-fund"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
-                >
-                  Edge Impact Fund
-                </Link>
-              </li> */}
               <li className="p-3">
                 <Link
                   to="/edge-cares"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Edge Cares
+                  {t("edgeCares")}
                 </Link>
               </li>
               <li className="p-3">
@@ -431,7 +434,7 @@ const Navbar = () => {
                   to="/edge-foundation"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Edge Horizon Foundation
+                  {t("edgeHorizonFoundation")}
                 </Link>
               </li>
               <li className="p-3">
@@ -439,7 +442,7 @@ const Navbar = () => {
                   to="/edge-capitla-csr"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Edge Capital CSR
+                  {t("edgeCapitalCSR")}
                 </Link>
               </li>
             </ul>
@@ -449,7 +452,7 @@ const Navbar = () => {
               to="/institutional"
               className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
             >
-              Institutional
+              {t("institutional")}
             </Link>
           </li>
           <li className="relative group">
@@ -457,7 +460,7 @@ const Navbar = () => {
               href="#"
               className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
             >
-              Company
+              {t("company")}
               <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
             </a>
             <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
@@ -466,7 +469,7 @@ const Navbar = () => {
                   to="/contact"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Contact
+                  {t("contact")}
                 </Link>
               </li>
               <li className="p-3">
@@ -474,7 +477,7 @@ const Navbar = () => {
                   to="/media"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Media
+                  {t("media")}
                 </Link>
               </li>
               <li className="p-3">
@@ -482,7 +485,7 @@ const Navbar = () => {
                   to="/documents"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Documents
+                  {t("documents")}
                 </Link>
               </li>
               <li className="p-3">
@@ -490,7 +493,7 @@ const Navbar = () => {
                   to="/careers"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
-                  Careers
+                  {t("careers")}
                 </Link>
               </li>
             </ul>
@@ -500,27 +503,45 @@ const Navbar = () => {
         {/* Desktop Contact */}
         <div
           className="hidden lg:flex items-center border border-white rounded-[15px] 
-          p-3 w-auto  relative h-[5rem] gap-3"
+          p-3 w-auto  relative h-[5rem] gap-8"
         >
-          {/* <div className="flex items-center mr-4">
-            <FontAwesomeIcon icon={faPhone} className="mr-2 text-[#206A7C]" />
-            <span className="font-semibold text-black">+31 6 13 484 484</span>
-          </div> */}
-          {!isMobile && (
-            <div>
-              <div
-                // ref={translateRef}
-                id="google_translate_element"
-                className="text-sm  h-[3rem] flex w-auto mr-[1rem] relative"
-              />
+          <div className="relative w-auto ">
+            <select
+              onChange={(e) => handleSelectChange(e)}
+              name="selectLanguage"
+              id="selectLanguage"
+              className="bg-[#D4DFDF40] border-2 border-white h-auto w-auto py-[.69rem]
+              rounded-lg px-3 outline-none text-black appearance-none pr-10 lg:text-[18px] font-bold"
+              value={language}
+            >
+              <option value="en" className="text-black">
+                {translations.en.english}
+              </option>
+              <option value="nl" className="text-black">
+                {translations.nl.dutch}
+              </option>
+            </select>
+
+            {/* Custom Dropdown Arrow */}
+            <div
+              className="pointer-events-none absolute right-3 top-1/2 transform -translate-y-1/2
+             text-black text-xl lg:mr-[.5rem]"
+            >
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src={images.landingPage.vector}
+                  alt="Research team analyzing market data"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-          )}
+          </div>
 
           <button
             className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold
            hover:bg-[#0e1417] transition-colors relative right-[1rem] w-auto"
           >
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact">{t("contactUs")}</Link>
           </button>
         </div>
 

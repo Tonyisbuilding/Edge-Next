@@ -4,7 +4,7 @@ import ContactInfo from "./ContactInfo";
 const Contact = () => {
   return (
     <>
-      <div className=" bg-[#EEF4F5] lg:flex md:pt-0 pt-[3rem]">
+      <div className=" bg-[#EEF4F5] lg:flex md:pt-0 pt-[3rem] lg:items-center">
         <div className=" lg:w-[50%] relative">
           <ContactInfo />
         </div>

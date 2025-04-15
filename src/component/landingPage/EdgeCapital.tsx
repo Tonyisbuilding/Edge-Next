@@ -1,13 +1,16 @@
 import "./component.css";
 import React, { useEffect, useRef } from "react";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const EdgeCapital: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const { language } = useChangeLanguageContext();
 
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const wordSpans = containerRef.current.querySelectorAll<HTMLSpanElement>(".word-span");
+    const wordSpans =
+      containerRef.current.querySelectorAll<HTMLSpanElement>(".word-span");
     if (!wordSpans.length) return;
 
     const options: IntersectionObserverInit = {
@@ -20,7 +23,9 @@ const EdgeCapital: React.FC = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("active");
-        } else if (entry.boundingClientRect.top > (entry.rootBounds?.top || 0)) {
+        } else if (
+          entry.boundingClientRect.top > (entry.rootBounds?.top || 0)
+        ) {
           entry.target.classList.remove("active");
         }
       });
@@ -33,13 +38,17 @@ const EdgeCapital: React.FC = () => {
     };
   }, []);
 
-  const originalText =
-    "At Edge Capital, we revolutionize investing with quantitative, fact-based strategies, not traditional predictions. Using predetermined parameters like interest rates and option premiums, we mitigate risks through hedging across options and futures markets. Our diverse products, tailored for large and small investors, offer optimized risk-return profiles, giving you a market edge.";
+  const originalText = `${
+    language === "en"
+      ? '"At Edge Capital, we revolutionize investing with quantitative, fact-based strategies, not traditional predictions. Using predetermined parameters like interest rates and option premiums, we mitigate risks through hedging across options and futures markets. Our diverse products, tailored for large and small investors, offer optimized risk-return profiles, giving you a market edge."'
+      : "Bij Edge Capital revolutioneren we beleggen met kwantitatieve, op feiten gebaseerde strategieën in plaats van traditionele voorspellingen.Door vooraf bepaalde parameters zoals rentetarieven en optiepremies te gebruiken, beperken we risico’s via hedging in de opties- en futuresmarkten.Onze diverse producten, afgestemd op zowel grote als kleine beleggers, bieden geoptimaliseerde risico-rendementsprofielen en verschaffen u een voorsprong op de markt."
+  }`;
 
   const words = originalText.split(/\s+/);
 
   return (
-    <section className="about-txt bg-[#EEF4F5] h-auto py-[3.5rem]  lg:h-auto lg:py-[5rem] relative">
+    <section className={`about-txt bg-[#EEF4F5] h-auto py-[3.5rem] ${ language === 'en' ? 'lg:h-auto lg:py-[2rem] lg:max-h-[680px]' : ' lg:h-auto pb-[10rem]'}    
+    relative `}>
       <div className="scroll-text-container h-auto" ref={containerRef}>
         {words.map((word, index) => (
           <span key={index} className="word-span">
@@ -53,9 +62,6 @@ const EdgeCapital: React.FC = () => {
 };
 
 export default EdgeCapital;
-
-
-
 
 // import "./component.css";
 // import React, { useEffect, useRef } from "react";
@@ -90,7 +96,7 @@ export default EdgeCapital;
 //         entries.forEach((entry: IntersectionObserverEntry) => {
 //           // Type assertion for target as HTMLElement since we know these are span elements
 //           const target = entry.target as HTMLElement;
-          
+
 //           if (entry.isIntersecting) {
 //             target.classList.add("active");
 //           } else if (entry.boundingClientRect.top > (entry.rootBounds?.top ?? 0)) {

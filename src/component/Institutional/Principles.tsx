@@ -1,282 +1,322 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import images from "@/constant/images";
+import React, { useState } from "react";
+import { TrendingUp, Scale, Award, BarChart2, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 // Define types for principle data
 interface Principle {
   id: number;
   title: string;
   description: string;
-  icon: IconType;
+  icon: React.ReactNode;
 }
 
-type IconType = "chart" | "balance" | "calculator" | "handshake" | "award";
-
-// Principle data
-const principles: Principle[] = [
-  {
-    id: 1,
-    title: "Volatility Premium Strategy",
-    description:
-      "Our strategy based on ES (S&P 500) and NQ (Nasdaq) options utilizes a model focused on selling volatility and targets short-term systems. We sell options with 0 days to expiration (DTE) at deltas between 0.1 and 0.3 with an asymmetrical preference for the call side.",
-    icon: "chart",
-  },
-  {
-    id: 2,
-    title: "Dynamic Delta-Hedging",
-    description:
-      "Delta-hedging adjusts dynamically based on market volatility, supported by parameters enhanced with machine learning. This allows us to maintain optimal risk management regardless of market conditions.",
-    icon: "balance",
-  },
-  {
-    id: 3,
-    title: "Risk Management & Scalability",
-    description:
-      "By exclusively using 0DTE options on the S&P 500 and Nasdaq, we avoid overnight risks. Moreover, our model offers high scalability of up to €100 million without compromising efficiency or performance.",
-    icon: "calculator",
-  },
-  {
-    id: 4,
-    title: "Institutional-Grade Collaboration",
-    description:
-      "We offer flexible collaboration options through direct fund participation or tailor-made SaaS solutions, allowing various types of investors to benefit from our strategies.",
-    icon: "handshake",
-  },
-  {
-    id: 5,
-    title: "Proven Performance",
-    description:
-      "The strategy shows an average daily expected return of 0.18% gross (before commissions) and 0.12% net (after costs). The win ratio, calculated as the ratio of profitable days to losing days, is 1.82 net and 2.41 gross.",
-    icon: "award",
-  },
-];
-
 const PrinciplesSection: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [isSticky, setIsSticky] = useState<boolean>(true);
-  const sectionRef = useRef<HTMLElement>(null);
-  const principleRefs = useRef<Array<{ current: HTMLDivElement | null }>>([]);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const { language } = useChangeLanguageContext();
+  const [activeCard, setActiveCard] = useState<number>(0);
 
-  // Setup observer for scroll detection and sticky behavior
-  useEffect(() => {
-    if (!sectionRef.current) return;
+  // Define translations for English and Dutch
+  const translations = {
+    en: {
+      subheader: "Edge Capital Principles",
+      header: "5 Principles That Drive Our Success",
+      principles: [
+        {
+          id: 1,
+          title: "Volatility Premium Strategy",
+          description:
+            "Our strategy based on ES (S&P 500) and NQ (Nasdaq) options utilizes a model focused on selling volatility and targets short-term systems. We sell options with 0 days to expiration (DTE) at deltas between 0.1 and 0.3 with an asymmetrical preference for the call side.",
+          icon: <TrendingUp className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 2,
+          title: "Dynamic Delta-Hedging",
+          description:
+            "Delta-hedging adjusts dynamically based on market volatility, supported by parameters enhanced with machine learning. This allows us to maintain optimal risk management regardless of market conditions.",
+          icon: <Scale className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 3,
+          title: "Proven Performance",
+          description:
+            "The strategy shows an average daily expected return of 0.18% gross (before commissions) and 0.12% net (after costs). The win ratio, calculated as the ratio of profitable days to losing days, is 1.82 net and 2.41 gross.",
+          icon: <Award className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 4,
+          title: "Risk Management & Scalability",
+          description:
+            "By exclusively using 0DTE options on the S&P 500 and Nasdaq, we avoid overnight risks. Moreover, our model offers high scalability of up to €100 million without compromising efficiency or performance.",
+          icon: <BarChart2 className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 5,
+          title: "Institutional-Grade Collaboration",
+          description:
+            "We offer flexible collaboration options through direct fund participation or tailor-made SaaS solutions, allowing various types of investors to benefit from our strategies.",
+          icon: <Users className="w-12 h-12 text-teal-400" />,
+        },
+      ],
+      prevAriaLabel: "Previous principle",
+      nextAriaLabel: "Next principle",
+      goToAriaLabel: (index: number) => `Go to principle ${index + 1}`,
+    },
+    nl: {
+      subheader: "Edge Capital Principes",
+      header: "5 Principes Die Ons Succes Sturen",
+      principles: [
+        {
+          id: 1,
+          title: "Volatiliteitspremiestrategie",
+          description:
+            "Onze strategie, gebaseerd op ES (S&P 500) en NQ (Nasdaq) opties, maakt gebruik van een model dat gericht is op het verkopen van volatiliteit en richt zich op kortetermijnsystemen. We verkopen opties met 0 dagen tot expiratie (DTE) bij delta's tussen 0,1 en 0,3 met een asymmetrische voorkeur voor de call-zijde.",
+          icon: <TrendingUp className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 2,
+          title: "Dynamische Delta-Hedging",
+          description:
+            "Delta-hedging past zich dynamisch aan op basis van marktvolatiliteit, ondersteund door parameters die zijn verbeterd met machine learning. Dit stelt ons in staat om optimaal risicobeheer te handhaven, ongeacht de marktomstandigheden.",
+          icon: <Scale className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 3,
+          title: "Bewezen Prestaties",
+          description:
+            "De strategie toont een gemiddeld dagelijks verwacht rendement van 0,18% bruto (voor commissies) en 0,12% netto (na kosten). De winratio, berekend als de verhouding tussen winstgevende dagen en verliesdagen, is 1,82 netto en 2,41 bruto.",
+          icon: <Award className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 4,
+          title: "Risicobeheer & Schaalbaarheid",
+          description:
+            "Door uitsluitend 0DTE-opties op de S&P 500 en Nasdaq te gebruiken, vermijden we nachtelijke risico's. Bovendien biedt ons model hoge schaalbaarheid tot €100 miljoen zonder afbreuk te doen aan efficiëntie of prestaties.",
+          icon: <BarChart2 className="w-12 h-12 text-teal-400" />,
+        },
+        {
+          id: 5,
+          title: "Institutionele Samenwerking",
+          description:
+            "We bieden flexibele samenwerkingsopties via directe fondsdeelname of op maat gemaakte SaaS-oplossingen, waardoor verschillende soorten beleggers kunnen profiteren van onze strategieën.",
+          icon: <Users className="w-12 h-12 text-teal-400" />,
+        },
+      ],
+      prevAriaLabel: "Vorig principe",
+      nextAriaLabel: "Volgend principe",
+      goToAriaLabel: (index: number) => `Ga naar principe ${index + 1}`,
+    },
+  };
 
-    // Initialize refs array
-    principleRefs.current = Array(principles.length)
-      .fill(null)
-      .map((_, i) => principleRefs.current[i] || { current: null });
+  // Select the appropriate content based on language, with fallback to English
+  const content = translations[language] || translations.en;
+  const principles: Principle[] = content.principles;
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
+  // Mobile navigation handlers
+  const goToPrevCard = () => {
+    setActiveCard((prev) => (prev - 1 + principles.length) % principles.length);
+  };
 
-      // Find which principle is currently in view
-      for (let i = 0; i < principles.length; i++) {
-        const element = principleRefs.current[i]?.current;
-        if (!element) continue;
-
-        const rect = element.getBoundingClientRect();
-        const elementTop = rect.top + window.scrollY;
-        const elementBottom = elementTop + rect.height;
-
-        if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
-          setActiveIndex(i);
-          break;
-        }
-      }
-    };
-
-    // IntersectionObserver to detect when section is in/out of view
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsSticky(true);
-          } else {
-            setIsSticky(false);
-          }
-        });
-      },
-      { threshold: 0, rootMargin: "0px 0px -100% 0px" }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
-  }, []);
-
-  // Render appropriate icon based on principle type
-  const renderIcon = (iconType: IconType): JSX.Element | null => {
-    switch (iconType) {
-      case "chart":
-        return (
-          <div className="flex-shrink-0   flex items-center justify-center">
-            <img
-              src={images.institution.market_analysis}
-              alt="Research team analyzing market data"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        );
-      case "balance":
-        return (
-          <div className="flex-shrink-0   flex items-center justify-center">
-            <img
-              src={images.institution.Clip_path}
-              alt="Research team analyzing market data"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        );
-      case "calculator":
-        return (
-          <div className="flex-shrink-0   flex items-center justify-center">
-            <img
-              src={images.institution.calculator}
-              alt="Research team analyzing market data"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        );
-      case "handshake":
-        return (
-          <div className="flex-shrink-0   flex items-center justify-center">
-            <img
-              src={images.institution.handshake_white}
-              alt="Research team analyzing market data"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        );
-      case "award":
-        return (
-          <div className="flex-shrink-0   flex items-center justify-center">
-            <img
-              src={images.institution.medal_award_badge}
-              alt="Research team analyzing market data"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        );
-      default:
-        return null;
-    }
+  const goToNextCard = () => {
+    setActiveCard((prev) => (prev + 1) % principles.length);
   };
 
   return (
-    <section
-      ref={sectionRef}
-      className="max-w-6xl mx-auto px-4 md:px-6 py-16 
-    h-auto relative overflow-hiddenmb-[2rem]"
-    >
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-16"
-      >
-        <h3 className="text-teal-600 text-3xl font-medium mb-2">
-          Edge Capital Principles
-        </h3>
-        <h2 className="text-4xl font-bold mb-2 text-gray-800">
-          6 Principles That
-        </h2>
-        <h2 className="text-4xl font-bold text-gray-800">Drive Our Success</h2>
-      </motion.div>
+    <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h3 className="text-teal-400 text-xl md:text-2xl font-medium mb-2">
+            {content.subheader}
+          </h3>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            {content.header}
+          </h2>
+        </div>
 
-      {/* Main Content */}
-      <div className="relative flex flex-col md:flex-row">
-        {/* Left Column: Principles Content */}
-        <div className="w-full md:w-1/2 relative">
-          {/* Vertical Timeline Line */}
-          <div className="hidden md:block absolute left-0 top-0 bottom-0 w-1 bg-gray-200">
+        {/* Mobile Display */}
+        <div className="md:hidden">
+          <div className="relative">
             <motion.div
-              className="absolute w-1 bg-black"
-              initial={{ height: "20%", top: "0%" }}
-              animate={{ height: "20%", top: `${activeIndex * 20}%` }}
-              transition={{ duration: 0.5 }}
-            />
+              key={activeCard}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-lg overflow-hidden shadow-lg"
+            >
+              <div className="p-6 flex flex-col h-full justify-between py-8">
+                <div>
+                  <div className="flex justify-center mb-6">
+                    {principles[activeCard].icon}
+                  </div>
+
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">
+                    {principles[activeCard].title}
+                  </h3>
+
+                  <p className="text-md text-gray-600 leading-relaxed">
+                    {principles[activeCard].description}
+                  </p>
+                </div>
+
+                <div className="flex justify-between items-center mt-6">
+                  <span className="text-teal-600 font-semibold">
+                    {`0${principles[activeCard].id}`}
+                  </span>
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={goToPrevCard}
+                      className="bg-gray-200 hover:bg-gray-300 rounded-full p-2 focus:outline-none"
+                      aria-label={content.prevAriaLabel}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 19l-7-7 7-7"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={goToNextCard}
+                      className="bg-gray-200 hover:bg-gray-300 rounded-full p-2 focus:outline-none"
+                      aria-label={content.nextAriaLabel}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Principles List */}
-          <div className="pl-0 md:pl-6">
-            {principles.map((principle, index) => (
-              <div
-                key={principle.id}
-                ref={(el) => (principleRefs.current[index] = { current: el })}
-                className={`mb-16 transition-opacity duration-500 ${
-                  index === activeIndex ? "opacity-100" : "opacity-50"
+          {/* Mobile Navigation Indicator */}
+          <div className="flex justify-center mt-4">
+            {principles.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveCard(index)}
+                className={`w-2 h-2 mx-1 rounded-full ${
+                  index === activeCard ? "bg-teal-500" : "bg-gray-400"
                 }`}
-              >
-                <motion.div
-                  className="flex flex-col md:flex-row items-start"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {/* Principle Number */}
-                  <div className="md:mr-6">
-                    <span className="text-teal-600 text-sm font-mono">{`{${principle.id}}`}</span>
-                  </div>
-
-                  {/* Principle Content */}
-                  <div className="flex-1 mb-6 md:mb-0">
-                    <h3 className="text-2xl font-semibold mb-2 text-gray-800">
-                      {principle.title}
-                    </h3>
-                    <p className="text-gray-600">{principle.description}</p>
-                  </div>
-
-                  {/* Mobile Only Icon */}
-                  <div
-                    className="md:hidden  bg-[#272727] rounded-lg mx-auto
-                  flex items-center justify-center text-white p-4 w-full h-[18.09rem]"
-                  >
-                    {renderIcon(principle.icon)}
-                  </div>
-                </motion.div>
-              </div>
+                aria-label={content.goToAriaLabel(index)}
+              />
             ))}
           </div>
         </div>
 
-        {/* Right Column: Sticky Icon Card */}
-        <div
-          ref={cardRef}
-          className={`hidden md:block md:w-1/3 ${
-            isSticky ? "fixed top-[10rem]" : "absolute bottom-0"
-          } transition-all duration-300`}
-          style={{ right: "calc((100% - 1280px) / 2)" }}
-        >
-          <motion.div
-            className="w-full h-64 bg-[#272727] rounded-lg flex items-center justify-center text-white p-8"
-            initial={{ scale: 0.95 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <AnimatePresence mode="wait">
+        {/* Desktop Grid Layout */}
+        <div className="hidden md:block">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {principles.slice(0, 3).map((principle, index) => (
               <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-                className="w-full h-full flex items-center justify-center"
+                key={principle.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                className="bg-white p-6 rounded-lg flex flex-col h-full justify-between py-8 hover:shadow-lg transition-shadow duration-300"
+                onClick={() => setActiveCard(index)}
               >
-                {renderIcon(principles[activeIndex].icon)}
+                <div>
+                  <div className="flex justify-center mb-6">
+                    {principle.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">
+                    {principle.title}
+                  </h3>
+                  <p className="text-md text-gray-600 leading-relaxed">
+                    {principle.description}
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-6">
+                  <span className="text-teal-600 font-semibold">{`0${principle.id}`}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </div>
               </motion.div>
-            </AnimatePresence>
-          </motion.div>
+            ))}
+          </div>
+
+          {/* Last Two Cards Side-by-Side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {principles.slice(3).map((principle, index) => (
+              <motion.div
+                key={principle.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: (index + 3) * 0.1,
+                }}
+                className="bg-white p-6 rounded-lg flex flex-col h-full justify-between py-8 hover:shadow-lg transition-shadow duration-300"
+                onClick={() => setActiveCard(index + 3)}
+              >
+                <div>
+                  <div className="flex justify-center mb-6">
+                    {principle.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">
+                    {principle.title}
+                  </h3>
+                  <p className="text-md text-gray-600 leading-relaxed">
+                    {principle.description}
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-6">
+                  <span className="text-teal-600 font-semibold">{`0${principle.id}`}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

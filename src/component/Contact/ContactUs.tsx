@@ -11,7 +11,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import images from "@/constant/images";
-
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 // Define form data interface
 interface FormDataType {
@@ -26,6 +26,7 @@ interface FormDataType {
 type FormErrors = Partial<Record<keyof FormDataType, string>>;
 
 const ContactInformation = () => {
+  const { language } = useChangeLanguageContext();
   const [formData, setFormData] = useState<FormDataType>({
     firstName: "",
     lastName: "",
@@ -35,6 +36,91 @@ const ContactInformation = () => {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
+
+  // Define translations for English and Dutch
+  const translations = {
+    en: {
+      contactInfo: {
+        title: "Contact Information",
+        description:
+          "Looking to collaborate or have questions about our services? We'd love to connect and explore how Edge Capital can help you achieve your financial goals.",
+        callUs: "Call Us",
+        emailUs: "Email Us",
+        visit: "Visit",
+        workingHours: "Working Hours",
+        phone: "+31613484484",
+        email: "info@edge-capital.nl",
+        address: "Walserij 15-I2211 SJ, Noordwijkerhout",
+        hours: "Mon - Fri: 9AM - 6PM",
+      },
+      form: {
+        title: "Send Us a Message",
+        description:
+          "Fill out the form below and we'll get back to you as soon as possible.",
+        firstNameLabel: "First name",
+        lastNameLabel: "Last name",
+        phoneLabel: "Phone/Mobile",
+        emailLabel: "Email",
+        messageLabel: "Message",
+        firstNamePlaceholder: "Enter your name",
+        lastNamePlaceholder: "Enter your name",
+        phonePlaceholder: "Enter your phone number",
+        emailPlaceholder: "Enter your work email address",
+        messagePlaceholder: "Enter your message",
+        sendButton: "Send Message",
+        errors: {
+          firstNameRequired: "First name is required",
+          lastNameRequired: "Last name is required",
+          emailRequired: "Email is required",
+          emailInvalid: "Email is invalid",
+        },
+        successMessage: "Message sent successfully!",
+      },
+      imageAlt: "Research team analyzing market data",
+    },
+    nl: {
+      contactInfo: {
+        title: "Contactinformatie",
+        description:
+          "Wilt u samenwerken of heeft u vragen over onze diensten? We maken graag contact om te ontdekken hoe Edge Capital u kan helpen uw financiële doelen te bereiken.",
+        callUs: "Bel Ons",
+        emailUs: "Email Ons",
+        visit: "Bezoek Ons",
+        workingHours: "Werkuren",
+        phone: "+31613484484",
+        email: "info@edge-capital.nl",
+        address: "Walserij 15-I2211 SJ, Noordwijkerhout",
+        hours: "Ma - Vr: 9:00 - 18:00",
+      },
+      form: {
+        title: "Stuur Ons een Bericht",
+        description:
+          "Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.",
+        firstNameLabel: "Voornaam",
+        lastNameLabel: "Achternaam",
+        phoneLabel: "Telefoon/Mobiel",
+        emailLabel: "Email",
+        messageLabel: "Bericht",
+        firstNamePlaceholder: "Voer uw naam in",
+        lastNamePlaceholder: "Voer uw naam in",
+        phonePlaceholder: "Voer uw telefoonnummer in",
+        emailPlaceholder: "Voer uw werkemailadres in",
+        messagePlaceholder: "Voer uw bericht in",
+        sendButton: "Bericht Verzenden",
+        errors: {
+          firstNameRequired: "Voornaam is verplicht",
+          lastNameRequired: "Achternaam is verplicht",
+          emailRequired: "Email is verplicht",
+          emailInvalid: "Email is ongeldig",
+        },
+        successMessage: "Bericht succesvol verzonden!",
+      },
+      imageAlt: "Onderzoeksteam dat marktgegevens analyseert",
+    },
+  };
+
+  // Select the appropriate content based on language, with fallback to English
+  const content = translations[language] || translations.en;
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -61,17 +147,17 @@ const ContactInformation = () => {
     const newErrors: FormErrors = {};
 
     if (!formData.firstName.trim()) {
-      newErrors.firstName = "First name is required";
+      newErrors.firstName = content.form.errors.firstNameRequired;
     }
 
     if (!formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required";
+      newErrors.lastName = content.form.errors.lastNameRequired;
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = content.form.errors.emailRequired;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid";
+      newErrors.email = content.form.errors.emailInvalid;
     }
 
     setErrors(newErrors);
@@ -90,7 +176,7 @@ const ContactInformation = () => {
         email: "",
         message: "",
       });
-      alert("Message sent successfully!");
+      alert(content.form.successMessage);
     }
   };
 
@@ -117,10 +203,10 @@ const ContactInformation = () => {
 
   return (
     <section className="max-w-6xl mx-auto my-12 px-1 md:px-0 relative">
-      <div className="flex flex-col md:flex-row rounded-[25px] overflow-hidden shadow-lg relative top-[-5rem] ">
+      <div className="flex flex-col md:flex-row rounded-[25px] overflow-hidden shadow-lg relative top-[-5rem]">
         {/* Contact Information Panel */}
         <motion.div
-          className="bg-gradient-to-br from-[#206D80] from-20%  to-[#219EB2] to-50% text-white p-8 md:w-1/2"
+          className="bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50% text-white p-8 md:w-1/2"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -129,60 +215,74 @@ const ContactInformation = () => {
             className="text-2xl font-bold mb-4"
             variants={itemVariants}
           >
-            Contact Information
+            {content.contactInfo.title}
           </motion.h2>
 
-          <motion.p className="mb-8 text-teal-50" variants={itemVariants}>
-            Looking to collaborate or have questions about our services? We'd
-            love to connect and explore how Edge Capital can help you achieve
-            your financial goals.
+          <motion.p
+            className="mb-8 text-teal-50"
+            variants={itemVariants}
+          >
+            {content.contactInfo.description}
           </motion.p>
 
           <div className="space-y-6">
-            <motion.div className="flex items-center" variants={itemVariants}>
+            <motion.div
+              className="flex items-center"
+              variants={itemVariants}
+            >
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaPhone className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">Call Us</p>
-                <p className="font-bold">+31613484484</p>
+                <p className="text-sm text-teal-100">{content.contactInfo.callUs}</p>
+                <p className="font-bold">{content.contactInfo.phone}</p>
               </div>
             </motion.div>
 
-            <motion.div className="flex items-center" variants={itemVariants}>
+            <motion.div
+              className="flex items-center"
+              variants={itemVariants}
+            >
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaEnvelope className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">Email Us</p>
-                <p className="font-bold">info@edge-capital.nl</p>
+                <p className="text-sm text-teal-100">{content.contactInfo.emailUs}</p>
+                <p className="font-bold">{content.contactInfo.email}</p>
               </div>
             </motion.div>
 
-            <motion.div className="flex items-center" variants={itemVariants}>
+            <motion.div
+              className="flex items-center"
+              variants={itemVariants}
+            >
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaMapMarkerAlt className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">Visit</p>
-                <p className="font-bold">
-                Walserij 15-I2211 SJ, Noordwijkerhout
-                </p>
+                <p className="text-sm text-teal-100">{content.contactInfo.visit}</p>
+                <p className="font-bold">{content.contactInfo.address}</p>
               </div>
             </motion.div>
 
-            <motion.div className="flex items-center" variants={itemVariants}>
+            <motion.div
+              className="flex items-center"
+              variants={itemVariants}
+            >
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaClock className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">Working Hours</p>
-                <p className="font-bold">Mon - Fri: 9AM - 6PM</p>
+                <p className="text-sm text-teal-100">{content.contactInfo.workingHours}</p>
+                <p className="font-bold">{content.contactInfo.hours}</p>
               </div>
             </motion.div>
           </div>
 
-          <motion.div className="flex space-x-4 mt-12" variants={itemVariants}>
+          <motion.div
+            className="flex space-x-4 mt-12"
+            variants={itemVariants}
+          >
             <a
               href="#"
               className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
@@ -218,18 +318,19 @@ const ContactInformation = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl font-bold mb-4 text-gray-800">
-            Send Us a Message
+            {content.form.title}
           </h2>
-          <p className="mb-6 text-gray-600">
-            Fill out the form below and we'll get back to you as soon as
-            possible.
-          </p>
+          <p className="mb-6 text-gray-600">{content.form.description}</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="md:w-1/2">
-                <label htmlFor="firstName" className="block text-gray-700 mb-1">
-                  First name<span className="text-red-500">*</span>
+                <label
+                  htmlFor="firstName"
+                  className="block text-gray-700 mb-1"
+                >
+                  {content.form.firstNameLabel}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -237,7 +338,7 @@ const ContactInformation = () => {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  placeholder="Enter your name"
+                  placeholder={content.form.firstNamePlaceholder}
                   className={`w-full p-3 border rounded-md ${
                     errors.firstName ? "border-red-500" : "border-gray-300"
                   }`}
@@ -251,8 +352,12 @@ const ContactInformation = () => {
               </div>
 
               <div className="md:w-1/2">
-                <label htmlFor="lastName" className="block text-gray-700 mb-1">
-                  Last name<span className="text-red-500">*</span>
+                <label
+                  htmlFor="lastName"
+                  className="block text-gray-700 mb-1"
+                >
+                  {content.form.lastNameLabel}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -260,21 +365,23 @@ const ContactInformation = () => {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  placeholder="Enter your name"
+                  placeholder={content.form.lastNamePlaceholder}
                   className={`w-full p-3 border rounded-md ${
                     errors.lastName ? "border-red-500" : "border-gray-300"
                   }`}
                   aria-required="true"
                 />
                 {errors.lastName && (
-                  <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.lastName}
+                  </p>
                 )}
               </div>
             </div>
 
             <div>
               <label htmlFor="phone" className="block text-gray-700 mb-1">
-                Phone/Mobile
+                {content.form.phoneLabel}
               </label>
               <input
                 type="text"
@@ -282,14 +389,15 @@ const ContactInformation = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Enter your phone number"
+                placeholder={content.form.phonePlaceholder}
                 className="w-full p-3 border border-gray-300 rounded-md"
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-gray-700 mb-1">
-                Email<span className="text-red-500">*</span>
+                {content.form.emailLabel}
+                <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -297,7 +405,7 @@ const ContactInformation = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Enter your work email address"
+                placeholder={content.form.emailPlaceholder}
                 className={`w-full p-3 border rounded-md ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 }`}
@@ -310,14 +418,14 @@ const ContactInformation = () => {
 
             <div>
               <label htmlFor="message" className="block text-gray-700 mb-1">
-                Message
+                {content.form.messageLabel}
               </label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Enter your message"
+                placeholder={content.form.messagePlaceholder}
                 rows={5}
                 className="w-full p-3 border border-gray-300 rounded-md"
               />
@@ -328,14 +436,14 @@ const ContactInformation = () => {
                 type="submit"
                 className="bg-[#217083] text-white px-6 py-3 rounded-md hover:bg-[#216f83af] transition-colors flex items-center"
               >
-                <div className="flex-shrink-0  flex items-center justify-center">
+                <div className="flex-shrink-0 flex items-center justify-center">
                   <img
                     src={images.form.send_mail}
-                    alt="Research team analyzing market data"
+                    alt={content.imageAlt}
                     className="w-full h-full object-cover"
                   />
-                </div>{" "} &nbsp;
-                Send Message
+                </div>{" "}
+                  {content.form.sendButton}
               </button>
             </div>
           </form>

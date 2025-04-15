@@ -1,42 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Recycle, BookOpen, Users, Rocket, Shield } from 'lucide-react';
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const OurCoreValues = () => {
+  const { language } = useChangeLanguageContext();
   
-const values = [
-    {
-      title: "Sustainability",
-      icon: <Recycle size={32} className='text-[#192227]' />,
-      description: "We integrate sustainable practices into all our processes and strive to minimize our ecological footprint. We invest in projects and initiatives that contribute to a greener future.",
-      measures: "Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers."
+  const translations = {
+    en: {
+      title: "Our Core Values",
+      values: [
+        {
+          title: "Sustainability",
+          icon: <Recycle size={32} className='text-[#192227]' />,
+          description: "We integrate sustainable practices into all our processes and strive to minimize our ecological footprint. We invest in projects and initiatives that contribute to a greener future.",
+          measures: "Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers."
+        },
+        {
+          title: "Transparency",
+          icon: <BookOpen size={32} className='text-[#192227]' />,
+          description: "We believe in open communication about our activities and impact. We regularly report on our progress and the outcomes of our CSR initiatives to keep our stakeholders well-informed.",
+          measures: "Measures: Automated risk management scenarios, 24/7 human monitoring, backups, testing periods."
+        },
+        {
+          title: "Social Impact",
+          icon: <Users size={32} className='text-[#192227]' />,
+          description: "We are determined to make a positive contribution to the communities in which we operate. Through our Edge Impact label and initiatives, such as Edge Cares (mid-2025) and the Edge Horizon Foundation (2026), we support charities and projects that create impact both locally and globally.",
+          measures: "Measures: Diversification across the largest and safest exchanges."
+        },
+        {
+          title: "Innovation",
+          icon: <Rocket size={32} className='text-[#192227]' />,
+          description: "We embrace innovation as a means to develop sustainable solutions and enhance our impact. By utilizing advanced technologies and methods, we improve our processes and the services we provide to our clients.",
+          measures: "Measures: Diversification across the largest and safest exchanges."
+        },
+        {
+          title: "Ethical Practices",
+          icon: <Shield size={32} className='text-[#192227]' />,
+          description: "We conduct our operations with integrity and respect the rights of everyone affected by our activities. We promote fair working conditions and diversity within our organization and in our business relationships",
+          measures: "Measures: Diversification across the largest and safest exchanges."
+        }
+      ]
     },
-    {
-      title: "Transparency",
-      icon: <BookOpen size={32} className='text-[#192227]' />,
-      description: "We believe in open communication about our activities and impact. We regularly report on our progress and the outcomes of our CSR initiatives to keep our stakeholders well-informed.",
-      measures: "Measures: Automated risk management scenarios, 24/7 human monitoring, backups, testing periods."
-    },
-    {
-      title: "Social Impact",
-      icon: <Users size={32} className='text-[#192227]' />,
-      description: "We are determined to make a positive contribution to the communities in which we operate. Through our Edge Impact label and initiatives, such as Edge Cares (mid-2025) and the Edge Horizon Foundation (2026), we support charities and projects that create impact both locally and globally.",
-      measures: "Measures: Diversification across the largest and safest exchanges."
-    },
-    {
-      title: "Innovation",
-      icon: <Rocket size={32} className='text-[#192227]' />,
-      description: "We embrace innovation as a means to develop sustainable solutions and enhance our impact. By utilizing advanced technologies and methods, we improve our processes and the services we provide to our clients.",
-      measures: "Measures: Diversification across the largest and safest exchanges."
-    },
-    {
-      title: "Ethical Practices",
-      icon: <Shield size={32} className='text-[#192227]' />,
-      description: "We conduct our operations with integrity and respect the rights of everyone affected by our activities. We promote fair working conditions and diversity within our organization and in our business relationships",
-      measures: "Measures: Diversification across the largest and safest exchanges."
+    nl: {
+      title: "Onze Kernwaarden",
+      values: [
+        {
+          title: "Duurzaamheid",
+          icon: <Recycle size={32} className='text-[#192227]' />,
+          description: "We integreren duurzame praktijken in al onze processen en streven ernaar onze ecologische voetafdruk te minimaliseren. We investeren in projecten en initiatieven die bijdragen aan een groenere toekomst.",
+          measures: "Maatregelen: Handelen in de meest liquide markten (S&P 500). Handelen via verschillende beurzen en brokers."
+        },
+        {
+          title: "Transparantie",
+          icon: <BookOpen size={32} className='text-[#192227]' />,
+          description: "We geloven in open communicatie over onze activiteiten en impact. We rapporteren regelmatig over onze voortgang en de resultaten van onze MVO-initiatieven om onze belanghebbenden goed geïnformeerd te houden.",
+          measures: "Maatregelen: Geautomatiseerde risicobeheerscenario's, 24/7 menselijke monitoring, back-ups, testperiodes."
+        },
+        {
+          title: "Sociale Impact",
+          icon: <Users size={32} className='text-[#192227]' />,
+          description: "We zijn vastbesloten een positieve bijdrage te leveren aan de gemeenschappen waarin we actief zijn. Via ons Edge Impact-label en initiatieven zoals Edge Cares (medio 2025) en de Edge Horizon Foundation (2026) ondersteunen we goede doelen en projecten die zowel lokaal als wereldwijd impact creëren.",
+          measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
+        },
+        {
+          title: "Innovatie",
+          icon: <Rocket size={32} className='text-[#192227]' />,
+          description: "We omarmen innovatie als middel om duurzame oplossingen te ontwikkelen en onze impact te vergroten. Door gebruik te maken van geavanceerde technologieën en methoden verbeteren we onze processen en de diensten die we aan onze klanten leveren.",
+          measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
+        },
+        {
+          title: "Ethische Praktijken",
+          icon: <Shield size={32} className='text-[#192227]' />,
+          description: "We voeren onze activiteiten uit met integriteit en respecteren de rechten van iedereen die door onze activiteiten wordt beïnvloed. We bevorderen eerlijke arbeidsomstandigheden en diversiteit binnen onze organisatie en in onze zakelijke relaties.",
+          measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
+        }
+      ]
     }
-  ];
-
+  };
+  
+  // Get the appropriate content based on language
+  const content = translations[language] || translations.en;
 
   // Container animation variants
   const containerVariants = {
@@ -70,7 +114,7 @@ const values = [
             id="core-values-title" 
             className="text-3xl md:text-4xl font-bold text-gray-800 inline-block relative"
           >
-            Our Core Values
+            {content.title}
             <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400 mt-1"></div>
           </h2>
         </div>
@@ -83,7 +127,7 @@ const values = [
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
         >
-          {values.map((value, index) => (
+          {content.values.map((value, index) => (
             <motion.div
               key={index}
               className="bg-[#DDE6E9] rounded-lg p-6 h-full"

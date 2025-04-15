@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const ReachOut = () => {
+  const { language } = useChangeLanguageContext();
+
   return (
     <section
       className="bg-[#377C8D] text-white py-16 md:py-24 relative overflow-hidden mt-[5rem] "
@@ -20,7 +23,7 @@ const ReachOut = () => {
       </div>
 
       <div className="container mx-auto px-6 md:px-8 max-w-6xl ">
-        <div className="flex flex-col md:flex-row md:items-center justify-center gap-[20%]">
+        <div className="flex flex-col md:flex-row md:items-center justify-center gap-[20%] lg:pl-20">
           {/* Text content */}
           <motion.div
             className="mb-10 md:mb-0 md:max-w-xl"
@@ -35,7 +38,9 @@ const ReachOut = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Please feel free to reach out to us!
+              {language === "nl"
+                ? "Neem gerust contact met ons op!"
+                : "Please feel free to reach out to us!"}
             </motion.h2>
 
             <motion.p
@@ -44,9 +49,12 @@ const ReachOut = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Looking to collaborate or have questions about our services? We'd
+              {language === "nl"
+                ? `Wilt u samenwerken of heeft u vragen over onze diensten? We komen graag met u in contact om te ontdekken hoe Edge Capital u kan helpen
+uw financiële doelen te bereiken.`
+                : `Looking to collaborate or have questions about our services? We'd
               love to connect and explore how Edge Capital can help you achieve
-              your financial goals.
+              your financial goals.`}
             </motion.p>
           </motion.div>
 

@@ -6,6 +6,9 @@ import "../component/landingPage/component.css";
 import { ChevronRight } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+
+
 
 const TeamCard = ({
   name,
@@ -15,6 +18,7 @@ const TeamCard = ({
   image,
 }: teamMemberCardstDataType) => {
   const [isFlipped, setIsFlipped] = useState(false);
+
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
@@ -27,8 +31,9 @@ const TeamCard = ({
     <div
       className="relative w-full h-[22.211rem] md:h-[30.375rem] cursor-pointer"
       onClick={handleFlip}
-      // onMouseEnter={() => setIsFlipped(true)}
-      // onMouseLeave={() => setIsFlipped(false)}
+      onMouseEnter={() => setIsFlipped(true)}
+        onMouseLeave={() => setIsFlipped(false)}
+      style={{ perspective: '1000px'}}
     >
       <motion.div
         className="absolute w-full h-full rounded-tr-[1rem] rounded-bl-[1rem] overflow-hidden"
@@ -36,8 +41,6 @@ const TeamCard = ({
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
         style={{ backfaceVisibility: "hidden" }}
-        onMouseEnter={() => setIsFlipped(true)}
-        onMouseLeave={() => setIsFlipped(false)}
       >
         <div className="w-full h-full bg-black">
           <img
@@ -90,8 +93,6 @@ const TeamCard = ({
         animate={{ rotateY: isFlipped ? 0 : -180 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
         style={{ backfaceVisibility: "hidden" }}
-        onMouseEnter={() => setIsFlipped(true)}
-        onMouseLeave={() => setIsFlipped(false)}
       >
         <div className="h-full flex flex-col justify-between">
           <div>
@@ -130,6 +131,8 @@ type TeamMemberCardsProps = {
 
 const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
   const { pathname } = useLocation();
+  const { language } = useChangeLanguageContext();
+
 
   return (
     <>
@@ -179,7 +182,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
             className={`text-3xl md:text-5xl font-bold text-center mb-12 text-black
              ${pathname.slice(1) === "team" ? "hidden" : "block"}`}
           >
-            The Team you can Trust
+            { language === 'nl' ? 'Het Team waarop u kunt Vertrouwen' : 'The Team you can Trust' }
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -197,7 +200,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
               className="bg-[#206A7C] text-white py-3 px-6 rounded-full hover:bg-gray-800 
             transition-colors duration-300"
             >
-              <Link to='/team'>Meet our entire team</Link>
+              <Link to='/team'>{ language === 'nl' ? 'Leer ons gehele team kennen' : 'Meet our entire team' }</Link>
             </button>
           </div>
         </div>

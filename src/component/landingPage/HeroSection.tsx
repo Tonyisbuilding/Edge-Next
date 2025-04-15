@@ -1,22 +1,26 @@
 import images from "@/constant/images";
 import "./HeroSection.css";
 import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
+// Beleggen met een voorsprong!
 const HeroSection = () => {
+  const { language } = useChangeLanguageContext();
   return (
     <>
-    {/* bg-[#EEF4F5] */}
-      <section className="hero bg-[#EEF4F5]  mt-[4rem] md:h-[100vh]">
+      {/* bg-[#EEF4F5] */}
+      <section className="hero bg-[#EEF4F5]  mt-[4rem] md:h-[100vh] md:max-h-[700px]">
         <div className="container hero-container">
           <div className="hero-content">
             <h1 className="hero-title">
-              Investing
+              {language === "en" ? "Investing" : "Beieggen met"}
               <br />
-              With An Edge
+              {language === "en" ? "with An Edge" : "een voorsprong!"}
             </h1>
             <p className="hero-subtitle">
-              Using dynamic, data-driven strategy for superior returns with
-              controlled risk
+              {language === "nl"
+                ? "Gebruik van dynamische, datagestuurde strategieën voor superieure rendementen met beheerst risico."
+                : "Using dynamic, data-driven strategy for superior returns with controlled risk"}
             </p>
 
             <ul className="hero-features">
@@ -27,8 +31,8 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">Advanced Strategies</span> -
-                    Arbitrage and delta-neutral for high returns.
+                    <span className="bold-text">{language === 'nl' ? 'Geavanceerde Strategieën' : 'Advanced Strategies'}</span> -
+                    {language === 'nl' ? ' Arbitrage en delta-neutraal voor hoge rendementen.' : 'Arbitrage and delta-neutral for high returns.'}
                   </p>
                 </div>
               </li>
@@ -40,8 +44,8 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">Fact-Based Expertise</span> -
-                    Rely on certainties, not predictions.
+                    <span className="bold-text">{language === 'nl' ? 'Feiten gebaseerde Expertise' : 'Fact-Based Expertise'}</span> -
+                    {language === 'nl' ? ' Vertrouw op zekerheden, niet op voorspellingen.' : 'Rely on certainties, not predictions.'}
                   </p>
                 </div>
               </li>
@@ -53,31 +57,28 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">Managed Risk</span> - Controlled
-                    risk for large-scale investments.
+                    <span className="bold-text">{language === 'nl' ? 'Beheerd Risico' : 'Managed Risk'}</span>
+                    { language === 'nl' ? ' - Beheerst risico voor grootschalige investeringen.' : '- Controlled risk for large-scale investments.'}
                   </p>
                 </div>
               </li>
             </ul>
 
-            <div className="hero-buttons">
+            <div className="hero-buttons ">
               <button className="btn btn-primary">
                 <Link
                   to="/contact"
                   className="block "
                   // onClick={toggleNav}
                 >
-                  Get in Touch
+                  { language === 'nl' ? 'Neem contact op' : 'Get in Touch'}
                 </Link>
               </button>
-              <button 
-              onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
-              className="btn btn-secondary">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
-                target='_blank'
-                >
-                  Request Brochure
-                </a>
+              <button
+                // onClick={()=> window.open('/requestinfo','_blank')}
+                className="btn btn-secondary"
+              >
+                <Link to="/requestinfo">{ language === 'nl' ? 'Brochure aanvragen' : 'Request Brochure'}</Link>
               </button>
             </div>
           </div>
@@ -88,8 +89,8 @@ const HeroSection = () => {
               loop
               muted
               playsInline
-              src={images.landingPage.heroSectionVideo} 
-              className="w-full h-full  object-cover opacity-75" 
+              src={images.landingPage.heroSectionVideo}
+              className="w-full h-full  object-cover opacity-75"
             />
             {/* <img
               src={images.landingPage.heroSection}

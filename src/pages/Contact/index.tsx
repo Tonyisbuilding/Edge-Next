@@ -7,6 +7,7 @@ import ContactInformation from "@/component/Contact/ContactUs";
 const ContactPage = () => {
   return (
     <>
+        <NavBar />
       <div
         className="relative"
         style={{
@@ -15,7 +16,6 @@ const ContactPage = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <ReachOut />
         <ContactInformation />
         <Contact />

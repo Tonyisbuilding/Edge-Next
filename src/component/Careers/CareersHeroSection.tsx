@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const JoinTheTeam = () => {
+  const { language } = useChangeLanguageContext();
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -60,17 +63,25 @@ const JoinTheTeam = () => {
               className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
               variants={itemVariants}
             >
-              Join the team
+              {language === `nl`
+                ? `Sluit je aan bij het team`
+                : `Join the team`}
             </motion.h2>
             <motion.p
               className="text-base md:text-lg text-gray-700 mb-8"
               variants={itemVariants}
             >
-              We integrate advanced financial modeling, quantitative research,
+              {language === "nl"
+                ? `We integreren geavanceerde financiële modellen, kwantitatief onderzoek
+en state-of-the-art technologie om de marktefficiëntie te optimaliseren en
+de liquiditeit te vergroten. Ons team van experts werkt samen om
+innovatieve handelsstrategieën te ontwikkelen die het financiële landschap
+van morgen vormgeven.`
+                : `We integrate advanced financial modeling, quantitative research,
               and state-of-the-art technology to optimize market efficiency and
               drive liquidity. Our team of experts collaborates to develop
               innovative trading strategies that shape the financial landscape
-              of tomorrow.
+              of tomorrow.`}
             </motion.p>
             <motion.a
               href="#open"
@@ -80,7 +91,7 @@ const JoinTheTeam = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Open positions ↓
+              { language === 'nl' ? 'Openstaande posities' : 'Open positions'} ↓
             </motion.a>
           </motion.div>
 

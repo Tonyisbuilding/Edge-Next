@@ -7,6 +7,7 @@ import DocumentCardSections from "@/component/EdgeDoc/DocumentCard";
 const EdgeDoc = () => {
   return (
     <>
+          <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -14,7 +15,6 @@ const EdgeDoc = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <EdgeDocuments />
         <DocumentCardSections />
         <Contact />

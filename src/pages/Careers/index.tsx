@@ -8,6 +8,7 @@ import Footer from "@/common/Footer";
 const Careers = () => {
   return (
     <>
+          <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -15,7 +16,6 @@ const Careers = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <JoinTheTeam />
         <WhyWorkWithUs />
         <OpenPositions />

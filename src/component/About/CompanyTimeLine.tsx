@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { timelineData } from "@/constant/data";
-
+import { timelineData, timelineDataDutch } from "@/constant/data";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 
 
 const CompanyTimeline = () => {
   
+const { language } = useChangeLanguageContext();
 
+const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
   const [activeYear, setActiveYear] = useState(0);
 
   const handlePrevYear = () => {
@@ -54,7 +56,7 @@ const CompanyTimeline = () => {
             <ChevronLeft size={20} />
           </button>
           
-          <div className="w-full overflow-hidden mx-10">
+          <div className="w-full overflow-hidden mx-10  py-[2rem] px-[2rem]">
             <div className="relative">
               {/* Timeline Bar */}
               <div className="h-1 bg-[#206A7C] w-full absolute top-1/2 -translate-y-1/2"></div>
@@ -62,7 +64,7 @@ const CompanyTimeline = () => {
               {/* Year Markers */}
               <div className="flex justify-between relative  mb-[1rem]">
                 {timelineData.map((item, index) => (
-                  <div key={item.year} className="flex flex-col items-center">
+                  <div key={item.year} className="flex flex-col items-center ">
                     <button
                       onClick={() => handleYearClick(index)}
                       className={`relative z-10 transition-all duration-300 ${
@@ -75,12 +77,15 @@ const CompanyTimeline = () => {
                         {index === activeYear && (
                           <motion.div
                             layoutId="activeYearIndicator"
-                            className="absolute inset-[-1]   top-[2.2rem] rounded-full border-2 border-teal-700 w-[3rem] h-[3rem]"
+                            className="absolute inset-[-1]   top-[2.2rem] rounded-full border-2 border-teal-700 w-[3.5rem] h-[3.5rem]"
                             transition={{ duration: 0.5 }}
                           />
                         )}
                       </div>
-                      <span className="block text-sm md:text-base">{item.year}</span>
+                      <span className={`block md:text-base mt-3 text-sm
+                        `}
+                        style={{ fontSize: item.year === 'Future' ? 13 : 14}}
+                        >{item.year}</span>
                     </button>
                   </div>
                 ))}
@@ -119,7 +124,7 @@ const CompanyTimeline = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              {timelineData[activeYear].content}
+              {renderedData[activeYear].content}
             </motion.p>
           </AnimatePresence>
         </div>

@@ -1,5 +1,6 @@
 import images from "@/constant/images";
 import "./marquee.css";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 interface Logo {
   id: string;
@@ -20,12 +21,16 @@ const logos: Logo[] = [
   { id: 'logo5', src: images.landingPage.BELEGGERSFAIR_LOGO_HEADER, alt: 'Logo 5' },
 ];
 
+//  Vertrouwd door marktleiders
 const Marquee: React.FC<MarqueeProps> = ({ speed = 20 }) => {
+
+  const { language } = useChangeLanguageContext();
+
   return (
-    <section className="py-6 bg-[#EEF4F5]">
+    <section className="py-6 bg-[#EEF4F5] max-h-[150px]">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-gray-500 text-sm md:text-base font-normal mb-10">
-          Trusted by Industry Leaders
+          { language === 'nl' ? 'Vertrouwd door marktleiders' : 'Trusted by Industry Leaders'}
         </h2>
 
         <div className="overflow-hidden">

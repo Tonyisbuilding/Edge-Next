@@ -13,10 +13,25 @@ import ContactPage from "./pages/Contact";
 import EdgeHorizon from "./pages/EdgeHorizon";
 import EdgeCare from "./pages/EdgeCare";
 import ScrollToTop from "./common/ScrollToTop";
+import ParticipateForm from "./pages/ParticipateForm/ParticipateForm";
+import RequestInfo from "./pages/RequestInfo";
+import ChangeLanguageContext from "./context/ChangeLanguage";
+import { useState } from "react";
+
+
+
 
 function App(): JSX.Element {
+
+  const [language, setLanguage] = useState<'en' | 'nl'>('en');
   return (
     <>
+    <ChangeLanguageContext.Provider
+    value={{
+      language,
+      setLanguage,
+    }}
+    > 
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -31,7 +46,10 @@ function App(): JSX.Element {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/edge-foundation" element={<EdgeHorizon />} />
         <Route path="/edge-cares" element={<EdgeCare />} />
+        <Route path="/participate" element={<ParticipateForm />} />
+        <Route path="/requestinfo" element={<RequestInfo />} />
       </Routes>
+    </ChangeLanguageContext.Provider>
     </>
   );
 }

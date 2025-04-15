@@ -1,46 +1,29 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import images from "@/constant/images";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+import { translations } from "@/constant/translation";
+
 
 const StrategySection = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
+  const { language } = useChangeLanguageContext(); 
+  const t = translations[language]; 
 
   const strategies = [
     {
       id: "Volatility Risk Premium",
-      title: "Volatility Risk Premium",
-      description:
-        "EdgeFund aims to exploit the volatility risk premium in globally developed equity and bond markets by writing call and put options to buyers seeking financial insurance in exchange for a premium. To implement this strategy, EdgeFund will sell put and call options with various strike prices and expiration dates on various equity and bond reference assets, including indices, in globally developed markets.",
-      popupTitle: "Volatility Risk Premium",
-      popupContent: `The Volatility Risk Premium (VRP) is the compensation that investors demand for providing protection against potential market downturns. 
-
-It exists because market participants are generally risk-averse and willing to pay a premium for protection against negative events. This premium manifests as an overpricing of options relative to their historical realized volatility.
-
-Our strategy systematically harvests this premium by:
-
-1. Selling options in a controlled manner
-2. Delta-hedging to maintain market neutrality
-3. Managing tail risk through diversification and position sizing
-4. Utilizing proprietary volatility forecasting models
-
-This approach generates consistent returns with low correlation to traditional asset classes, making it an excellent portfolio diversifier.`,
+      title: t.volatilityRiskPremiumTitle,
+      description: t.volatilityRiskPremiumDescription,
+      popupTitle: t.volatilityRiskPremiumPopupTitle,
+      popupContent: t.volatilityRiskPremiumPopupContent,
     },
     {
       id: "interest-rate-arbitrage",
-      title: "Interest Rate Arbitrage",
-      description:
-        "Market-neutral interest rate arbitrage is an investment strategy aimed at generating profit by exploiting price inefficiencies between interest rates, while simultaneously minimizing exposure to overall market movements. The goal is to create a position that is not overly influenced by broader market trends, hence the term “market-neutral.",
-      popupTitle: "Market-Neutral Swap Arbitrage",
-      popupContent: `Our Market-Neutral Swap Arbitrage strategy exploits inefficiencies in the interest rate swap market by identifying and capitalizing on temporary mispricing between related instruments.
-
-Key components of this strategy include:
-
-1. Identifying basis spread anomalies between different tenor points on the swap curve
-2. Exploiting differences between swap rates and government bond yields
-3. Capitalizing on cross-currency basis swap opportunities
-4. Leveraging our proprietary term structure models to identify relative value opportunities
-
-This strategy is designed to be market-neutral, with returns driven by the convergence of pricing anomalies rather than by directional market movements. The strategy employs moderate leverage and sophisticated risk management techniques to ensure consistent performance across various market regimes.`,
+      title: t.interestRateArbitrageTitle,
+      description: t.interestRateArbitrageDescription,
+      popupTitle: t.marketNeutralSwapArbitragePopupTitle,
+      popupContent: t.marketNeutralSwapArbitragePopupContent,
     },
   ];
 
@@ -57,7 +40,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
   return (
     <div className="bg-[#EEF4F5C2] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Our strategy</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">{t.ourStrategy}</h2>
         <div className="h-1 w-36 bg-yellow-400 mb-8"></div>
 
         {/* Desktop layout */}
@@ -79,10 +62,10 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                     whileHover={{ scale: 1.05 }}
                     className="w-16 h-12"
                   >
-                    <div className="flex-shrink-0   flex items-center justify-center relative top-[-1rem]">
+                    <div className="flex-shrink-0 flex items-center justify-center relative top-[-1rem]">
                       <img
                         src={images.edgefund.scaleUp}
-                        alt="Research team analyzing market data"
+                        alt={language === 'nl' ? "Onderzoeksteam dat marktgegevens analyseert" : "Research team analyzing market data"}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -96,7 +79,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                   className="text-[#0E7490] hover:text-[#0e7490b7] font-medium 
                   hover:cursor-pointer underline"
                 >
-                  Learn More
+                  {t.learnMore}
                 </button>
               </div>
             </div>
@@ -104,36 +87,34 @@ This strategy is designed to be market-neutral, with returns driven by the conve
         </div>
 
         {/* Mobile layout */}
-        <div className="lg:hidden flex flex-col ">
+        <div className="lg:hidden flex flex-col">
           {strategies.map((strategy, index) => (
             <div
               key={strategy.id}
-              className={`bg-[#EEF4F5C2]  p-6 border border-[#206A7C]
-             ${index === 0 ? "rounded-t-lg" : "rounded-b-lg"} `}
+              className={`bg-[#EEF4F5C2] p-6 border border-[#206A7C]
+             ${index === 0 ? "rounded-t-lg" : "rounded-b-lg"}`}
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-lg font-semibold text-gray-900">
                   {strategy.title}
                 </h3>
                 <motion.div whileHover={{ scale: 1.05 }} className="w-12 h-10">
-                  <div className="flex-shrink-0   flex items-center justify-center relative top-[-1rem]">
+                  <div className="flex-shrink-0 flex items-center justify-center relative top-[-1rem]">
                     <img
                       src={images.edgefund.scaleUp}
-                      alt="Research team analyzing market data"
+                      alt={language === 'nl' ? "Onderzoeksteam dat marktgegevens analyseert" : "Research team analyzing market data"}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </motion.div>
               </div>
-              <p className="text-gray-600 text-sm mb-4">
-                {strategy.description}
-              </p>
+              <p className="text-gray-600 text-sm mb-4">{strategy.description}</p>
               <div className="text-right">
                 <button
                   onClick={() => openPopup(strategy.id)}
                   className="text-[#0E7490] hover:text-[#0e7490b7] font-medium text-sm underline"
                 >
-                  Learn More
+                  {t.learnMore}
                 </button>
               </div>
             </div>
@@ -169,7 +150,7 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                         <button
                           onClick={closePopup}
                           className="text-gray-400 hover:text-gray-600 p-2"
-                          aria-label="Close popup"
+                          aria-label={language === 'nl' ? "Popup sluiten" : "Close popup"}
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -199,9 +180,9 @@ This strategy is designed to be market-neutral, with returns driven by the conve
                       <div className="mt-8 text-right">
                         <button
                           onClick={closePopup}
-                          className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                          className="bg-[#0E7490] hover:bg-[#0e7490b7] text-white font-medium py-2 px-6 rounded-lg transition-colors"
                         >
-                          Close
+                          {t.close}
                         </button>
                       </div>
                     </div>

@@ -9,6 +9,7 @@ import OurCharities from "@/component/EdgeConnect/OurCharities";
 const EdgeConnect = () => {
   return (
     <>
+          <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -16,7 +17,6 @@ const EdgeConnect = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <EdgeConnectHero />
         <HowDoesItWork />
         <GetStartedSection />
