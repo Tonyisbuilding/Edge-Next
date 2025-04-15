@@ -1,8 +1,22 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Mail, Phone, MapPin, Flag, Globe, User, FileText, Calendar, DollarSign } from "lucide-react";
+import {
+  ChevronDown,
+  Mail,
+  Phone,
+  MapPin,
+  Flag,
+  Globe,
+  User,
+  FileText,
+  Calendar,
+  DollarSign,
+} from "lucide-react";
 import axiosInstance from "@/Api/AxiosInstance";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 // Define interfaces for our data structures
 // interface Country {
@@ -102,13 +116,13 @@ const ParticipantForm: React.FC = () => {
     nationality: "",
     phone: "",
     mail: "",
-    iban: "", // New field
-    onBehalfOf: "", // New field
-    tin: "", // New field
-    idType: "", // New field
-    idNumber: "", // New field
-    dateOfBirth: "", // New field
-    initialDeposit: "", // New field
+    iban: "",
+    onBehalfOf: "",
+    tin: "",
+    idType: "",
+    idNumber: "",
+    dateOfBirth: "",
+    initialDeposit: "",
   });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [formError, setFormError] = useState<string>("");
@@ -255,7 +269,8 @@ const ParticipantForm: React.FC = () => {
           ibanRequired: "IBAN is verplicht", // New field
           dateOfBirthRequired: "Geboortedatum is verplicht", // New field
           initialDepositRequired: "Initiële storting moet groter zijn dan 0", // New field
-          defaultError: "Kan het formulier niet verzenden. Probeer het later opnieuw.",
+          defaultError:
+            "Kan het formulier niet verzenden. Probeer het later opnieuw.",
         },
       },
     },
@@ -290,7 +305,9 @@ const ParticipantForm: React.FC = () => {
     tap: { scale: 0.95 },
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ): void => {
     const { id, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -318,15 +335,16 @@ const ParticipantForm: React.FC = () => {
     const payload = {
       ...formData,
       // phone: phonePrefix + formData.phone,
-      phone:  formData.phone,
+      phone: formData.phone,
     };
 
+    console.log(payload, "payload");
     try {
       const response = await axiosInstance.post("/participate", payload);
 
-      alert(content.form.successMessage);
+      // alert(content.form.successMessage);
+      toast.success(content.form.successMessage);
       console.log(response);
-
       // Reset form after successful submission
       setFormData({
         name: "",
@@ -346,15 +364,35 @@ const ParticipantForm: React.FC = () => {
         initialDeposit: "",
       });
     } catch (error) {
-      setFormError(error instanceof Error ? error.message : content.form.errors.defaultError);
-      console.error(error);
+      setFormError(
+        error instanceof Error
+          ? error.message
+          : content.form.errors.defaultError
+      );
+     
+      if (
+        error &&
+        typeof error === "object" &&
+        "response" in error &&
+        error.response &&
+        typeof error.response === "object" &&
+        "data" in error.response
+      ) {
+        if (axios.isAxiosError(error) && error.response?.data?.error) {
+          toast.error(error.response.data.error);
+        }
+      }
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-gray-50 to-indigo-50 pt-16 mt-[5rem]">
+    <div
+      className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-gray-50
+     to-indigo-50 pt-16 mt-[5rem]"
+    >
+      <ToastContainer />
       <motion.div
         initial="hidden"
         animate="visible"
@@ -365,10 +403,16 @@ const ParticipantForm: React.FC = () => {
         <div className="relative bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50% text-white py-8 px-6">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#206D80] rounded-full -mr-16 -mt-16 opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-20 h-20 bg-[#206D80] rounded-full -ml-10 -mb-10 opacity-20"></div>
-          <motion.h1 variants={itemVariants} className="text-3xl font-bold relative z-10">
+          <motion.h1
+            variants={itemVariants}
+            className="text-3xl font-bold relative z-10"
+          >
             {content.header}
           </motion.h1>
-          <motion.p variants={itemVariants} className="text-indigo-100 mt-2 relative z-10">
+          <motion.p
+            variants={itemVariants}
+            className="text-indigo-100 mt-2 relative z-10"
+          >
             {content.description}
           </motion.p>
         </div>
@@ -385,8 +429,12 @@ const ParticipantForm: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Field */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="name">
-                  {content.form.nameLabel} <span className="text-red-500">*</span>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="name"
+                >
+                  {content.form.nameLabel}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -404,7 +452,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* Street Name and House Number */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="street">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="street"
+                >
                   {content.form.streetLabel}
                 </label>
                 <div className="relative">
@@ -422,7 +473,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* Zip Code */}
               <motion.div variants={itemVariants}>
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="zipcode">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="zipcode"
+                >
                   {content.form.zipcodeLabel}
                 </label>
                 <input
@@ -437,7 +491,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* City */}
               <motion.div variants={itemVariants}>
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="city">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="city"
+                >
                   {content.form.cityLabel}
                 </label>
                 <input
@@ -452,7 +509,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* Country */}
               <motion.div variants={itemVariants}>
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="country">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="country"
+                >
                   {content.form.countryLabel}
                 </label>
                 <div className="relative">
@@ -478,7 +538,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* Nationality */}
               <motion.div variants={itemVariants}>
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="nationality">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="nationality"
+                >
                   {content.form.nationalityLabel}
                 </label>
                 <div className="relative">
@@ -504,8 +567,12 @@ const ParticipantForm: React.FC = () => {
 
               {/* Date of Birth */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="dateOfBirth">
-                  {content.form.dateOfBirthLabel} <span className="text-red-500">*</span>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="dateOfBirth"
+                >
+                  {content.form.dateOfBirthLabel}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -522,8 +589,12 @@ const ParticipantForm: React.FC = () => {
 
               {/* IBAN */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="iban">
-                  {content.form.ibanLabel} <span className="text-red-500">*</span>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="iban"
+                >
+                  {content.form.ibanLabel}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <FileText className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -541,7 +612,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* On behalf of */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="onBehalfOf">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="onBehalfOf"
+                >
                   {content.form.onBehalfOfLabel}
                 </label>
                 <div className="relative">
@@ -559,7 +633,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* Tax Identification Number (TIN) */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="tin">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="tin"
+                >
                   {content.form.tinLabel}
                 </label>
                 <div className="relative">
@@ -577,7 +654,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* Type of Identification Document */}
               <motion.div variants={itemVariants}>
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="idType">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="idType"
+                >
                   {content.form.idTypeLabel}
                 </label>
                 <div className="relative">
@@ -589,7 +669,11 @@ const ParticipantForm: React.FC = () => {
                     className="pl-10 w-full py-2 px-4 bg-gray-50 border border-gray-200 rounded-lg text-black appearance-none focus:outline-none focus:ring-2 focus:ring-[#219EB2] focus:border-transparent transition-all"
                   >
                     {idTypes.map((type) => (
-                      <option key={type.value} value={type.value} disabled={type.value === ""}>
+                      <option
+                        key={type.value}
+                        value={type.value}
+                        disabled={type.value === ""}
+                      >
                         {type.label}
                       </option>
                     ))}
@@ -600,7 +684,10 @@ const ParticipantForm: React.FC = () => {
 
               {/* Document Number */}
               <motion.div variants={itemVariants}>
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="idNumber">
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="idNumber"
+                >
                   {content.form.idNumberLabel}
                 </label>
                 <div className="relative">
@@ -618,8 +705,12 @@ const ParticipantForm: React.FC = () => {
 
               {/* Initial Deposit */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="initialDeposit">
-                  {content.form.initialDepositLabel} <span className="text-red-500">*</span>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="initialDeposit"
+                >
+                  {content.form.initialDepositLabel}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <DollarSign className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -639,8 +730,12 @@ const ParticipantForm: React.FC = () => {
 
               {/* Phone Number with country code */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="phone">
-                  {content.form.phoneLabel} <span className="text-red-500">*</span>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="phone"
+                >
+                  {content.form.phoneLabel}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="flex">
                   <div className="relative flex-1">
@@ -660,8 +755,12 @@ const ParticipantForm: React.FC = () => {
 
               {/* Email */}
               <motion.div variants={itemVariants} className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="mail">
-                  {content.form.emailLabel} <span className="text-red-500">*</span>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                  htmlFor="mail"
+                >
+                  {content.form.emailLabel}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -679,7 +778,10 @@ const ParticipantForm: React.FC = () => {
             </div>
 
             {/* Submit Button */}
-            <motion.div variants={itemVariants} className="mt-8 flex justify-center">
+            <motion.div
+              variants={itemVariants}
+              className="mt-8 flex justify-center"
+            >
               <motion.button
                 variants={buttonVariants}
                 initial="rest"
@@ -689,7 +791,11 @@ const ParticipantForm: React.FC = () => {
                 disabled={isSubmitting}
                 className="px-8 py-3 bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50% text-white font-medium rounded-xl shadow-lg transition-all flex items-center justify-center disabled:bg-[#219EB2] disabled:cursor-not-allowed"
               >
-                <span>{isSubmitting ? content.form.submittingText : content.form.submitButton}</span>
+                <span>
+                  {isSubmitting
+                    ? content.form.submittingText
+                    : content.form.submitButton}
+                </span>
                 {!isSubmitting && (
                   <motion.div
                     animate={{ x: [0, 5, 0] }}

@@ -227,7 +227,7 @@ const WhyWorkWithUs = () => {
 
   return (
     <section
-      className="py-16 px-4 md:px-6 bg-[#F7F7F7]"
+      className="py-16 px-4 md:px-6 bg-[##EEF4F5]"
       aria-labelledby="why-work-with-us"
     >
       <div className="max-w-7xl mx-auto">
@@ -253,7 +253,7 @@ const WhyWorkWithUs = () => {
             {cards.slice(0, 2).map((card) => (
               <motion.div
                 key={card.id}
-                className="bg-gray-50 p-6 rounded-lg text-black"
+                className="bg-gray-50 p-6 rounded-lg text-black shadow-lg shadow-[rgba(32,106,124, 0.25)]"
                 variants={cardVariants}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
@@ -273,7 +273,7 @@ const WhyWorkWithUs = () => {
             {cards.slice(2).map((card) => (
               <motion.div
                 key={card.id}
-                className="bg-gray-50 p-6 rounded-lg text-black"
+                className="bg-gray-50 p-6 rounded-lg text-black shadow-lg shadow-[rgba(32,106,124, 0.25)]"
                 variants={cardVariants}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >

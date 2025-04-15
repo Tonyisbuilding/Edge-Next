@@ -30,7 +30,8 @@ const LandingPage = () => {
           <Marquee speed={15} />
           <EdgeCapital />
           <WhyEdgeCapital />
-          <TeamMemberCards teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData} />
+          <TeamMemberCards 
+          teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData} />
           <Presentation />
           <Contact />
         <Footer />

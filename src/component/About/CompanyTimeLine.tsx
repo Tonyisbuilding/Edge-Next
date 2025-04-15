@@ -43,20 +43,22 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          We're building a platform that gives investors an edge. By focusing on innovation and growth, we're transforming the financial landscape.
+          We're building a platform that gives investors an edge. By focusing on innovation and growth, 
+          we're transforming the financial landscape.
         </motion.p>
         
         {/* Timeline Navigation */}
         <div className="relative flex items-center mb-16">
           <button 
             onClick={handlePrevYear}
-            className="absolute left-0 bg-[#206A7C] text-white p-2 rounded-md hover:bg-teal-800 transition-colors z-10"
+            className="absolute left-0 bg-[#206A7C] text-white p-2 rounded-md hover:bg-teal-800 
+            transition-colors z-10"
             aria-label="Previous year"
           >
             <ChevronLeft size={20} />
           </button>
           
-          <div className="w-full overflow-hidden mx-10  py-[2rem] px-[2rem]">
+          <div className="w-full overflow-hidden mx-10  py-[2rem] px-[.5rem] md:px-[2rem]">
             <div className="relative">
               {/* Timeline Bar */}
               <div className="h-1 bg-[#206A7C] w-full absolute top-1/2 -translate-y-1/2"></div>
@@ -73,11 +75,13 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
                           : "text-gray-500 hover:text-teal-600"
                       }`}
                     >
-                      <div className={` h-10 w-10 flex items-center justify-center mb-2 transition-colors duration-300 `}>
+                      <div className={` h-10 w-10 flex items-center justify-center mb-2 transition-colors
+                         duration-300 `}>
                         {index === activeYear && (
                           <motion.div
                             layoutId="activeYearIndicator"
-                            className="absolute inset-[-1]   top-[2.2rem] rounded-full border-2 border-teal-700 w-[3.5rem] h-[3.5rem]"
+                            className="absolute inset-[-1]   top-[2.2rem] rounded-full border-2
+                             border-teal-700 w-[3rem] h-[3rem] md:w-[3.5rem] md:h-[3.5rem]"
                             transition={{ duration: 0.5 }}
                           />
                         )}

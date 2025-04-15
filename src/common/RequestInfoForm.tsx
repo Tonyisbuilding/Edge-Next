@@ -10,6 +10,9 @@ import {
 } from "lucide-react";
 import axiosInstance from "@/Api/AxiosInstance";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const RequestInfoForm = () => {
   const { language } = useChangeLanguageContext();
@@ -118,17 +121,17 @@ const RequestInfoForm = () => {
     setSubmitSuccess(null);
     setErrorMessage("");
 
+    console.log(formData)
     try {
       const response = await axiosInstance.post("/requestinfo", formData);
 
       if (!response) {
         const errorData: { message?: string } = await response;
-        throw new Error(
-          errorData.message || content.form.defaultError
-        );
+        throw new Error(errorData.message || content.form.defaultError);
       }
 
       setSubmitSuccess(true);
+      toast.success('Form submitted successfully!')
       setFormData({
         firstName: "",
         lastName: "",
@@ -139,11 +142,29 @@ const RequestInfoForm = () => {
         newsletter: false,
       });
     } catch (error: unknown) {
+      console.log(error)
       setSubmitSuccess(false);
       if (error instanceof Error) {
         setErrorMessage(error.message || content.form.defaultError);
       } else {
         setErrorMessage(content.form.defaultError);
+      }
+      //
+      setErrorMessage(
+        error instanceof Error ? error.message : content.form.defaultError
+      );
+
+      if (
+        error &&
+        typeof error === "object" &&
+        "response" in error &&
+        error.response &&
+        typeof error.response === "object" &&
+        "data" in error.response
+      ) {
+        if (axios.isAxiosError(error) && error.response?.data?.error) {
+          toast.error(error.response.data.error);
+        }
       }
     } finally {
       setIsSubmitting(false);
@@ -175,9 +196,9 @@ const RequestInfoForm = () => {
   };
 
   return (
-    <div
-      className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6 flex items-center justify-center pt-[8rem]"
-    >
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100
+     p-6 flex items-center justify-center pt-[8rem]">
+      <ToastContainer />
       <motion.div
         className="w-full max-w-5xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -247,7 +268,7 @@ const RequestInfoForm = () => {
                     placeholder={content.form.firstNamePlaceholder}
                     className="w-full pl-10 pr-3 py-2 border  border-gray-300 rounded-lg focus:outline-none 
                     focus:ring-2 focus:ring-[#219EB2] focus:border-transparent transition-all duration-200 text-black"
-                    style={{ backgroundColor: 'white'}}
+                    style={{ backgroundColor: "white" }}
                   />
                 </div>
               </motion.div>
@@ -275,7 +296,7 @@ const RequestInfoForm = () => {
                     placeholder={content.form.lastNamePlaceholder}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none 
                     focus:ring-2 focus:ring-[#219EB2] focus:border-transparent transition-all duration-200 text-black"
-                    style={{ backgroundColor: 'white'}}
+                    style={{ backgroundColor: "white" }}
                   />
                 </div>
               </motion.div>
@@ -304,7 +325,7 @@ const RequestInfoForm = () => {
                   placeholder={content.form.emailPlaceholder}
                   className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none 
                   focus:ring-2 focus:ring-[#219EB2] focus:border-transparent transition-all duration-200 text-black"
-                  style={{ backgroundColor: 'white'}}
+                  style={{ backgroundColor: "white" }}
                 />
               </div>
             </motion.div>
@@ -332,7 +353,7 @@ const RequestInfoForm = () => {
                   placeholder={content.form.phonePlaceholder}
                   className="w-full pl-10 pr-3 py-2  border border-gray-300 rounded-lg focus:outline-none 
                   focus:ring-2 focus:ring-[#219EB2] focus:border-transparent transition-all duration-200 text-black"
-                  style={{ backgroundColor: 'white'}}
+                  style={{ backgroundColor: "white" }}
                 />
               </div>
             </motion.div>

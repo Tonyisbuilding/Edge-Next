@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { charities } from "@/constant/data";
+import { charities, charitiesDutch } from "@/constant/data";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const OurCharities = () => {
@@ -36,6 +36,7 @@ const OurCharities = () => {
 
   // Choose text based on current language
   const text = translations[language] || translations.en;
+  const renderedData = language === 'nl' ? charitiesDutch : charities;
 
   return (
     <section className="py-12 px-4 md:px-8 bg-gray-100 relative">
@@ -64,7 +65,7 @@ const OurCharities = () => {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {charities.map((charity, index) => (
+          {renderedData.map((charity, index) => (
             <motion.div 
               key={index} 
               className="bg-white rounded-lg shadow-md overflow-hidden py-[2rem] lg:h-[24.5rem]"

@@ -26,35 +26,35 @@ const PrinciplesSection: React.FC = () => {
           title: "Volatility Premium Strategy",
           description:
             "Our strategy based on ES (S&P 500) and NQ (Nasdaq) options utilizes a model focused on selling volatility and targets short-term systems. We sell options with 0 days to expiration (DTE) at deltas between 0.1 and 0.3 with an asymmetrical preference for the call side.",
-          icon: <TrendingUp className="w-12 h-12 text-teal-400" />,
+          icon: <TrendingUp className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 2,
           title: "Dynamic Delta-Hedging",
           description:
             "Delta-hedging adjusts dynamically based on market volatility, supported by parameters enhanced with machine learning. This allows us to maintain optimal risk management regardless of market conditions.",
-          icon: <Scale className="w-12 h-12 text-teal-400" />,
+          icon: <Scale className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 3,
           title: "Proven Performance",
           description:
             "The strategy shows an average daily expected return of 0.18% gross (before commissions) and 0.12% net (after costs). The win ratio, calculated as the ratio of profitable days to losing days, is 1.82 net and 2.41 gross.",
-          icon: <Award className="w-12 h-12 text-teal-400" />,
+          icon: <Award className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 4,
           title: "Risk Management & Scalability",
           description:
             "By exclusively using 0DTE options on the S&P 500 and Nasdaq, we avoid overnight risks. Moreover, our model offers high scalability of up to €100 million without compromising efficiency or performance.",
-          icon: <BarChart2 className="w-12 h-12 text-teal-400" />,
+          icon: <BarChart2 className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 5,
           title: "Institutional-Grade Collaboration",
           description:
             "We offer flexible collaboration options through direct fund participation or tailor-made SaaS solutions, allowing various types of investors to benefit from our strategies.",
-          icon: <Users className="w-12 h-12 text-teal-400" />,
+          icon: <Users className="w-12 h-12 text-[#000D14]" />,
         },
       ],
       prevAriaLabel: "Previous principle",
@@ -70,35 +70,35 @@ const PrinciplesSection: React.FC = () => {
           title: "Volatiliteitspremiestrategie",
           description:
             "Onze strategie, gebaseerd op ES (S&P 500) en NQ (Nasdaq) opties, maakt gebruik van een model dat gericht is op het verkopen van volatiliteit en richt zich op kortetermijnsystemen. We verkopen opties met 0 dagen tot expiratie (DTE) bij delta's tussen 0,1 en 0,3 met een asymmetrische voorkeur voor de call-zijde.",
-          icon: <TrendingUp className="w-12 h-12 text-teal-400" />,
+          icon: <TrendingUp className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 2,
           title: "Dynamische Delta-Hedging",
           description:
             "Delta-hedging past zich dynamisch aan op basis van marktvolatiliteit, ondersteund door parameters die zijn verbeterd met machine learning. Dit stelt ons in staat om optimaal risicobeheer te handhaven, ongeacht de marktomstandigheden.",
-          icon: <Scale className="w-12 h-12 text-teal-400" />,
+          icon: <Scale className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 3,
           title: "Bewezen Prestaties",
           description:
             "De strategie toont een gemiddeld dagelijks verwacht rendement van 0,18% bruto (voor commissies) en 0,12% netto (na kosten). De winratio, berekend als de verhouding tussen winstgevende dagen en verliesdagen, is 1,82 netto en 2,41 bruto.",
-          icon: <Award className="w-12 h-12 text-teal-400" />,
+          icon: <Award className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 4,
           title: "Risicobeheer & Schaalbaarheid",
           description:
             "Door uitsluitend 0DTE-opties op de S&P 500 en Nasdaq te gebruiken, vermijden we nachtelijke risico's. Bovendien biedt ons model hoge schaalbaarheid tot €100 miljoen zonder afbreuk te doen aan efficiëntie of prestaties.",
-          icon: <BarChart2 className="w-12 h-12 text-teal-400" />,
+          icon: <BarChart2 className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 5,
           title: "Institutionele Samenwerking",
           description:
             "We bieden flexibele samenwerkingsopties via directe fondsdeelname of op maat gemaakte SaaS-oplossingen, waardoor verschillende soorten beleggers kunnen profiteren van onze strategieën.",
-          icon: <Users className="w-12 h-12 text-teal-400" />,
+          icon: <Users className="w-12 h-12 text-[#000D14]" />,
         },
       ],
       prevAriaLabel: "Vorig principe",
@@ -121,14 +121,14 @@ const PrinciplesSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#F8F9FA] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h3 className="text-teal-400 text-xl md:text-2xl font-medium mb-2">
+          {/* <h3 className="text-teal-400 text-xl md:text-2xl font-medium mb-2">
             {content.subheader}
-          </h3>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          </h3> */}
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
             {content.header}
           </h2>
         </div>
@@ -237,11 +237,12 @@ const PrinciplesSection: React.FC = () => {
                   duration: 0.5,
                   delay: index * 0.1,
                 }}
-                className="bg-white p-6 rounded-lg flex flex-col h-full justify-between py-8 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white p-6 rounded-lg flex flex-col h-full justify-between py-8 
+                shadow-lg transition-shadow duration-300 shadow-[rgba(32,106,124, 0.25)]"
                 onClick={() => setActiveCard(index)}
               >
                 <div>
-                  <div className="flex justify-center mb-6">
+                  <div className="flex  mb-6">
                     {principle.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900">
@@ -251,7 +252,7 @@ const PrinciplesSection: React.FC = () => {
                     {principle.description}
                   </p>
                 </div>
-                <div className="flex justify-between items-center mt-6">
+                <div className="flex justify-between items-center mt-6 lg:hidden">
                   <span className="text-teal-600 font-semibold">{`0${principle.id}`}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -283,11 +284,12 @@ const PrinciplesSection: React.FC = () => {
                   duration: 0.5,
                   delay: (index + 3) * 0.1,
                 }}
-                className="bg-white p-6 rounded-lg flex flex-col h-full justify-between py-8 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white p-6 rounded-lg flex flex-col h-full justify-between 
+                py-8 shadow-lg transition-shadow duration-300 shadow-[rgba(32,106,124, 0.25)]"
                 onClick={() => setActiveCard(index + 3)}
               >
                 <div>
-                  <div className="flex justify-center mb-6">
+                  <div className="flex  mb-6">
                     {principle.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900">
@@ -297,7 +299,7 @@ const PrinciplesSection: React.FC = () => {
                     {principle.description}
                   </p>
                 </div>
-                <div className="flex justify-between items-center mt-6">
+                <div className="flex justify-between items-center mt-6 lg:hidden">
                   <span className="text-teal-600 font-semibold">{`0${principle.id}`}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

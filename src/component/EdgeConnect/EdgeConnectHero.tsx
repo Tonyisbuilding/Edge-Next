@@ -99,9 +99,10 @@ const EdgeConnectHero = () => {
           className="w-full md:w-1/2 relative top-[-5rem]"
           variants={itemVariants}
         >
-          <div className="relative h-64 md:h-96">
-            <div>
-              <img src={images.edgeConnect.Edge_Connect} alt={language === 'nl' ? "Edge Connect logo" : "Edge Connect logo"} />
+          <div className="relative h-64 md:h-76">
+            <div className=" w-full flex justify-center items-center">
+              <img src={images.edgeConnect.Edge_Connect} 
+              alt={language === 'nl' ? "Edge Connect logo" : "Edge Connect logo"} />
             </div>
           </div>
         </motion.div>
