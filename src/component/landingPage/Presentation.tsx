@@ -95,19 +95,28 @@
 
 // export default Presentation;
 
-// import React, { useRef, useState } from "react";
 import images from "@/constant/images";
-// import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const Presentation = () => {
   // const videoRef = useRef<HTMLVideoElement>(null);
   // const [isPlaying, setIsPlaying] = useState(false);
+  const { language } = useChangeLanguageContext();
 
   const benefits = [
     "Live Q&A to address your key concerns.",
     "Customized insights for your investment goals.",
     "Expert advisors with over 15 years of experience.",
   ];
+  const benefitsDucth = [
+    "Live Q&A om uw belangrijkste vragen te beantwoorden.",
+    "Inzichten op maat voor uw investeringsdoelen.",
+    "Deskundige adviseurs met meer dan 15 jaar ervaring.",
+  ];
+
+  const renderData = language === 'nl' ? benefitsDucth : benefits;
+  
 
   // const handlePlayClick = () => {
   //   if (videoRef.current) {
@@ -178,19 +187,23 @@ const Presentation = () => {
             className="text-2xl sm:text-[26px] md:text-[28px] font-bold text-[#1e293b] 
           mb-4 sm:mb-5 tracking-tight"
           >
-            Secure Your Exclusive Presentation
+            {language === "nl"
+              ? "Vraag uw Exclusieve Presentatie aan"
+              : "Secure Your Exclusive Presentation"}
           </h2>
           <p className="text-[#64748b] mb-6 sm:mb-7 md:mb-8 text-[0.95rem] sm:text-base md:text-[1.05rem]">
-            Starting a new investment is a significant step! Before you make
+            {language === "nl"
+              ? `Het starten van een nieuwe investering is een belangrijke stap!Voordat u die beslissing neemt, is het essentieel om goed geïnformeerd te zijn. Via een online presentatie (duur: ongeveer 30 minuten) geven wij u een duidelijk en volledig overzicht van onze organisatie en producten.`
+              : `Starting a new investment is a significant step! Before you make
             that decision, it's important to get well-informed. Through an
             online presentation (duration: approximately 30 minutes), we provide
             you with a clear and comprehensive overview of our organization and
-            products.
+            products.`}
           </p>
 
           {/* Benefits List */}
           <div className="mb-6 md:mb-8">
-            {benefits.map((benefit, index) => (
+            {renderData.map((benefit, index) => (
               <div
                 className="flex items-start mb-4 md:mb-5 text-black"
                 key={index}
@@ -229,17 +242,23 @@ const Presentation = () => {
 
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 w-full">
-            <button className="bg-[#206A7C] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#206A7C]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#206A7C]/30">
+            <button
+              // https://calendar.notion.so/meet/edgecapitalmanagementbv/ar4ym4lr7
+              onClick={() =>
+                window.open(
+                  "https://calendar.notion.so/meet/edgecapitalmanagementbv/ar4ym4lr7",
+                  "_blank"
+                )
+              }
+              className="bg-[#206A7C] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#206A7C]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#206A7C]/30"
+            >
               Schedule a presentation
             </button>
-            <button 
-            onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
-            className="bg-transparent text-[#206A7C]  border-[#206A7C] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#206A7C]/5 hover:-translate-y-0.5">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
-                target='_blank'
-                >
-                  Request Brochure
-                </a>
+            <button
+              // onClick={()=> window.open('/requestinfo')}
+              className="bg-transparent text-[#206A7C]  border-[#206A7C] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#206A7C]/5 hover:-translate-y-0.5"
+            >
+              <Link to="/requestinfo">Request Brochure</Link>
             </button>
           </div>
 

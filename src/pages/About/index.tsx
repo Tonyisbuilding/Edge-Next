@@ -11,6 +11,7 @@ import { teamMembers } from "@/constant/data";
 const About = () => {
   return (
     <>
+      <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -18,13 +19,12 @@ const About = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <EdgeCapitalHero />
         <WhatSetsUsApart />
         <CompanyTimeline />
         <TeamMemberCards teamMembers={teamMembers} />
         <Contact />
-      <Footer />
+        <Footer />
       </div>
       {/* <EdgeCapitalFooter /> */}
     </>

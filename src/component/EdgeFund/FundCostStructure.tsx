@@ -1,7 +1,158 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const FundCostStructure = () => {
+  const [activePopup, setActivePopup] = useState<boolean | null>(null);
+  const { language } = useChangeLanguageContext();
+
+  const openPopup = () => {
+    setActivePopup(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closePopup = () => {
+    setActivePopup(null);
+    document.body.style.overflow = "auto";
+  };
+
+  // Translations
+  const translations = {
+    en: {
+      fundCostStructure: "Fund Cost Structure",
+      minimumInvestment: "minimum investment",
+      requestInformation: "Request Information",
+      bookConsultation: "Book a consultation",
+      learnMore: "Learn more",
+      close: "Close",
+      highWatermarkTitle: "High Watermark Principle Explained",
+      highWatermarkDescription: "Our commission structure protects your investments with the High Watermark principle",
+      highWatermarkPopupTitle: "High Watermark Principle",
+      highWatermarkPopupContent: "The manager calculates profit sharing based on the \"high water mark principle.\" High watermark: A high watermark refers to the highest value achieved by an investment fund or asset manager. This term is often used in performance-based compensation of a fund or asset manager. In a fee structure with a high watermark application, commission fees of a fund manager or asset manager are only calculated based on net results. The fee is only calculated after past losses have been recovered. This prevents the fund manager or asset manager from receiving fees from volatile performance. Profit sharing is calculated retrospectively on a monthly basis, and the high watermark level is also determined monthly."
+    },
+    nl: {
+      fundCostStructure: "Kostenstructuur Fonds",
+      minimumInvestment: "minimale investering",
+      requestInformation: "Informatie aanvragen",
+      bookConsultation: "Consultatie boeken",
+      learnMore: "Meer informatie",
+      close: "Sluiten",
+      highWatermarkTitle: "High Watermark Principe Uitgelegd",
+      highWatermarkDescription: "Onze commissiestructuur beschermt uw investeringen met het High Watermark principe",
+      highWatermarkPopupTitle: "High Watermark Principe",
+      highWatermarkPopupContent: "De beheerder berekent winstdeling op basis van het \"high water mark principe.\" High watermark: Een high watermark verwijst naar de hoogste waarde die door een beleggingsfonds of vermogensbeheerder is bereikt. Deze term wordt vaak gebruikt bij prestatiegebonden vergoeding van een fonds of vermogensbeheerder. In een kostenstructuur met een high watermark toepassing worden commissievergoedingen van een fondsbeheerder of vermogensbeheerder alleen berekend op basis van nettoresultaten. De vergoeding wordt alleen berekend nadat eerdere verliezen zijn hersteld. Dit voorkomt dat de fondsbeheerder of vermogensbeheerder vergoedingen ontvangt voor volatiele prestaties. Winstdeling wordt maandelijks met terugwerkende kracht berekend, en het high watermark niveau wordt ook maandelijks bepaald."
+    }
+  };
+
+  // Fund class data with translations
+  const fundClassesData = {
+    en: [
+      {
+        id: "class-i",
+        title: "Participation Class I",
+        stars: 1,
+        description: "Perfect for individual investors and small family offices.",
+        investment: "€100K-€250K",
+        buttonText: "Request Information",
+        buttonClass: "bg-gray-900 hover:bg-gray-800",
+        features: [
+          "1.5% Management Fee (per year)",
+          "22.5% Profit Sharing (per month) High",
+          "High Watermark Protection",
+          "Monthly Performance Reports",
+        ],
+      },
+      {
+        id: "class-ii",
+        title: "Participation Class II",
+        stars: 2,
+        description:
+          "Ideal for established investors and medium-sized institutions.",
+        investment: "€250K-€500K",
+        buttonText: "Book a consultation",
+        buttonClass:
+          "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
+        features: [
+          "Everything in Class I +",
+          "1.25% Management Fee (per year)",
+          "17.5% Profit Sharing (per month)",
+          "Dedicated Account Manager",
+          "Priority Support Channel",
+        ],
+      },
+      {
+        id: "class-iii",
+        title: "Participation Class III",
+        stars: 3,
+        description:
+          "Built for institutional investors and large family offices.",
+        investment: "€500K+",
+        buttonText: "Request Information",
+        buttonClass: "bg-gray-900 hover:bg-gray-800",
+        features: [
+          "Everything in Class II +",
+          "1% Management Fee (per year)",
+          "12.5% Profit Sharing (per month)",
+          "Custom Investment Strategy",
+          "Quarterly Strategy Reviews",
+        ],
+      },
+    ],
+    nl: [
+      {
+        id: "class-i",
+        title: "Participatieklasse I",
+        stars: 1,
+        description: "Perfect voor individuele beleggers en kleine family offices.",
+        investment: "€100K-€250K",
+        buttonText: "Informatie aanvragen",
+        buttonClass: "bg-gray-900 hover:bg-gray-800",
+        features: [
+          "1,5% Beheerskosten (per jaar)",
+          "22,5% Winstdeling (per maand) High",
+          "High Watermark Bescherming",
+          "Maandelijkse Prestatierapporten",
+        ],
+      },
+      {
+        id: "class-ii",
+        title: "Participatieklasse II",
+        stars: 2,
+        description:
+          "Ideaal voor ervaren beleggers en middelgrote instellingen.",
+        investment: "€250K-€500K",
+        buttonText: "Consultatie boeken",
+        buttonClass:
+          "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
+        features: [
+          "Alles in Klasse I +",
+          "1,25% Beheerskosten (per jaar)",
+          "17,5% Winstdeling (per maand)",
+          "Toegewijde Accountmanager",
+          "Prioriteit Supportkanaal",
+        ],
+      },
+      {
+        id: "class-iii",
+        title: "Participatieklasse III",
+        stars: 3,
+        description:
+          "Ontwikkeld voor institutionele beleggers en grote family offices.",
+        investment: "€500K+",
+        buttonText: "Informatie aanvragen",
+        buttonClass: "bg-gray-900 hover:bg-gray-800",
+        features: [
+          "Alles in Klasse II +",
+          "1% Beheerskosten (per jaar)",
+          "12,5% Winstdeling (per maand)",
+          "Aangepaste Beleggingsstrategie",
+          "Kwartaal Strategiereviews",
+        ],
+      },
+    ]
+  };
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,7 +180,7 @@ const FundCostStructure = () => {
 
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: (i:number) => ({
+    visible: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {
@@ -73,61 +224,12 @@ const FundCostStructure = () => {
     },
   };
 
-  // Fund class data
-  const fundClasses = [
-    {
-      id: "class-i",
-      title: "Participation Class I",
-      stars: 1,
-      description: "Perfect for individual investors and small family offices.",
-      investment: "€100K-€250K",
-      buttonText: "Request Information",
-      buttonClass: "bg-gray-900 hover:bg-gray-800",
-      features: [
-        "1.5% Management Fee (per year)",
-        "22.5% Profit Sharing (per month) High",
-        "High Watermark Protection",
-        "Monthly Performance Reports",
-      ],
-    },
-    {
-      id: "class-ii",
-      title: "Participation Class II",
-      stars: 2,
-      description:
-        "Ideal for established investors and medium-sized institutions.",
-      investment: "€250K-€500K",
-      buttonText: "Book a consultation",
-      buttonClass: "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
-      features: [
-        "Everything in Class I +",
-        "1.25% Management Fee (per year)",
-        "17.5% Profit Sharing (per month)",
-        "Dedicated Account Manager",
-        "Priority Support Channel",
-      ],
-    },
-    {
-      id: "class-iii",
-      title: "Participation Class III",
-      stars: 3,
-      description:
-        "Built for institutional investors and large family offices.",
-      investment: "€500K+",
-      buttonText: "Request Information",
-      buttonClass: "bg-gray-900 hover:bg-gray-800",
-      features: [
-        "Everything in Class II +",
-        "1% Management Fee (per year)",
-        "12.5% Profit Sharing (per month)",
-        "Custom Investment Strategy",
-        "Quarterly Strategy Reviews",
-      ],
-    },
-  ];
+  // Get current language content - default to English if language selection is invalid
+  const t = translations[language as keyof typeof translations] || translations.en;
+  const fundClasses = fundClassesData[language as keyof typeof fundClassesData] || fundClassesData.en;
 
   // Star component
-  const StarRating = ({ count }:{count: number}) => (
+  const StarRating = ({ count }: { count: number }) => (
     <motion.div className="flex gap-1" variants={starContainerVariants}>
       {[...Array(count)].map((_, i) => (
         <motion.div key={i} variants={starVariants}>
@@ -177,7 +279,7 @@ const FundCostStructure = () => {
             variants={cardVariants}
             className="text-3xl font-bold text-gray-900 border-b border-gray-300 pb-2"
           >
-            Fund Cost Structure
+            {t.fundCostStructure}
           </motion.h2>
 
           {/* Desktop Layout */}
@@ -202,18 +304,16 @@ const FundCostStructure = () => {
                   <p className="mt-4 text-lg font-bold text-gray-900">
                     {fundClass.investment}
                   </p>
-                  <p className="text-sm text-gray-500">minimum investment</p>
+                  <p className="text-sm text-gray-500">{t.minimumInvestment}</p>
 
-                  <button
-                    className={`mt-4 w-full py-3 px-4 rounded-md text-white font-medium ${fundClass.buttonClass} transition-colors duration-300`}
-                    onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
-                  >
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
-                    target="_blank"
+                  <Link to="/requestinfo">
+                    <button
+                      className={`mt-4 w-full py-3 px-4 rounded-md text-white font-medium hover:cursor-pointer
+                        ${fundClass.buttonClass} transition-colors duration-300`}
                     >
-                    {fundClass.buttonText}
-                    </a>
-                  </button>
+                      {fundClass.buttonText}
+                    </button>
+                  </Link>
 
                   <div className="mt-6 space-y-3">
                     {fundClass.features.map((feature, index) => (
@@ -252,18 +352,15 @@ const FundCostStructure = () => {
                   <p className="mt-4 text-lg font-bold text-gray-900">
                     {fundClass.investment}
                   </p>
-                  <p className="text-sm text-gray-500">minimum investment</p>
-
-                  <button
-                    className={`mt-4 w-full py-3 px-4 rounded-md text-white font-medium ${fundClass.buttonClass} transition-colors duration-300`}
-                    onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
-                  >
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
-                    target="_blank"
+                  <p className="text-sm text-gray-500">{t.minimumInvestment}</p>
+                  <Link to="/requestinfo">
+                    <button
+                      className={`mt-4 w-full py-3 px-4 rounded-md text-white font-medium hover:cursor-pointer
+                        ${fundClass.buttonClass} transition-colors duration-300`}
                     >
-                    {fundClass.buttonText}
-                    </a>
-                  </button>
+                      {fundClass.buttonText}
+                    </button>
+                  </Link>
 
                   <div className="mt-6 space-y-3">
                     {fundClass.features.map((feature, index) => (
@@ -288,41 +385,87 @@ const FundCostStructure = () => {
             initial="hidden"
             whileInView={"visible"}
             variants={noteVariants}
-            className="bg-white rounded-lg shadow-sm p-6 flex items-start space-x-4 mt-8 "
+            className="bg-white rounded-lg shadow-sm p-6 lg:flex items-start space-x-4 mt-8 "
           >
-            <div className="flex-shrink-0 w-10 h-10  rounded-full flex 
-            items-center justify-center relative top-[5rem] md:top-[.5rem]">
-              <svg
-                className="w-6 h-6 text-teal-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 13l4 4L19 7"
-                ></path>
-              </svg>
-            </div>
             <div className="flex-1 items-center justify-center">
               <h4 className="text-lg font-semibold text-gray-900">
-                High Watermark Principle Explained
+                {t.highWatermarkTitle}
               </h4>
               <p className="mt-1 text-gray-600">
-                Our commission structure protects your investments with the High
-                Watermark principle
+                {t.highWatermarkDescription}
               </p>
             </div>
+            <button
+              className="text-[#002731] hover:text-[#002731c0] font-medium transition-colors
+             duration-300 shadow-sm rounded-md p-3 flex items-center justify-center mt-3 hover:cursor-pointer "
+              onClick={() => openPopup()}
+            >
+              {t.learnMore}
+            </button>
           </motion.div>
-            {/* <button className="text-[#002731] hover:text-[#002731c0] font-medium transition-colors
-             duration-300 shadow-sm rounded-md p-3 flex items-center justify-center relative top-[5rem] 
-             md:top-[.4rem]">
-              Learn more
-            </button> */}
         </motion.div>
+
+        {/* Popup */}
+        <AnimatePresence>
+          {activePopup && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-[#00000098] bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              onClick={closePopup}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", damping: 25 }}
+                className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="p-6 sm:p-8">
+                  <div className="flex justify-between items-center mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {t.highWatermarkPopupTitle}
+                    </h3>
+                    <button
+                      onClick={closePopup}
+                      className="text-gray-400 hover:text-gray-600 p-2"
+                      aria-label="Close popup"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="prose max-w-none text-black">
+                    {t.highWatermarkPopupContent}
+                  </div>
+                  <div className="mt-8 text-right">
+                    <button
+                      onClick={closePopup}
+                      className="bg-[#0E7490] hover:bg-[#0e7490b7] text-white font-medium 
+                      py-2 px-6 rounded-lg transition-colors"
+                    >
+                      {t.close}
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

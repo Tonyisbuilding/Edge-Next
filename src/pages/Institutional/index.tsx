@@ -12,6 +12,7 @@ import ClientsSection from "@/component/Institutional/ClientSection";
 const Institutional = () => {
   return (
     <>
+        <NavBar />
       <div
         className="bg-white"
         style={{
@@ -20,7 +21,6 @@ const Institutional = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <HeroSection />
         <ResearchDevelopmentSection />
         <PrinciplesSection />

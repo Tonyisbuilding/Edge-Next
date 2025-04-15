@@ -75,9 +75,12 @@ import person from "../../src/assets/images/edgeDoc/person.png";
 import discount_email from "../../src/assets/images/edgeDoc/discount_email.png";
 import form_submission from "../../src/assets/images/edgeDoc/form_submission.png";
 import security from "../../src/assets/images/edgeDoc/security.png";
+import csrvid from "../../src/assets/images/csr/csrvid.mp4";
+import vector from "../../src/assets/images/Vector.svg";
 
 const images = {
     landingPage:{
+        vector,
         heroSection,
         risk,
         access,
@@ -170,6 +173,9 @@ const images = {
         discount_email,
         form_submission,
         security,
+    },
+    csr:{
+        csrvid
     },
 }
 

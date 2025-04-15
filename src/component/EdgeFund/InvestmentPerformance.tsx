@@ -1,7 +1,51 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const InvestmentPerformance = () => {
+  const { language } = useChangeLanguageContext();
+  
+  const translations = {
+    en: {
+      returns: "Returns",
+      february: "February",
+      participationFrom: "participation from",
+      metrics: {
+        netReturn2024: "Net return 2024:",
+        netReturnSinceInception: "Net return since inception (2021):",
+        averageAnnualReturn: "Average annual return since inception:"
+      },
+      downloadFactsheet: "Download our factsheet for a detailed overview.",
+      requestFactsheet: "Request factsheet",
+      receiveInfoMemorandum: "Receive the information memorandum",
+      disclaimer: {
+        title: "General disclaimer on returns:",
+        content: "Bolder Funds Services B.V. (administrator) calculates the fund's results on a monthly basis. The above results are net of the 22.5% profit share and the 1.50% annual management fee. The returns from September 1, 2022, represent the actual results of the fund. Returns prior to September 1, 2022, are based on forward testing (live account) and not on backtesting. These returns should not be considered as an indication of future results."
+      }
+    },
+    nl: {
+      returns: "Rendementen",
+      february: "Februari",
+      participationFrom: "participatie vanaf",
+      metrics: {
+        netReturn2024: "Nettorendement 2024:",
+        netReturnSinceInception: "Nettorendement sinds oprichting (2021):",
+        averageAnnualReturn: "Gemiddeld jaarlijks rendement sinds oprichting:"
+      },
+      downloadFactsheet: "Download onze factsheet voor een gedetailleerd overzicht.",
+      requestFactsheet: "Factsheet aanvragen",
+      receiveInfoMemorandum: "Ontvang het informatiememorandum",
+      disclaimer: {
+        title: "Algemene disclaimer over rendementen:",
+        content: "Bolder Funds Services B.V. (administrateur) berekent de resultaten van het fonds op maandbasis. Bovenstaande resultaten zijn na aftrek van de 22,5% winstdeling en de 1,50% jaarlijkse beheervergoeding. De rendementen vanaf 1 september 2022 vertegenwoordigen de werkelijke resultaten van het fonds. Rendementen vóór 1 september 2022 zijn gebaseerd op forward testing (live account) en niet op backtesting. Deze rendementen mogen niet worden beschouwd als een indicatie van toekomstige resultaten."
+      }
+    }
+  };
+
+  // Get the appropriate language translations
+  const t = translations[language] || translations.en;
+  
   const cardVariants = {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
@@ -21,27 +65,27 @@ const InvestmentPerformance = () => {
       participation: "€100,000",
       percentage: "+0.32%",
       metrics: [
-        { label: "Net return 2024:", value: "+18.47%" },
-        { label: "Net return since inception (2021):", value: "+116.99%" },
-        { label: "Average annual return since inception:", value: "+22.62%" },
+        { label: t.metrics.netReturn2024, value: "+18.47%" },
+        { label: t.metrics.netReturnSinceInception, value: "+116.99%" },
+        { label: t.metrics.averageAnnualReturn, value: "+22.62%" },
       ],
     },
     {
       participation: "€250,000",
       percentage: "+0.33%",
       metrics: [
-        { label: "Net return 2024:", value: "+19.76%" },
-        { label: "Net return since inception (2021):", value: "+130.22%" },
-        { label: "Average annual return since inception:", value: "+24.44%" },
+        { label: t.metrics.netReturn2024, value: "+19.76%" },
+        { label: t.metrics.netReturnSinceInception, value: "+130.22%" },
+        { label: t.metrics.averageAnnualReturn, value: "+24.44%" },
       ],
     },
     {
       participation: "€500,000",
       percentage: "+0.34%",
       metrics: [
-        { label: "Net return 2024:", value: "+21.28%" },
-        { label: "Net return since inception (2021):", value: "+144.80%" },
-        { label: "Average annual return since inception:", value: "+26.37%" },
+        { label: t.metrics.netReturn2024, value: "+21.28%" },
+        { label: t.metrics.netReturnSinceInception, value: "+144.80%" },
+        { label: t.metrics.averageAnnualReturn, value: "+26.37%" },
       ],
     },
   ];
@@ -50,9 +94,9 @@ const InvestmentPerformance = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <motion.h2
         variants={cardVariants}
-        className="text-3xl lg:text-[3rem] font-bold text-gray-900  mb-6 text-left underline"
+        className="text-3xl lg:text-[3rem] font-bold text-gray-900 mb-6 text-left underline"
       >
-        Returns
+        {t.returns}
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {performanceData.map((card, index) => (
@@ -86,7 +130,7 @@ const InvestmentPerformance = () => {
                   </svg>
                 </div>
                 <span className="text-lg font-semibold text-[#206A7C]">
-                  February
+                  {language === 'nl' ? t.february : 'February'}
                 </span>
               </div>
               <span className="text-base font-bold text-emerald-600 bg-emerald-50 px-3.5 py-1.5 rounded-full">
@@ -95,7 +139,7 @@ const InvestmentPerformance = () => {
             </div>
             <div className="p-7">
               <div className="inline-block bg-gray-100 text-gray-900 font-medium text-sm px-4 py-2 rounded-full mb-7">
-                (participation from {card.participation})
+                ({t.participationFrom} {card.participation})
               </div>
               <ul className="mb-7">
                 {card.metrics.map((metric, i) => (
@@ -117,17 +161,18 @@ const InvestmentPerformance = () => {
                 ))}
               </ul>
               <p className="text-sm text-gray-600 mb-7">
-                Download our factsheet for a detailed overview.
+                {t.downloadFactsheet}
               </p>
-              <motion.button
-              onClick={()=> window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header','_blank')}
-                variants={buttonVariants}
-                whileHover="hover"
-                className="w-full bg-[#206A7C] text-white px-6 py-3.5 rounded-full font-semibold 
+              <Link to="/requestinfo">
+                <motion.button
+                  variants={buttonVariants}
+                  whileHover="hover"
+                  className="w-full bg-[#206A7C] text-white px-6 py-3.5 rounded-full font-semibold 
                 text-sm shadow-sm hover:cursor-pointer"
-              >
-                Request factsheet
-              </motion.button>
+                >
+                  {t.requestFactsheet}
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         ))}
@@ -139,8 +184,7 @@ const InvestmentPerformance = () => {
           transition={{ duration: 0.3 }}
           className="bg-[#206A7C] text-white px-9 py-4.5 rounded-[40px] font-semibold flex items-center gap-3 shadow-md max-w-md w-full justify-center"
         >
-          {/* <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm">ℹ</span> */}
-          Receive the information memorandum
+          {t.receiveInfoMemorandum}
         </motion.button>
       </div>
 
@@ -167,16 +211,10 @@ const InvestmentPerformance = () => {
               strokeLinejoin="round"
             />
           </svg>
-          <h3 className="text-xl font-bold">General disclaimer on returns:</h3>
+          <h3 className="text-xl font-bold">{t.disclaimer.title}</h3>
         </div>
         <p className="text-sm leading-relaxed">
-          Bolder Funds Services B.V. (administrator) calculates the fund's
-          results on a monthly basis. The above results are net of the 22.5%
-          profit share and the 1.50% annual management fee. The returns from
-          September 1, 2022, represent the actual results of the fund. Returns
-          prior to September 1, 2022, are based on forward testing (live
-          account) and not on backtesting. These returns should not be
-          considered as an indication of future results.
+          {t.disclaimer.content}
         </p>
       </motion.div>
     </div>

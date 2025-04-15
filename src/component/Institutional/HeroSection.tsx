@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
 import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const HeroSection = () => {
+  const { language } = useChangeLanguageContext();
+
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -25,7 +28,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="h-[150vh] relative">
+    <div className="h-[150vh] relative mt-[5rem]">
       <div className="relative min-h-screen font-sans">
         {/* Background image with overlay */}
         <div
@@ -63,16 +66,22 @@ const HeroSection = () => {
                   initial="hidden"
                   whileInView="visible"
                 >
-                  We are the Future of Institutional Trading
+                  {language === "nl"
+                    ? "Wij zijn de toekomst van institutionele handel"
+                    : "We are the Future of Institutional Trading"}
                 </motion.h1>
 
                 <motion.p
                   className="text-sm md:text-base mb-6"
                   variants={fadeIn}
                 >
-                  We combine deep trading acumen with advanced analytics and
+                  {language === "nl"
+                    ? `We combineren diepgaande handelsinzichten met geavanceerde analyses en
+technologie om cruciale liquiditeit te leveren en de wereldwijde
+markten van morgen vorm te geven.`
+                    : `We combine deep trading acumen with advanced analytics and
                   technology to deliver critical liquidity and shape the global
-                  markets of tomorrow.
+                  markets of tomorrow.`}
                 </motion.p>
 
                 <motion.button
@@ -83,14 +92,14 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Link to="/contact" className="block ">
-                    Contact us
+                  { language === 'nl' ? 'Neem contact met ons op' : 'Contact us'}
                   </Link>
                 </motion.button>
-                <div
+                {/* <div
                   className="blur-sm absolute h-[30%] w-full bg-[#206a7c3a] lg:top-[16rem] top-[87%] left-0
                  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 
                 "
-                ></div>
+                ></div> */}
               </motion.div>
             </motion.div>
           </div>
@@ -103,7 +112,7 @@ const HeroSection = () => {
         transition={{ delay: 0.8, duration: 0.6 }}
       >
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">
-          Where Finance, Mathematics & Technology Converge
+          {language === 'nl' ? 'Waar financiën, wiskunde en technologie samenkomen' : 'Where Finance, Mathematics & Technology Converge'}
         </h2>
       </motion.div>
     </div>

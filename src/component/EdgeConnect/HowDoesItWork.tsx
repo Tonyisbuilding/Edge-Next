@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
+import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 interface CardContentItem {
   tier?: string;
@@ -16,6 +18,83 @@ interface Card {
 }
 
 const HowDoesItWork = () => {
+  const { language } = useChangeLanguageContext();
+
+  // Translations
+  const translations = {
+    en: {
+      sectionTitle: "How does it work?",
+      subtitle: "Earn Rewards by Introducing New Clients!",
+      description: "At Edge Capital, we recognize the power of personal recommendations. That's why we're excited to introduce our new referral program! When you refer new clients to us, you'll receive a cash reward based on the assets under management (AUM) they bring in, provided they remain clients for at least 3 months.",
+      cardTitles: [
+        "Earn tiered rewards",
+        "Invest in your network",
+        "Flexible reward options"
+      ],
+      tierLabels: [
+        "1-3 Referred Clients:",
+        "4-6 Referred Clients:",
+        "7+ Referred Clients:"
+      ],
+      rewardValues: [
+        "Receive 0.75% of the referred AUM",
+        "Receive 1.00% of the referred AUM",
+        "Receive 1.25% of the referred AUM"
+      ],
+      networkContent: [
+        "Share Edge Capital with friends, family, and colleagues who could benefit from our exceptional wealth management services.",
+        "The more clients you refer, the higher your reward percentage becomes. Our experts will provide each referral with personalized care and attention."
+      ],
+      rewardOptions: [
+        "Choose how you'd like to receive your rewards:",
+        "Direct Cash Payment:",
+        "Charitable Donation:"
+      ],
+      optionDescriptions: [
+        "Receive funds directly to your bank account",
+        "Support one of six partner organizations with your rewards"
+      ],
+      ctaButton: "Start Referring"
+    },
+    nl: {
+      sectionTitle: "Hoe werkt het?",
+      subtitle: "Verdien beloningen door nieuwe klanten voor te stellen!",
+      description: "Bij Edge Capital erkennen we de kracht van persoonlijke aanbevelingen. Daarom zijn we verheugd om ons nieuwe verwijzingsprogramma te introduceren! Wanneer u nieuwe klanten naar ons verwijst, ontvangt u een geldelijke beloning op basis van de beheerde activa (AUM) die zij inbrengen, mits zij minimaal 3 maanden klant blijven.",
+      cardTitles: [
+        "Verdien getrapte beloningen",
+        "Investeer in uw netwerk",
+        "Flexibele beloningsopties"
+      ],
+      tierLabels: [
+        "1-3 Verwezen klanten:",
+        "4-6 Verwezen klanten:",
+        "7+ Verwezen klanten:"
+      ],
+      rewardValues: [
+        "Ontvang 0,75% van de verwezen AUM",
+        "Ontvang 1,00% van de verwezen AUM",
+        "Ontvang 1,25% van de verwezen AUM"
+      ],
+      networkContent: [
+        "Deel Edge Capital met vrienden, familie en collega's die baat kunnen hebben bij onze uitzonderlijke vermogensbeheerservices.",
+        "Hoe meer klanten u verwijst, hoe hoger uw beloningspercentage wordt. Onze experts zullen elke verwijzing voorzien van persoonlijke zorg en aandacht."
+      ],
+      rewardOptions: [
+        "Kies hoe u uw beloningen wilt ontvangen:",
+        "Directe contante betaling:",
+        "Liefdadigheidsgift:"
+      ],
+      optionDescriptions: [
+        "Ontvang geld rechtstreeks op uw bankrekening",
+        "Ondersteun een van de zes partnerorganisaties met uw beloningen"
+      ],
+      ctaButton: "Begin met verwijzen"
+    }
+  };
+
+  // Get translations based on current language
+  const t = translations[language as keyof typeof translations] || translations.en;
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -44,43 +123,42 @@ const HowDoesItWork = () => {
   const cards: Card[] = [
     {
       icon: images.edgeConnect.handshake_icon,
-      title: "Earn tiered rewards",
+      title: t.cardTitles[0],
       content: [
         {
-          tier: "1-3 Referred Clients:",
-          reward: `Receive 0.75% of the referred AUM`,
+          tier: t.tierLabels[0],
+          reward: t.rewardValues[0],
         },
         {
-          tier: "4-6 Referred Clients:",
-          reward: "Receive 1.00% of the referred AUM",
+          tier: t.tierLabels[1],
+          reward: t.rewardValues[1],
         },
         {
-          tier: "7+ Referred Clients:",
-          reward: "Receive 1.25% of the referred AUM",
+          tier: t.tierLabels[2],
+          reward: t.rewardValues[2],
         },
       ],
     },
     {
       icon: images.edgeConnect.network_icon,
-      title: "Invest in your network",
+      title: t.cardTitles[1],
       content: [
-        "Share Edge Capital with friends, family, and colleagues who could benefit from our exceptional wealth management services.",
-        "The more clients you refer, the higher your reward percentage becomes. Our experts will provide each referral with personalized care and attention.",
+        t.networkContent[0],
+        t.networkContent[1],
       ],
     },
     {
       icon: images.edgeConnect.money_icon,
-      title: "Flexible reward options",
+      title: t.cardTitles[2],
       content: [
-        "Choose how you'd like to receive your rewards:",
+        t.rewardOptions[0],
         {
-          option: "Direct Cash Payment:",
-          description: "Receive funds directly to your bank account",
+          option: t.rewardOptions[1],
+          description: t.optionDescriptions[0],
         },
         {
-          option: "Charitable Donation:",
-          description:
-            "Support one of six partner organizations with your rewards",
+          option: t.rewardOptions[2],
+          description: t.optionDescriptions[1],
         },
       ],
     },
@@ -105,22 +183,18 @@ const HowDoesItWork = () => {
             className="text-3xl md:text-4xl font-bold text-gray-900 after:content-[''] after:block after:w-24 after:h-1 after:bg-teal-600 after:mt-2"
             variants={itemVariants}
           >
-            How does it work?
+            {t.sectionTitle}
           </motion.h2>
 
           <motion.h3
             className="text-xl md:text-2xl font-semibold text-gray-800"
             variants={itemVariants}
           >
-            Earn Rewards by Introducing New Clients!
+            {t.subtitle}
           </motion.h3>
 
           <motion.p className="text-gray-600 max-w-3xl" variants={itemVariants}>
-            At Edge Capital, we recognize the power of personal recommendations.
-            That's why we're excited to introduce our new referral program! When
-            you refer new clients to us, you'll receive a cash reward based on
-            the assets under management (AUM) they bring in, provided they
-            remain clients for at least 3 months.
+            {t.description}
           </motion.p>
         </div>
 
@@ -138,7 +212,8 @@ const HowDoesItWork = () => {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="bg-[#F3F4F6] rounded-lg p-6 shadow-sm border border-[#E5E7EB] relative lg:h-[70vh]"
+              className="bg-[#F3F4F6] rounded-lg p-6 shadow-sm border
+               border-[#E5E7EB] relative lg:h-[70vh] w-auto mx-auto"
               variants={{
                 hidden: { y: 50, opacity: 0 },
                 visible: {
@@ -152,11 +227,11 @@ const HowDoesItWork = () => {
                 },
               }}
             >
-              <div className="p-3  inline-flex mb-4 border border-[#0000003a] rounded-md">
-                <div className="flex-shrink-0   flex items-center justify-center">
+              <div className="p-3 inline-flex mb-4 border border-[#0000003a] rounded-md">
+                <div className="flex-shrink-0 flex items-center justify-center">
                   <img
                     src={card.icon}
-                    alt="Research team analyzing market data"
+                    alt={language === 'nl' ? "Team icoon" : "Team icon"}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -187,20 +262,17 @@ const HowDoesItWork = () => {
                   </div>
                 ))}
               </div>
-
-              <motion.button
-                className="w-[90%] py-3 px-4 bg-[#0E7490] text-white rounded-md font-medium 
-                transition-colors hover:bg-[#0e7490d3] focus:outline-none focus:ring-2 focus:ring-offset-2 
-                focus:ring-teal-500 absolute bottom-[1rem] lg:w-[87%]"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFL8uncgP8CUHx8fM-1VQrV-Dc8Q3eULrDpP7buGC7zDrInQ/viewform?usp=header"
-                 target="_blank"
-                >
-                  Start Referring
-                </a>
-              </motion.button>
+              <Link to='/requestinfo'>
+                <motion.button
+                  className="w-[90%] py-3 px-4 bg-[#0E7490] text-white rounded-md font-medium 
+                  transition-colors hover:bg-[#0e7490d3] focus:outline-none focus:ring-2 focus:ring-offset-2 
+                  focus:ring-teal-500 absolute bottom-[1rem] lg:w-[87%] hover:cursor-pointer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >  
+                  {t.ctaButton}
+                </motion.button>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

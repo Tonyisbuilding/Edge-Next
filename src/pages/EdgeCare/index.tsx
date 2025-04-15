@@ -6,6 +6,7 @@ import EdgeCareSection from "@/component/EdgeCare/EdgeCareSection";
 const EdgeCare = () => {
   return (
     <>
+          <NavBar />
       <div
         style={{
           maxWidth: "1550px",
@@ -13,7 +14,6 @@ const EdgeCare = () => {
           width: "100%",
         }}
       >
-        <NavBar />
         <EdgeCareSection />
         <Contact />
         <Footer />

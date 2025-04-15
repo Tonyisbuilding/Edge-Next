@@ -9,13 +9,16 @@ import Presentation from "@/component/landingPage/Presentation";
 // import TheTeamYouCanTrust from "@/component/landingPage/TheTeamYouCanTrust";
 import WhyEdgeCapital from "@/component/landingPage/WhyEdgeCapital";
 // import OurHistory from "@/component/About/OurHistory";
-import { theTeamYouCanTrustData } from "@/constant/data";
+import { theTeamYouCanTrustData, theTeamYouCanTrustDataDutch } from "@/constant/data";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 
 const LandingPage = () => {
+  const { language } = useChangeLanguageContext();
   return (
     <>
       <div>
+        <NavBar />
         <div
           style={{
             maxWidth: "1550px",
@@ -23,12 +26,11 @@ const LandingPage = () => {
             width: "100%",
           }}
         >
-          <NavBar />
           <HeroSection />
           <Marquee speed={15} />
           <EdgeCapital />
           <WhyEdgeCapital />
-          <TeamMemberCards teamMembers={theTeamYouCanTrustData} />
+          <TeamMemberCards teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData} />
           <Presentation />
           <Contact />
         <Footer />

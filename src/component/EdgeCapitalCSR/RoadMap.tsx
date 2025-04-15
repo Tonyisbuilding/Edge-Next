@@ -1,34 +1,70 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import RoadmapCard from "./RoadmapCard";
-
-
-
-const roadmapData = [
-  {
-    id: 1,
-    title: "Edge Impact Label",
-    content: "Our Edge Impact Label identifies and supports projects with significant social and environmental benefits. We carefully select initiatives that align with our core values and can make a meaningful difference.",
-    year: "Present",
-    subtitle: "Making an Impact Today"
-  },
-  {
-    id: 2,
-    title: "Edge Cares",
-    content: "Our Edge Cares initiative will focus on community engagement and charitable partnerships. This program will empower our team to actively participate in making a difference in the communities where we operate.",
-    year: "Mid-2025",
-    subtitle: "Community Engagement"
-  },
-  {
-    id: 3,
-    title: "Edge Horizon Foundation",
-    content: "The Edge Horizon Foundation will serve as our primary vehicle for implementing large-scale sustainability and social impact projects, creating lasting positive change on a global scale.",
-    year: "2026",
-    subtitle: "Global Sustainability"
-  }
-];
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const RoadmapSection = () => {
+  const { language } = useChangeLanguageContext();
+
+  const translations = {
+    en: {
+      title: "Our Roadmap",
+      roadmapData: [
+        {
+          id: 1,
+          title: "Edge Impact Label",
+          content: "Our Edge Impact Label identifies and supports projects with significant social and environmental benefits. We carefully select initiatives that align with our core values and can make a meaningful difference.",
+          year: "Present",
+          subtitle: "Making an Impact Today"
+        },
+        {
+          id: 2,
+          title: "Edge Cares",
+          content: "Our Edge Cares initiative will focus on community engagement and charitable partnerships. This program will empower our team to actively participate in making a difference in the communities where we operate.",
+          year: "Mid-2025",
+          subtitle: "Community Engagement"
+        },
+        {
+          id: 3,
+          title: "Edge Horizon Foundation",
+          content: "The Edge Horizon Foundation will serve as our primary vehicle for implementing large-scale sustainability and social impact projects, creating lasting positive change on a global scale.",
+          year: "2026",
+          subtitle: "Global Sustainability"
+        }
+      ]
+    },
+    nl: {
+      title: "Onze Roadmap",
+      roadmapData: [
+        {
+          id: 1,
+          title: "Edge Impact Label",
+          content: "Ons Edge Impact Label identificeert en ondersteunt projecten met significante sociale en milieu-voordelen. We selecteren zorgvuldig initiatieven die in lijn zijn met onze kernwaarden en die een betekenisvol verschil kunnen maken.",
+          year: "Heden",
+          subtitle: "Vandaag Impact Maken"
+        },
+        {
+          id: 2,
+          title: "Edge Cares",
+          content: "Ons Edge Cares-initiatief zal zich richten op betrokkenheid bij de gemeenschap en liefdadigheidspartnerschappen. Dit programma zal ons team in staat stellen om actief deel te nemen aan het maken van verschil in de gemeenschappen waar we actief zijn.",
+          year: "Medio 2025",
+          subtitle: "Gemeenschapsbetrokkenheid"
+        },
+        {
+          id: 3,
+          title: "Edge Horizon Foundation",
+          content: "De Edge Horizon Foundation zal dienen als ons primaire voertuig voor het implementeren van grootschalige duurzaamheids- en sociale impactprojecten, die blijvende positieve verandering creëren op wereldwijde schaal.",
+          year: "2026",
+          subtitle: "Wereldwijde Duurzaamheid"
+        }
+      ]
+    }
+  };
+
+  // Use the appropriate content based on language
+  const content = translations[language] || translations.en;
+  const roadmapData = content.roadmapData;
+
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [viewportHeight, setViewportHeight] = useState(0);
@@ -68,7 +104,7 @@ const RoadmapSection = () => {
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 relative
             mx-auto text-black flex justify-center underline"
         >
-          Our Roadmap
+          {content.title}
           {/* <div className="w-full"> */}
 
           {/* <div className="absolute bottom-0 left-0 w-[30%] h-1 bg-yellow-400 rounded mx-auto"></div> */}

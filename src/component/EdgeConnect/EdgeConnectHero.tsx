@@ -2,8 +2,30 @@ import React from "react";
 import { motion } from "framer-motion";
 import images from "@/constant/images";
 import { Link } from "react-router-dom";
+import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const EdgeConnectHero = () => {
+  const { language } = useChangeLanguageContext();
+
+  // Translations object
+  const translations = {
+    en: {
+      heading: "Edge Connect is the first step in our Edge Impact initiative. As our company continues to grow, we believe in giving back.",
+      subtitle: "Earn & Give Back",
+      description: "We reward you for introducing new clients. Keep your reward or donate part (or all) to a charity selected by our team—making an impact where it matters most.",
+      cta: "Speak to our team"
+    },
+    nl: {
+      heading: "Edge Connect is de eerste stap in ons Edge Impact initiatief. Naarmate ons bedrijf blijft groeien, geloven wij in het teruggeven aan de maatschappij.",
+      subtitle: "Verdien & Geef Terug",
+      description: "We belonen je voor het introduceren van nieuwe klanten. Behoud je beloning of doneer een deel (of alles) aan een goed doel geselecteerd door ons team—voor impact waar het er het meest toe doet.",
+      cta: "Spreek met ons team"
+    }
+  };
+
+  // Get the appropriate language translations
+  const t = translations[language] || translations.en;
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -31,8 +53,6 @@ const EdgeConnectHero = () => {
     tap: { scale: 0.98, transition: { duration: 0.1 } },
   };
 
-
-
   return (
     <motion.div
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden mt-[5rem]"
@@ -50,30 +70,27 @@ const EdgeConnectHero = () => {
             className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"
             variants={itemVariants}
           >
-            Edge Connect is the first step in our Edge Impact initiative. As our
-            company continues to grow, we believe in giving back.
+            {t.heading}
           </motion.h2>
 
           <motion.div className="mb-8" variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-2 text-black">Earn & Give Back</h3>
+            <h3 className="text-xl font-bold mb-2 text-black">{t.subtitle}</h3>
             <p className="text-gray-700">
-              We reward you for introducing new clients. Keep your reward or
-              donate part (or all) to a charity selected by our team—making an
-              impact where it matters most.
+              {t.description}
             </p>
           </motion.div>
 
           <motion.button
-            className="px-6 py-3 bg-gray-800 text-white rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            className="px-6 py-3 bg-[#206A7C] text-white rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
             variants={buttonVariants}
             initial="initial"
             whileHover="hover"
             whileTap="tap"
-            aria-label="Speak to our team about the Edge Connect program"
+            aria-label={language === 'nl' ? "Spreek met ons team over het Edge Connect programma" : "Speak to our team about the Edge Connect program"}
           >
-            <Link to="/team" className="block ">
-            Speak to our team
-              </Link>
+            <Link to="/team" className="block">
+              {t.cta}
+            </Link>
           </motion.button>
         </motion.div>
 
@@ -84,7 +101,7 @@ const EdgeConnectHero = () => {
         >
           <div className="relative h-64 md:h-96">
             <div>
-              <img src={images.edgeConnect.Edge_Connect} alt="" />
+              <img src={images.edgeConnect.Edge_Connect} alt={language === 'nl' ? "Edge Connect logo" : "Edge Connect logo"} />
             </div>
           </div>
         </motion.div>
