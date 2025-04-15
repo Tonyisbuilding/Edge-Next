@@ -5,15 +5,15 @@ import axiosInstance from "@/Api/AxiosInstance";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 // Define interfaces for our data structures
-interface Country {
-  code: string;
-  name: string;
-}
+// interface Country {
+//   code: string;
+//   name: string;
+// }
 
-interface PhonePrefix {
-  code: string;
-  country: string;
-}
+// interface PhonePrefix {
+//   code: string;
+//   country: string;
+// }
 
 interface FormData {
   name: string;
@@ -92,7 +92,7 @@ function isValidEmail(email: string): boolean {
 
 const ParticipantForm: React.FC = () => {
   const { language } = useChangeLanguageContext();
-  const [phonePrefix, setPhonePrefix] = useState<string>("+1");
+  // const [phonePrefix, setPhonePrefix] = useState<string>("+1");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     street: "",
@@ -317,7 +317,8 @@ const ParticipantForm: React.FC = () => {
 
     const payload = {
       ...formData,
-      phone: phonePrefix + formData.phone,
+      // phone: phonePrefix + formData.phone,
+      phone:  formData.phone,
     };
 
     try {
