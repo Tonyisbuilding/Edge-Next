@@ -46,7 +46,7 @@ const ContactInput = ({placeholder,CTAButton,icon}:contactInputType) => {
           console.log('hi')
           break;
         case 'Call Us':
-          handleCopyClick('+31613484484')
+          handleCopyClick('+31 252 781 777')
           break;
         case 'Get Direction':
           window.open('https://www.google.com/maps/search/?api=1&query=Walserij%2015-I%2C%202211%20SJ%20Noordwijkerhout', '_blank');

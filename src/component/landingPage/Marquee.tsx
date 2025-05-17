@@ -21,7 +21,7 @@ const logos: Logo[] = [
   { id: 'logo5', src: images.landingPage.BELEGGERSFAIR_LOGO_HEADER, alt: 'Logo 5' },
 ];
 
-//  Vertrouwd door marktleiders
+//  Bekend van:
 const Marquee: React.FC<MarqueeProps> = ({ speed = 20 }) => {
 
   const { language } = useChangeLanguageContext();
@@ -29,8 +29,8 @@ const Marquee: React.FC<MarqueeProps> = ({ speed = 20 }) => {
   return (
     <section className="py-6 bg-[#EEF4F5] max-h-[150px]">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-gray-500 text-sm md:text-base font-normal mb-10">
-          { language === 'nl' ? 'Vertrouwd door marktleiders' : 'Trusted by Industry Leaders'}
+        <h2 className="text-center text-gray-500 text-sm md:text-base font-bold mb-10">
+          { language === 'nl' ? 'Bekend van:' : 'Known from:'}
         </h2>
 
         <div className="overflow-hidden">

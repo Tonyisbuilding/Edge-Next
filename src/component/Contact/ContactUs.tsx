@@ -48,7 +48,7 @@ const ContactInformation = () => {
         emailUs: "Email Us",
         visit: "Visit",
         workingHours: "Working Hours",
-        phone: "+31613484484",
+        phone: "+31 252 781 777",
         email: "info@edge-capital.nl",
         address: "Walserij 15-I2211 SJ, Noordwijkerhout",
         hours: "Mon - Fri: 9AM - 6PM",
@@ -80,20 +80,20 @@ const ContactInformation = () => {
     },
     nl: {
       contactInfo: {
-        title: "Contactinformatie",
+        title: "Contactgegevens",
         description:
           "Wilt u samenwerken of heeft u vragen over onze diensten? We maken graag contact om te ontdekken hoe Edge Capital u kan helpen uw financiële doelen te bereiken.",
         callUs: "Bel Ons",
-        emailUs: "Email Ons",
-        visit: "Bezoek Ons",
-        workingHours: "Werkuren",
-        phone: "+31613484484",
+        emailUs: "Mail ons",
+        visit: "Bezoekadres",
+        workingHours: "Openingstijden",
+        phone: "+31 252 781 777",
         email: "info@edge-capital.nl",
         address: "Walserij 15-I2211 SJ, Noordwijkerhout",
         hours: "Ma - Vr: 9:00 - 18:00",
       },
       form: {
-        title: "Stuur Ons een Bericht",
+        title: "Stuur ons een bericht",
         description:
           "Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.",
         firstNameLabel: "Voornaam",
@@ -106,7 +106,7 @@ const ContactInformation = () => {
         phonePlaceholder: "Voer uw telefoonnummer in",
         emailPlaceholder: "Voer uw werkemailadres in",
         messagePlaceholder: "Voer uw bericht in",
-        sendButton: "Bericht Verzenden",
+        sendButton: "Verzend bericht",
         errors: {
           firstNameRequired: "Voornaam is verplicht",
           lastNameRequired: "Achternaam is verplicht",

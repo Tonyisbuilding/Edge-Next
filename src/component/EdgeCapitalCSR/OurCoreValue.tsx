@@ -48,31 +48,31 @@ const OurCoreValues = () => {
         {
           title: "Duurzaamheid",
           icon: <Recycle size={32} className='text-[#192227]' />,
-          description: "We integreren duurzame praktijken in al onze processen en streven ernaar onze ecologische voetafdruk te minimaliseren. We investeren in projecten en initiatieven die bijdragen aan een groenere toekomst.",
+          description: "Wij integreren duurzame praktijken in al onze processen en streven ernaar onze ecologische voetafdruk te minimaliseren. We investeren in projecten en initiatieven die bijdragen aan een groenere toekomst.",
           measures: "Maatregelen: Handelen in de meest liquide markten (S&P 500). Handelen via verschillende beurzen en brokers."
         },
         {
           title: "Transparantie",
           icon: <BookOpen size={32} className='text-[#192227]' />,
-          description: "We geloven in open communicatie over onze activiteiten en impact. We rapporteren regelmatig over onze voortgang en de resultaten van onze MVO-initiatieven om onze belanghebbenden goed geïnformeerd te houden.",
+          description: "Wij geloven in open communicatie over onze activiteiten en impact. We rapporteren regelmatig over onze voortgang en de resultaten van onze MVO-initiatieven, zodat onze stakeholders goed geïnformeerd zijn.",
           measures: "Maatregelen: Geautomatiseerde risicobeheerscenario's, 24/7 menselijke monitoring, back-ups, testperiodes."
         },
         {
           title: "Sociale Impact",
           icon: <Users size={32} className='text-[#192227]' />,
-          description: "We zijn vastbesloten een positieve bijdrage te leveren aan de gemeenschappen waarin we actief zijn. Via ons Edge Impact-label en initiatieven zoals Edge Cares (medio 2025) en de Edge Horizon Foundation (2026) ondersteunen we goede doelen en projecten die zowel lokaal als wereldwijd impact creëren.",
+          description: "We zijn vastbesloten om een positieve bijdrage te leveren aan de gemeenschappen waarin we actief zijn. Door middel van onze Edge Impact-label en -initiatieven, zoals Edge Cares (mid-2025) en de Edge Horizon Foundation (2026), ondersteunen we goede doelen en projecten die zowel lokaal als wereldwijd impact maken.",
           measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
         },
         {
           title: "Innovatie",
           icon: <Rocket size={32} className='text-[#192227]' />,
-          description: "We omarmen innovatie als middel om duurzame oplossingen te ontwikkelen en onze impact te vergroten. Door gebruik te maken van geavanceerde technologieën en methoden verbeteren we onze processen en de diensten die we aan onze klanten leveren.",
+          description: "Wij omarmen innovatie als een middel om duurzame oplossingen te ontwikkelen en onze impact te vergroten. Door gebruik te maken van geavanceerde technologieën en methoden, verbeteren we onze processen en de diensten die we aan onze klanten aanbieden.",
           measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
         },
         {
-          title: "Ethische Praktijken",
+          title: "Ethisch Ondernemen",
           icon: <Shield size={32} className='text-[#192227]' />,
-          description: "We voeren onze activiteiten uit met integriteit en respecteren de rechten van iedereen die door onze activiteiten wordt beïnvloed. We bevorderen eerlijke arbeidsomstandigheden en diversiteit binnen onze organisatie en in onze zakelijke relaties.",
+          description: "Wij handelen met integriteit en respecteren de rechten van iedereen die door onze activiteiten wordt beïnvloed. We stimuleren eerlijke arbeidsomstandigheden en diversiteit binnen onze organisatie en in onze zakelijke relaties.",
           measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
         }
       ]

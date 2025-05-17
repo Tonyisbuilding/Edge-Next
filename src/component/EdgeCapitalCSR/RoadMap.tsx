@@ -39,23 +39,23 @@ const RoadmapSection = () => {
         {
           id: 1,
           title: "Edge Impact Label",
-          content: "Ons Edge Impact Label identificeert en ondersteunt projecten met significante sociale en milieu-voordelen. We selecteren zorgvuldig initiatieven die in lijn zijn met onze kernwaarden en die een betekenisvol verschil kunnen maken.",
+          content: "Ons Edge Impact Label identificeert en ondersteunt projecten met aanzienlijke sociale en milieugerelateerde voordelen. We selecteren zorgvuldig initiatieven die aansluiten bij onze kernwaarden en daadwerkelijk een verschil kunnen maken.",
           year: "Heden",
-          subtitle: "Vandaag Impact Maken"
+          subtitle: "Impact maken vandaag"
         },
         {
           id: 2,
           title: "Edge Cares",
-          content: "Ons Edge Cares-initiatief zal zich richten op betrokkenheid bij de gemeenschap en liefdadigheidspartnerschappen. Dit programma zal ons team in staat stellen om actief deel te nemen aan het maken van verschil in de gemeenschappen waar we actief zijn.",
-          year: "Medio 2025",
-          subtitle: "Gemeenschapsbetrokkenheid"
+          content: "Ons Edge Cares-initiatief richt zich op maatschappelijke betrokkenheid en liefdadigheidspartnerschappen. Dit programma stelt ons team in staat om actief bij te dragen aan positieve verandering in de gemeenschappen waarin we actief zijn.",
+          year: "Midden 2025",
+          subtitle: "Betrokkenheid bij de gemeenschap"
         },
         {
           id: 3,
           title: "Edge Horizon Foundation",
-          content: "De Edge Horizon Foundation zal dienen als ons primaire voertuig voor het implementeren van grootschalige duurzaamheids- en sociale impactprojecten, die blijvende positieve verandering creëren op wereldwijde schaal.",
+          content: "De Edge Horizon Foundation zal fungeren als ons belangrijkste middel voor het uitvoeren van grootschalige duurzaamheids- en maatschappelijke impactprojecten, met als doel blijvende positieve verandering op wereldniveau.",
           year: "2026",
-          subtitle: "Wereldwijde Duurzaamheid"
+          subtitle: "Duurzaamheid op wereldschaal"
         }
       ]
     }

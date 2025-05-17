@@ -182,7 +182,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
             className={`text-3xl md:text-5xl font-bold text-center mb-12 text-black
              ${pathname.slice(1) === "team" ? "hidden" : "block"}`}
           >
-            { language === 'nl' ? 'Het Team waarop u kunt Vertrouwen' : 'The Team you can Trust' }
+            { language === 'nl' ? 'Ons Management team' : 'Our Management Team' }
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -196,12 +196,16 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
               pathname.slice(1) === "team" ? "hidden" : "block"
             }`}
           >
-            <button
-              className="bg-[#206A7C] text-white py-3 px-6 rounded-full hover:bg-gray-800 
-            transition-colors duration-300"
-            >
-              <Link to='/team'>{ language === 'nl' ? 'Leer ons gehele team kennen' : 'Meet our entire team' }</Link>
-            </button>
+           <button
+  className="bg-[#206A7C] text-white font-medium py-[10px] px-[20px] rounded-full 
+  shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
+  hover:-translate-y-[2px] transition-all duration-200"
+>
+  <Link to="/team">
+    {language === 'nl' ? 'Leer ons gehele team kennen' : 'Meet our entire team'}
+  </Link>
+</button>
+
           </div>
         </div>
       </div>

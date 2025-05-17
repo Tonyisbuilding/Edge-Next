@@ -39,9 +39,9 @@ const Navbar = () => {
       aboutUs: "About Us",
       about: "About",
       team: "Team",
-      edgeFund: "Edge Fund",
+      edgeFund: "EdgeFund",
       edgeImpact: "Edge Impact",
-      edgeConnect: "Edge Connect",
+      // edgeConnect: "Edge Connect",
       edgeCares: "Edge Cares",
       edgeHorizonFoundation: "Edge Horizon Foundation",
       edgeCapitalCSR: "Edge Capital CSR",
@@ -60,9 +60,9 @@ const Navbar = () => {
       aboutUs: "Over Ons",
       about: "Over",
       team: "Team",
-      edgeFund: "Edge Fonds",
+      edgeFund: "EdgeFund",
       edgeImpact: "Edge Impact",
-      edgeConnect: "Edge Connect",
+      // edgeConnect: "Edge Connect",
       edgeCares: "Edge Cares",
       edgeHorizonFoundation: "Edge Horizon Stichting",
       edgeCapitalCSR: "Edge Capital MVO",
@@ -401,6 +401,16 @@ const Navbar = () => {
               {t("edgeFund")}
             </Link>
           </li>
+
+          <li>
+            <Link
+              to="/institutional"
+              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
+            >
+              {t("institutional")}
+            </Link>
+          </li>
+          
           <li className="relative group">
             <a
               href="#"
@@ -447,14 +457,8 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li>
-            <Link
-              to="/institutional"
-              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
-            >
-              {t("institutional")}
-            </Link>
-          </li>
+
+         
           <li className="relative group">
             <a
               href="#"

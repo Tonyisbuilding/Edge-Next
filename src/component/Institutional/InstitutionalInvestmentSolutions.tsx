@@ -40,31 +40,31 @@ const InstitutionalInvestmentSolutions = () => {
       imageAlt: "Research team analyzing market data",
     },
     nl: {
-      title: "Institutionele Investeringsoplossingen",
+      title: "Institutionele Beleggingsoplossingen",
       cards: [
         {
           title: "Directe Fondsdeelname",
           content: [
-            "Fondsen met een fonds-van-fondsenstructuur kunnen eenvoudig en direct deelnemen aan ons fonds. Dit stelt u in staat om volledig gebruik te maken van onze marktneutrale strategie.",
-            "Ontworpen voor institutionele klanten met investeringen vanaf €500.000.",
+            "Fondsen met een fund-of-funds-structuur kunnen eenvoudig en rechtstreeks deelnemen aan ons fonds. Hiermee kunt u optimaal profiteren van onze marktneutrale strategie.",
+            "Ontworpen voor institutionele cliënten met investeringen vanaf €500.000.",
             "Beheervergoeding: 1% per jaar",
-            "Prestatievergoeding: 12,5% per maand (hoogwatermerk)",
+            "Prestatievergoeding: 12,5% per maand (high watermark)",
           ],
         },
         {
-          title: "API-Gebaseerde SaaS-Oplossingen",
+          title: "API-gebaseerde SaaS-oplossingen",
           content: [
-            "Voor fondsen zonder een fonds-van-fondsenstructuur bieden we oplossingen op maat, waardoor u via een API voor eigen rekening kunt deelnemen.",
-            "Dit gebeurt via een SaaS-overeenkomst (Software as a Service), waardoor u de flexibiliteit krijgt om onze strategieën binnen uw eigen fondsstructuur te integreren.",
-            "Aangepaste vergoedingsstructuur op basis van vereisten",
+            "Voor fondsen zonder fund-of-funds-structuur bieden wij maatwerkoplossingen, waarmee u via een API op eigen rekening kunt deelnemen.",
+            "Dit gebeurt via een SaaS-overeenkomst (Software as a Service), die u de flexibiliteit biedt om onze strategieën te integreren binnen uw eigen fondsstructuur.",
+            "Vergoedingsstructuur aangepast aan uw wensen",
           ],
         },
         {
-          title: "Prestatiegebaseerde Vergoedingsstructuur",
+          title: "Prestatiegerichte Vergoedingsstructuur",
           content: [
-            "Onze vergoedingsstructuur is ontworpen om onze belangen met de uwe af te stemmen. Wij slagen alleen als u slaagt.",
-            "Dit zorgt ervoor dat we ons blijven richten op het leveren van consistente prestaties in plaats van alleen activa onder beheer te accumuleren.",
-            "Lagere vergoedingen voor grotere toewijzingen",
+            "Onze vergoedingsstructuur is ontworpen om onze belangen op één lijn te brengen met die van u. Wij slagen pas als u dat ook doet.",
+            "Dit zorgt ervoor dat we gefocust blijven op consistente prestaties, in plaats van simpelweg activa onder beheer op te bouwen.",
+            "Verlaagde vergoedingen bij grotere allocaties",
           ],
         },
       ],

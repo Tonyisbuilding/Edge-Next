@@ -40,16 +40,20 @@ const EdgeCapital: React.FC = () => {
 
   const originalText = `${
     language === "en"
-      ? '"At Edge Capital, we revolutionize investing with quantitative, fact-based strategies, not traditional predictions. Using predetermined parameters like interest rates and option premiums, we mitigate risks through hedging across options and futures markets. Our diverse products, tailored for large and small investors, offer optimized risk-return profiles, giving you a market edge."'
-      : "Bij Edge Capital revolutioneren we beleggen met kwantitatieve, op feiten gebaseerde strategieën in plaats van traditionele voorspellingen.Door vooraf bepaalde parameters zoals rentetarieven en optiepremies te gebruiken, beperken we risico’s via hedging in de opties- en futuresmarkten.Onze diverse producten, afgestemd op zowel grote als kleine beleggers, bieden geoptimaliseerde risico-rendementsprofielen en verschaffen u een voorsprong op de markt."
+       ? '"At Edge Capital, we believe in a different approach to investing. We are not guided by fundamental or technical analyses, which often lead to inaccurate predictions. It is widely known that 4 out of 5 traditional investment funds underperform the index they aim to beat over the long term. Instead of traditional methods, we use quantitative trading systems based on predetermined parameters such as interest rates and option premiums. We mitigate risks by hedging all positions. We apply our strategies across various markets, including the options and futures markets."'
+      : "Bij Edge Capital geloven we in een andere benadering van beleggen. We laten ons niet leiden door fundamentele of technische analyses die vaak tot onnauwkeurige voorspellingen kunnen leiden. Algemeen bekend is dat 4 op de 5 traditionele beleggingsfondsen op lange termijn achterblijven op de index die zij proberen te verslaan. In plaats van traditionele methodes maken wij met onze kwantitatieve handelssystemen gebruik van parameters die van tevoren vaststaan, zoals rentetarieven en optiepremies.We beperken de risico’s door middel van het afdekken van alle posities (hedging). We passen onze strategieën toe op verschillende markten zoals de optie en futuremarkt."
   }`;
+
 
   const words = originalText.split(/\s+/);
 
   return (
-    <section className={`about-txt bg-[#EEF4F5] h-auto py-[3.5rem] ${ language === 'en' ? 'lg:h-auto lg:py-[2rem] lg:max-h-[680px]' : ' lg:h-auto pb-[10rem]'}    
+    <section className={`about-txt bg-[#EEF4F5]  h-fit-content py-[3.5rem]  ${ language === 'en' ? 'lg:h-auto lg:py-[2rem] lg:max-h-none' : ' lg:h-auto pb-[10rem]'}    
     relative `}>
-      <div className="scroll-text-container h-auto" ref={containerRef}>
+<div 
+  ref={containerRef}
+  className="scroll-text-container h-auto w-full max-w-[90rem] mx-auto px-6"
+>
         {words.map((word, index) => (
           <span key={index} className="word-span">
             {word}

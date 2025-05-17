@@ -76,37 +76,37 @@ const TradingApproachSection = () => {
       ],
     },
     nl: {
-      title: "Onze Handelsaanpak",
+      title: "Waarom Edge Capital?",
       tradingApproachData: [
         {
           icon: BarChart3,
-          title: "Marktneutrale Handel",
-          description: "Onze strategie richt zich op 0DTE-opties op de S&P 500 en Nasdaq, waardoor we kunnen profiteren van kortetermijnmarktbewegingen terwijl we nachtelijke blootstelling minimaliseren. Door een marktneutrale aanpak te hanteren, genereren we rendement in zowel stijgende als dalende markten, wat consistente prestaties garandeert ongeacht volatiliteitsschommelingen.",
+          title: "Marktneutraal Handelen",
+          description: "Onze strategie richt zich op 0DTE-opties op de S&P 500 en Nasdaq, waarmee we kunnen inspelen op kortetermijnbewegingen in de markt terwijl we blootstelling ‘overnight’ vermijden. Door een marktneutrale aanpak genereren we rendement in zowel stijgende als dalende markten — en blijven we consistent presteren, ongeacht volatiliteitsschommelingen.",
         },
         {
           icon: ShieldCheck,
           title: "Geautomatiseerd Risicobeheer",
-          description: "Risico wordt dynamisch beheerd door middel van delta-hedging, dat posities in realtime aanpast op basis van marktomstandigheden. Onze eigen algoritmes, verbeterd door machine learning, analyseren volatiliteit en voeren transacties met precisie uit, waardoor een optimale risico-rendementsbalans in alle marktomgevingen wordt gegarandeerd.",
+          description: "Risico’s worden dynamisch beheerd via delta-hedging, waarbij posities in realtime worden aangepast op basis van marktomstandigheden. Onze eigen algoritmes, versterkt met machine learning, analyseren volatiliteit en voeren transacties nauwkeurig uit — voor een optimaal risico-rendementsevenwicht in elke marktomgeving.",
         },
         {
           icon: Monitor,
-          title: "Schaalbaarheid & Geen Nachtelijk Risico",
-          description: "Met diepe liquiditeit en institutionele uitvoering kan ons model naadloos opschalen tot €100 miljoen zonder prestatieverlies. Door uitsluitend 0DTE-opties te verhandelen, elimineren we nachtelijk risico, wat kapitaalefficiëntie garandeert en blootstelling aan onvoorspelbare marktbewegingen na sluitingstijd vermindert.",
+          title: "Schaalbaarheid & Geen Overnight-risico",
+          description: "Dankzij diepe liquiditeit en institutionele uitvoering kan ons model moeiteloos opschalen tot €100 miljoen zonder prestatieverlies. Door uitsluitend te handelen in 0DTE-opties elimineren we overnight-risico’s, verbeteren we kapitaalefficiëntie en vermijden we onvoorspelbare marktschommelingen buiten handelsuren.",
         },
         {
           icon: Search,
           title: "Intern Onderzoek & Ontwikkeling",
-          description: "We verfijnen onze strategieën voortdurend door middel van grondig onderzoek en real-time markttesten. Ons interne ontwikkelingsteam integreert de nieuwste ontwikkelingen in kwantitatieve financiën, volatiliteitsmodellering en machine learning, waardoor onze handelssystemen adaptief en veerkrachtig blijven in steeds veranderende marktomstandigheden.",
+          description: "Wij verfijnen onze strategieën continu door grondig onderzoek en realtime marktanalyses. Ons interne team ontwikkelt voortdurend met de nieuwste inzichten in kwantitatieve financiering, volatiliteitsmodellering en machine learning — zodat onze systemen robuust blijven in veranderende marktomstandigheden.",
         },
         {
           icon: Laptop,
-          title: "Integratie met Meerdere Brokers",
-          description: "Onze technologie verbindt naadloos met toonaangevende brokers, waaronder Interactive Brokers, TastyTrade, Exante en Swissquote, en biedt institutionele klanten flexibele uitvoeringsoplossingen. Via API-gebaseerde handel kunnen onze strategieën worden geïntegreerd in bestaande fondsstructuren, wat een soepele en efficiënte handelservaring garandeert.",
+          title: "Multi-Broker Integratie",
+          description: "Onze technologie integreert naadloos met toonaangevende brokers zoals Interactive Brokers, TastyTrade, Exante en Swissquote. Via API-gestuurd handelen kunnen onze strategieën worden geïntegreerd in bestaande fondsstructuren — voor een efficiënte, flexibele uitvoering.",
         },
         {
           icon: PieChart,
-          title: "Bewezen Prestaties & Risicometrieken",
-          description: "Gesteund door real-world uitvoeringsgegevens levert onze strategie een gemiddeld dagelijks rendement van 0,18% bruto (0,12% netto) met een winratio van 1,82 netto en 2,41 bruto. Onze systematische, onderzoeksgebaseerde aanpak zorgt voor consistente rendementen terwijl strikte risicocontroles worden gehandhaafd.",
+          title: "Bewezen Prestaties & Risicometrics",
+          description: "Op basis van echte handelsdata laat onze strategie een gemiddelde dagelijkse opbrengst zien van 0,18% bruto (0,12% netto) met een winratio van 1,82 netto en 2,41 bruto. Onze systematische, onderzoeksgerichte aanpak levert consistente rendementen op binnen strikte risicogrensen.",
         },
       ],
     },

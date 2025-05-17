@@ -6,7 +6,7 @@ const EdgeCareSection = () => {
   const { language } = useChangeLanguageContext();
 
   return (
-    <section className="flex justify-center items-center py-12 px-8 bg-gray-50 w-full mt-[5rem] h-screen lg:max-h-[700px]">
+    <section className="flex justify-center items-center py-12 px-8 bg-[#eef4f5cc] w-full mt-[5rem] h-screen lg:max-h-[700px]">
       <div className="flex max-w-6xl w-full gap-12 items-center flex-wrap">
         {/* Text Content */}
         <div className="flex-1 min-w-[300px] md:text-left text-center order-2 md:order-none">

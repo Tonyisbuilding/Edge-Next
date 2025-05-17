@@ -20,8 +20,8 @@ const EdgeCapitalHero = () => {
       altText: "Edge Capital Team"
     },
     nl: {
-      heading: "Onze naam is meer dan alleen een knipoog naar 'hedge funds'. 'Edge' vertegenwoordigt het voordeel dat we onze klanten bieden—voorop blijven met strategieën gebaseerd op marktfeiten in plaats van voorspellingen.",
-      subheading: "Onze strategieën zijn gebouwd op arbitragemethoden en marktneutrale investeringen, wat ons een voorsprong geeft op traditionele vermogensbeheerproducten.",
+      heading: "Onze naam is meer dan slechts een knipoog naar ‘hedge funds’. ‘Edge’ staat voor het voordeel dat we onze cliënten bieden—vooroplopen met strategieën gebaseerd op marktfeiten in plaats van voorspellingen.",
+      subheading: "Onze strategieën zijn gebaseerd op arbitragemethoden en marktonafhankelijke beleggingen, wat ons een voordeel geeft ten opzichte van traditionele vermogensbeheerproducten.",
       getInTouch: "Neem Contact Op",
       altText: "Edge Capital Team"
     }
@@ -108,7 +108,10 @@ const EdgeCapitalHero = () => {
             }
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
-            <button className="mt-4 px-6 py-3 bg-[#206A7C] text-white font-medium rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transition-colors">
+<button className="mt-4 px-6 py-3 bg-[#206A7C] text-white font-medium rounded-full 
+shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
+hover:bg-[#206A7C] focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 
+transition-all duration-300">
               <Link to="/contact" className="block ">
                 {t("getInTouch")}
               </Link>

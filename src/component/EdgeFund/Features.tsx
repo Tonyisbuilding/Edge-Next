@@ -39,20 +39,20 @@ const Feature = () => {
         items: [
           {
             title: 'Volatility Premium',
-            description: 'Delta-neutral positions on the S&P500 to capitalize on market volatility'
+            description: 'Market-neutral strategy to capitalize on market volatility'
           },
           {
             title: 'Interest Rate Arbitrage',
-            description: 'Taking advantage of interest rate differentials across markets'
+            description: 'Market-neutral profit from interest rate differentials'
           },
           {
             title: 'FX Arbitrage',
-            description: 'Exploiting currency market inefficiencies for consistent returns'
+            description: 'Exploiting discrepancies within the currency markets — a modern and improved version of the well-known index arbitrage.'
           }
         ]
       },
       keyInformation: {
-        title: 'Key Information',
+        title: 'Characteristics',
         description: 'Institutional-grade structure and oversight',
         items: [
           {
@@ -74,20 +74,20 @@ const Feature = () => {
         ]
       },
       liquidityTerms: {
-        title: 'Liquidity Terms',
-        description: 'Flexible options with controlled risk management',
+        title: 'Entry and Exit',
+        description: 'Flexible entry and exit terms without fees',
         items: [
           {
-            title: 'Monthly Subscriptions',
-            description: 'New investments accepted monthly'
+            title: 'Monthly Entry Options',
+            description: 'New investments are accepted on a monthly basis.'
           },
           {
-            title: 'Redemption Notice Period',
-            description: 'Redemptions must be notified by the 15th of the month'
+            title: 'Flexible Exit',
+            description: 'You can exit on a monthly basis.'
           },
           {
-            title: 'Position Management',
-            description: 'Early notification allows for controlled position reduction'
+            title: 'No Fees',
+            description: 'Entering and exiting involves no fees.'
           },
           {
             title: 'Monthly Reporting',
@@ -121,40 +121,40 @@ const Feature = () => {
     },
     nl: {
       features: 'Kenmerken',
-      description: 'Een open-end beleggingsfonds dat geavanceerde beleggingsstrategieën biedt met beheer op institutioneel niveau.',
+      description: 'Een open-end beleggingsfonds dat geavanceerde investeringsstrategieën biedt met beheer op institutioneel niveau.',
       investmentStrategy: {
         title: 'Beleggingsstrategie',
-        description: 'Geavanceerde benaderingen om rendement te maximaliseren met beheerst risico',
+        description: 'Geavanceerde benaderingen om rendement te maximaliseren met een beheerst risico',
         items: [
           {
-            title: 'Volatiliteitspremie',
-            description: 'Delta-neutrale posities op de S&P500 om te profiteren van marktvolatiliteit'
+            title: 'Volatility Premium Risk',
+            description: 'Marktneutrale strategie om in te spelen op de marktvolatiliteit'
           },
           {
             title: 'Rente-arbitrage',
-            description: 'Profiteren van renteverschillen tussen markten'
+            description: 'Marktneutraal profiteren van renteverschillen'
           },
           {
             title: 'FX-arbitrage',
-            description: 'Gebruikmaken van inefficiënties in de valutamarkt voor consistente rendementen'
+            description: 'Benutten van discrepanties binnen de valautamarkten, een moderne en verbeterde versie van het wel bekende index-arbitrage'
           }
         ]
       },
       keyInformation: {
-        title: 'Belangrijke Informatie',
-        description: 'Institutionele structuur en toezicht',
+        title: 'Kenmerken',
+        description: 'Structuur en toezicht op institutioneel niveau',
         items: [
           {
-            title: 'Professioneel Beheer',
+            title: 'Professioneel beheer',
             description: 'Beheerd door Edge Capital Management B.V.'
           },
           {
-            title: 'Veilige Bewaring',
+            title: 'Veilige bewaring',
             description: 'Edge Capital EdgeFund Custody Foundation zorgt voor activaveiligheid'
           },
           {
-            title: 'Bankpartner',
-            description: 'Northern Trust levert bankinfrastructuur'
+            title: 'Bank',
+            description: 'Nothern Trust is onze partner voor onze banking services'
           },
           {
             title: 'Administratie',
@@ -163,47 +163,47 @@ const Feature = () => {
         ]
       },
       liquidityTerms: {
-        title: 'Liquiditeitsvoorwaarden',
-        description: 'Flexibele opties met gecontroleerd risicobeheer',
+        title: 'In en uitstappen',
+        description: 'Flexibele in en uitstap voorwaarden zonder kosten',
         items: [
           {
-            title: 'Maandelijkse Inschrijvingen',
-            description: 'Nieuwe investeringen maandelijks geaccepteerd'
+            title: 'Maandelijkse instapmogelijkheden',
+            description: 'Nieuwe investeringen worden maandelijks geaccepteerd'
           },
           {
-            title: 'Opzegtermijn',
-            description: 'Aflossingen moeten voor de 15e van de maand worden gemeld'
+            title: 'Flexibel uitstappen',
+            description: 'U kunt maandelijks uitstappen'
           },
           {
-            title: 'Positiebeheer',
-            description: 'Vroege kennisgeving maakt gecontroleerde positievermindering mogelijk'
+            title: 'Geen kosten',
+            description: 'In en uitstappen brengt geen kosten met zich mee'
           },
           {
-            title: 'Maandelijkse Rapportage',
-            description: 'Gedetailleerde overzichten maandelijks verstrekt aan alle deelnemers'
+            title: 'Maandelijkse rapportage',
+            description: 'Gedetailleerde overzichten worden maandelijks verstrekt aan alle deelnemers'
           }
         ]
       },
       participationRequirements: {
-        title: 'Deelnamevereisten',
-        description: 'Investeringsdrempels en richtlijnen',
+        title: 'Deelnamevoorwaarden',
+        description: 'Beleggingsdrempels en richtlijnen',
         items: [
           {
-            title: '€100.000 initiële investering vereist',
+            title: 'Minimale initiële investering: €100.000',
             description: ''
           },
           {
-            title: 'Minimaal €10.000 voor vervolgbeleggingen',
+            title: 'Minimaal €10.000 voor vervolginvesteringen',
             description: ''
           },
           {
-            title: 'Minimaal €10.000 opname met €100.000 resterend saldo vereist',
+            title: 'Minimale opname van €10.000 met een resterend saldo van €100.000 vereist',
             description: ''
           },
           {
-            title: 'Inschrijving: Via deze formulieren.',
+            title: 'Inschrijven:',
             description: '',
-            linkText: 'Klik om deze formulieren te tonen'
+            linkText: ' Via deze formulieren.'
           }
         ]
       }
@@ -281,7 +281,7 @@ const Feature = () => {
   const t = translations[language] || translations.en;
 
   return (
-    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#EEF4F5] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"

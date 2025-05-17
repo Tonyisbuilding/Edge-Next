@@ -43,7 +43,7 @@ const OpenPositions = () => {
       applyAriaLabel: (title: string) => `Apply for ${title} position`,
     },
     nl: {
-      heading: "Open Posities",
+      heading: "Openstaande Vacatures",
       jobs: [
         {
           id: 1,

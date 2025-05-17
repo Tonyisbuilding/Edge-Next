@@ -53,31 +53,31 @@ const WhyWorkWithUs = () => {
       ],
     },
     nl: {
-      title: "Waarom met ons samenwerken?",
+      title: "Waarom met ons werken?",
       cards: [
         {
           id: 1,
           icon: "rocket",
           iconColor: "text-teal-600",
-          title: "Prestaties Stimuleren",
+          title: "Prestaties Leveren",
           description:
-            "We zijn onvermoeibaar in onze zoektocht naar uitzonderlijke investeringsstrategieën. Onze aanpak combineert grondig onderzoek, innovatieve kwantitatieve methoden en een toewijding om superieure rendementen te leveren voor onze klanten.",
+            "We zijn compromisloos in onze zoektocht naar uitzonderlijke beleggingsstrategieën. Onze aanpak combineert grondig onderzoek, innovatieve kwantitatieve methoden en een toewijding aan superieure rendementen voor onze cliënten.",
         },
         {
           id: 2,
           icon: "globe",
           iconColor: "text-teal-600",
-          title: "Wereldwijde Marktinzichten",
+          title: "Inzichten in de Wereldeconomie",
           description:
-            "We maken gebruik van diepgaande marktkennis en geavanceerde financiële technologie om unieke investeringskansen op wereldwijde markten te identificeren, waarbij we vooroplopen op economische trends en marktdynamiek.",
+            "We benutten diepgaand marktinzicht en geavanceerde financiële technologie om unieke investeringskansen te identificeren binnen wereldwijde markten. Zo blijven we vooruitlopen op economische trends en marktbewegingen.",
         },
         {
           id: 3,
           icon: "users",
           iconColor: "text-teal-600",
-          title: "Samenwerkingsuitmuntendheid",
+          title: "Samenwerkende Uitmuntendheid",
           description:
-            "Ons succes is gebaseerd op een samenwerkingscultuur die toptalent uit financiën, economie, datawetenschap en technologie samenbrengt om collectieve innovatie en strategisch denken te stimuleren.",
+            "Ons succes is gebouwd op een samenwerkingsgerichte cultuur die toptalent uit financiën, economie, datawetenschap en technologie samenbrengt — voor collectieve innovatie en strategisch denken.",
         },
         {
           id: 4,
@@ -85,7 +85,7 @@ const WhyWorkWithUs = () => {
           iconColor: "text-teal-600",
           title: "Precisie & Risicobeheer",
           description:
-            "We blinken uit in geavanceerde risicobeoordeling en -beheer, waarbij we geavanceerde kwantitatieve modellen en strategische inzichten toepassen om het kapitaal van onze investeerders te beschermen en te optimaliseren.",
+            "We blinken uit in geavanceerde risicobeoordeling en -beheer door het toepassen van kwantitatieve modellen en strategisch inzicht om het kapitaal van investeerders te beschermen en te optimaliseren.",
         },
         {
           id: 5,
@@ -93,7 +93,7 @@ const WhyWorkWithUs = () => {
           iconColor: "text-teal-600",
           title: "Continue Innovatie",
           description:
-            "We zijn toegewijd aan continu leren en innovatie, waarbij we onze investeringsstrategieën constant ontwikkelen, opkomende technologieën benutten en ons aanpassen aan het dynamische wereldwijde financiële landschap.",
+            "We zetten ons in voor continu leren en innoveren. Onze investeringsstrategieën evolueren voortdurend door gebruik te maken van opkomende technologieën en ons aan te passen aan het dynamische wereldwijde financiële landschap.",
         },
       ],
     },

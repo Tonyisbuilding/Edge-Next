@@ -39,8 +39,8 @@ const ReachOut = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               {language === "nl"
-                ? "Neem gerust contact met ons op!"
-                : "Please feel free to reach out to us!"}
+                ? "Voel u vrij om contact met ons op te nemen!"
+                : "Feel free to contact us!"}
             </motion.h2>
 
             <motion.p

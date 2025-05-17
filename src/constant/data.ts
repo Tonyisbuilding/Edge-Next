@@ -41,12 +41,7 @@ export const whyEdgeCapitalData: whyEdgeCapitalType[] = [
     desc: "We ensure stability through a market-neutral approach, minimizing volatility with advanced algorithms. Our goal is to provide above-average returns while maintaining acceptable risk. Your investments grow steadily with us.",
     id: 1,
   },
-  {
-    icon: images.landingPage.risk,
-    title: "Diversified and Risk-Conscious",
-    desc: "We employ a diversified strategy across multiple asset classes, ensuring risk-adjusted returns. By actively managing risk exposure, we create a balanced portfolio designed for steady, long-term growth.",
-    id: 2,
-  },
+
   {
     icon: images.landingPage.access,
     title: "Personal and Accessible",
@@ -59,12 +54,7 @@ export const whyEdgeCapitalData: whyEdgeCapitalType[] = [
     desc: "Trust is our priority. We uphold strict agreements and work with external advisors to refine our methods. This ensures accountability, transparency, and long-term relationships built on reliability.",
     id: 4,
   },
-  {
-    icon: images.landingPage.briefcase,
-    title: "Technology-Driven Edge",
-    desc: "Harnessing the power of data science and automation, we optimize trading decisions with precision. Our proprietary algorithms and AI-driven insights keep us ahead in dynamic market conditions.",
-    id: 5,
-  },
+
   {
     icon: images.landingPage.server,
     title: "Professional and Exclusive",
@@ -75,20 +65,15 @@ export const whyEdgeCapitalData: whyEdgeCapitalType[] = [
 export const whyEdgeCapitalDataDutch: whyEdgeCapitalType[] = [
   {
     icon: images.landingPage.profit,
-    title: "Stabiel en Winstgevend",
-    desc: "We zorgen voor stabiliteit via een marktonafhankelijke aanpak, waarbij we volatiliteit minimaliseren met geavanceerde algoritmes. Ons doel is om bovengemiddelde rendementen te leveren met aanvaardbaar risico. Uw investeringen groeien gestaag met ons mee.",
+    title: "Stabiel en rendabel",
+    desc: "Onze stabiliteit is gebaseerd op onze markt neutrale aanpak in al onze beleggingsproducten. Uiteraard zijn er momenten van volatiliteit maar door onze goed ingestelde algoritmes zakken wij niet door de ondergrens. Wij streven naar een bovengemiddeld rendement met een aanvaardbaar risico. Kortom, wij bieden stabiliteit en een gestage groei van uw beleggingen tegen een aanvaardbaar risico.",
     id: 1,
   },
-  {
-    icon: images.landingPage.risk,
-    title: "Gediversifieerd en Risicobewust",
-    desc: "Wij hanteren een gediversifieerde strategie over meerdere activaklassen om risico-gecorrigeerde rendementen te waarborgen. Door risico actief te beheren, creëren we een gebalanceerde portefeuille gericht op stabiele, langetermijngroei.",
-    id: 2,
-  },
+
   {
     icon: images.landingPage.access,
-    title: "Persoonlijk en Toegankelijk",
-    desc: "Krijg toegang tot hoogwaardige investeringsstrategieën die normaal voorbehouden zijn aan instellingen. Onze aanpak combineert arbitrage, delta-neutraal beleggen en geavanceerde technologie om precisie en betrouwbaarheid te leveren. Beleg met een voorsprong.",
+    title: "Persoonlijk en toegankelijk",
+    desc: "Edge Capital is een onderneming met een klein team van specialisten. Wij hechten heel veel waarde aan een persoonlijke relatie met onze klanten en wij willen onze klanten ook echt kennen. Bij Edge Capital bent u geen nummer maar een partner in het beleggingsproces.",
     id: 3,
   },
   {
@@ -97,16 +82,11 @@ export const whyEdgeCapitalDataDutch: whyEdgeCapitalType[] = [
     desc: "Vertrouwen is onze prioriteit. We hanteren strikte afspraken en werken met externe adviseurs om onze methodes te verfijnen. Dit garandeert verantwoording, transparantie en langdurige relaties gebaseerd op betrouwbaarheid.",
     id: 4,
   },
-  {
-    icon: images.landingPage.briefcase,
-    title: "Technologisch Voordeel",
-    desc: "Door de kracht van data science en automatisering te benutten, optimaliseren we handelsbeslissingen met precisie. Onze eigen algoritmes en AI-gedreven inzichten houden ons voorop in dynamische marktomstandigheden.",
-    id: 5,
-  },
+  
   {
     icon: images.landingPage.server,
-    title: "Professioneel en Exclusief",
-    desc: "Krijg toegang tot eersteklas investeringsstrategieën, doorgaans alleen beschikbaar voor instellingen. Onze arbitrage- en delta-neutrale aanpak combineert precisie, vakmanschap en geavanceerde technologie—waardoor u een exclusief voordeel in beleggen krijgt.",
+    title: "Professioneel en exclusief",
+    desc: "Bij Edge Capital krijgt u toegang tot professionele beleggingsstrategieën die normaal gesproken alleen beschikbaar zijn voor institutionele beleggers. Onze methodes van arbitreren en delta neutraal beleggen vergen niet alleen vakmanschap en precisie maar ook de juiste technologie. Wij bieden u deze exclusieve mogelijkheid om zodoende te kunnen beleggen met een voorsprong.",
     id: 6,
   },
 ];
@@ -157,7 +137,7 @@ export const timelineData: timelineDataType[] = [
   {
     year: "2016",
     content:
-      "Tradealot B.V. launched a low-cost trading platform and completed a fully subscribed bond issuance in 83 days, aiming to disrupt major brokerages.",
+      "Paul Lamain changes the company's name to Tradealot B.V. and introduces a bond issuance. Tradealot focuses on launching a trading platform where investors can trade shares for a fixed low monthly fee. With this, Tradealot aims to compete with the established players in the brokerage industry and disrupt the traditional revenue model. The bond issuance is a great success and is fully subscribed within 83 days.",
   },
   {
     year: "2019",
@@ -184,32 +164,32 @@ export const timelineDataDutch: timelineDataType[] = [
   {
     year: "2015",
     content:
-      "Paul Lamain richt Algorithmic Services B.V. op, een bedrijf gespecialiseerd in het ontwikkelen en optimaliseren van algoritmen voor financiële ondernemingen.",
+      "Paul Lamain richt Algorithmic Services B.V. op,  een bedrijf dat gespecialiseerd is in het ontwikkelen en optimaliseren van algoritmes voor financiële ondernemingen.",
   },
   {
     year: "2016",
     content:
-      "Tradealot B.V. lanceert een handelsplatform met lage kosten en voltooit in 83 dagen een volledig ingeschreven obligatie-uitgifte, met als doel grote brokers te verstoren.",
+      "Paul Lamain verandert de naam van de onderneming naar Tradealot B.V. en introduceert een obligatie-uitgifte. Tradealot richt zich op het opzetten van een handelsplatform waarop beleggers aandelen kunnen verhandelen tegen vaste lage kosten per maand. Tradealot wil hiermee de concurrentie aangaan met de gevestigde orde in het brokerlandschap en het traditionele verdienmodel doorbreken. De obligatie-uitgifte is een groot succes en binnen 83 dagen volgeschreven.",
   },
   {
     year: "2019",
     content:
-      "In samenwerking met JFD Bank wordt Tradealot de eerste entiteit in Nederland die gratis aandelenhandel introduceert, waardoor beleggers fysieke aandelen kunnen verhandelen zonder transactiekosten.",
+      "In samenwerking met JFD Bank wordt Tradealot de eerste partij in Nederland die gratis aandelenhandel introduceert, waardoor beleggers fysieke aandelen kunnen verhandelen zonder transactiekosten.",
   },
   {
     year: "2022",
     content:
-      "Tradealot breidt zijn aanbod uit door de lancering van Tradealot EdgeFund, zijn eerste bij de AFM geregistreerde beleggingsfonds. Daarnaast initieert het Tradealot Bond Issuance III, wat zijn financiële productportfolio verder versterkt.",
+      "Tradealot breidt zijn aanbod uit met de lancering van Tradealot EdgeFund, het eerste bij de AFM geregistreerde beleggingsfonds. Daarnaast start het met Tradealot Obligatie-uitgifte III, waarmee het zijn reeks financiële producten verder vergroot.",
   },
   {
     year: "2023",
     content:
-      "Tradealot wordt omgedoopt tot Edge Capital, een naam die beter de missie en visie weerspiegelt. De nieuwe identiteit sluit aan bij het doel van het bedrijf om beleggers te versterken—trouw aan het motto: Beleggen met een voorsprong!",
+      "Tradealot veranderd haar naam in Edge Capital. De nieuwe naam sluit perfect aan bij de bedrijfsactiviteiten en weerspiegelt ons motto; Beleggen met een voorsprong!",
   },
   {
     year: "Future",
     content:
-      "Edge Capital blijft zich inzetten voor innovatie en groei. In 2024 zal het bedrijf zich richten op het verkrijgen van een volledige AFM-vergunning, waardoor het een breder publiek kan bedienen en effectiever kan concurreren in de beleggingsindustrie.",
+      "Ook in de aankomende jaren zal Edge Capital blijven innoveren en investeren in verdere groei van de onderneming. In de nabije toekomst komt de focus te liggen op een volledige vergunning van de AFM. De onderneming kan hierdoor een breder publiek gaan bedienen en zich zo definitief meten met de gevestigde orde binnen de industrie.",
   },
 ];
 

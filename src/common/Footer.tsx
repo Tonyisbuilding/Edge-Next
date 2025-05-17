@@ -36,7 +36,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/edge-fund">
-                  {language === "nl" ? "Edge Fonds" : "Edge Fund"}
+                  {language === "nl" ? "EdgeFund" : "EdgeFund"}
                 </a>
               </li>
               {/* <li><a href="/impact">Edge Impact</a></li> */}
@@ -57,11 +57,11 @@ const Footer = () => {
           <div className="footer-nav">
             <h3>{language === "nl" ? "Helpcentrum" : "Help Center"}</h3>
             <ul>
-              <li>
+              {/* <li>
                 <a href="/media">
                   {language === "nl" ? "Kennisbank" : "Knowledge Base"}
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/contact">
                   {language === "nl" ? "Ondersteuning" : "Support"}
@@ -152,38 +152,42 @@ const Footer = () => {
         </h3>
         <p>
           {language === "nl"
-            ? `De informatie op deze website is uitsluitend bedoeld voor algemene informatieve doeleinden. De informatie wordt verstrekt door de beheerder en hoewel wij ernaar streven de informatie actueel en correct te houden, geven wij geen enkele garantie of verklaring van welke aard dan ook, expliciet of impliciet, over de volledigheid, juistheid, betrouwbaarheid, geschiktheid of beschikbaarheid met betrekking tot de website of de informatie, producten, diensten of gerelateerde grafische weergaven op de website voor welk doel dan ook. Elk vertrouwen dat u stelt in dergelijke informatie is dan ook strikt op eigen risico. Edge Capital Management BV is geregistreerd bij de Autoriteit Financiële Markten (AFM) als een AIFM (Alternative Investment Fund Manager) onder het AIFMD-registratieregime van Artikel 2:66a Wft en is opgenomen in het register voor vrijgestelde beheerders van beleggingsinstellingen op de website van de AFM, zoals bedoeld in Artikel 1:107 Wft met registratienummer 50027774.`
+            ? `De informatie op deze website is uitsluitend bedoeld voor algemene informatiedoeleinden. De informatie wordt verstrekt door de beheerder en hoewel we ernaar streven de informatie actueel en correct te houden, 
+            geven we geen verklaringen of garanties van welke aard dan ook, expliciet of impliciet, over de volledigheid, nauwkeurigheid, betrouwbaarheid, geschiktheid of beschikbaarheid met betrekking tot de website of de informatie, 
+            producten, diensten of gerelateerde afbeeldingen op de website voor welk doel dan ook. Elk vertrouwen dat u stelt in dergelijke informatie is daarom strikt op eigen risico.
+
+
+            Edge Capital Management BV is geregistreerd bij de Nederlandse Autoriteit Financiële Markten (AFM) als AIFM (Alternative Investment Fund Manager) conform het AIFMD-registratieregime van artikel 2:66a Wft 
+            en ingeschreven in het register voor uitgezonderde beheerders van beleggingsinstellingen op de AFM-website, als bedoeld in artikel 1:107 Wft met registratienummer 50027774.`
             : `
-            The information on this website is solely intended for general
-          informational purposes. The information is provided by the
-          administrator, and while we strive to keep the information up to date
-          and correct, we make no representations or warranties of any kind,
-          express or implied, about the completeness, accuracy, reliability,
-          suitability, or availability concerning the website or the
-          information, products, services, or related graphics on the website
-          for any purpose. Any reliance you place on such information is
-          therefore strictly at your own risk. Edge Capital Management BV is
-          registered with the Dutch Authority for the Financial Markets (AFM) as
-          an AIFM (Alternative Investment Fund Manager) under the AIFMD
-          registration regime of Article 2:66a Wft and is listed in the register
-          for exempt managers of investment institutions on the AFM website, as
-          referred to in Article 1:107 Wft with registration number 50027774.`}
+            The information on this website is solely intended for general informational purposes. The information is provided by the administrator, and while we strive to keep the information up to date and correct, 
+            we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability concerning the website or the information, products, 
+            services, or related graphics on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
+
+           Edge Capital Management BV is registered with the Dutch Authority for the Financial Markets (AFM) as an AIFM (Alternative Investment Fund Manager) 
+           under the AIFMD registration regime of Article 2:66a Wft and is listed in the register for exempt managers of investment institutions on the AFM website, 
+           as referred to in Article 1:107 Wft with registration number 50027774.`}
         </p>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="footer-bottom">
-        <div className="footer-copyright">
-          © 2024 edgecapital. All rights reserved.
-        </div>
-        <div className="footer-status">
-          <span className="status-dot"></span>
-          <span>All Systems Operational</span>
-        </div>
-        <a href="/privacy" className="footer-policy">
-          Privacy Policy
-        </a>
-      </div>
+     {/* Bottom Bar */}
+<div className="footer-bottom">
+  <div className="footer-copyright">
+    {language === "nl"
+      ? "© 2025 Edge Capital. Alle rechten voorbehouden."
+      : "© 2025 Edge Capital. All rights reserved."}
+  </div>
+  <div className="footer-status">
+    <span className="status-dot"></span>
+    {language === "nl"
+      ? <span>Alle systemen operationeel</span>
+      : <span>All systems operational</span>}
+  </div>
+  <a href="/privacy" className="footer-policy">
+    {language === "nl" ? "Privacybeleid" : "Privacy Policy"}
+  </a>
+</div>
+
     </footer>
   );
 };

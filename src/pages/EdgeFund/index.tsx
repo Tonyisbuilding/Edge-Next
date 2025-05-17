@@ -22,8 +22,9 @@ const EdgeFund = () => {
       >
         <AboutEdgeFund />
         <Target />
-        <WhatSetsUsApart />
         <StrategySection />
+
+        <WhatSetsUsApart />
         <Feature />
         <FundCostStructure />
         <InvestmentPerformance />
