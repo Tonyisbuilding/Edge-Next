@@ -11,7 +11,6 @@ const ResearchDevelopmentSection = () => {
   const translations = {
     en: {
       title: "Research & Development – The Engine Behind Our Success",
-      description: "Our research is primarily conducted in-house. Our research department focuses on testing a wide range of possibilities in the markets and our systems. By continuously testing and simulating various market situations, we are better prepared and can consistently upgrade our systems.",
       sections: [
         {
           title: "In-House Research for Continuous Adaptation",
@@ -30,20 +29,19 @@ const ResearchDevelopmentSection = () => {
       imageAlt: "Research team analyzing market data",
     },
     nl: {
-      title: "Onderzoek & Ontwikkeling – De Motor Achter Ons Succes",
-      description: "Ons onderzoek wordt voornamelijk intern uitgevoerd. Onze onderzoeksafdeling richt zich op het testen van een breed scala aan mogelijkheden in de markten en onze systemen. Door continu verschillende marktsituaties te testen en te simuleren, zijn we beter voorbereid en kunnen we onze systemen consistent verbeteren.",
+      title: "Research & Development – De motor achter ons succes",
       sections: [
         {
           title: "Intern Onderzoek voor Continue Aanpassing",
-          content: "Grondig onderzoek vormt de basis voor een succesvolle en duurzame handelsstrategie. We breiden ons platform continu uit op basis van input van onze onderzoeksafdeling.",
+          content: "Grondig onderzoek vormt de basis voor een succesvolle en duurzame handelsstrategie. Wij breiden ons platform continu uit op basis van input uit ons onderzoeksteam.",
         },
         {
-          title: "Integratie van Machine Learning",
-          content: "We passen ons aan nieuwe technologieën aan, zoals het implementeren van machine learning om onze handelsparameters te verbeteren en de nauwkeurigheid van voorspellingen te vergroten.",
+          title: "Machine Learning Integratie",
+          content: "Wij passen ons aan nieuwe technologieën aan, zoals machine learning, om handelsparameters te verbeteren en nauwkeuriger te voorspellen.",
         },
         {
-          title: "Eigen Handelsmotor",
-          content: "We hebben hedgers ontwikkeld die op meerdere beurzen kunnen opereren, wat ongeëvenaarde flexibiliteit en efficiëntie biedt.",
+          title: "Eigen Handelsengine",
+          content: "We hebben hedgers ontwikkeld die op meerdere beurzen kunnen opereren — met ongeëvenaarde flexibiliteit en efficiëntie.",
         },
       ],
       contactUs: "Neem Contact Op",
@@ -87,7 +85,7 @@ const ResearchDevelopmentSection = () => {
             variants={containerVariants}
           >
             <motion.h2
-              className="text-2xl md:text-[22px] font-bold text-gray-800"
+              className="text-2xl md:text-[32px] font-bold text-gray-800"
               variants={itemVariants}
             >
               {content.title}
@@ -169,7 +167,7 @@ const ResearchDevelopmentSection = () => {
             </motion.div>
             <Link to="/contact">
               <motion.div className="mt-8" variants={itemVariants}>
-                <button className="bg-gray-800 hover:bg-gray-700 text-white py-2 px-6 rounded transition duration-300 hover:cursor-pointer">
+                <button className="bg-[#192227] hover:bg-gray-700 text-white py-2 px-6 rounded transition duration-300 hover:cursor-pointer">
                   {content.contactUs}
                 </button>
               </motion.div>

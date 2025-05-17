@@ -76,14 +76,14 @@ const Target = () => {
     en: [
       { title: "Annual Target", value: "24%", id: 1 },
       { title: "Total cumulative result", value: "125.79%", id: 2 },
-      { title: "Monthly target", value: "2%", id: 3 },
-      { title: "Institutional Clients", value: "8.15%", id: 4 },
+      { title: "Monthly net return target", value: "1.66%", id: 3 },
+      { title: "Best month", value: "8.15%", id: 4 },
     ],
     nl: [
-      { title: "Jaarlijks doel", value: "24%", id: 1 },
-      { title: "Totaal cumulatief resultaat", value: "125.79%", id: 2 },
-      { title: "Maandelijks doel", value: "2%", id: 3 },
-      { title: "Institutionele klanten", value: "8.15%", id: 4 },
+      { title: "Jaarlijks netto rendementsdoel", value: "24%", id: 1 },
+      { title: "Totaal cumlatief resultaat", value: "125.79%", id: 2 },
+      { title: "Maandelijks netto rendementsdoel", value: "1.66%", id: 3 },
+      { title: "Beste maand", value: "8.15%", id: 4 },
     ]
   };
 

@@ -67,7 +67,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
       <div className="lg:w-full max-w-md bg-white rounded-[1rem] shadow-md p-8 border-black 
       border-2 2xl:max-w-[500px]">
         <h2 className="text-2xl font-bold text-left mb-6 text-black">
-          { language === 'nl' ? 'Stuur ons je vraag' : 'Send us your query'}
+          { language === 'nl' ? 'Vraag informatie aan' : 'Request information'}
         </h2>
         <form 
         onSubmit={(e)=>handleSubmit(e)}
@@ -83,7 +83,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
                 name="name"
                 value={formData.name}
                 onChange={(e)=>handleChange(e)}
-                placeholder={ language === 'nl' ? 'Vul je naam in' : 'Enter your name'}
+                placeholder={ language === 'nl' ? 'Vul u naam in' : 'Enter your name'}
                 className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none 
                 focus:ring-2 focus:ring-blue-500 text-black bg-[#F0F0F0]"
                 required
@@ -113,7 +113,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
               name="email"
               value={formData.email}
               onChange={(e)=>handleChange(e)}
-              placeholder={ language === 'nl' ? 'Vul je e-mailadres in' : 'Enter your email'}
+              placeholder={ language === 'nl' ? 'Vul uw e-mailadres in' : 'Enter your email'}
               className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2
                focus:ring-blue-500 text-black bg-[#F0F0F0]"
               required
@@ -129,7 +129,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
               name="number"
               value={formData.number}
               onChange={(e)=>handleChange(e)}
-              placeholder={ language === 'nl' ? 'Vul je onderwerp in' : 'Enter your number'}
+              placeholder={ language === 'nl' ? 'Vul uw mobiele nummer in' : 'Enter your number'}
               className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2
                focus:ring-blue-500 text-black bg-[#F0F0F0]"
               required
@@ -145,7 +145,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
               name="message"
               value={formData.message}
               onChange={(e)=>handleChange(e)}
-              placeholder={ language === 'nl' ? 'Vul je bericht in' : 'Enter your message'}
+              placeholder={ language === 'nl' ? 'Laat uw bericht achter' : 'Enter your message'}
               rows={4}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
                focus:ring-blue-500 text-black bg-[#F0F0F0]"
@@ -158,7 +158,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
               type="submit"
               className="w-full bg-[#192227] text-white py-2 rounded-md hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              { language === 'nl' ? 'Verzend je bericht' : 'Send Your Message'}
+              { language === 'nl' ? 'Verzend uw bericht' : 'Send Your Message'}
             </button>
           </div>
         </form>

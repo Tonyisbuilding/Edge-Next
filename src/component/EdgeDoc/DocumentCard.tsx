@@ -555,7 +555,7 @@ const DocumentCardSections = () => {
 
   return (
     <section
-      className="py-8 w-screen px-4 md:px-[5rem] bg-white"
+      className="py-8 w-screen px-4 md:px-[5rem] bg-[#F8F9FA]"
       aria-labelledby="documents-heading"
     >
       <h2 id="documents-heading" className="sr-only">

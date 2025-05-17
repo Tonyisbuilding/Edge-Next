@@ -9,14 +9,14 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 // Translations object
 const translations = {
   en: {
-    title: "About Edge Fund",
+    title: "About EdgeFund",
     description: "EdgeFund uses an automated, volatility-driven strategy focused on selling options while minimizing risk through delta hedging. Futures are used for hedging, with the S&P 500 as the primary market due to its liquidity. Additionally, the fund employs interest rate and FX arbitrage to enhance returns.",
     minimumInvestment: "Minimum investment: €100,000.",
     participateButton: "Participate"
   },
   nl: {
-    title: "Over Edge Fund",
-    description: "EdgeFund maakt gebruik van een geautomatiseerde, volatiliteit-gedreven strategie gericht op het verkopen van opties terwijl het risico wordt geminimaliseerd door delta-hedging. Futures worden gebruikt voor hedging, met de S&P 500 als primaire markt vanwege de liquiditeit. Daarnaast past het fonds rente- en FX-arbitrage toe om rendementen te verbeteren.",
+    title: "Over EdgeFund",
+    description: "EdgeFund maakt gebruik van een geautomatiseerde, op volatiliteit gebaseerde strategie die zich richt op het verkopen van opties, terwijl het risico wordt geminimaliseerd via delta-hedging. Futures worden ingezet voor hedging, met de S&P 500 als primaire markt vanwege de hoge liquiditeit. Daarnaast maakt het fonds gebruik van rente- en valutaarbitrage om het rendement te verhogen.",
     minimumInvestment: "Minimale investering: €100.000.",
     participateButton: "Deelnemen"
   }
@@ -55,7 +55,9 @@ const AboutEdgeFund = () => {
             </p>
             <Link to="/participate">
               <motion.button
-                className="bg-[#206A7C] text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
+                className="bg-[#206A7C] text-white px-8 py-3 rounded-full 
+                shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
+                hover:bg-[#206A7C] transition-all duration-300"                
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >

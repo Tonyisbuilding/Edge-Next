@@ -28,24 +28,26 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-5xl mx-auto text-center">
-        <motion.h2 
-          className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          For Over 8 Years
-        </motion.h2>
-        
-        <motion.p 
-          className="text-lg text-gray-700 mb-16 max-w-3xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          We're building a platform that gives investors an edge. By focusing on innovation and growth, 
-          we're transforming the financial landscape.
-        </motion.p>
+      <motion.h2
+  className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+>
+  {language === 'nl' ? 'Al meer dan 8 jaar' : 'For Over 8 Years'}
+</motion.h2>
+
+<motion.p
+  className="text-lg text-gray-700 mb-16 max-w-3xl mx-auto"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.7, delay: 0.2 }}
+>
+  {language === 'nl'
+    ? 'We bieden een platform dat beleggers een voorsprong biedt. Door ons te richten op innovatie en groei, transformeren we het financiële landschap.'
+    : "We're building a platform that gives investors an edge. By focusing on innovation and growth, we're transforming the financial landscape."}
+</motion.p>
+
         
         {/* Timeline Navigation */}
         <div className="relative flex items-center mb-16">

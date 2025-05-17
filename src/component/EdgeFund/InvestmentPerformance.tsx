@@ -37,8 +37,8 @@ const InvestmentPerformance = () => {
       requestFactsheet: "Factsheet aanvragen",
       receiveInfoMemorandum: "Ontvang het informatiememorandum",
       disclaimer: {
-        title: "Algemene disclaimer over rendementen:",
-        content: "Bolder Funds Services B.V. (administrateur) berekent de resultaten van het fonds op maandbasis. Bovenstaande resultaten zijn na aftrek van de 22,5% winstdeling en de 1,50% jaarlijkse beheervergoeding. De rendementen vanaf 1 september 2022 vertegenwoordigen de werkelijke resultaten van het fonds. Rendementen vóór 1 september 2022 zijn gebaseerd op forward testing (live account) en niet op backtesting. Deze rendementen mogen niet worden beschouwd als een indicatie van toekomstige resultaten."
+        title: "Algemene disclaimer rendementen:",
+        content: "Bolder Funds Services B.V. (administrateur) berekent maandelijks de resultaten van het fonds. Bovenstaande resultaten zijn na aftrek van de 22,5% winstdeling en de 1,50% jaarlijkse beheervergoeding. De rendementen vanaf 1 september 2022 vertegenwoordigen de werkelijke resultaten van het fonds. De rendementen vóór 1 september 2022 zijn gebaseerd op forward testing (live rekening) en niet op basis van backtesting. Deze rendementen dienen niet als indicatie voor toekomstige resultaten."
       }
     }
   };

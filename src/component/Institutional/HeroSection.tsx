@@ -67,7 +67,7 @@ const HeroSection = () => {
                   whileInView="visible"
                 >
                   {language === "nl"
-                    ? "Wij zijn de toekomst van institutionele handel"
+                    ? "Wij zijn de Toekomst van Institutionele Handel"
                     : "We are the Future of Institutional Trading"}
                 </motion.h1>
 
@@ -76,9 +76,7 @@ const HeroSection = () => {
                   variants={fadeIn}
                 >
                   {language === "nl"
-                    ? `We combineren diepgaande handelsinzichten met geavanceerde analyses en
-technologie om cruciale liquiditeit te leveren en de wereldwijde
-markten van morgen vorm te geven.`
+                    ? `Wij combineren diepgaande handelskennis met geavanceerde analyses en technologie om essentiële liquiditeit te leveren en de wereldmarkten van morgen vorm te geven.`
                     : `We combine deep trading acumen with advanced analytics and
                   technology to deliver critical liquidity and shape the global
                   markets of tomorrow.`}
@@ -92,7 +90,7 @@ markten van morgen vorm te geven.`
                   whileTap={{ scale: 0.95 }}
                 >
                   <Link to="/contact" className="block ">
-                  { language === 'nl' ? 'Neem contact met ons op' : 'Contact us'}
+                  { language === 'nl' ? 'Neem contact op' : 'Contact us'}
                   </Link>
                 </motion.button>
                 {/* <div

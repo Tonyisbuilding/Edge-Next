@@ -1,6 +1,7 @@
 /* Hero Section Styles */
 .hero {
     padding: 50px 25px;
+    padding-top: 140px;
 }
 
 .hero-container {
@@ -92,7 +93,17 @@
     background-color: #206A7C;
     color: #fff;
     border: none;
-}
+    border-radius: 9999px; /* To match the fully-rounded style */
+    padding: 10px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(32, 106, 124, 0.3); /* Soft shadow in button color */
+    transition: all 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 8px 20px rgba(32, 106, 124, 0.45); /* Bigger and darker */
+    transform: translateY(-2px); /* Optional: slight lift effect */
+  }
 
 .btn-primary:hover {
     background-color: #185461;
@@ -106,6 +117,8 @@
 
 .btn-secondary:hover {
     background-color: rgba(32, 106, 124, 0.1);
+    transform: translateY(-2px); /* Optional: slight lift effect */
+
 }
 
 .hero-image img {
@@ -172,7 +185,7 @@
 
     .hero-title {
         font-size: 43px;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
         line-height: auto;
     }
 

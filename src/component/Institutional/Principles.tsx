@@ -63,39 +63,39 @@ const PrinciplesSection: React.FC = () => {
     },
     nl: {
       subheader: "Edge Capital Principes",
-      header: "5 Principes Die Ons Succes Sturen",
+      header: "5 Principes Die Ons Succes Aandrijven",
       principles: [
         {
           id: 1,
           title: "Volatiliteitspremiestrategie",
           description:
-            "Onze strategie, gebaseerd op ES (S&P 500) en NQ (Nasdaq) opties, maakt gebruik van een model dat gericht is op het verkopen van volatiliteit en richt zich op kortetermijnsystemen. We verkopen opties met 0 dagen tot expiratie (DTE) bij delta's tussen 0,1 en 0,3 met een asymmetrische voorkeur voor de call-zijde.",
+            "Onze strategie is gebaseerd op ES (S&P 500) en NQ (Nasdaq) opties en gebruikt een model dat zich richt op het verkopen van volatiliteit binnen kortetermijnsystemen. Wij verkopen opties met 0 dagen looptijd (DTE) en deltas tussen 0,1 en 0,3 — met een asymmetrische voorkeur voor callopties.",
           icon: <TrendingUp className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 2,
           title: "Dynamische Delta-Hedging",
           description:
-            "Delta-hedging past zich dynamisch aan op basis van marktvolatiliteit, ondersteund door parameters die zijn verbeterd met machine learning. Dit stelt ons in staat om optimaal risicobeheer te handhaven, ongeacht de marktomstandigheden.",
+            "Delta-hedging wordt dynamisch aangepast op basis van marktvolatiliteit, ondersteund door parameters die zijn verbeterd met machine learning. Dit stelt ons in staat om optimaal risicobeheer te handhaven onder alle marktomstandigheden.",
           icon: <Scale className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 3,
           title: "Bewezen Prestaties",
           description:
-            "De strategie toont een gemiddeld dagelijks verwacht rendement van 0,18% bruto (voor commissies) en 0,12% netto (na kosten). De winratio, berekend als de verhouding tussen winstgevende dagen en verliesdagen, is 1,82 netto en 2,41 bruto.",
+            "De strategie toont een gemiddelde verwachte dagelijkse bruto-opbrengst van 0,18% (voor commissies) en netto 0,12% (na kosten). De win-ratio, berekend als de verhouding tussen winstgevende en verlieslatende dagen, is 1,82 netto en 2,41 bruto.",
           icon: <Award className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 4,
           title: "Risicobeheer & Schaalbaarheid",
           description:
-            "Door uitsluitend 0DTE-opties op de S&P 500 en Nasdaq te gebruiken, vermijden we nachtelijke risico's. Bovendien biedt ons model hoge schaalbaarheid tot €100 miljoen zonder afbreuk te doen aan efficiëntie of prestaties.",
+            "Door uitsluitend 0DTE-opties te gebruiken op de S&P 500 en Nasdaq vermijden we risico’s van posities ‘overnight’. Bovendien biedt ons model een hoge schaalbaarheid tot €100 miljoen, zonder in te leveren op efficiëntie of prestaties.",
           icon: <BarChart2 className="w-12 h-12 text-[#000D14]" />,
         },
         {
           id: 5,
-          title: "Institutionele Samenwerking",
+          title: "Samenwerking op Institutioneel Niveau",
           description:
             "We bieden flexibele samenwerkingsopties via directe fondsdeelname of op maat gemaakte SaaS-oplossingen, waardoor verschillende soorten beleggers kunnen profiteren van onze strategieën.",
           icon: <Users className="w-12 h-12 text-[#000D14]" />,
@@ -121,7 +121,7 @@ const PrinciplesSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#F8F9FA] py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#F2F7F7] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -146,7 +146,7 @@ const PrinciplesSection: React.FC = () => {
             >
               <div className="p-6 flex flex-col h-full justify-between py-8">
                 <div>
-                  <div className="flex justify-center mb-6">
+                  <div className="flex mb-6">
                     {principles[activeCard].icon}
                   </div>
 

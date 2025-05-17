@@ -45,7 +45,7 @@ const JoinTheTeam = () => {
   };
 
   return (
-    <section className="w-full py-16 px-4 md:px-6 lg:px-8 overflow-hidden bg-white mt-[5rem]">
+    <section className="w-full py-16 px-4 md:px-6 lg:px-8 overflow-hidden bg-[##EEF4F5] mt-[5rem]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="flex flex-col lg:flex-row items-center justify-center gap-[20%] lg:gap-12"
@@ -72,11 +72,7 @@ const JoinTheTeam = () => {
               variants={itemVariants}
             >
               {language === "nl"
-                ? `We integreren geavanceerde financiële modellen, kwantitatief onderzoek
-en state-of-the-art technologie om de marktefficiëntie te optimaliseren en
-de liquiditeit te vergroten. Ons team van experts werkt samen om
-innovatieve handelsstrategieën te ontwikkelen die het financiële landschap
-van morgen vormgeven.`
+                ? `Wij integreren geavanceerde financiële modellering, kwantitatief onderzoek en state-of-the-art technologie om marktefficiëntie te optimaliseren en liquiditeit te stimuleren. Ons team van experts werkt samen om innovatieve handelsstrategieën te ontwikkelen die het financiële landschap van morgen vormgeven.`
                 : `We integrate advanced financial modeling, quantitative research,
               and state-of-the-art technology to optimize market efficiency and
               drive liquidity. Our team of experts collaborates to develop
@@ -85,8 +81,10 @@ van morgen vormgeven.`
             </motion.p>
             <motion.a
               href="#open"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#206A7C] text-white rounded-full
-               hover:bg-[#1922279d] transition-colors duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#206A7C] text-white rounded-full 
+              shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
+              hover:bg-[#206A7C] transition-all duration-300"
+
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

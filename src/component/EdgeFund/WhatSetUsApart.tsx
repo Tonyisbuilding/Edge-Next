@@ -68,24 +68,24 @@ const WhatSetsUsApart = () => {
       ]
     },
     nl: {
-      sectionTitle: "Wat ons onderscheidt",
+      sectionTitle: "Risico",
       riskItems: [
         {
-          title: "Liquiditeitsrisico",
+          title: "Liquiditeit Risico",
           description: "Het onvermogen om gemakkelijk uit een positie te stappen vanwege het gebrek aan liquiditeit van het gebruikte beleggingsinstrument.",
           measures: "Maatregelen: Handelen in de meest liquide markten (S&P 500). Handelen via verschillende beurzen en brokers.",
           icon: <BarChart size={24} className="text-white" />
         },
         {
-          title: "Uitvoeringsrisico",
-          description: "Het risico dat uw order niet volledig of helemaal niet wordt uitgevoerd vanwege een technisch probleem.",
-          measures: "Maatregelen: Geautomatiseerde risicobeheerscenario's, 24/7 menselijke monitoring, back-ups, testperiodes.",
+          title: "Executie Risico",
+          description: "Het risico van uw order wordt door een technisch probleem niet geheel of helemaal niet uitgevoerd.",
+          measures: "Maatregelen: Geautomatiseerde risicobeheerscenario's, 24/7 menselijke monitoring, back-ups, test periodes.",
           icon: <Settings size={24} className="text-white" />
         },
         {
-          title: "Tegenpartijrisico",
-          description: "De kans dat een bepaalde beurs niet in staat zal zijn om de vereiste betalingen voor hun schuldverplichtingen te doen.",
-          measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen.",
+          title: "Tegenpartij Risico",
+          description: "De kans dat een bepaalde beurs niet in staat zal zijn om de vereiste betalingen voor hun schuldverplichtingen te doen.",
+          measures: "Maatregelen: Verspreiding tussen de grootste en veiligste beurzen.",
           icon: <AlertTriangle size={24} className="text-white" />
         }
       ]

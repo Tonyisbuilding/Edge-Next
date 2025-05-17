@@ -37,7 +37,7 @@ const EdgeCareHero = () => {
             transition={{ duration: 0.8 }}
           >
             {language === "nl"
-              ? "Toegewijd aan het samen bouwen van een duurzame toekomst"
+              ? "Toegewijd aan het gezamenlijk bouwen van een duurzame toekomst"
               : "Committed To Building A Sustainable Future Together"}
           </motion.h1>
 
@@ -48,9 +48,7 @@ const EdgeCareHero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {language === "nl"
-              ? `Bij Edge Capital is maatschappelijk verantwoord ondernemen de drijvende kracht achter onze missie
-om blijvende waarde te creëren voor de maatschappij, het milieu en onze
-stakeholders.`
+              ? `Bij Edge Capital wordt onze missie om blijvende waarde te creëren voor de samenleving, het milieu en onze stakeholders gedreven door Maatschappelijk Verantwoord Ondernemen.`
               : `At Edge Capital, Corporate Social Responsibility drives our mission
             to create lasting value for society, the environment, and our
             stakeholders.`}

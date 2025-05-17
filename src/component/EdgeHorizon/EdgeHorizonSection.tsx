@@ -6,7 +6,7 @@ const EdgeHorizonSection = () => {
   const { language } = useChangeLanguageContext();
 
   return (
-    <section className="flex justify-center items-center py-12 px-8 bg-gray-50 w-full pt-[15rem] md:h-screen
+    <section className="flex justify-center items-center py-12 px-8 bg-[#eef4f5cc]-50 w-full pt-[15rem] md:h-screen
      lg:max-h-[700px] md:mt-[5rem] md:pt-0">
       <div className="flex max-w-6xl w-full gap-1 renderedData items-center flex-wrap  ">
         {/* Text Content */}

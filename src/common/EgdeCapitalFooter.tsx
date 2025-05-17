@@ -35,7 +35,7 @@ const EdgeCapitalFooter = () => {
             <h3 className="font-medium text-white mb-4">Home</h3>
             <ul className="space-y-3">
               <li><a href="#" className="hover:text-gray-300 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Edge Fund</a></li>
+              <li><a href="#" className="hover:text-gray-300 transition-colors">EdgeFund</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">Edge Impact</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">Institutional</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">Contact</a></li>
@@ -89,7 +89,7 @@ const EdgeCapitalFooter = () => {
         {/* Bottom Footer */}
         <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
           <div className="text-sm">
-            © 2024 edgecapital. All rights reserved.
+            © 2025 edgecapital. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-8">

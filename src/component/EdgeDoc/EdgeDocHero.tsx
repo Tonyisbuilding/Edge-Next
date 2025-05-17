@@ -34,7 +34,7 @@ const EdgeDocuments = () => {
 
   return (
     <section
-      className="w-full bg-white py-20 px-4 md:px-6 lg:px-8 overflow-hidden mt-[5rem]"
+      className="w-full bg-[#F8F9FA] py-20 px-4 md:px-6 lg:px-8 overflow-hidden mt-[5rem]"
       aria-labelledby="edge-documents-heading"
     >
       <div className="max-w-7xl mx-auto">
@@ -67,7 +67,7 @@ const EdgeDocuments = () => {
               }}
             >
               {language === "nl"
-                ? `Alles wat u nodig heeft voor uw beleggingsreis, allemaal op één plek. Eenvoudig downloaden, ondertekenen en indienen.`
+                ? `Alles wat u nodig heeft voor uw investeringsreis, op één plek. Download, onderteken en dien eenvoudig in.`
                 : `Everything you need for your investment journey, all in one place. Download, sign, and submit with ease.`}
             </motion.p>
           </div>

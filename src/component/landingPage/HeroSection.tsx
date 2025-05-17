@@ -13,13 +13,13 @@ const HeroSection = () => {
         <div className="container hero-container">
           <div className="hero-content">
             <h1 className="hero-title">
-              {language === "en" ? "Investing" : "Beieggen met"}
+              {language === "en" ? "Investing" : "Beleggen met "}
               <br />
               {language === "en" ? "with An Edge" : "een voorsprong!"}
             </h1>
             <p className="hero-subtitle">
               {language === "nl"
-                ? "Gebruik van dynamische, datagestuurde strategieën voor superieure rendementen met beheerst risico."
+                ? "Gebruik van dynamische, datagestuurde strategieën voor superieure rendementen met een beheerst risico."
                 : "Using dynamic, data-driven strategy for superior returns with controlled risk"}
             </p>
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
                 <div className="feature-text">
                   <p>
                     <span className="bold-text">{language === 'nl' ? 'Geavanceerde Strategieën' : 'Advanced Strategies'}</span> -
-                    {language === 'nl' ? ' Arbitrage en delta-neutraal voor hoge rendementen.' : 'Arbitrage and delta-neutral for high returns.'}
+                    {language === 'nl' ? ' Arbitrage en delta-neutraal voor bovengemiddelde rendementen.' : 'Arbitrage and delta-neutral for high returns.'}
                   </p>
                 </div>
               </li>
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">{language === 'nl' ? 'Feiten gebaseerde Expertise' : 'Fact-Based Expertise'}</span> -
+                    <span className="bold-text">{language === 'nl' ? 'Op feiten gebaseerde strategieën' : 'Fact-Based Expertise'}</span> -
                     {language === 'nl' ? ' Vertrouw op zekerheden, niet op voorspellingen.' : 'Rely on certainties, not predictions.'}
                   </p>
                 </div>

@@ -32,16 +32,16 @@ const FundCostStructure = () => {
       highWatermarkPopupContent: "The manager calculates profit sharing based on the \"high water mark principle.\" High watermark: A high watermark refers to the highest value achieved by an investment fund or asset manager. This term is often used in performance-based compensation of a fund or asset manager. In a fee structure with a high watermark application, commission fees of a fund manager or asset manager are only calculated based on net results. The fee is only calculated after past losses have been recovered. This prevents the fund manager or asset manager from receiving fees from volatile performance. Profit sharing is calculated retrospectively on a monthly basis, and the high watermark level is also determined monthly."
     },
     nl: {
-      fundCostStructure: "Kostenstructuur Fonds",
-      minimumInvestment: "minimale investering",
+      fundCostStructure: "Kostenstructuur van het Fonds",
+      minimumInvestment: "Minimale deelname",
       requestInformation: "Informatie aanvragen",
       bookConsultation: "Consultatie boeken",
       learnMore: "Meer informatie",
       close: "Sluiten",
-      highWatermarkTitle: "High Watermark Principe Uitgelegd",
-      highWatermarkDescription: "Onze commissiestructuur beschermt uw investeringen met het High Watermark principe",
+      highWatermarkTitle: "Toelichting High Watermark-principe",
+      highWatermarkDescription: "Het High watermark principe beschermt u tegen onverwachte kosten",
       highWatermarkPopupTitle: "High Watermark Principe",
-      highWatermarkPopupContent: "De beheerder berekent winstdeling op basis van het \"high water mark principe.\" High watermark: Een high watermark verwijst naar de hoogste waarde die door een beleggingsfonds of vermogensbeheerder is bereikt. Deze term wordt vaak gebruikt bij prestatiegebonden vergoeding van een fonds of vermogensbeheerder. In een kostenstructuur met een high watermark toepassing worden commissievergoedingen van een fondsbeheerder of vermogensbeheerder alleen berekend op basis van nettoresultaten. De vergoeding wordt alleen berekend nadat eerdere verliezen zijn hersteld. Dit voorkomt dat de fondsbeheerder of vermogensbeheerder vergoedingen ontvangt voor volatiele prestaties. Winstdeling wordt maandelijks met terugwerkende kracht berekend, en het high watermark niveau wordt ook maandelijks bepaald."
+      highWatermarkPopupContent: "Een high watermark refereert naar de hoogste waarde die een beleggingsfonds of vermogensbeheerder heeft behaald. Deze term wordt vaak gebruikt bij prestatieafhankelijke compensatie van een fonds- of vermogensbeheerder.\nBij een kostenstructuur met een high watermark toepassing worden provisiekosten van een fondsmanager of vermogensbeheerder alleen berekend over de nettoresultaten. De vergoeding wordt pas berekend nadat de verliezen uit het verleden zijn teruggewonnen. Zo wordt voorkomen dat de fondsmanager of vermogensbeheerder vergoedingen ontvangt uit een volatiele prestatie.\nDe winstdeling wordt op maandbasis achteraf berekend en het high watermark-niveau wordt ook per maand bepaald.",
     }
   };
 
@@ -87,7 +87,7 @@ const FundCostStructure = () => {
         stars: 3,
         description:
           "Built for institutional investors and large family offices.",
-        investment: "€500K+",
+        investment: "€ 500K - en hoger",
         buttonText: "Request Information",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
@@ -109,10 +109,10 @@ const FundCostStructure = () => {
         buttonText: "Informatie aanvragen",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
-          "1,5% Beheerskosten (per jaar)",
-          "22,5% Winstdeling (per maand) High",
-          "High Watermark Bescherming",
-          "Maandelijkse Prestatierapporten",
+          "1,5% Beheervergoeding (per jaar)",
+          "22,5% Winstdeling (per maand) Hoog",
+          "High Watermark-bescherming",
+          "Maandelijkse prestatieoverzichten",
         ],
       },
       {
@@ -120,17 +120,16 @@ const FundCostStructure = () => {
         title: "Participatieklasse II",
         stars: 2,
         description:
-          "Ideaal voor ervaren beleggers en middelgrote instellingen.",
+          "Ideaal voor gevestigde beleggers en middelgrote instellingen.",
         investment: "€250K-€500K",
         buttonText: "Consultatie boeken",
         buttonClass:
           "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
         features: [
-          "Alles in Klasse I +",
-          "1,25% Beheerskosten (per jaar)",
+          "1,25% Beheervergoeding (per jaar)",
           "17,5% Winstdeling (per maand)",
-          "Toegewijde Accountmanager",
-          "Prioriteit Supportkanaal",
+          "High Watermark- bescherming",
+          "Maandelijkse prestatieoverzichten",
         ],
       },
       {
@@ -138,16 +137,15 @@ const FundCostStructure = () => {
         title: "Participatieklasse III",
         stars: 3,
         description:
-          "Ontwikkeld voor institutionele beleggers en grote family offices.",
-        investment: "€500K+",
+          "Ontworpen voor institutionele beleggers en grote family offices.",
+        investment: "€ 500K - en hoger",
         buttonText: "Informatie aanvragen",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
-          "Alles in Klasse II +",
-          "1% Beheerskosten (per jaar)",
+          "1% Beheervergoeding (per jaar)",
           "12,5% Winstdeling (per maand)",
-          "Aangepaste Beleggingsstrategie",
-          "Kwartaal Strategiereviews",
+          "High Watermark- bescherming",
+          "Maandelijkse prestatieoverzichten",
         ],
       },
     ]
@@ -266,7 +264,7 @@ const FundCostStructure = () => {
   );
 
   return (
-    <div className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#EEF4F5] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"

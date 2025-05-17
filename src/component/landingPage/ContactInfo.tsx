@@ -17,7 +17,7 @@ const ContactInfo = () => {
         <div className="">
           <h1 className=" text-[#111111] md:text-[50.27px] text-[30px] font-semibold ">
             {language === "nl"
-              ? `We verwelkomen je graag!`
+              ? `We verwelkomen u graag!`
               : `We'd Love to Have you around`}
           </h1>
           <p className=" pt-[1rem] text-[#3D3D3D] text-[16.59px] font-normal">
@@ -29,12 +29,12 @@ const ContactInfo = () => {
         </div>
         <div className="">
           <ContactInput
-            placeholder="example@gmail.com"
-            CTAButton={ language === 'nl'? 'Inschrijven' : 'Subscribe'}
+            placeholder="Info@edge-capital.nl"
+            CTAButton={ language === 'nl'? 'Mail ons' : 'Mail Us'}
             icon={images.landingPage.email}
           />
           <ContactInput
-            placeholder="+31613484484"
+            placeholder="+31 252 781 777"
             CTAButton={ language === 'nl' ? 'Bel ons' : 'Call Us'}
             icon={images.landingPage.email}
           />
