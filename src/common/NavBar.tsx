@@ -118,9 +118,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
         <Link to="/" className="flex-shrink-0">
           <img
-            src={images.landingPage.ECLogoSVG}
+            src={images.landingPage.EdgeCapitalLogoSVG}
             alt="Edge Capital"
-            className="w-[202px] h-[34px]"
+            className="w-[202px] h-[54px] "
           />
         </Link>
 
@@ -134,9 +134,9 @@ const Navbar = () => {
             <div className="flex-shrink-0">
               <Link to="/" onClick={toggleNav}>
                 <img
-                  src={images.landingPage.ECLogoSVG}
+                  src={images.landingPage.EdgeCapitalLogoSVG}
                   alt="Edge Capital"
-                  className="w-[202px] h-[34px]"
+                  className="w-[202px] h-[54px]"
                 />
               </Link>
             </div>
@@ -214,7 +214,7 @@ const Navbar = () => {
                 </a>
                 {activeDropdowns[2] && (
                   <ul className="ml-4 mt-2">
-                    <li className="py-2">
+                    {/* <li className="py-2">
                       <Link
                         to="/edge-connect"
                         className="block text-[#192227]"
@@ -222,7 +222,7 @@ const Navbar = () => {
                       >
                         {t("edgeConnect")}
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="py-2">
                       <Link
                         to="/edge-cares"
@@ -423,14 +423,14 @@ const Navbar = () => {
               className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0
              invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all"
             >
-              <li className="p-3">
+              {/* <li className="p-3">
                 <Link
                   to="/edge-connect"
                   className="block text-[#192227] font-medium hover:text-[#206A7C]"
                 >
                   {t("edgeConnect")}
                 </Link>
-              </li>
+              </li> */}
               <li className="p-3">
                 <Link
                   to="/edge-cares"
