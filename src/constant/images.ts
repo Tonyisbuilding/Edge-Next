@@ -30,6 +30,8 @@ import effect from "../../src/assets/images/edgefund/effect.png";
 import scaleUp from "../../src/assets/images/edgefund/scale.png";
 import ECLogo from "../../src/assets/images/ECLogo.png";
 import ECLogoSVG from "../../src/assets/images/ECLogo.svg";
+import EdgeCapitalLogo from "../../src/assets/images/EdgeCapitalLogo.png";
+import EdgeCapitalLogoSVG from "../../src/assets/images/EdgeCapitalLogo.svg";
 import profit from "../../src/assets/images/landingPage/profit.svg";
 import arrow_down from "../../src/assets/icons/arrow-down.png";
 import check_circle from "../../src/assets/icons/check-circle.png";
@@ -113,6 +115,8 @@ const images = {
         Brahim,
         management,
         ECLogoSVG,
+        EdgeCapitalLogo,
+        EdgeCapitalLogoSVG,
         profit,
         heroSectionVideo
     },

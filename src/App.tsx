@@ -17,7 +17,8 @@ import ParticipateForm from "./pages/ParticipateForm/ParticipateForm";
 import RequestInfo from "./pages/RequestInfo";
 import ChangeLanguageContext from "./context/ChangeLanguage";
 import { useState } from "react";
-
+import ScrollToTopButton from './ScrollToTopButton';
+import PrivacyPolicy from "./pages/Privacy";
 
 
 
@@ -48,8 +49,10 @@ function App(): JSX.Element {
         <Route path="/edge-cares" element={<EdgeCare />} />
         <Route path="/participate" element={<ParticipateForm />} />
         <Route path="/requestinfo" element={<RequestInfo />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
     </ChangeLanguageContext.Provider>
+    <ScrollToTopButton />
     </>
   );
 }

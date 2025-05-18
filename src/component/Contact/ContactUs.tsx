@@ -12,12 +12,16 @@ import {
 } from "react-icons/fa";
 import images from "@/constant/images";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axiosInstance from "@/Api/AxiosInstance";
+import axios from "axios";
 
 // Define form data interface
 interface FormDataType {
   firstName: string;
   lastName: string;
-  phone: string;
+  number: string;
   email: string;
   message: string;
 }
@@ -30,10 +34,14 @@ const ContactInformation = () => {
   const [formData, setFormData] = useState<FormDataType>({
     firstName: "",
     lastName: "",
-    phone: "",
+    number: "",
     email: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState<null | boolean>(null);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const [errors, setErrors] = useState<FormErrors>({});
 
@@ -164,19 +172,67 @@ const ContactInformation = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setIsSubmitting(true);
+    setSubmitSuccess(null);
+    setErrorMessage("");
+
     if (validateForm()) {
-      console.log("Form submitted:", formData);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-      alert(content.form.successMessage);
+      try {
+        const response = await axiosInstance.post("/contactUs", formData);
+
+        if (!response) {
+          const errorData: { message?: string } = await response;
+          throw new Error(
+            errorData.message || "Er is een onverwachte fout opgetreden."
+          );
+        }
+
+        setSubmitSuccess(true);
+        toast.success("Form submitted successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+          number: "",
+        });
+      } catch (error: unknown) {
+        console.log(error);
+        setSubmitSuccess(false);
+        if (error instanceof Error) {
+          setErrorMessage(
+            error.message || "Er is een onverwachte fout opgetreden."
+          );
+        } else {
+          setErrorMessage("Er is een onverwachte fout opgetreden.");
+        }
+        //
+        setErrorMessage(
+          error instanceof Error
+            ? error.message
+            : "Er is een onverwachte fout opgetreden."
+        );
+
+        if (
+          error &&
+          typeof error === "object" &&
+          "response" in error &&
+          error.response &&
+          typeof error.response === "object" &&
+          "data" in error.response
+        ) {
+          if (axios.isAxiosError(error) && error.response?.data?.error) {
+            toast.error(error.response.data.error);
+          }
+        }
+      } finally {
+        setIsSubmitting(false);
+      }
+      console.log(submitSuccess);
+      console.log(errorMessage);
     }
   };
 
@@ -203,6 +259,7 @@ const ContactInformation = () => {
 
   return (
     <section className="max-w-6xl mx-auto my-12 px-1 md:px-0 relative">
+      <ToastContainer />
       <div className="flex flex-col md:flex-row rounded-[25px] overflow-hidden shadow-lg relative top-[-5rem]">
         {/* Contact Information Panel */}
         <motion.div
@@ -218,71 +275,61 @@ const ContactInformation = () => {
             {content.contactInfo.title}
           </motion.h2>
 
-          <motion.p
-            className="mb-8 text-teal-50"
-            variants={itemVariants}
-          >
+          <motion.p className="mb-8 text-teal-50" variants={itemVariants}>
             {content.contactInfo.description}
           </motion.p>
 
           <div className="space-y-6">
-            <motion.div
-              className="flex items-center"
-              variants={itemVariants}
-            >
+            <motion.div className="flex items-center" variants={itemVariants}>
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaPhone className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">{content.contactInfo.callUs}</p>
+                <p className="text-sm text-teal-100">
+                  {content.contactInfo.callUs}
+                </p>
                 <p className="font-bold">{content.contactInfo.phone}</p>
               </div>
             </motion.div>
 
-            <motion.div
-              className="flex items-center"
-              variants={itemVariants}
-            >
+            <motion.div className="flex items-center" variants={itemVariants}>
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaEnvelope className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">{content.contactInfo.emailUs}</p>
+                <p className="text-sm text-teal-100">
+                  {content.contactInfo.emailUs}
+                </p>
                 <p className="font-bold">{content.contactInfo.email}</p>
               </div>
             </motion.div>
 
-            <motion.div
-              className="flex items-center"
-              variants={itemVariants}
-            >
+            <motion.div className="flex items-center" variants={itemVariants}>
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaMapMarkerAlt className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">{content.contactInfo.visit}</p>
+                <p className="text-sm text-teal-100">
+                  {content.contactInfo.visit}
+                </p>
                 <p className="font-bold">{content.contactInfo.address}</p>
               </div>
             </motion.div>
 
-            <motion.div
-              className="flex items-center"
-              variants={itemVariants}
-            >
+            <motion.div className="flex items-center" variants={itemVariants}>
               <div className="w-12 h-12 bg-[#4191A1] rounded-[8.76px] flex items-center justify-center mr-4">
                 <FaClock className="text-xl" />
               </div>
               <div>
-                <p className="text-sm text-teal-100">{content.contactInfo.workingHours}</p>
+                <p className="text-sm text-teal-100">
+                  {content.contactInfo.workingHours}
+                </p>
                 <p className="font-bold">{content.contactInfo.hours}</p>
               </div>
             </motion.div>
           </div>
 
-          <motion.div
-            className="flex space-x-4 mt-12"
-            variants={itemVariants}
-          >
+          <motion.div className="flex space-x-4 mt-12" variants={itemVariants}>
             <a
               href="#"
               className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
@@ -322,13 +369,10 @@ const ContactInformation = () => {
           </h2>
           <p className="mb-6 text-gray-600">{content.form.description}</p>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 text-black">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="md:w-1/2">
-                <label
-                  htmlFor="firstName"
-                  className="block text-gray-700 mb-1"
-                >
+                <label htmlFor="firstName" className="block text-gray-700 mb-1">
                   {content.form.firstNameLabel}
                   <span className="text-red-500">*</span>
                 </label>
@@ -352,10 +396,7 @@ const ContactInformation = () => {
               </div>
 
               <div className="md:w-1/2">
-                <label
-                  htmlFor="lastName"
-                  className="block text-gray-700 mb-1"
-                >
+                <label htmlFor="lastName" className="block text-gray-700 mb-1">
                   {content.form.lastNameLabel}
                   <span className="text-red-500">*</span>
                 </label>
@@ -372,22 +413,20 @@ const ContactInformation = () => {
                   aria-required="true"
                 />
                 {errors.lastName && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.lastName}
-                  </p>
+                  <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
                 )}
               </div>
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-gray-700 mb-1">
+              <label htmlFor="number" className="block text-gray-700 mb-1">
                 {content.form.phoneLabel}
               </label>
               <input
                 type="text"
-                id="phone"
-                name="phone"
-                value={formData.phone}
+                id="number"
+                name="number"
+                value={formData.number}
                 onChange={handleChange}
                 placeholder={content.form.phonePlaceholder}
                 className="w-full p-3 border border-gray-300 rounded-md"
@@ -443,7 +482,17 @@ const ContactInformation = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>{" "}
+                {isSubmitting ? (
+                <>
+                  {language === "nl"
+                    ? "Bezig met verzenden..."
+                    : "Submitting..."}
+                </>
+              ) : (
+                <>
                   {content.form.sendButton}
+                </>
+              )}
               </button>
             </div>
           </form>
