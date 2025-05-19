@@ -1,5 +1,6 @@
 import "./common.css";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+// import images from "@/constant/images";
 
 const Footer = () => {
   const { language } = useChangeLanguageContext();
@@ -17,6 +18,14 @@ const Footer = () => {
                 : "Investing with an edge"}
             </p>
           </div>
+
+          {/* <div className="flex-shrink-0  flex items-center justify-center">
+            <img
+              src={images.landingPage.EdgeCapitalLogoSVG}
+              alt="Research team analyzing market data"
+              className="w-full h-full object-cover"
+            />
+          </div> */}
 
           <div className="footer-email">
             <a href="mailto:info@edge-capital.nl">info@edge-capital.nl</a>
@@ -170,24 +179,25 @@ const Footer = () => {
         </p>
       </div>
 
-     {/* Bottom Bar */}
-<div className="footer-bottom">
-  <div className="footer-copyright">
-    {language === "nl"
-      ? "© 2025 Edge Capital. Alle rechten voorbehouden."
-      : "© 2025 Edge Capital. All rights reserved."}
-  </div>
-  <div className="footer-status">
-    <span className="status-dot"></span>
-    {language === "nl"
-      ? <span>Alle systemen operationeel</span>
-      : <span>All systems operational</span>}
-  </div>
-  <a href="/privacy" className="footer-policy">
-    {language === "nl" ? "Privacybeleid" : "Privacy Policy"}
-  </a>
-</div>
-
+      {/* Bottom Bar */}
+      <div className="footer-bottom">
+        <div className="footer-copyright">
+          {language === "nl"
+            ? "© 2025 Edge Capital. Alle rechten voorbehouden."
+            : "© 2025 Edge Capital. All rights reserved."}
+        </div>
+        <div className="footer-status">
+          <span className="status-dot"></span>
+          {language === "nl" ? (
+            <span>Alle systemen operationeel</span>
+          ) : (
+            <span>All systems operational</span>
+          )}
+        </div>
+        <a href="/privacy" className="footer-policy">
+          {language === "nl" ? "Privacybeleid" : "Privacy Policy"}
+        </a>
+      </div>
     </footer>
   );
 };

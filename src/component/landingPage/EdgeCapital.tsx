@@ -49,8 +49,8 @@ const EdgeCapital: React.FC = () => {
 
   return (
     <section className={`about-txt bg-[#EEF4F5]  h-fit-content py-[3.5rem]  
-      ${ language === 'en' ? 'lg:h-auto lg:py-[2rem] lg:max-h-none pb-[15rem]' : 
-        ' lg:h-auto lg:pb-[5rem] pb-[27rem]'}    
+      ${ language === 'en' ? 'lg:h-auto lg:py-[2rem] lg:max-h-none pb-[23rem] ' : 
+        ' lg:h-auto lg:pb-[5rem] md:pb-[27rem] pb-[35rem]'}    
     relative `}>
 <div 
   ref={containerRef}
