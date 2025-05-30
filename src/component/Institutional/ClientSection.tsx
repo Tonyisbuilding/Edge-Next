@@ -10,12 +10,12 @@ interface ClientCardProps {
 
 const ClientCard = ({ title, description, icon: Icon }: ClientCardProps) => (
   <div className="relative overflow-hidden bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-    <div className="absolute -right-8 -top-8 w-24 h-24 bg-[#206A7C]/10 rounded-full transition-transform duration-300 group-hover:scale-150"></div>
-    <div className="absolute -left-4 -bottom-4 w-16 h-16 bg-[#206A7C]/5 rounded-full transition-transform duration-500 group-hover:scale-150 delay-100"></div>
+    <div className="absolute -right-8 -top-8 w-24 h-24 bg-[#008487]/10 rounded-full transition-transform duration-300 group-hover:scale-150"></div>
+    <div className="absolute -left-4 -bottom-4 w-16 h-16 bg-[#008487]/5 rounded-full transition-transform duration-500 group-hover:scale-150 delay-100"></div>
     
     <div className="flex flex-col h-full relative z-10">
       <div className="mb-6">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#206A7C]/10 text-[#206A7C] mb-4 transition-all duration-300 group-hover:bg-[#206A7C]/20">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#008487]/10 text-[#008487] mb-4 transition-all duration-300 group-hover:bg-[#008487]/20">
           <Icon size={20} className="transition-all duration-300 group-hover:scale-110" />
         </div>
         <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
@@ -92,10 +92,10 @@ const ClientsSection = () => {
   const clients = content.clients;
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-[#206A7C]/5">
+    <section className="py-24 bg-gradient-to-br from-gray-50 to-[#008487]/5">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          {/* <div className="inline-block px-3 py-1 rounded-full bg-[#206A7C]/10 text-[#206A7C] text-sm font-medium mb-4">
+          {/* <div className="inline-block px-3 py-1 rounded-full bg-[#008487]/10 text-[#008487] text-sm font-medium mb-4">
             {content.subheader}
           </div> */}
           <h2 className="text-4xl font-bold text-gray-900 mb-4">{content.header}</h2>

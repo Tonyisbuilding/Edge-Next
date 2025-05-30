@@ -32,7 +32,7 @@ const FeatureCard = ({
     >
       {/* Front Card */}
       <motion.div
-        className="absolute w-full max-h-[400px]  bg-[#206A7C] rounded-lg p-8 flex flex-col
+        className="absolute w-full max-h-[400px]  bg-[#008487] rounded-lg p-8  flex flex-col
            text-white overflow-hidden"
         initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
@@ -42,14 +42,14 @@ const FeatureCard = ({
         }}
       >
         <div className="mb-6">{icon}</div>
-        <h3 className="text-2xl font-semibold text-left mt-[60%] md:mt-[70%]">
+        <h3 className="text-2xl font-semibold text-left mt-[60%]   md:mt-[65%]">
           {title}
         </h3>
       </motion.div>
 
       {/* Back Card */}
      <motion.div
-  className="absolute w-full h-[400px] max-h-[400px] bg-[#206A7C] rounded-lg p-8 
+  className="absolute w-full h-[400px] max-h-[400px] bg-[#008487] rounded-lg p-8 
     text-white overflow-hidden"
   initial={false}
   animate={{ rotateY: isFlipped ? 0 : -180 }}
@@ -98,21 +98,21 @@ const WhatSetsUsApart = () => {
       features: [
         {
           icon: <Target className="w-12 h-12 text-white text-left" />,
-          title: "Marktzekerheid",
+          title: "Resultaat ongeacht marktrichting",
           backText:
-            "We vertrouwen niet op voorspellingen—we gebruiken vooraf gedefinieerde parameters zoals rentetarieven en optiepremies om onze strategieën te sturen.",
+            "Door strategisch te handelen op basis van meetbare marktdata behalen we resultaten onafhankelijk van de richting van de markt. Niet de trend telt, maar het benutten van beweging.",
         },
         {
           icon: <Shield className="w-12 h-12 text-white" />,
           title: "Risicobeheer",
           backText:
-            "Elke positie die we innemen is volledig afgedekt, wat zorgt voor geminimaliseerd risico en stabiele rendementen.",
+            "Risico wordt beperkt door systematische hedging en dynamische position sizing. Onze systemen passen positiegroottes automatisch aan op basis van actuele marktdata en volatiliteit, met als doel stabiele prestaties onder alle omstandigheden.",
         },
         {
           icon: <Castle className="w-12 h-12 text-white" />,
-          title: "Kwantitatieve Handel",
+          title: "Kwantitatieve systemen",
           backText:
-            "Onze strategieën maken gebruik van geavanceerde handelssystemen op opties- en futuresmarkten voor precisie en efficiëntie.",
+            "Emotie heeft geen plaats in onze strategie. Onze kwantitatieve systemen volgen vooraf gedefinieerde regels en datagedreven logica, waardoor elke beslissing consistent, reproduceerbaar en vrij van subjectieve invloeden is.",
         },
       ],
     }

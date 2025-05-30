@@ -56,7 +56,7 @@
 //           </video>
 //         </div>
 //         <div className=" lg:w-[50%] ">
-//           <h2 className=" text-left  text-[#192227] text-[30px] montserrat font-bold lg:w-[30rem]">
+//           <h2 className=" text-left  text-[#000C0C] text-[30px] montserrat font-bold lg:w-[30rem]">
 //             Secure Your Exclusive Presentation
 //           </h2>
 //           <p className=" font-normal text-[17.45px] text-[#1A1A1A] montserrat py-5 lg:w-[30rem]">
@@ -163,9 +163,9 @@ const Presentation = () => {
               className="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer"
               onClick={handlePlayClick}
             >
-              <div className="bg-[#206A7C] w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-full flex justify-center
-                items-center shadow-lg shadow-[#206A7C]/30 transition-all duration-300 ease-in-out hover:scale-[1.08] 
-                hover:shadow-xl hover:shadow-[#206A7C]/40"
+              <div className="bg-[#008487] w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-full flex justify-center
+                items-center shadow-lg shadow-[#008487]/30 transition-all duration-300 ease-in-out hover:scale-[1.08] 
+                hover:shadow-xl hover:shadow-[#008487]/40"
               >
                 <Play className="text-white" size={24} />
               </div>
@@ -174,7 +174,7 @@ const Presentation = () => {
 
           <div className="flex-shrink-0 flex items-center justify-center">
             <img
-              src={images.landingPage.presentationPreview}
+              src={images.landingPage.Edgenext_presentation}
               alt="Research team analyzing market data"
               className="w-full h-full lg:h-[38rem] object-cover rounded-md"
             />
@@ -208,7 +208,7 @@ const Presentation = () => {
                 className="flex items-start mb-4 md:mb-5 text-black"
                 key={index}
               >
-                <span className="text-[#206A7C] mr-3 flex-shrink-0 bg-[#206A7C]/10 rounded-full p-1">
+                <span className="text-[#008487] mr-3 flex-shrink-0 bg-[#008487]/10 rounded-full p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -230,16 +230,16 @@ const Presentation = () => {
           </div>
 
           {/* Testimonial Section */}
-          <div className="bg-[#f8fafc] border-l-4 border-[#206A7C] p-4 sm:p-5 mb-6 sm:mb-7 md:mb-8 rounded-lg">
+          <div className="bg-[#f8fafc] border-l-4 border-[#008487] p-4 sm:p-5 mb-6 sm:mb-7 md:mb-8 rounded-lg">
           <p className="italic text-[#475569] text-[0.95rem] sm:text-base">
   {language === 'nl'
-    ? '"De presentatie was voor mij zeer waardevol. Het heeft me geholpen een weloverwogen beslissing te nemen hoe verder te gaan met mijn beleggingen."' 
+    ? '"Ondanks dat EdgeNext een nieuw label is, heeft de presentatie me de inzichten gegeven dat er een gedegen achtergrond is onder supervisie van Edge Capital. Hierdoor heb ik besloten in zee te gaan met EdgeNext, ik kijk uit naar een mooie toekomst samen!"' 
     : '"The presentation was incredibly valuable. It helped me make informed decisions about my financial future."'}
 </p>
 
-           <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#206A7C] text-[0.9rem] sm:text-[0.95rem]">
+           <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#008487] text-[0.9rem] sm:text-[0.95rem]">
   {language === 'nl'
-    ? '— Mark van den Waal, klant sinds 2024'
+    ? '— Johan Bergen, klant sinds 1 juni 2025'
     : '— Mark van den Waal, client since 2024'}
 </p>
 
@@ -255,13 +255,13 @@ const Presentation = () => {
                   "_blank"
                 )
               }
-              className="bg-[#206A7C] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#206A7C]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#206A7C]/30"
+              className="bg-[#008487] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#008487]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#008487]/30"
             >
   {language === 'nl' ? 'Plan uw prestentatie' : 'Schedule a presentation'}
             </button>
             <button
               // onClick={()=> window.open('/requestinfo')}
-              className="bg-transparent text-[#206A7C]  border-[#206A7C] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#206A7C]/5 hover:-translate-y-0.5"
+              className="bg-transparent text-[#008487]  border-[#008487] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#008487]/5 hover:-translate-y-0.5"
             >
               <Link to="/requestinfo">
                 {language === 'nl' ? 'Vraag onze brochure aan' : 'Request Brochure'}
@@ -271,7 +271,7 @@ const Presentation = () => {
 
           {/* Urgency Text */}
           <p className="text-[0.85rem] sm:text-[0.9rem] text-[#64748b] mt-4 sm:mt-5 flex items-center gap-2">
-            <span className="text-[#206A7C] flex-shrink-0">
+            <span className="text-[#008487] flex-shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -288,7 +288,7 @@ const Presentation = () => {
               </svg>
             </span>
  {language === 'nl'
-    ? 'Beperkte plekken beschikbaar deze maand. Reserveer vandaag nogU sessie.'
+    ? 'Beperkte beschikbaarheid. Plan uw presentatie snel!'
     : 'Limited spots available this month. Reserve your session today.'}          </p>
         </div>
       </div>

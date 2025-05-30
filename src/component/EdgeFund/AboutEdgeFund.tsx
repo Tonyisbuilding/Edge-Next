@@ -55,9 +55,9 @@ const AboutEdgeFund = () => {
             </p>
             <Link to="/participate">
               <motion.button
-                className="bg-[#206A7C] text-white px-8 py-3 rounded-full 
+                className="bg-[#008487] text-white px-8 py-3 rounded-full 
                 shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
-                hover:bg-[#206A7C] transition-all duration-300"                
+                hover:bg-[#008487] transition-all duration-300"                
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >

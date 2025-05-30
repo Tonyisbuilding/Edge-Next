@@ -14,7 +14,7 @@ const RoadmapCard = ({ number, title, content, index }: RoadmapCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: 0.1 * index }}
-      className="bg-[#192227] text-white rounded-lg p-6 shadow-lg relative overflow-hidden h-auto"
+      className="bg-[#000C0C] text-white rounded-lg p-6 shadow-lg relative overflow-hidden h-auto"
     >
       <span 
         className="text-5xl md:text-[75px] font-bold text-yellow-400 opacity-90 mb-4 block py-[10px]" 

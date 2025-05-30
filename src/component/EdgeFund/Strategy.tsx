@@ -57,7 +57,7 @@ const StrategySection = () => {
               className={`bg-[#EEF4F5C2] ${
                 index === 0 ? "rounded-l-lg" : "rounded-r-lg"
               } 
-             p-8 border-1 border-[#206A7C] flex flex-col justify-between`}
+             p-8 border-1 border-[#008487] flex flex-col justify-between`}
             >
               <div>
                 <div className="flex justify-between items-start mb-6">
@@ -97,7 +97,7 @@ const StrategySection = () => {
           {strategies.map((strategy, index) => (
             <div
               key={strategy.id}
-              className={`bg-[#EEF4F5C2] p-6 border border-[#206A7C]
+              className={`bg-[#EEF4F5C2] p-6 border border-[#008487]
              ${index === 0 ? "rounded-t-lg" : "rounded-b-lg"}`}
             >
               <div className="flex justify-between items-start mb-4">

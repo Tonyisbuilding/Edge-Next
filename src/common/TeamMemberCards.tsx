@@ -61,7 +61,7 @@ const TeamCard = ({
 
       <motion.div
         className={` bg-white w-full absolute bottom-[0rem] md:bottom-[0rem] rounded-bl-[1rem] p-5
-       shadow-lg shadow-[#9e9d9d54] text-[#192227] flex items-center justify-between
+       shadow-lg shadow-[#9e9d9d54] text-[#000C0C] flex items-center justify-between
         ${pathname.slice(1) !== "team" ? "hidden" : "block"}`}
         initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
@@ -80,10 +80,10 @@ const TeamCard = ({
           className="flex items-center hover:cursor-pointer"
           onClick={() => window.open(`${linkedin}`, '_blank')}
         >
-          <h1 className="inter text-[14px] md:text-[14px] font-medium text-[#206A7C]">
+          <h1 className="inter text-[14px] md:text-[14px] font-medium text-[#008487]">
             About
           </h1>
-          <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-left text-[#206A7C]" />
+          <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-left text-[#008487]" />
         </button>
       </motion.div>
 
@@ -202,7 +202,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
               }`}
           >
             <button
-              className="bg-[#206A7C] text-white font-medium py-[10px] px-[20px] rounded-full 
+              className="bg-[#008487] text-white font-medium py-[10px] px-[20px] rounded-full 
   shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
   hover:-translate-y-[2px] transition-all duration-200"
             >

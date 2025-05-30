@@ -212,7 +212,7 @@ const ContactForm = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-[#192227] text-white py-2 rounded-md hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-[#000C0C] text-white py-2 rounded-md hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               {/* {language === "nl" ? "Verzend uw bericht" : "Send Your Message"} */}
               {isSubmitting ? (

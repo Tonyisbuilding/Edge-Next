@@ -14,15 +14,15 @@ const HeroSection = () => {
           <div className="hero-content">
             
             <h1 className="hero-title">
-              {language === "en" ? "Investing" : "Beleggen met "}
+              {language === "en" ? "EdgeNext takes your" : "EdgeNext brengt uw "}
               <br />
-              {language === "en" ? "with An Edge" : "een voorsprong!"}
+              {language === "en" ? "investment to the next level!" : "belegging naar een Next level!"}
             </h1>
 
             <p className="hero-subtitle">
               {language === "nl"
                 ? "Gebruik van dynamische, datagestuurde strategieën voor superieure rendementen met een beheerst risico."
-                : "Using dynamic, data-driven strategy for superior returns with controlled risk"}
+                : "Investing with certainty — we base our investments on facts, not forecasts."}
             </p>
 
             <ul className="hero-features">
@@ -34,7 +34,7 @@ const HeroSection = () => {
                 <div className="feature-text">
                   <p>
                     <span className="bold-text">{language === 'nl' ? 'Geavanceerde Strategieën' : 'Advanced Strategies'}</span> -
-                    {language === 'nl' ? ' Arbitrage en delta-neutraal voor bovengemiddelde rendementen.' : 'Arbitrage and delta-neutral for high returns.'}
+                    {language === 'nl' ? ' Correlatie Arbitrage, een afgeleide van Index Arbitrage uitgevoerd op de meest liquide markt ter wereld (FX)' : 'Arbitrage and delta-neutral for high returns.'}
                   </p>
                 </div>
               </li>
@@ -46,8 +46,8 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">{language === 'nl' ? 'Op feiten gebaseerde strategieën' : 'Fact-Based Expertise'}</span> -
-                    {language === 'nl' ? ' Vertrouw op zekerheden, niet op voorspellingen.' : 'Rely on certainties, not predictions.'}
+                    <span className="bold-text">{language === 'nl' ? 'Op feiten gebaseerd' : 'Fact-Based Expertise'}</span> -
+                    {language === 'nl' ? ' Een bewezen strategie die inspeelt op afwijkingen tussen verschillende gecorreleerde valutaparen.' : 'Rely on certainties, not predictions.'}
                   </p>
                 </div>
               </li>
@@ -59,8 +59,8 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">{language === 'nl' ? 'Beheerd Risico' : 'Managed Risk'}</span>
-                    { language === 'nl' ? ' - Beheerst risico voor grootschalige investeringen.' : '- Controlled risk for large-scale investments.'}
+                    <span className="bold-text">{language === 'nl' ? 'Riskmanagement' : 'Managed Risk'}</span>
+                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 2.7%' : '- Controlled risk for large-scale investments.'}
                   </p>
                 </div>
               </li>

@@ -167,7 +167,7 @@ const ResearchDevelopmentSection = () => {
             </motion.div>
             <Link to="/contact">
               <motion.div className="mt-8" variants={itemVariants}>
-                <button className="bg-[#192227] hover:bg-gray-700 text-white py-2 px-6 rounded-4xl transition duration-300 hover:cursor-pointer">
+                <button className="bg-[#000C0C] hover:bg-gray-700 text-white py-2 px-6 rounded-4xl transition duration-300 hover:cursor-pointer">
                   {content.contactUs}
                 </button>
               </motion.div>

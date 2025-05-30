@@ -1,6 +1,6 @@
 Feature section styles
 .feature-section {
-    background-color: #192227;
+    background-color: #000C0C;
     padding: 20px 10px;
     padding-top: 40px;
     display: flex;
@@ -43,7 +43,7 @@ Feature section styles
 }
 
 .card {
-    background-color: #F9A600;
+    background-color: #008487;
     border-radius: 8px;
     padding: 30px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -56,7 +56,7 @@ Feature section styles
 .card .icon {
     /* width: 70px;
     height: 70px; */
-    background-color: #192227;
+    background-color: #000C0C;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ Feature section styles
 .card h3 {
     font-size: 20px;
     font-weight: bold;
-    color: #192227;
+    color: #000C0C;
     margin-bottom: 12px;
 
 }

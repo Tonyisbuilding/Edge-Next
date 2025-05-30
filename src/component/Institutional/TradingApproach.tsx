@@ -76,7 +76,7 @@ const TradingApproachSection = () => {
       ],
     },
     nl: {
-      title: "Waarom Edge Capital?",
+      title: "Waarom EdgeNext?",
       tradingApproachData: [
         {
           icon: BarChart3,
@@ -117,7 +117,7 @@ const TradingApproachSection = () => {
   const tradingApproachData = content.tradingApproachData;
 
   return (
-    <div className="bg-[#192227] min-h-screen py-12 px-4 sm:px-6 lg:px-8 rounded-[20px] relative">
+    <div className="bg-[#000C0C] min-h-screen py-12 px-4 sm:px-6 lg:px-8 rounded-[20px] relative">
       <div className="max-w-7xl mx-auto">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}

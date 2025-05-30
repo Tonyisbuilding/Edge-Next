@@ -12,6 +12,14 @@ import Second from "../../src/assets/images/landingPage/Second.png";
 import Third from "../../src/assets/images/landingPage/Third_logo.png";
 import Forth from "../../src/assets/images/landingPage/fourth_logo.png";
 import Logo_five from "../../src/assets/images/landingPage/Logo_five.png";
+import Citibank from "../../src/assets/images/landingPage/citibank_logo.svg.svg";
+import Bolderlogo from "../../src/assets/images/landingPage/Page-1.svg";
+import GBEBroker from "../../src/assets/images/landingPage/gbe_brokers_ltd_logo.svg.svg";
+import NewEC from "../../src/assets/images/landingPage/New_EC.svg";
+
+
+
+
 
 // import Numberfive from "../../src/assets/images/landingPage/Numberfive.png";
 
@@ -28,6 +36,8 @@ import dots_one from "../../src/assets/images/landingPage/dots_one.png";
 import dots_updated from "../../src/assets/images/landingPage/Dot_updated.png";
 
 import presentationPreview from "../../src/assets/images/landingPage/presentationPreview.png";
+import Edgenext_presentation from "../../src/assets/images/landingPage/Presentatie.jpg";
+
 import presentationVid from "../../src/assets/images/landingPage/presentation.mp4";
 import teagan from "../../src/assets/images/landingPage/teagan.png";
 import paul from "../../src/assets/images/landingPage/paul.png";
@@ -52,6 +62,9 @@ import ECLogo from "../../src/assets/images/ECLogo.png";
 import ECLogoSVG from "../../src/assets/images/ECLogo.svg";
 import EdgeCapitalLogo from "../../src/assets/images/EdgeCapitalLogo.png";
 import EdgeCapitalLogoSVG from "../../src/assets/images/EdgeCapitalLogo.svg";
+import Edgenext from "../../src/assets/images/Edgenext.svg";
+import Edgenext_white from "../../src/assets/images/Edgenext-white.png";
+
 // import Edgecap from "../../src/assets/images/Edgecap.svg";
 import New_Cap from "../../src/assets/images/landingPage/New_cap.svg";
 import Brush from "../../src/assets/images/landingPage/Brush.png";
@@ -108,6 +121,8 @@ import vector from "../../src/assets/images/Vector.svg";
 
 const images = {
     landingPage:{
+        Edgenext,
+        Edgenext_white,
         vector,
         heroSection,
         risk,
@@ -122,6 +137,10 @@ const images = {
         Third,
         Forth,
         Logo_five,
+        Citibank,
+        Bolderlogo,
+        GBEBroker,
+        NewEC,
         // Numberfive,
         B_class,
         ECLogo,
@@ -158,7 +177,8 @@ const images = {
         profit,
         heroSectionVideo, 
         New_Cap,
-        Brush
+        Brush,
+        Edgenext_presentation
     },
     about:{
         herosectionforabout,

@@ -81,9 +81,9 @@ const JoinTheTeam = () => {
             </motion.p>
             <motion.a
               href="#open"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#206A7C] text-white rounded-full 
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#008487] text-white rounded-full 
               shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
-              hover:bg-[#206A7C] transition-all duration-300"
+              hover:bg-[#008487] transition-all duration-300"
 
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}

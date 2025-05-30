@@ -72,7 +72,7 @@ const FundCostStructure = () => {
         investment: "€250K-€500K",
         buttonText: "Sign up now!",
         buttonClass:
-          "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
+          "bg-gradient-to-r from-[#5A7B8D] to-[#000C0C] hover:bg-slate-700",
         features: [
           "Everything in Class I +",
           "1.25% Management Fee (per year)",
@@ -124,7 +124,7 @@ const FundCostStructure = () => {
         investment: "€250K-€500K",
         buttonText: "Schrijf u nu in!",
         buttonClass:
-          "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
+          "bg-gradient-to-r from-[#5A7B8D] to-[#000C0C] hover:bg-slate-700",
         features: [
           "1,25% Beheervergoeding (per jaar)",
           "17,5% Winstdeling (per maand)",

@@ -65,66 +65,80 @@ export const whyEdgeCapitalData: whyEdgeCapitalType[] = [
 export const whyEdgeCapitalDataDutch: whyEdgeCapitalType[] = [
   {
     icon: images.landingPage.profit,
-    title: "Stabiel en rendabel",
-    desc: "Onze stabiliteit is gebaseerd op onze markt neutrale aanpak in al onze beleggingsproducten. Uiteraard zijn er momenten van volatiliteit maar door onze goed ingestelde algoritmes zakken wij niet door de ondergrens. Wij streven naar een bovengemiddeld rendement met een aanvaardbaar risico. Kortom, wij bieden stabiliteit en een gestage groei van uw beleggingen tegen een aanvaardbaar risico.",
+    title: "Waarom hebben jullie juist deze valuta gekozen?",
+    desc: "We kiezen bewust voor de meest liquide en actief verhandelde valuta ter wereld. Deze markten bieden constante handelsactiviteit, nauwe onderlinge correlaties en voorspelbare prijsbewegingen op basis van economische feiten. Dat maakt ze perfect geschikt voor onze data-gedreven strategieën die geen ruimte laten voor toeval.",
     id: 1,
   },
 
   {
     icon: images.landingPage.access,
-    title: "Persoonlijk en toegankelijk",
-    desc: "Edge Capital is een onderneming met een klein team van specialisten. Wij hechten heel veel waarde aan een persoonlijke relatie met onze klanten en wij willen onze klanten ook echt kennen. Bij Edge Capital bent u geen nummer maar een partner in het beleggingsproces.",
+    title: "Wat gebeurt er als de correlatie wegvalt? Is dat mogelijk?",
+    desc: "Ja, het is mogelijk dat correlaties tijdelijk afwijken, meestal door onverwachte externe factoren zoals geopolitieke spanningen, financiële crisissen of natuurrampen. Dergelijke verstoringen beïnvloeden doorgaans kortstondig het evenwicht tussen valuta. Onze systemen zijn hierop voorbereid en passen zich dynamisch aan. Zodra markten weer gedreven worden door structurele en technische factoren, herstellen de historische correlaties zich meestal snel en maken wij rendement voor onze beleggers.",
     id: 3,
   },
   {
     icon: images.landingPage.handshake,
-    title: "Betrouwbaarheid Voorop",
-    desc: "Vertrouwen is onze prioriteit. We hanteren strikte afspraken en werken met externe adviseurs om onze methodes te verfijnen. Dit garandeert verantwoording, transparantie en langdurige relaties gebaseerd op betrouwbaarheid.",
+    title: "Wat is het belangrijkste onderdeel van de strategie?",
+    desc: "Onze strategie bestaat uit een volledig geïntegreerd systeem waarin elke stap cruciaal is. Van data-analyse tot het bepalen van instap- en uitstapmomenten – alles werkt samen. Wat écht het verschil maakt, is de continue optimalisatie van parameters. Hierdoor blijven we wendbaar in snel veranderende markten en behouden we prestaties en stabiliteit op de lange termijn.",
     id: 4,
   },
   
   {
     icon: images.landingPage.server,
-    title: "Professioneel en exclusief",
-    desc: "Bij Edge Capital krijgt u toegang tot professionele beleggingsstrategieën die normaal gesproken alleen beschikbaar zijn voor institutionele beleggers. Onze methodes van arbitreren en delta neutraal beleggen vergen niet alleen vakmanschap en precisie maar ook de juiste technologie. Wij bieden u deze exclusieve mogelijkheid om zodoende te kunnen beleggen met een voorsprong.",
+    title: "Hoe wordt het systeem gemonitord? Hoe wordt het veilig beheerd?",
+    desc: "Ons systeem wordt 24/7 actief gemonitord. We maken gebruik van een meerlaags waarschuwingssysteem dat direct signaleert bij technische afwijkingen of marktverstoringen. Dit stelt ons in staat om snel te reageren en risico’s effectief te beheersen.",
     id: 6,
   },
 ];
 
 export const theTeamYouCanTrustData: teamMemberCardstDataType[] = [
-  {
-    name: "Teagan de Groot",
-    position: "Partner and Board of Directors",
-    bio: `Teagan de Groot has been the director of Edge Capital since 2021.
-Teagan has years of experience in investing, as an active trader he has been involved in developing successful trading strategies. In addition, Teagan has held various management positions, and his typical helicopter view makes him extremely suitable to take on the daily management of the company.`,
-    linkedin: "https://www.linkedin.com/in/teagan-de-groot-9b512616a/",
-    image: images.landingPage.teagan,
+     {
+    name: "Aron Broeken",
+    position: "General Manager EdgeNext",
+    bio: "Aron Broeken combines vision, leadership, and execution power in his role as General Manager. With years of experience in asset management and trading, he guides the organization toward sustainable growth and scalable operations with strategic insight, decisiveness, and accountability.",
+    linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
+    image: images.landingPage.Aron,
   },
-  {
-    name: "Paul Lamain",
-    position: "Founder and Board of Directors",
-    bio: `Paul Lamain is the founder of Edge Capital.
-Before founding Edge Capital, he worked at several renowned companies, including a large online broker with global operations and a European institutional asset manager, where he gained valuable knowledge and experience. Alongside Teagan, Paul is responsible for Edge Capital's policies and is closely involved in all aspects of the company.`,
-    linkedin: "https://www.linkedin.com/in/paul-lamain-72a079135/",
-    image: images.landingPage.paul,
+   {
+    name: "Pepijn van den Hurk",
+    position: "Head of Finance and Technology EdgeNext",
+    bio: "Pepijn van den Hurk plays a central role in shaping the fund’s financial and technological strategy. He oversees financial operations including capital allocation, risk management, and reporting, while also driving the long-term shift toward scalable, tech-driven processes.",
+    linkedin: "",
+    image: images.landingPage.Pepijn,
+  },
+
+{
+    name: "Tom Meulemans",
+    position: "Head of Relationships and Sales EdgeNext",
+    bio: "Tom Meulemans is responsible for managing relationships and sales for the fund. With a strong commercial background and sharp eye for investor needs, he plays a key role in growing and maintaining the fund’s network. As a main point of contact for (potential) investors, Tom is known for his ability to communicate complex financial topics with clarity. His personal approach and deep market understanding foster long-term partnerships and strong investor trust.",
+    linkedin: "",
+    image: images.landingPage.Tom,
   },
 ];
 
 export const theTeamYouCanTrustDataDutch: teamMemberCardstDataType[] = [
-  {
-    name: "Teagan de Groot",
-    position: "Partner en Raad van Bestuur",
-    bio: `Teagan de Groot is sinds 2021 directeur van Edge Capital. Teagan heeft jarenlange ervaring in beleggen en was als actieve handelaar betrokken bij het ontwikkelen van succesvolle handelsstrategieën. Daarnaast bekleedde Teagan diverse managementfuncties. Dankzij zijn helikopterview is hij bij uitstek geschikt voor het dagelijks bestuur van het bedrijf.`,
-    linkedin: "https://www.linkedin.com/in/teagan-de-groot-9b512616a/",
-    image: images.landingPage.teagan,
+     {
+    name: "Aron Broeken",
+    position: "Algemeen Directeur EdgeNext",
+    bio: "Aron Broeken combineert visie, leiderschap en executiekracht in zijn rol als General Manager. Met jarenlange ervaring in asset management en trading, stuurt hij met strategisch inzicht, besluitvaardigheid en verantwoordelijkheid de organisatie richting duurzame groei en schaalbare bedrijfsvoering.",
+    linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
+    image: images.landingPage.Aron,
   },
   {
-    name: "Paul Lamain",
-    position: "Oprichter en Raad van Bestuur",
-    bio: `Paul Lamain is de oprichter van Edge Capital. Voordat hij Edge Capital oprichtte, werkte hij bij diverse gerenommeerde bedrijven, waaronder een grote online broker met wereldwijde activiteiten en een Europese institutionele vermogensbeheerder, waar hij waardevolle kennis en ervaring opdeed. Samen met Teagan is Paul verantwoordelijk voor het beleid van Edge Capital en nauw betrokken bij alle aspecten van het bedrijf.`,
-    linkedin: "https://www.linkedin.com/in/paul-lamain-72a079135/",
-    image: images.landingPage.paul,
+    name: "Pepijn van den Hurk",
+    position: "Hoofd Financiën en Technologie EdgeNext",
+    bio: "Pepijn van den Hurk speelt een centrale rol in zowel de financiële als technologische strategie van het fonds. Hij is verantwoordelijk voor de financiële operatie, waaronder kapitaalallocatie, risicobeheer en rapportage, en stuurt tegelijkertijd de langetermijnontwikkeling aan richting schaalbare, technologiegedreven processen.",
+    linkedin: "",
+    image: images.landingPage.Pepijn,
   },
+  {
+    name: "Tom Meulemans",
+    position: "Hoofd Relaties en Verkoop EdgeNext",
+    bio: "Tom Meulemans is verantwoordelijk voor relaties en sales van het fonds. Met een sterke commerciële achtergrond en een scherp oog voor de behoeften van investeerders, speelt hij een sleutelrol in het uitbreiden en onderhouden van het netwerk van het fonds. Tom is een vast aanspreekpunt voor (potentiële) investeerders en weet complexe financiële informatie helder en toegankelijk over te brengen. Zijn persoonlijke benadering, gecombineerd met diepgaande marktkennis, zorgt voor duurzame samenwerkingen en een solide vertrouwensbasis met onze partners.",
+    linkedin: "",
+    image: images.landingPage.Tom,
+  },
+
 ];
 
 
@@ -189,7 +203,7 @@ export const timelineDataDutch: timelineDataType[] = [
   {
     year: "Future",
     content:
-      "Ook in de aankomende jaren zal Edge Capital blijven innoveren en investeren in verdere groei van de onderneming. In de nabije toekomst komt de focus te liggen op een volledige vergunning van de AFM. De onderneming kan hierdoor een breder publiek gaan bedienen en zich zo definitief meten met de gevestigde orde binnen de industrie.",
+      "Met EdgeNext hebben we vooruitstrevende doelstellingen. We streven ernaar om binnen enkele jaren uit te groeien tot een toonaangevend multi-strategie fonds. De verdere ontwikkeling van onze systemen en de uitbreiding van ons team hebben daarbij hoge prioriteit. Gezamenlijk met Edge Capital hebben we een duidelijk groeidoel: binnen vijf jaar willen we €100 miljoen aan vermogen onder beheer realiseren.",
   },
 ];
 
@@ -271,21 +285,21 @@ export const advisoryBoardDutch: teamMemberCardstDataType[] = [
 
 export const SupportAndCommercial: teamMemberCardstDataType[] = [
   {
-    name: "Brahim Bouzerrade",
-    position: "Business Development Manager",
-    bio: `Brahim is responsible for identifying, developing, and realizing growth opportunities for the company. His focus is on expanding the customer base and developing strategic partnerships. With years of experience, Brahim is regarded as a seasoned sales professional within our team.`,
+    name: "Bernard Beerding",
+    position: "Manager Business Development",
+    bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
     linkedin: "",
-    image: images.landingPage.Brahim,
+    image: images.landingPage.Bernard,
   },
 ];
 
 export const SupportAndCommercialDutch: teamMemberCardstDataType[] = [
   {
-    name: "Brahim Bouzerrade",
+    name: "Bernard Beerding",
     position: "Manager Business Development",
-    bio: `Brahim is verantwoordelijk voor het identificeren, ontwikkelen en realiseren van groeimogelijkheden voor het bedrijf. Zijn focus ligt op het uitbreiden van de klantenkring en het ontwikkelen van strategische partnerschappen.`,
-    linkedin: "", // Add if available
-    image: images.landingPage.Brahim, // assuming this exists
+    bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
+    linkedin: "",
+    image: images.landingPage.Bernard,
   },
 ];
 
@@ -303,7 +317,7 @@ export const edgeNextTeam: teamMemberCardstDataType[] = [
     name: "Pepijn van den Hurk",
     position: "Head of Finance and Technology EdgeNext",
     bio: "Pepijn van den Hurk plays a central role in shaping the fund’s financial and technological strategy. He oversees financial operations including capital allocation, risk management, and reporting, while also driving the long-term shift toward scalable, tech-driven processes.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/pepijn-van-den-hurk-ba457a20a/",
     image: images.landingPage.Pepijn,
   },
   {
@@ -336,7 +350,7 @@ export const edgeNextTeamDutch: teamMemberCardstDataType[] = [
     name: "Pepijn van den Hurk",
     position: "Hoofd Financiën en Technologie EdgeNext",
     bio: "Pepijn van den Hurk speelt een centrale rol in zowel de financiële als technologische strategie van het fonds. Hij is verantwoordelijk voor de financiële operatie, waaronder kapitaalallocatie, risicobeheer en rapportage, en stuurt tegelijkertijd de langetermijnontwikkeling aan richting schaalbare, technologiegedreven processen.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/pepijn-van-den-hurk-ba457a20a/",
     image: images.landingPage.Pepijn,
   },
   {
@@ -354,6 +368,7 @@ export const edgeNextTeamDutch: teamMemberCardstDataType[] = [
     image: images.landingPage.Bernard,
   },
 ];
+
 
 
 export const charities: charitiesDataType[] = [

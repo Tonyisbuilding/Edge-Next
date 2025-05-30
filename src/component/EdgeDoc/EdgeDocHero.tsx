@@ -43,7 +43,7 @@ const EdgeDocuments = () => {
           <div className="lg:max-w-xl z-10">
             <motion.h2
               id="edge-documents-heading"
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#206A7C] mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#008487] mb-6"
               initial="hidden"
               animate="visible"
               variants={textVariants}

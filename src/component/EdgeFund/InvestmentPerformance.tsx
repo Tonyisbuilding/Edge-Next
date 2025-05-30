@@ -37,7 +37,7 @@ const InvestmentPerformance = () => {
       requestFactsheet: "Factsheet aanvragen",
       receiveInfoMemorandum: "Ontvang het informatiememorandum",
       disclaimer: {
-        title: "Algemene disclaimer rendementen:",
+        title: "Algemene Disclaimer – EdgeNext (handelsnaam van Edge Capital Management B.V.) rendementen:",
         content: "Bolder Funds Services B.V. (administrateur) berekent maandelijks de resultaten van het fonds. Bovenstaande resultaten zijn na aftrek van de 22,5% winstdeling en de 1,50% jaarlijkse beheervergoeding. De rendementen vanaf 1 september 2022 vertegenwoordigen de werkelijke resultaten van het fonds. De rendementen vóór 1 september 2022 zijn gebaseerd op forward testing (live rekening) en niet op basis van backtesting. Deze rendementen dienen niet als indicatie voor toekomstige resultaten."
       }
     }
@@ -118,7 +118,7 @@ const InvestmentPerformance = () => {
                   >
                     <path
                       d="M2 22 L8 14 L14 16 L20 10 L26 6 L34 4"
-                      stroke="#206A7C"
+                      stroke="#008487"
                       strokeWidth="2"
                       strokeLinecap="round"
                       fill="none"
@@ -129,7 +129,7 @@ const InvestmentPerformance = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-lg font-semibold text-[#206A7C]">
+                <span className="text-lg font-semibold text-[#008487]">
                   {language === 'nl' ? t.february : 'February'}
                 </span>
               </div>
@@ -167,7 +167,7 @@ const InvestmentPerformance = () => {
                 <motion.button
                   variants={buttonVariants}
                   whileHover="hover"
-                  className="w-full bg-[#206A7C] text-white px-6 py-3.5 rounded-full font-semibold 
+                  className="w-full bg-[#008487] text-white px-6 py-3.5 rounded-full font-semibold 
                 text-sm shadow-sm hover:cursor-pointer"
                 >
                   {t.requestFactsheet}
@@ -182,7 +182,7 @@ const InvestmentPerformance = () => {
         <motion.button
           whileHover={{ y: -2, backgroundColor: "#185663" }}
           transition={{ duration: 0.3 }}
-          className="bg-[#206A7C] text-white px-9 py-4.5 rounded-[40px] font-semibold flex items-center gap-3 shadow-md max-w-md w-full justify-center"
+          className="bg-[#008487] text-white px-9 py-4.5 rounded-[40px] font-semibold flex items-center gap-3 shadow-md max-w-md w-full justify-center"
         >
           {t.receiveInfoMemorandum}
         </motion.button>
@@ -192,7 +192,7 @@ const InvestmentPerformance = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-[#192227] text-white p-9 rounded-[20px] shadow-md relative overflow-hidden"
+        className="bg-[#000C0C] text-white p-9 rounded-[20px] shadow-md relative overflow-hidden"
       >
         <div className="absolute top-0 left-0 w-2 h-full bg-black/10" />
         <div className="flex items-center gap-3 mb-4">

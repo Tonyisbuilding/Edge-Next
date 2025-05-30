@@ -38,11 +38,12 @@ const EdgeCapital: React.FC = () => {
     };
   }, []);
 
-  const originalText = `${
-    language === "en"
-       ? '"At Edge Capital, we believe in a different approach to investing. We are not guided by fundamental or technical analyses, which often lead to inaccurate predictions. It is widely known that 4 out of 5 traditional investment funds underperform the index they aim to beat over the long term. Instead of traditional methods, we use quantitative trading systems based on predetermined parameters such as interest rates and option premiums. We mitigate risks by hedging all positions. We apply our strategies across various markets, including the options and futures markets."'
-      : "Bij Edge Capital geloven we in een andere benadering van beleggen. We laten ons niet leiden door fundamentele of technische analyses die vaak tot onnauwkeurige voorspellingen kunnen leiden. Algemeen bekend is dat 4 op de 5 traditionele beleggingsfondsen op lange termijn achterblijven op de index die zij proberen te verslaan. In plaats van traditionele methodes maken wij met onze kwantitatieve handelssystemen gebruik van parameters die van tevoren vaststaan, zoals rentetarieven en optiepremies.We beperken de risico’s door middel van het afdekken van alle posities (hedging). We passen onze strategieën toe op verschillende markten zoals de optie en futuremarkt."
-  }`;
+const originalText = `${
+  language === "en"
+    ? '"At EdgeNext, we take investing to the next level. In a world where markets move faster and volatility is the norm rather than the exception, we believe in a dynamic, innovative approach. There is no room for guesswork or gut feeling — we eliminate luck and base our decisions entirely on facts. Our strategies are built to adapt to constant market changes. By using proven quantitative models, we actively respond to increased volatility instead of avoiding it. We seize opportunities where others see risk and leave traditional investment methods behind. At EdgeNext, we don’t invest in expectations — we invest in certainties. That means structured decision-making, data-driven execution, and continuously optimizing our systems to turn market dynamics into returns."'
+    : 'Bij EdgeNext tillen we beleggen naar het volgende niveau. In een wereld waarin markten steeds sneller bewegen en volatiliteit geen uitzondering maar de norm is, geloven wij in een dynamische, innovatieve aanpak. Geen ruimte voor giswerk of onderbuikgevoel – wij sluiten geluk uit en baseren ons volledig op feiten. Onze strategieën zijn ontworpen om zich aan te passen aan de constante veranderingen in de markt. Door gebruik te maken van bewezen kwantitatieve modellen spelen we actief in op verhoogde volatiliteit, in plaats van deze te vermijden. We benutten kansen waar anderen risico zien en laten traditionele beleggingsmethodes achter ons. Met EdgeNext investeren we niet in verwachtingen, maar in zekerheden. Dat betekent gestructureerde besluitvorming, data-gedreven handelen en het continu optimaliseren van onze systemen om marktdynamiek om te zetten in rendement.'
+}`;
+
 
 
   const words = originalText.split(/\s+/);

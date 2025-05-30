@@ -34,7 +34,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7 }}
 >
-  {language === 'nl' ? 'Al meer dan 8 jaar' : 'For Over 8 Years'}
+  {language === 'nl' ? 'Onderdeel van Edge Capital' : 'For Over 8 Years'}
 </motion.h2>
 
 <motion.p
@@ -44,7 +44,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
   transition={{ duration: 0.7, delay: 0.2 }}
 >
   {language === 'nl'
-    ? 'We bieden een platform dat beleggers een voorsprong biedt. Door ons te richten op innovatie en groei, transformeren we het financiële landschap.'
+    ? 'Hoewel EdgeNext een nieuw label is, maken we deel uit van een organisatie met een bewezen staat van dienst en jarenlange ervaring in de financiële markten.'
     : "We're building a platform that gives investors an edge. By focusing on innovation and growth, we're transforming the financial landscape."}
 </motion.p>
 
@@ -53,7 +53,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
         <div className="relative flex items-center mb-16">
           <button 
             onClick={handlePrevYear}
-            className="absolute left-0 bg-[#206A7C] text-white p-2 rounded-md hover:bg-teal-800 
+            className="absolute left-0 bg-[#008487] text-white p-2 rounded-md hover:bg-teal-800 
             transition-colors z-10"
             aria-label="Previous year"
           >
@@ -63,7 +63,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
           <div className="w-full overflow-hidden mx-10  py-[2rem] px-[.5rem] md:px-[2rem]">
             <div className="relative">
               {/* Timeline Bar */}
-              <div className="h-1 bg-[#206A7C] w-full absolute top-1/2 -translate-y-1/2"></div>
+              <div className="h-1 bg-[#008487] w-full absolute top-1/2 -translate-y-1/2"></div>
               
               {/* Year Markers */}
               <div className="flex justify-between relative  mb-[1rem]">
@@ -73,7 +73,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
                       onClick={() => handleYearClick(index)}
                       className={`relative z-10 transition-all duration-300 ${
                         index === activeYear 
-                          ? "text-[#206A7C] font-bold" 
+                          ? "text-[#008487] font-bold" 
                           : "text-gray-500 hover:text-teal-600"
                       }`}
                     >
@@ -101,7 +101,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
           
           <button 
             onClick={handleNextYear}
-            className="absolute right-0 bg-[#206A7C] text-white p-2 rounded-md hover:bg-teal-800 transition-colors z-10"
+            className="absolute right-0 bg-[#008487] text-white p-2 rounded-md hover:bg-teal-800 transition-colors z-10"
             aria-label="Next year"
           >
             <ChevronRight size={20} />
@@ -113,7 +113,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
           <AnimatePresence mode="wait">
             <motion.h3
               key={`year-${activeYear}`}
-              className="text-3xl font-bold text-[#206A7C] mb-6"
+              className="text-3xl font-bold text-[#008487] mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

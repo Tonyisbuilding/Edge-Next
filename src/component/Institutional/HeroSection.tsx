@@ -53,9 +53,9 @@ const HeroSection = () => {
               whileInView="visible"
               variants={staggerChildren}
             >
-              {/* <div className="blur-xl absolute h-[30%] w-full bg-[#206A7C] top-[15rem]"></div> */}
+              {/* <div className="blur-xl absolute h-[30%] w-full bg-[#008487] top-[15rem]"></div> */}
               <motion.div
-                className="bg-[#206A7C] text-white p-6 md:p-8 rounded-lg shadow-lg"
+                className="bg-[#008487] text-white p-6 md:p-8 rounded-lg shadow-lg"
                 variants={fadeIn}
                 initial="hidden"
                 whileInView="visible"
@@ -83,7 +83,7 @@ const HeroSection = () => {
                 </motion.p>
 
                 <motion.button
-                  className="bg-[#192227] hover:bg-[#1922279d] text-white font-medium 
+                  className="bg-[#000C0C] hover:bg-[#000C0C9d] text-white font-medium 
                   py-2 px-6 rounded-4xl transition duration-300 relative z-10"
                   variants={fadeIn}
                   whileHover={{ scale: 1.05 }}
@@ -94,7 +94,7 @@ const HeroSection = () => {
                   </Link>
                 </motion.button>
                 {/* <div
-                  className="blur-sm absolute h-[30%] w-full bg-[#206a7c3a] lg:top-[16rem] top-[87%] left-0
+                  className="blur-sm absolute h-[30%] w-full bg-[#0084873a] lg:top-[16rem] top-[87%] left-0
                  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 
                 "
                 ></div> */}

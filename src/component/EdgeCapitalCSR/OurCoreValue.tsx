@@ -12,31 +12,31 @@ const OurCoreValues = () => {
       values: [
         {
           title: "Sustainability",
-          icon: <Recycle size={32} className='text-[#192227]' />,
+          icon: <Recycle size={32} className='text-[#000C0C]' />,
           description: "We integrate sustainable practices into all our processes and strive to minimize our ecological footprint. We invest in projects and initiatives that contribute to a greener future.",
           measures: "Measures: Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers."
         },
         {
           title: "Transparency",
-          icon: <BookOpen size={32} className='text-[#192227]' />,
+          icon: <BookOpen size={32} className='text-[#000C0C]' />,
           description: "We believe in open communication about our activities and impact. We regularly report on our progress and the outcomes of our CSR initiatives to keep our stakeholders well-informed.",
           measures: "Measures: Automated risk management scenarios, 24/7 human monitoring, backups, testing periods."
         },
         {
           title: "Social Impact",
-          icon: <Users size={32} className='text-[#192227]' />,
+          icon: <Users size={32} className='text-[#000C0C]' />,
           description: "We are determined to make a positive contribution to the communities in which we operate. Through our Edge Impact label and initiatives, such as Edge Cares (mid-2025) and the Edge Horizon Foundation (2026), we support charities and projects that create impact both locally and globally.",
           measures: "Measures: Diversification across the largest and safest exchanges."
         },
         {
           title: "Innovation",
-          icon: <Rocket size={32} className='text-[#192227]' />,
+          icon: <Rocket size={32} className='text-[#000C0C]' />,
           description: "We embrace innovation as a means to develop sustainable solutions and enhance our impact. By utilizing advanced technologies and methods, we improve our processes and the services we provide to our clients.",
           measures: "Measures: Diversification across the largest and safest exchanges."
         },
         {
           title: "Ethical Practices",
-          icon: <Shield size={32} className='text-[#192227]' />,
+          icon: <Shield size={32} className='text-[#000C0C]' />,
           description: "We conduct our operations with integrity and respect the rights of everyone affected by our activities. We promote fair working conditions and diversity within our organization and in our business relationships",
           measures: "Measures: Diversification across the largest and safest exchanges."
         }
@@ -47,31 +47,31 @@ const OurCoreValues = () => {
       values: [
         {
           title: "Duurzaamheid",
-          icon: <Recycle size={32} className='text-[#192227]' />,
+          icon: <Recycle size={32} className='text-[#000C0C]' />,
           description: "Wij integreren duurzame praktijken in al onze processen en streven ernaar onze ecologische voetafdruk te minimaliseren. We investeren in projecten en initiatieven die bijdragen aan een groenere toekomst.",
           measures: "Maatregelen: Handelen in de meest liquide markten (S&P 500). Handelen via verschillende beurzen en brokers."
         },
         {
           title: "Transparantie",
-          icon: <BookOpen size={32} className='text-[#192227]' />,
+          icon: <BookOpen size={32} className='text-[#000C0C]' />,
           description: "Wij geloven in open communicatie over onze activiteiten en impact. We rapporteren regelmatig over onze voortgang en de resultaten van onze MVO-initiatieven, zodat onze stakeholders goed geïnformeerd zijn.",
           measures: "Maatregelen: Geautomatiseerde risicobeheerscenario's, 24/7 menselijke monitoring, back-ups, testperiodes."
         },
         {
           title: "Sociale Impact",
-          icon: <Users size={32} className='text-[#192227]' />,
+          icon: <Users size={32} className='text-[#000C0C]' />,
           description: "We zijn vastbesloten om een positieve bijdrage te leveren aan de gemeenschappen waarin we actief zijn. Door middel van onze Edge Impact-label en -initiatieven, zoals Edge Cares (mid-2025) en de Edge Horizon Foundation (2026), ondersteunen we goede doelen en projecten die zowel lokaal als wereldwijd impact maken.",
           measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
         },
         {
           title: "Innovatie",
-          icon: <Rocket size={32} className='text-[#192227]' />,
+          icon: <Rocket size={32} className='text-[#000C0C]' />,
           description: "Wij omarmen innovatie als een middel om duurzame oplossingen te ontwikkelen en onze impact te vergroten. Door gebruik te maken van geavanceerde technologieën en methoden, verbeteren we onze processen en de diensten die we aan onze klanten aanbieden.",
           measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
         },
         {
           title: "Ethisch Ondernemen",
-          icon: <Shield size={32} className='text-[#192227]' />,
+          icon: <Shield size={32} className='text-[#000C0C]' />,
           description: "Wij handelen met integriteit en respecteren de rechten van iedereen die door onze activiteiten wordt beïnvloed. We stimuleren eerlijke arbeidsomstandigheden en diversiteit binnen onze organisatie en in onze zakelijke relaties.",
           measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
         }
@@ -137,7 +137,7 @@ const OurCoreValues = () => {
               <div className="mb-4">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-semibold text-[#192227] mb-3">
+              <h3 className="text-xl font-semibold text-[#000C0C] mb-3">
                 {value.title}
               </h3>
               <p className="text-[#1A1A1A] mb-4">

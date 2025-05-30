@@ -13,6 +13,8 @@ import {
 import Contact from "@/component/landingPage/Contact";
 import Footer from "@/common/Footer";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+import { theTeamYouCanTrustData, theTeamYouCanTrustDataDutch } from "@/constant/data";
+
 
 const Teams = () => {
 
@@ -28,14 +30,20 @@ const Teams = () => {
           margin: "0 auto",
           width: "100%",
         }}
+        
       >
-        <TeamMemberCards
+        {/* <TeamMemberCards
   teamMembers={language === 'nl' ? teamMembersDutch : teamMembers}
+  department={language === 'nl' ? 'Management' : "Management"}
+/> */}
+
+        <TeamMemberCards
+  teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData}
   department={language === 'nl' ? 'Management' : "Management"}
 />
 
 <TeamMemberCards
-  teamMembers={language === 'nl' ? advisoryBoardDutch : advisoryBoard}
+  teamMembers={language === 'nl' ? teamMembersDutch : teamMembers}
   department={language === 'nl' ? 'Raad van Advies' : 'Advisory Board'}
 />
 
@@ -44,10 +52,10 @@ const Teams = () => {
   department={language === 'nl' ? 'Support en Commercieel' : 'Support and Commercial'}
 />
 
-<TeamMemberCards
+{/* <TeamMemberCards
   teamMembers={language === 'nl' ? edgeNextTeamDutch : edgeNextTeam}
   department="EdgeNext"
-/>
+/> */}
 
         <Contact />
         <Footer />

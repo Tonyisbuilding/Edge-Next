@@ -81,7 +81,7 @@ const EdgeConnectHero = () => {
           </motion.div>
 
           <motion.button
-            className="px-6 py-3 bg-[#206A7C] text-white rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            className="px-6 py-3 bg-[#008487] text-white rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
             variants={buttonVariants}
             initial="initial"
             whileHover="hover"

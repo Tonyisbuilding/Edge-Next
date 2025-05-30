@@ -59,7 +59,7 @@
   
   .nav-item a {
     text-decoration: none;
-    color: #192227;
+    color: #000C0C;
     font-weight: 600;
     transition: color 0.3s;
     display: flex;
@@ -67,7 +67,7 @@
   }
   
   .nav-item a:hover {
-    color: #206A7C;
+    color: #008487;
   }
   
   .dropdown-menu {
@@ -96,14 +96,14 @@
   }
   
   .dropdown-menu li a {
-    color: #192227;
+    color: #000C0C;
     font-weight: 500;
     display: block;
     list-style: none;
   }
   
   .dropdown-menu li a:hover {
-    color: #206A7C;
+    color: #008487;
   }
   
   .nav-actions {
@@ -126,7 +126,7 @@
   
   .phone svg {
     margin-right: 5px;
-    color: #206A7C;
+    color: #008487;
   }
   
   .phone span {
@@ -134,7 +134,7 @@
   }
   
   .nav-cta {
-    background-color: #192227;
+    background-color: #000C0C;
     color: #fff;
     border: none;
     border-radius: 6px;

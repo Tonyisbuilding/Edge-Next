@@ -29,7 +29,7 @@ const RiskCard = ({ title, description, measures, icon, index }: RiskCardType) =
         {icon}
       </motion.div>
 
-      <h3 className="font-bold mb-3 md:text-[21.89px] text-[#192227] text-[18.71px] inter">{title}</h3>
+      <h3 className="font-bold mb-3 md:text-[21.89px] text-[#000C0C] text-[18.71px] inter">{title}</h3>
 
       <p className="font-normal mb-4 text-[14.92px] md:text-[17.45px] text-[#1A1A1A]">{description}</p>
 

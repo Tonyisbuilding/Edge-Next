@@ -39,13 +39,7 @@ const Navbar = () => {
       aboutUs: "About Us",
       about: "About",
       team: "Team",
-      edgeFund: "EdgeFund",
-      edgeImpact: "Edge Impact",
-      // edgeConnect: "Edge Connect",
-      edgeCares: "Edge Cares",
-      edgeHorizonFoundation: "Edge Horizon Foundation",
-      edgeCapitalCSR: "Edge Capital CSR",
-      institutional: "Institutional",
+      edgeFund: "EdgeNext Fund",
       company: "Company",
       contact: "Contact",
       media: "Media",
@@ -60,12 +54,7 @@ const Navbar = () => {
       aboutUs: "Over Ons",
       about: "Over",
       team: "Team",
-      edgeFund: "EdgeFund",
-      edgeImpact: "Edge Impact",
-      // edgeConnect: "Edge Connect",
-      edgeCares: "Edge Cares",
-      edgeHorizonFoundation: "Edge Horizon Stichting",
-      edgeCapitalCSR: "Edge Capital MVO",
+      edgeFund: "EdgeNext Fund",
       institutional: "Institutioneel",
       company: "Bedrijf",
       contact: "Contact",
@@ -118,7 +107,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
         <Link to="/" className="flex-shrink-0">
           <img
-            src={images.landingPage.EdgeCapitalLogoSVG}
+            src={images.landingPage.Edgenext}
             alt="Edge Capital"
             className="w-[202px] h-[54px] "
           />
@@ -150,7 +139,7 @@ const Navbar = () => {
               <li className="py-4 border-b border-gray-100">
                 <Link
                   to="/"
-                  className="text-[#192227] font-semibold block"
+                  className="text-[#000C0C] font-semibold block"
                   onClick={toggleNav}
                 >
                   {t("home")}
@@ -159,7 +148,7 @@ const Navbar = () => {
               <li className="py-4 border-b border-gray-100">
                 <a
                   href="#"
-                  className="text-[#192227] font-semibold flex justify-between items-center w-full"
+                  className="text-[#000C0C] font-semibold flex justify-between items-center w-full"
                   onClick={(e) => toggleDropdown(1, e)}
                 >
                   {t("aboutUs")}
@@ -173,7 +162,7 @@ const Navbar = () => {
                     <li className="py-2">
                       <Link
                         to="/about"
-                        className="block text-[#192227]"
+                        className="block text-[#000C0C]"
                         onClick={toggleNav}
                       >
                         {t("about")}
@@ -182,7 +171,7 @@ const Navbar = () => {
                     <li className="py-2">
                       <Link
                         to="/team"
-                        className="block text-[#192227]"
+                        className="block text-[#000C0C]"
                         onClick={toggleNav}
                       >
                         {t("team")}
@@ -194,19 +183,20 @@ const Navbar = () => {
               <li className="py-4 border-b border-gray-100">
                 <Link
                   to="/edge-fund"
-                  className="text-[#192227] font-semibold block"
+                  className="text-[#000C0C] font-semibold block"
                   onClick={toggleNav}
                 >
                   {t("edgeFund")}
                 </Link>
               </li>
+            
               <li className="py-4 border-b border-gray-100">
                 <a
                   href="#"
-                  className="text-[#192227] font-semibold flex justify-between items-center w-full"
+                  className="text-[#000C0C] font-semibold flex justify-between items-center w-full"
                   onClick={(e) => toggleDropdown(2, e)}
                 >
-                  {t("edgeImpact")}
+                  {t("company")}
                   <FontAwesomeIcon
                     icon={activeDropdowns[2] ? faChevronUp : faChevronDown}
                     className="text-xs"
@@ -214,90 +204,19 @@ const Navbar = () => {
                 </a>
                 {activeDropdowns[2] && (
                   <ul className="ml-4 mt-2">
-                    {/* <li className="py-2">
-                      <Link
-                        to="/edge-connect"
-                        className="block text-[#192227]"
-                        onClick={toggleNav}
-                      >
-                        {t("edgeConnect")}
-                      </Link>
-                    </li> */}
-                    <li className="py-2">
-                      <Link
-                        to="/edge-cares"
-                        className="block text-[#192227]"
-                        onClick={toggleNav}
-                      >
-                        {t("edgeCares")}
-                      </Link>
-                    </li>
-                    <li className="py-2">
-                      <Link
-                        to="/edge-foundation"
-                        className="block text-[#192227]"
-                        onClick={toggleNav}
-                      >
-                        {t("edgeHorizonFoundation")}
-                      </Link>
-                    </li>
-                    <li className="py-2">
-                      <Link
-                        to="/edge-capitla-csr"
-                        className="block text-[#192227]"
-                        onClick={toggleNav}
-                      >
-                        {t("edgeCapitalCSR")}
-                      </Link>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li className="py-4 border-b border-gray-100">
-                <Link
-                  to="/institutional"
-                  className="text-[#192227] font-semibold block"
-                  onClick={toggleNav}
-                >
-                  {t("institutional")}
-                </Link>
-              </li>
-              <li className="py-4 border-b border-gray-100">
-                <a
-                  href="#"
-                  className="text-[#192227] font-semibold flex justify-between items-center w-full"
-                  onClick={(e) => toggleDropdown(3, e)}
-                >
-                  {t("company")}
-                  <FontAwesomeIcon
-                    icon={activeDropdowns[3] ? faChevronUp : faChevronDown}
-                    className="text-xs"
-                  />
-                </a>
-                {activeDropdowns[3] && (
-                  <ul className="ml-4 mt-2">
                     <li className="py-2">
                       <Link
                         to="/contact"
-                        className="block text-[#192227]"
+                        className="block text-[#000C0C]"
                         onClick={toggleNav}
                       >
                         {t("contact")}
                       </Link>
                     </li>
-                    {/* <li className="py-2">
-                      <Link
-                        to="/media"
-                        className="block text-[#192227]"
-                        onClick={toggleNav}
-                      >
-                        {t("media")}
-                      </Link>
-                    </li> */}
                     <li className="py-2">
                       <Link
                         to="/documents"
-                        className="block text-[#192227]"
+                        className="block text-[#000C0C]"
                         onClick={toggleNav}
                       >
                         {t("documents")}
@@ -306,7 +225,7 @@ const Navbar = () => {
                     <li className="py-2">
                       <Link
                         to="/careers"
-                        className="block text-[#192227]"
+                        className="block text-[#000C0C]"
                         onClick={toggleNav}
                       >
                         {t("careers")}
@@ -349,7 +268,7 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-              <button className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold w-full">
+              <button className="bg-[#000C0C] text-white rounded-md px-6 py-3 font-semibold w-full">
                 <Link to="/contact">{t("contactUs")}</Link>
               </button>
             </div>
@@ -361,7 +280,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/"
-              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
+              className="text-[#000C0C] font-semibold hover:text-[#008487] transition-colors"
             >
               {t("home")}
             </Link>
@@ -369,7 +288,7 @@ const Navbar = () => {
           <li className="relative group">
             <a
               href="#"
-              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
+              className="text-[#000C0C] font-semibold hover:text-[#008487] transition-colors flex items-center"
             >
               {t("aboutUs")}
               <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
@@ -378,7 +297,7 @@ const Navbar = () => {
               <li className="p-3">
                 <Link
                   to="/about"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                  className="block text-[#000C0C] font-medium hover:text-[#008487]"
                 >
                   {t("about")}
                 </Link>
@@ -386,7 +305,7 @@ const Navbar = () => {
               <li className="p-3">
                 <Link
                   to="/team"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                  className="block text-[#000C0C] font-medium hover:text-[#008487]"
                 >
                   {t("team")}
                 </Link>
@@ -396,73 +315,18 @@ const Navbar = () => {
           <li>
             <Link
               to="/edge-fund"
-              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
+              className="text-[#000C0C] font-semibold hover:text-[#008487] transition-colors"
             >
               {t("edgeFund")}
             </Link>
           </li>
 
-          <li>
-            <Link
-              to="/institutional"
-              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors"
-            >
-              {t("institutional")}
-            </Link>
-          </li>
+         
           
           <li className="relative group">
             <a
               href="#"
-              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
-            >
-              {t("edgeImpact")}
-              <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
-            </a>
-            <ul
-              className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0
-             invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all"
-            >
-              {/* <li className="p-3">
-                <Link
-                  to="/edge-connect"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
-                >
-                  {t("edgeConnect")}
-                </Link>
-              </li> */}
-              <li className="p-3">
-                <Link
-                  to="/edge-cares"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
-                >
-                  {t("edgeCares")}
-                </Link>
-              </li>
-              <li className="p-3">
-                <Link
-                  to="/edge-foundation"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
-                >
-                  {t("edgeHorizonFoundation")}
-                </Link>
-              </li>
-              <li className="p-3">
-                <Link
-                  to="/edge-capitla-csr"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
-                >
-                  {t("edgeCapitalCSR")}
-                </Link>
-              </li>
-            </ul>
-          </li>
-
-         
-          <li className="relative group">
-            <a
-              href="#"
-              className="text-[#192227] font-semibold hover:text-[#206A7C] transition-colors flex items-center"
+              className="text-[#000C0C] font-semibold hover:text-[#008487] transition-colors flex items-center"
             >
               {t("company")}
               <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
@@ -471,23 +335,15 @@ const Navbar = () => {
               <li className="p-3">
                 <Link
                   to="/contact"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                  className="block text-[#000C0C] font-medium hover:text-[#008487]"
                 >
                   {t("contact")}
                 </Link>
               </li>
-              {/* <li className="p-3">
-                <Link
-                  to="/media"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
-                >
-                  {t("media")}
-                </Link>
-              </li> */}
               <li className="p-3">
                 <Link
                   to="/documents"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                  className="block text-[#000C0C] font-medium hover:text-[#008487]"
                 >
                   {t("documents")}
                 </Link>
@@ -495,7 +351,7 @@ const Navbar = () => {
               <li className="p-3">
                 <Link
                   to="/careers"
-                  className="block text-[#192227] font-medium hover:text-[#206A7C]"
+                  className="block text-[#000C0C] font-medium hover:text-[#008487]"
                 >
                   {t("careers")}
                 </Link>
@@ -542,7 +398,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="bg-[#192227] text-white rounded-4xl px-6 py-3 font-semibold
+            className="bg-[#000C0C] text-white rounded-4xl px-6 py-3 font-semibold
            hover:bg-[#0e1417] transition-colors relative right-[1rem] w-auto"
           >
             <Link to="/contact">{t("contactUs")}</Link>

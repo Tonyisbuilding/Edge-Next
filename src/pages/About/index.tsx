@@ -7,6 +7,8 @@ import React from "react";
 import Footer from "@/common/Footer";
 import Contact from "@/component/landingPage/Contact";
 import { teamMembers, teamMembersDutch } from "@/constant/data";
+import { theTeamYouCanTrustData, theTeamYouCanTrustDataDutch } from "@/constant/data";
+
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const About = () => {
@@ -25,7 +27,8 @@ const About = () => {
         <EdgeCapitalHero />
         <WhatSetsUsApart />
         <CompanyTimeline />
-        <TeamMemberCards teamMembers={language  === 'nl' ? teamMembersDutch : teamMembers} />
+        <TeamMemberCards
+          teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData} />
         <Contact />
         <Footer />
       </div>

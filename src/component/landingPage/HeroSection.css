@@ -17,9 +17,9 @@
 
 .hero-title {
   font-weight: 700; /* or something similar */
-    font-size: 60px;
+    font-size: 50px;
     line-height: 1.1;
-    color: #192227;
+    color: #000C0C;
     margin-bottom: 20px;
 }
 
@@ -63,7 +63,7 @@
 .feature-text h3 {
     font-weight: 600;
     margin-bottom: 5px;
-    color: #192227;
+    color: #000C0C;
 }
 
 .bold-text {
@@ -90,7 +90,7 @@
 }
 
 .btn-primary {
-    background-color: #206A7C;
+    background-color: #008487;
     color: #fff;
     border: none;
     border-radius: 9999px; /* To match the fully-rounded style */
@@ -111,8 +111,8 @@
 
 .btn-secondary {
     background-color: transparent;
-    color: #206A7C;
-    border: 2px solid #206A7C;
+    color: #008487;
+    border: 2px solid #008487;
 }
 
 .btn-secondary:hover {
@@ -146,7 +146,7 @@
     }
 
     .hero-title {
-        font-size: 42px;
+        font-size: 32px !important;
     }
 
     .hero-container {
