@@ -515,7 +515,7 @@ const Navbar = () => {
               name="selectLanguage"
               id="selectLanguage"
               className="bg-[#D4DFDF40] border-2 border-white h-auto w-auto py-[.69rem]
-              rounded-lg px-3 outline-none text-black appearance-none pr-10 lg:text-[18px] font-bold"
+              rounded-2xl px-3 outline-none text-black appearance-none pr-10 lg:text-[18px] font-bold"
               value={language}
             >
               <option value="en" className="text-black">
@@ -542,7 +542,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="bg-[#192227] text-white rounded-md px-6 py-3 font-semibold
+            className="bg-[#192227] text-white rounded-4xl px-6 py-3 font-semibold
            hover:bg-[#0e1417] transition-colors relative right-[1rem] w-auto"
           >
             <Link to="/contact">{t("contactUs")}</Link>

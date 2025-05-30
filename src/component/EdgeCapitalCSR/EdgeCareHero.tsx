@@ -60,7 +60,7 @@ const EdgeCareHero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button
-              className="px-8 py-3 bg-teal-600 text-white rounded-md text-sm md:text-base font-medium transition duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50"
+              className="px-8 py-3 bg-teal-600 text-white rounded-4xl text-sm md:text-base font-medium transition duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50"
               whileHover={{
                 scale: 1.05,
                 backgroundColor: "#0E7490",

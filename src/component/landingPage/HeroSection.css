@@ -16,8 +16,8 @@
 }
 
 .hero-title {
-    font-weight: 900;
-    font-size: 55px;
+  font-weight: 700; /* or something similar */
+    font-size: 60px;
     line-height: 1.1;
     color: #192227;
     margin-bottom: 20px;
@@ -67,7 +67,7 @@
 }
 
 .bold-text {
-    font-weight: 600;
+    font-weight: 900;
     color: #1A1A1A;
 }
 

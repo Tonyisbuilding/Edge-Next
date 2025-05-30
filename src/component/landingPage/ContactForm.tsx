@@ -7,7 +7,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 import axiosInstance from "@/Api/AxiosInstance";
 import axios from "axios";
 
-// Stuur ons je vraag
+// Stuur onsU vraag
 const ContactForm = () => {
   const { language } = useChangeLanguageContext();
   const [formData, setFormData] = useState({
@@ -98,7 +98,7 @@ const ContactForm = () => {
     >
       <ToastContainer />
       <div
-        className="lg:w-full max-w-md bg-white rounded-[1rem] shadow-md p-8 border-black 
+        className="lg:w-full max-w-md bg-white rounded-[1rem] shadow-md p-8 border-none 
       border-2 2xl:max-w-[500px]"
       >
         <h2 className="text-2xl font-bold text-left mb-6 text-black">
@@ -120,10 +120,9 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={(e) => handleChange(e)}
                 placeholder={
-                  language === "nl" ? "Vul u naam in" : "Enter your name"
+                  language === "nl" ? "Vul uw naam in" : "Enter your name"
                 }
-                className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none 
-                focus:ring-2 focus:ring-blue-500 text-black bg-[#F0F0F0]"
+                className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
                 required
               />
             </div>
@@ -159,8 +158,8 @@ const ContactForm = () => {
               placeholder={
                 language === "nl" ? "Vul uw e-mailadres in" : "Enter your email"
               }
-              className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2
-               focus:ring-blue-500 text-black bg-[#F0F0F0]"
+    className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
+
               required
             />
           </div>
@@ -182,8 +181,7 @@ const ContactForm = () => {
                   ? "Vul uw mobiele nummer in"
                   : "Enter your number"
               }
-              className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2
-               focus:ring-blue-500 text-black bg-[#F0F0F0]"
+              className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
               required
             />
           </div>
@@ -206,8 +204,7 @@ const ContactForm = () => {
                   : "Enter your message"
               }
               rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
-               focus:ring-blue-500 text-black bg-[#F0F0F0]"
+             className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
               required
             ></textarea>
           </div>

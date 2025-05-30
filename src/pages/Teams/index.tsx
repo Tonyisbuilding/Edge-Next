@@ -7,6 +7,8 @@ import {
   advisoryBoardDutch,
   SupportAndCommercial,
   SupportAndCommercialDutch,
+    edgeNextTeam,
+  edgeNextTeamDutch,
 } from "@/constant/data";
 import Contact from "@/component/landingPage/Contact";
 import Footer from "@/common/Footer";
@@ -27,15 +29,26 @@ const Teams = () => {
           width: "100%",
         }}
       >
-        <TeamMemberCards teamMembers={language === 'nl' ? teamMembersDutch : teamMembers} department={language === 'nl' ? 'Beheer' : "Management"} />
         <TeamMemberCards
-          teamMembers={language === 'nl' ? advisoryBoardDutch : advisoryBoard}
-          department={language === 'nl' ? 'adviesraad' : 'Advisory Board'}
-        />
-        <TeamMemberCards
-          teamMembers={language === 'nl' ? SupportAndCommercialDutch : SupportAndCommercial}
-          department={language === 'nl' ? 'Ondersteunend en commercieel' : 'Support and commercial'}
-        />
+  teamMembers={language === 'nl' ? teamMembersDutch : teamMembers}
+  department={language === 'nl' ? 'Management' : "Management"}
+/>
+
+<TeamMemberCards
+  teamMembers={language === 'nl' ? advisoryBoardDutch : advisoryBoard}
+  department={language === 'nl' ? 'Raad van Advies' : 'Advisory Board'}
+/>
+
+<TeamMemberCards
+  teamMembers={language === 'nl' ? SupportAndCommercialDutch : SupportAndCommercial}
+  department={language === 'nl' ? 'Support en Commercieel' : 'Support and Commercial'}
+/>
+
+<TeamMemberCards
+  teamMembers={language === 'nl' ? edgeNextTeamDutch : edgeNextTeam}
+  department="EdgeNext"
+/>
+
         <Contact />
         <Footer />
       </div>

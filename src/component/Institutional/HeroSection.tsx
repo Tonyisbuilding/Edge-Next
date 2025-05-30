@@ -84,7 +84,7 @@ const HeroSection = () => {
 
                 <motion.button
                   className="bg-[#192227] hover:bg-[#1922279d] text-white font-medium 
-                  py-2 px-6 rounded-md transition duration-300 relative z-10"
+                  py-2 px-6 rounded-4xl transition duration-300 relative z-10"
                   variants={fadeIn}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

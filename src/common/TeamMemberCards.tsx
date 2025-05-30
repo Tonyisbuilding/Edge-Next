@@ -32,8 +32,8 @@ const TeamCard = ({
       className="relative w-full h-[22.211rem] md:h-[30.375rem] cursor-pointer"
       onClick={handleFlip}
       onMouseEnter={() => setIsFlipped(true)}
-        onMouseLeave={() => setIsFlipped(false)}
-      style={{ perspective: '1000px'}}
+      onMouseLeave={() => setIsFlipped(false)}
+      style={{ perspective: '1000px' }}
     >
       <motion.div
         className="absolute w-full h-full rounded-tr-[1rem] rounded-bl-[1rem] overflow-hidden"
@@ -60,7 +60,7 @@ const TeamCard = ({
       </motion.div>
 
       <motion.div
-        className={` bg-white w-full absolute bottom-[0rem] md:bottom-[-2rem] rounded-bl-[1rem] p-5
+        className={` bg-white w-full absolute bottom-[0rem] md:bottom-[0rem] rounded-bl-[1rem] p-5
        shadow-lg shadow-[#9e9d9d54] text-[#192227] flex items-center justify-between
         ${pathname.slice(1) !== "team" ? "hidden" : "block"}`}
         initial={false}
@@ -78,7 +78,7 @@ const TeamCard = ({
         </div>
         <button
           className="flex items-center hover:cursor-pointer"
-          onClick={() => window.open(`${linkedin}`,'_blank')}
+          onClick={() => window.open(`${linkedin}`, '_blank')}
         >
           <h1 className="inter text-[14px] md:text-[14px] font-medium text-[#206A7C]">
             About
@@ -100,24 +100,23 @@ const TeamCard = ({
             <p className="text-gray-300 mb-4">{position}</p>
             <p className="text-sm">{bio}</p>
           </div>
-          <div>
-            <a
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-blue-400 hover:text-blue-300"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+          {linkedin && (
+            <div>
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-blue-400 hover:text-blue-300"
+                onClick={(e) => e.stopPropagation()}
               >
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-              LinkedIn
-            </a>
-          </div>
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          )}
+
         </div>
       </motion.div>
     </div>
@@ -143,21 +142,21 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
         <div>
           <div>
             <img
-              src={images.landingPage.dots_one}
+              src={images.landingPage.dots_updated}
               alt=""
               className="absolute left-0 top-[2rem]"
             />
           </div>
           <div>
             <img
-              src={images.landingPage.dots_one}
+              src={images.landingPage.dots_updated}
               alt=""
               className="absolute left-0 top-[18rem] lg:block hidden"
             />
           </div>
           <div>
             <img
-              src={images.landingPage.dots_one}
+              src={images.landingPage.dots_updated}
               alt=""
               className="absolute right-0 top-[2rem] lg:block hidden"
             />
@@ -165,24 +164,31 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
         </div>
         {/* ........ */}
         <div
-          className={`w-full max-w-6xl mx-auto px-4  ${
-            pathname.slice(1) === "team" ? "py-0 md:py-5" : "py-12"
-          }`}
+          className={`w-full max-w-6xl mx-auto px-4  ${pathname.slice(1) === "team" ? "py-0 md:py-5" : "py-12"
+            }`}
         >
           <div
             className={`text-[27.1px] md:[60.23px] inter font-semibold text-left mb-3 text-black
           ${pathname.slice(1) !== "team" ? "hidden" : "block"} inter`}
           >
-            <h1 className=" font-semibold md:text-[60.23px] text-[35.05px]">
-              {department}
-            </h1>
-            <div className=" bg-[#F9A600] h-[2px] w-[5rem]"></div>
+            <div className="relative inline-block">
+              <h1 className="font-semibold md:text-[60.23px] text-[35.05px]">
+                {department}
+              </h1>
+              <img
+                src={images.landingPage.Brush}
+                alt="Underline brush"
+                className="absolute left-0 bottom-0 w-auto h-[8px] pointer-events-none"
+              />
+            </div>
+
+            {/* <div className=" bg-[#F9A600] h-[2px] w-[5rem]"></div> */}
           </div>
           <h2
             className={`text-3xl md:text-5xl font-bold text-center mb-12 text-black
              ${pathname.slice(1) === "team" ? "hidden" : "block"}`}
           >
-            { language === 'nl' ? 'Ons Management team' : 'Our Management Team' }
+            {language === 'nl' ? 'Ons Management team' : 'Our Management Team'}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -192,19 +198,18 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
           </div>
 
           <div
-            className={`flex justify-center mt-10 ${
-              pathname.slice(1) === "team" ? "hidden" : "block"
-            }`}
+            className={`flex justify-center mt-10 ${pathname.slice(1) === "team" ? "hidden" : "block"
+              }`}
           >
-           <button
-  className="bg-[#206A7C] text-white font-medium py-[10px] px-[20px] rounded-full 
+            <button
+              className="bg-[#206A7C] text-white font-medium py-[10px] px-[20px] rounded-full 
   shadow-[0_4px_10px_rgba(32,106,124,0.3)] hover:shadow-[0_8px_20px_rgba(32,106,124,0.45)] 
   hover:-translate-y-[2px] transition-all duration-200"
->
-  <Link to="/team">
-    {language === 'nl' ? 'Leer ons gehele team kennen' : 'Meet our entire team'}
-  </Link>
-</button>
+            >
+              <Link to="/team">
+                {language === 'nl' ? 'Leer ons gehele team kennen' : 'Meet our entire team'}
+              </Link>
+            </button>
 
           </div>
         </div>

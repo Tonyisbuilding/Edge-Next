@@ -101,7 +101,7 @@ const TradingApproachSection = () => {
         {
           icon: Laptop,
           title: "Multi-Broker Integratie",
-          description: "Onze technologie integreert naadloos met toonaangevende brokers zoals Interactive Brokers, TastyTrade, Exante en Swissquote. Via API-gestuurd handelen kunnen onze strategieën worden geïntegreerd in bestaande fondsstructuren — voor een efficiënte, flexibele uitvoering.",
+          description: "Onze technologie integreert naadloos met toonaangevende brokers zoals Interactive Brokers, TastyTrade, Exante en Swissquote. Via API kunnen onze strategieën worden geïntegreerd in bestaande fondsstructuren — voor een efficiënte, flexibele uitvoering.",
         },
         {
           icon: PieChart,

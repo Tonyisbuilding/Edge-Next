@@ -1,6 +1,6 @@
 import "./common.css";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
-// import images from "@/constant/images";
+import images from "@/constant/images";
 
 const Footer = () => {
   const { language } = useChangeLanguageContext();
@@ -11,11 +11,13 @@ const Footer = () => {
         {/* Left Section - Brand */}
         <div className="footer-brand">
           <div className="brand-content">
-            <h2>Edge Capital</h2>
+            <img
+              src={images.landingPage.New_Cap}
+              alt="Edge Capital"
+              className="w-[202px] h-[auto]"
+            />
             <p>
-              {language === "nl"
-                ? "Beleggen met een voorsprong"
-                : "Investing with an edge"}
+
             </p>
           </div>
 
@@ -96,34 +98,14 @@ const Footer = () => {
               className="social-icon"
             >
               <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="linkedin"
+                className="w-6 h-6 fill-current text-white"
               >
-                <path
-                  d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6 9H2V21H6V9Z"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                <path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z" />
               </svg>
+
               LinkedIn
             </a>
             <a

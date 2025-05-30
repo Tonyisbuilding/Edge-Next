@@ -331,29 +331,19 @@ const ContactInformation = () => {
 
           <motion.div className="flex space-x-4 mt-12" variants={itemVariants}>
             <a
-              href="#"
+              href="https://www.facebook.com/tradealot/?locale=nl_NL"
               className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/edgecapital1/"
               className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
             >
               <FaLinkedinIn />
             </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
-            >
-              <FaInstagram />
-            </a>
+           
+           
           </motion.div>
         </motion.div>
 

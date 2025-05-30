@@ -40,8 +40,14 @@ const StrategySection = () => {
   return (
     <div className="bg-[#EEF4F5C2] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">{t.ourStrategy}</h2>
-        <div className="h-1 w-36 bg-yellow-400 mb-8"></div>
+       <div className="relative inline-block mb-8">
+  <h2 className="text-5xl font-bold text-gray-900 z-10 relative">{t.ourStrategy}</h2>
+  <img
+    src={images.landingPage.Brush}
+    alt="Brush underline"
+    className="absolute left-0 bottom-[-1px] w-auto h-[8px] z-0 pointer-events-none"
+  />
+</div>
 
         {/* Desktop layout */}
         <div className="hidden lg:grid grid-cols-2">

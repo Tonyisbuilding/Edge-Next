@@ -353,7 +353,7 @@ const Feature = () => {
                                 {item.hasLink && (
                                   <button className="text-sm text-primary-600 font-medium hover:text-primary-800
                                   mt-1 underline focus:outline-none text-black hover:cursor-pointer">
-                                    <Link to='/documents'>
+                                    <Link to='/participate'>
                                       {itemTranslation.linkText}
                                     </Link>
                                   </button>

@@ -34,8 +34,8 @@ const FundCostStructure = () => {
     nl: {
       fundCostStructure: "Kostenstructuur van het Fonds",
       minimumInvestment: "Minimale deelname",
-      requestInformation: "Informatie aanvragen",
-      bookConsultation: "Consultatie boeken",
+      requestInformation: "Schrijf u nu in!",
+      bookConsultation: "Schrijf u nu in!",
       learnMore: "Meer informatie",
       close: "Sluiten",
       highWatermarkTitle: "Toelichting High Watermark-principe",
@@ -54,7 +54,7 @@ const FundCostStructure = () => {
         stars: 1,
         description: "Perfect for individual investors and small family offices.",
         investment: "€100K-€250K",
-        buttonText: "Request Information",
+        buttonText: "Sign up now!",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
           "1.5% Management Fee (per year)",
@@ -70,7 +70,7 @@ const FundCostStructure = () => {
         description:
           "Ideal for established investors and medium-sized institutions.",
         investment: "€250K-€500K",
-        buttonText: "Book a consultation",
+        buttonText: "Sign up now!",
         buttonClass:
           "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
         features: [
@@ -88,7 +88,7 @@ const FundCostStructure = () => {
         description:
           "Built for institutional investors and large family offices.",
         investment: "€ 500K - en hoger",
-        buttonText: "Request Information",
+        buttonText: "Sign up now!",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
           "Everything in Class II +",
@@ -106,7 +106,7 @@ const FundCostStructure = () => {
         stars: 1,
         description: "Perfect voor individuele beleggers en kleine family offices.",
         investment: "€100K-€250K",
-        buttonText: "Informatie aanvragen",
+        buttonText: "Schrijf u nu in!",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
           "1,5% Beheervergoeding (per jaar)",
@@ -122,7 +122,7 @@ const FundCostStructure = () => {
         description:
           "Ideaal voor gevestigde beleggers en middelgrote instellingen.",
         investment: "€250K-€500K",
-        buttonText: "Consultatie boeken",
+        buttonText: "Schrijf u nu in!",
         buttonClass:
           "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
         features: [
@@ -139,7 +139,7 @@ const FundCostStructure = () => {
         description:
           "Ontworpen voor institutionele beleggers en grote family offices.",
         investment: "€ 500K - en hoger",
-        buttonText: "Informatie aanvragen",
+        buttonText: "Schrijf u nu in!",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
           "1% Beheervergoeding (per jaar)",

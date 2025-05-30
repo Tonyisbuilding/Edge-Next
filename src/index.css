@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* h1 {
+  font-weight: bolder !important;
+} */
+
+
 
 :root {
   

@@ -22,13 +22,13 @@ const ContactInfo = () => {
           </h1>
           <p className=" pt-[1rem] text-[#3D3D3D] text-[16.59px] font-normal">
             {language === "nl"
-              ? `Neem contact met ons op en schrijf je in voor onze nieuwsbrief voor vragen, ondersteuning of feedback. We staan klaar om je bij elke stap te helpen.`
+              ? `Neem contact met ons op en schrijf U in voor onze nieuwsbrief voor vragen, ondersteuning of feedback. We staan klaar om U bij elke stap te helpen.`
               : `Contact us and suscribe to our news letter for inquiries, support,
             or feedback. We're here to assist you every step of the way.`}
           </p>
         </div>
         <div className="">
-          <ContactInput
+          <ContactInput 
             placeholder="Info@edge-capital.nl"
             CTAButton={ language === 'nl'? 'Mail ons' : 'Mail Us'}
             icon={images.landingPage.email}

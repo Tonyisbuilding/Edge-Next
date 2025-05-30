@@ -32,7 +32,7 @@ const FeatureCard = ({
     >
       {/* Front Card */}
       <motion.div
-        className="absolute w-full max-h-[500px] h-full bg-[#206A7C] rounded-lg p-8 flex flex-col
+        className="absolute w-full max-h-[400px]  bg-[#206A7C] rounded-lg p-8 flex flex-col
            text-white overflow-hidden"
         initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
@@ -48,16 +48,19 @@ const FeatureCard = ({
       </motion.div>
 
       {/* Back Card */}
-      <motion.div
-        className="absolute w-full h-full bg-[#206A7C] rounded-lg p-8 
-          flex flex-col text-white overflow-hidden"
-        initial={false}
-        animate={{ rotateY: isFlipped ? 0 : -180 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-        style={{ backfaceVisibility: "hidden" }}
-      >
-        <p className="text-base absolute bottom-[20px]">{backText}</p>
-      </motion.div>
+     <motion.div
+  className="absolute w-full h-[400px] max-h-[400px] bg-[#206A7C] rounded-lg p-8 
+    text-white overflow-hidden"
+  initial={false}
+  animate={{ rotateY: isFlipped ? 0 : -180 }}
+  transition={{ duration: 0.6, ease: "easeInOut" }}
+  style={{ backfaceVisibility: "hidden" }}
+>
+  <div className="flex flex-col justify-end items-center text-left h-full">
+    <p className="text-base">{backText}</p>
+  </div>
+</motion.div>
+
     </div>
   );
 };
@@ -118,7 +121,7 @@ const WhatSetsUsApart = () => {
   const currentLanguageData = translations[language];
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-16 px-4 bg-[#EEF4F5">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           className="text-4xl font-bold text-center mb-12 text-gray-900"

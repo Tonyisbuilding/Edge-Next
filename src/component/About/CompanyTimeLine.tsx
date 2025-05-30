@@ -26,7 +26,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
   };
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-16 px-4 bg-[#EEF4F5]">
       <div className="max-w-5xl mx-auto text-center">
       <motion.h2
   className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"

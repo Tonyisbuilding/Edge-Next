@@ -63,29 +63,29 @@ const InvestmentPerformance = () => {
   const performanceData = [
     {
       participation: "€100,000",
-      percentage: "+0.32%",
+      percentage: " 2,77%",
       metrics: [
         { label: t.metrics.netReturn2024, value: "+18.47%" },
-        { label: t.metrics.netReturnSinceInception, value: "+116.99%" },
-        { label: t.metrics.averageAnnualReturn, value: "+22.62%" },
+        { label: t.metrics.netReturnSinceInception, value: "129,99%" },
+        { label: t.metrics.averageAnnualReturn, value: "22,62%" },
       ],
     },
     {
       participation: "€250,000",
-      percentage: "+0.33%",
+      percentage: "2,89%",
       metrics: [
         { label: t.metrics.netReturn2024, value: "+19.76%" },
-        { label: t.metrics.netReturnSinceInception, value: "+130.22%" },
-        { label: t.metrics.averageAnnualReturn, value: "+24.44%" },
+        { label: t.metrics.netReturnSinceInception, value: "144,34%" },
+        { label: t.metrics.averageAnnualReturn, value: "24,44%" },
       ],
     },
     {
       participation: "€500,000",
-      percentage: "+0.34%",
+      percentage: "2,93%",
       metrics: [
         { label: t.metrics.netReturn2024, value: "+21.28%" },
-        { label: t.metrics.netReturnSinceInception, value: "+144.80%" },
-        { label: t.metrics.averageAnnualReturn, value: "+26.37%" },
+        { label: t.metrics.netReturnSinceInception, value: "158,96%" },
+        { label: t.metrics.averageAnnualReturn, value: "26,37%" },
       ],
     },
   ];

@@ -41,17 +41,17 @@ const GetStartedSection = () => {
         {
           number: "1",
           title: "Verwijs nieuwe klanten",
-          content: "Deel je unieke verwijzingslink of neem contact op met je relatiemanager om nieuwe klanten te introduceren."
+          content: "DeelU unieke verwijzingslink of neem contact op metU relatiemanager om nieuwe klanten te introduceren."
         },
         {
           number: "2",
-          title: "Verdien je beloningen",
-          content: "Zodra je klanten actief blijven, ontvang je een beloning om in te wisselen."
+          title: "VerdienU beloningen",
+          content: "ZodraU klanten actief blijven, ontvangU een beloning om in te wisselen."
         },
         {
           number: "3",
           title: "Maak impact",
-          content: "Help bedrijven groeien terwijl je beloningen verdient voor je waardevolle verwijzingen."
+          content: "Help bedrijven groeien terwijlU beloningen verdient voorU waardevolle verwijzingen."
         }
       ],
       prevButtonLabel: "Vorige stap",

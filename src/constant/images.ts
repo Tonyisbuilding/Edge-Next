@@ -7,12 +7,26 @@ import briefcase from "../../src/assets/images/landingPage/briefcase.png";
 import IEX from "../../src/assets/images/landingPage/IEX.png";
 import rtlz from "../../src/assets/images/landingPage/rtlz.png";
 import IEX_nl from "../../src/assets/images/landingPage/IEX_nl.png";
+
+import Second from "../../src/assets/images/landingPage/Second.png";
+import Third from "../../src/assets/images/landingPage/Third_logo.png";
+import Forth from "../../src/assets/images/landingPage/fourth_logo.png";
+import Logo_five from "../../src/assets/images/landingPage/Logo_five.png";
+
+// import Numberfive from "../../src/assets/images/landingPage/Numberfive.png";
+
+
+
+
+
 import B_class from "../../src/assets/images/landingPage/class.png";
 import heroSectionVideo from "../../src/assets/images/landingPage/Home-left.mp4";
 import management from "../../src/assets/images/landingPage/management.svg";
 import handshake from "../../src/assets/images/landingPage/handshake.png";
 import schedule from "../../src/assets/images/landingPage/schedule.png";
 import dots_one from "../../src/assets/images/landingPage/dots_one.png";
+import dots_updated from "../../src/assets/images/landingPage/Dot_updated.png";
+
 import presentationPreview from "../../src/assets/images/landingPage/presentationPreview.png";
 import presentationVid from "../../src/assets/images/landingPage/presentation.mp4";
 import teagan from "../../src/assets/images/landingPage/teagan.png";
@@ -21,6 +35,12 @@ import scale from "../../src/assets/images/landingPage/scale.png";
 import Henk from "../../src/assets/images/landingPage/Henk.png";
 import Michiel from "../../src/assets/images/landingPage/Michiel.png";
 import Brahim from "../../src/assets/images/landingPage/Brahim.png";
+import Aron from "../../src/assets/images/landingPage/Aron.jpg";
+import Pepijn from "../../src/assets/images/landingPage/Pepijn.jpg";
+import Tom from "../../src/assets/images/landingPage/Tom.jpg";
+import Bernard from "../../src/assets/images/landingPage/Bernard.jpg";
+
+
 import money_briefcase from "../../src/assets/images/landingPage/money-briefcase.png";
 import herosectionforabout from "../../src/assets/images/about/herosectionforabout.png";
 import edgehero from "../../src/assets/images/edgefund/edgehero.png";
@@ -32,6 +52,12 @@ import ECLogo from "../../src/assets/images/ECLogo.png";
 import ECLogoSVG from "../../src/assets/images/ECLogo.svg";
 import EdgeCapitalLogo from "../../src/assets/images/EdgeCapitalLogo.png";
 import EdgeCapitalLogoSVG from "../../src/assets/images/EdgeCapitalLogo.svg";
+// import Edgecap from "../../src/assets/images/Edgecap.svg";
+import New_Cap from "../../src/assets/images/landingPage/New_cap.svg";
+import Brush from "../../src/assets/images/landingPage/Brush.png";
+
+
+
 import profit from "../../src/assets/images/landingPage/profit.svg";
 import arrow_down from "../../src/assets/icons/arrow-down.png";
 import check_circle from "../../src/assets/icons/check-circle.png";
@@ -92,6 +118,11 @@ const images = {
         IEX,
         rtlz,
         IEX_nl,
+        Second,
+        Third,
+        Forth,
+        Logo_five,
+        // Numberfive,
         B_class,
         ECLogo,
         arrow_down,
@@ -101,6 +132,10 @@ const images = {
         schedule,
         teagan,
         paul,
+        Aron,
+        Pepijn,
+        Tom,
+        Bernard,
         presentationVid,
         presentationPreview,
         check_circle,
@@ -110,6 +145,7 @@ const images = {
         strategy,
         bolt,
         dots_one,
+        dots_updated,
         Henk,
         Michiel,
         Brahim,
@@ -117,8 +153,12 @@ const images = {
         ECLogoSVG,
         EdgeCapitalLogo,
         EdgeCapitalLogoSVG,
+        // EdgeCap,
+        // Edgecap,
         profit,
-        heroSectionVideo
+        heroSectionVideo, 
+        New_Cap,
+        Brush
     },
     about:{
         herosectionforabout,

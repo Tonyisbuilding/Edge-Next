@@ -12,11 +12,13 @@ const HeroSection = () => {
       <section className="hero bg-[#EEF4F5]  mt-[4rem] md:h-[100vh] md:max-h-[700px]">
         <div className="container hero-container">
           <div className="hero-content">
+            
             <h1 className="hero-title">
               {language === "en" ? "Investing" : "Beleggen met "}
               <br />
               {language === "en" ? "with An Edge" : "een voorsprong!"}
             </h1>
+
             <p className="hero-subtitle">
               {language === "nl"
                 ? "Gebruik van dynamische, datagestuurde strategieën voor superieure rendementen met een beheerst risico."

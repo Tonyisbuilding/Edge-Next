@@ -66,14 +66,7 @@ const EdgeCapitalFooter = () => {
                 <Linkedin size={20} className="mr-2" />
                 <span>LinkedIn</span>
               </a>
-              <a 
-                href="#" 
-                className="flex items-center bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors w-fit"
-                aria-label="Twitter / X"
-              >
-                <Twitter size={20} className="mr-2" />
-                <span>Twitter / X</span>
-              </a>
+              
               <a 
                 href="#" 
                 className="flex items-center bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors w-fit"

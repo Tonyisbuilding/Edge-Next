@@ -48,7 +48,7 @@ const EdgeDocuments = () => {
               animate="visible"
               variants={textVariants}
             >
-              {language === "nl" ? "Randdocumenten" : "Edge Documents"}
+              {language === "nl" ? "Documenten" : "Edge Documents"}
             </motion.h2>
 
             <motion.p
@@ -67,7 +67,7 @@ const EdgeDocuments = () => {
               }}
             >
               {language === "nl"
-                ? `Alles wat u nodig heeft voor uw investeringsreis, op één plek. Download, onderteken en dien eenvoudig in.`
+                ? `Alle benodigde documenten van Edge Capital.`
                 : `Everything you need for your investment journey, all in one place. Download, sign, and submit with ease.`}
             </motion.p>
           </div>

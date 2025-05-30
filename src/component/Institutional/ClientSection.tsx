@@ -32,7 +32,7 @@ const ClientsSection = () => {
   // Define translations for English and Dutch
   const translations = {
     en: {
-      subheader: "Trusted Partners",
+      // subheader: "Trusted Partners",
       header: "Our Clients",
       description: "We serve a broad spectrum of institutional clients with tailored solutions.",
       clients: [
@@ -59,7 +59,7 @@ const ClientsSection = () => {
       ],
     },
     nl: {
-      subheader: "Vertrouwde Partners",
+      // subheader: "Vertrouwde Partners",
       header: "Onze Klanten",
       description: "We bedienen een breed scala aan institutionele klanten met oplossingen op maat.",
       clients: [
@@ -95,9 +95,9 @@ const ClientsSection = () => {
     <section className="py-24 bg-gradient-to-br from-gray-50 to-[#206A7C]/5">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#206A7C]/10 text-[#206A7C] text-sm font-medium mb-4">
+          {/* <div className="inline-block px-3 py-1 rounded-full bg-[#206A7C]/10 text-[#206A7C] text-sm font-medium mb-4">
             {content.subheader}
-          </div>
+          </div> */}
           <h2 className="text-4xl font-bold text-gray-900 mb-4">{content.header}</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             {content.description}

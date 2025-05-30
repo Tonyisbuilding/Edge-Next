@@ -18,7 +18,7 @@ const EdgeConnectHero = () => {
     nl: {
       heading: "Edge Connect is de eerste stap in ons Edge Impact initiatief. Naarmate ons bedrijf blijft groeien, geloven wij in het teruggeven aan de maatschappij.",
       subtitle: "Verdien & Geef Terug",
-      description: "We belonen je voor het introduceren van nieuwe klanten. Behoud je beloning of doneer een deel (of alles) aan een goed doel geselecteerd door ons team—voor impact waar het er het meest toe doet.",
+      description: "We belonenU voor het introduceren van nieuwe klanten. BehoudU beloning of doneer een deel (of alles) aan een goed doel geselecteerd door ons team—voor impact waar het er het meest toe doet.",
       cta: "Spreek met ons team"
     }
   };

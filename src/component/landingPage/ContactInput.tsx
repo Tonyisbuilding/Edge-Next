@@ -68,8 +68,8 @@ const ContactInput = ({placeholder,CTAButton,icon}:contactInputType) => {
           placeholder={placeholder}
           readOnly={placeholder == 'Subscribe' ? false : true}
           // {placeholder !== 'Subscribe' ? readOnly : null} 
-          className=" border-2 border-[#808080] lg:w-[100%] md:w-[80vw] w-[90vw] lg:h-[10vh] rounded-xl bg-[#F0F0F0] text-[15.8px]
-          font-medium text-[#111111] pl-[3rem] h-[8vh] lg:max-h-[85px]"
+          className="outline-none border-none lg:w-[100%] md:w-[80vw] w-[90vw] lg:h-[10vh] rounded-xl bg-[#Ffff] text-[15.8px]
+font-medium text-[#111111] pl-[3rem] h-[8vh] lg:max-h-[85px] focus:outline-none focus:border-none"
         />
         <div className=" flex  items-center mt-[.5rem] md:absolute md:top-[.3rem] lg:right-[1%] 
         md:left-[28.2rem]]">

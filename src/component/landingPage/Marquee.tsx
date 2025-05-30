@@ -15,10 +15,10 @@ interface MarqueeProps {
 
 const logos: Logo[] = [
   { id: 'logo1', src: images.landingPage.B_class, alt: 'Logo 1' },
-  { id: 'logo2', src: images.landingPage.IEX_nl, alt: 'Logo 2' },
-  { id: 'logo3', src: images.landingPage.rtlz, alt: 'Logo 3' },
-  { id: 'logo4', src: images.landingPage.IEX, alt: 'Logo 4' },
-  { id: 'logo5', src: images.landingPage.BELEGGERSFAIR_LOGO_HEADER, alt: 'Logo 5' },
+  { id: 'logo2', src: images.landingPage.Second, alt: 'Logo 2' },
+  { id: 'logo3', src: images.landingPage.Third, alt: 'Logo 3' },
+  { id: 'logo4', src: images.landingPage.Forth, alt: 'Logo 4' },
+  { id: 'logo5', src: images.landingPage.Logo_five, alt: 'Logo 5' },
 ];
 
 //  Bekend van:

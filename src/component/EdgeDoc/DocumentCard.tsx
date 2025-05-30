@@ -555,7 +555,7 @@ const DocumentCardSections = () => {
 
   return (
     <section
-      className="py-8 w-screen px-4 md:px-[5rem] bg-[#F8F9FA]"
+      className="py-8 w-[1550px] px-4 md:px-[5rem] bg-[#F8F9FA] max-w[1440px]"
       aria-labelledby="documents-heading"
     >
       <h2 id="documents-heading" className="sr-only">
@@ -564,7 +564,7 @@ const DocumentCardSections = () => {
 
       {/* Tabs */}
       <div className="flex overflow-x-scroll md:overflow-x-auto pb-4 mb-6 scrollbar-hide w-full">
-        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg md:w-full w-auto">
+        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg md:w-full w-[1440px]">
           {tabs.map((tab) => (
             <button
               key={tab.id}

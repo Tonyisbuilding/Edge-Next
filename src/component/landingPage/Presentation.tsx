@@ -116,7 +116,7 @@ const Presentation = () => {
   ];
 
   const renderData = language === 'nl' ? benefitsDucth : benefits;
-  
+
 
   // const handlePlayClick = () => {
   //   if (videoRef.current) {
@@ -231,13 +231,18 @@ const Presentation = () => {
 
           {/* Testimonial Section */}
           <div className="bg-[#f8fafc] border-l-4 border-[#206A7C] p-4 sm:p-5 mb-6 sm:mb-7 md:mb-8 rounded-lg">
-            <p className="italic text-[#475569] text-[0.95rem] sm:text-base">
-              "The presentation was incredibly valuable. It helped me make
-              informed decisions about my financial future."
-            </p>
-            <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#206A7C] text-[0.9rem] sm:text-[0.95rem]">
-              — Sarah M., Client since 2023
-            </p>
+          <p className="italic text-[#475569] text-[0.95rem] sm:text-base">
+  {language === 'nl'
+    ? '"De presentatie was voor mij zeer waardevol. Het heeft me geholpen een weloverwogen beslissing te nemen hoe verder te gaan met mijn beleggingen."' 
+    : '"The presentation was incredibly valuable. It helped me make informed decisions about my financial future."'}
+</p>
+
+           <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#206A7C] text-[0.9rem] sm:text-[0.95rem]">
+  {language === 'nl'
+    ? '— Mark van den Waal, klant sinds 2024'
+    : '— Mark van den Waal, client since 2024'}
+</p>
+
           </div>
 
           {/* Call-to-Action Buttons */}
@@ -250,15 +255,17 @@ const Presentation = () => {
                   "_blank"
                 )
               }
-              className="bg-[#206A7C] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#206A7C]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#206A7C]/30"
+              className="bg-[#206A7C] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#206A7C]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#206A7C]/30"
             >
-              Schedule a presentation
+  {language === 'nl' ? 'Plan uw prestentatie' : 'Schedule a presentation'}
             </button>
             <button
               // onClick={()=> window.open('/requestinfo')}
-              className="bg-transparent text-[#206A7C]  border-[#206A7C] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-lg font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#206A7C]/5 hover:-translate-y-0.5"
+              className="bg-transparent text-[#206A7C]  border-[#206A7C] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#206A7C]/5 hover:-translate-y-0.5"
             >
-              <Link to="/requestinfo">Request Brochure</Link>
+              <Link to="/requestinfo">
+                {language === 'nl' ? 'Vraag onze brochure aan' : 'Request Brochure'}
+              </Link>
             </button>
           </div>
 
@@ -280,8 +287,9 @@ const Presentation = () => {
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
             </span>
-            Limited spots available this month. Reserve your session today.
-          </p>
+ {language === 'nl'
+    ? 'Beperkte plekken beschikbaar deze maand. Reserveer vandaag nogU sessie.'
+    : 'Limited spots available this month. Reserve your session today.'}          </p>
         </div>
       </div>
     </section>

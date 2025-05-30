@@ -40,7 +40,7 @@ interface FormData {
   mail: string;
   iban: string; // New field
   onBehalfOf: string; // New field
-  tin: string; // New field
+ BSN: string; // New field
   idType: string; // New field
   idNumber: string; // New field
   dateOfBirth: string; // New field
@@ -215,7 +215,7 @@ const ParticipantForm: React.FC = () => {
         emailLabel: "E-mail",
         ibanLabel: "IBAN", // New field
         onBehalfOfLabel: "Namens", // New field
-        tinLabel: "Belastingidentificatienummer (TIN)", // New field
+        tinLabel: "Belastingidentificatienummer (BSN)", // New field
         idTypeLabel: "Type Identificatiedocument", // New field
         idNumberLabel: "Documentnummer", // New field
         dateOfBirthLabel: "Geboortedatum", // New field
@@ -230,7 +230,7 @@ const ParticipantForm: React.FC = () => {
         emailPlaceholder: "E-mail",
         ibanPlaceholder: "Voer uw IBAN in", // New field
         onBehalfOfPlaceholder: "Voer naam van persoon/organisatie in", // New field
-        tinPlaceholder: "Voer uw TIN in", // New field
+        tinPlaceholder: "Voer uw BSN in", // New field
         idTypePlaceholder: "Selecteer Documenttype", // New field
         idNumberPlaceholder: "Voer documentnummer in", // New field
         dateOfBirthPlaceholder: "Selecteer geboortedatum", // New field
@@ -780,7 +780,7 @@ const ParticipantForm: React.FC = () => {
             {/* Submit Button */}
             <motion.div
               variants={itemVariants}
-              className="mt-8 flex justify-center"
+              className="mt-8 flex justify-end"
             >
               <motion.button
                 variants={buttonVariants}
@@ -789,7 +789,7 @@ const ParticipantForm: React.FC = () => {
                 whileTap="tap"
                 type="submit"
                 disabled={isSubmitting}
-                className="px-8 py-3 bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50% text-white font-medium rounded-xl shadow-lg transition-all flex items-center justify-center disabled:bg-[#219EB2] disabled:cursor-not-allowed"
+                className="px-8 py-3 bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50% text-white font-medium rounded-4xl shadow-lg transition-all flex items-center justify-center disabled:bg-[#219EB2] disabled:cursor-not-allowed"
               >
                 <span>
                   {isSubmitting
