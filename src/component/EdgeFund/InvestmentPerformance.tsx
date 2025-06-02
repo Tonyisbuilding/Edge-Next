@@ -37,8 +37,8 @@ const InvestmentPerformance = () => {
       requestFactsheet: "Factsheet aanvragen",
       receiveInfoMemorandum: "Ontvang het informatiememorandum",
       disclaimer: {
-        title: "Algemene Disclaimer – EdgeNext (handelsnaam van Edge Capital Management B.V.) rendementen:",
-        content: "Bolder Funds Services B.V. (administrateur) berekent maandelijks de resultaten van het fonds. Bovenstaande resultaten zijn na aftrek van de 22,5% winstdeling en de 1,50% jaarlijkse beheervergoeding. De rendementen vanaf 1 september 2022 vertegenwoordigen de werkelijke resultaten van het fonds. De rendementen vóór 1 september 2022 zijn gebaseerd op forward testing (live rekening) en niet op basis van backtesting. Deze rendementen dienen niet als indicatie voor toekomstige resultaten."
+        title: "Algemene disclaimer rendementen:",
+        content: "Bolder Funds Services B.V. (administrateur) berekent maandelijks de resultaten van het fonds. Bovenstaande resultaten zijn na aftrek van de winstdeling en de jaarlijkse beheervergoeding. De rendementen vanaf 1 juni 2025 vertegenwoordigen de werkelijke resultaten van het fonds. De rendementen vóór 1 juni 2025 zijn gebaseerd op forward testing (live rekening) en niet op basis van backtesting. Deze rendementen dienen niet als indicatie voor toekomstige resultaten."
       }
     }
   };

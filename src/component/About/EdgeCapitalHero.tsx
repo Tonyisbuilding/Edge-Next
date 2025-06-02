@@ -14,8 +14,8 @@ const EdgeCapitalHero = () => {
   // Translation dictionary
   const translations = {
     en: {
-      heading: "Our name is more than just a nod to 'hedge funds.' 'Edge' represents the advantage we provide our clients—staying ahead with strategies based on market facts rather than predictions.",
-      subheading: "Our strategies are built on arbitrage methods and market-neutral investing, giving us an edge over traditional wealth management products.",
+      heading: "Next stands for progress. For innovation. For the next level in investing. EdgeNext combines advanced data analytics, real-time risk control, and adaptive systems to deliver optimal performance in markets that are moving faster and becoming more volatile than ever.",
+      subheading: "EdgeNext is not an evolution of existing methods — it is a fundamentally different way of thinking about return, risk, and results.",
       getInTouch: "Get in Touch",
       altText: "Edge Capital Team"
     },
@@ -77,7 +77,7 @@ const EdgeCapitalHero = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 mt-[5rem]">
+    <div className="max-w-7.5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 mt-[5rem]">
       <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
         <div className="lg:w-1/2 space-y-6 mb-8 lg:mb-0">
           <motion.div

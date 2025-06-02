@@ -34,7 +34,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7 }}
 >
-  {language === 'nl' ? 'Onderdeel van Edge Capital' : 'For Over 8 Years'}
+  {language === 'nl' ? 'Onderdeel van Edge Capital' : 'Part of Edge Capital'}
 </motion.h2>
 
 <motion.p
@@ -45,7 +45,7 @@ const renderedData = language === 'nl' ? timelineDataDutch : timelineData;
 >
   {language === 'nl'
     ? 'Hoewel EdgeNext een nieuw label is, maken we deel uit van een organisatie met een bewezen staat van dienst en jarenlange ervaring in de financiële markten.'
-    : "We're building a platform that gives investors an edge. By focusing on innovation and growth, we're transforming the financial landscape."}
+    : "Although EdgeNext is a new label, we are part of an organization with a proven track record and years of experience in the financial markets."}
 </motion.p>
 
         

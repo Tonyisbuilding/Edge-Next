@@ -33,7 +33,7 @@ const historyData = [
   },
   {
     year: "Future",
-    front: "Edge Capital remains committed to innovation and growth. In 2024, the company will focus on obtaining a full AFM license, enabling it to serve a broader audience and compete more effectively in the investment industry.",
+    front: "At EdgeNext, we have ambitious goals. Our aim is to grow into a leading multi-strategy fund within the next few years. We place high priority on further developing our systems and expanding our team. Together with Edge Capital, we have a clear growth objective: to reach €100 million in assets under management within five years.",
     back: "Additional details or insights for the future."
   }
 ];

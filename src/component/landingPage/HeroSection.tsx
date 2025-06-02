@@ -9,8 +9,8 @@ const HeroSection = () => {
   return (
     <>
       {/* bg-[#EEF4F5] */}
-      <section className="hero bg-[#EEF4F5]  mt-[4rem] md:h-[100vh] md:max-h-[700px]">
-        <div className="container hero-container">
+      <section className="hero  bg-[#EEF4F5]  mt-[4rem] md:h-[100vh] md:max-h-[700px]">
+        <div className="container hero-container pt-[44px] sm:pt-0">
           <div className="hero-content">
             
             <h1 className="hero-title">
@@ -34,7 +34,7 @@ const HeroSection = () => {
                 <div className="feature-text">
                   <p>
                     <span className="bold-text">{language === 'nl' ? 'Geavanceerde Strategieën' : 'Advanced Strategies'}</span> -
-                    {language === 'nl' ? ' Correlatie Arbitrage, een afgeleide van Index Arbitrage uitgevoerd op de meest liquide markt ter wereld (FX)' : 'Arbitrage and delta-neutral for high returns.'}
+                    {language === 'nl' ? ' Correlatie Arbitrage, een afgeleide van Index Arbitrage uitgevoerd op de meest liquide markt ter wereld (FX)' : 'Correlation Arbitrage, a derivative of Index Arbitrage executed on the most liquid market in the world (FX).'}
                   </p>
                 </div>
               </li>
@@ -47,7 +47,7 @@ const HeroSection = () => {
                 <div className="feature-text">
                   <p>
                     <span className="bold-text">{language === 'nl' ? 'Op feiten gebaseerd' : 'Fact-Based Expertise'}</span> -
-                    {language === 'nl' ? ' Een bewezen strategie die inspeelt op afwijkingen tussen verschillende gecorreleerde valutaparen.' : 'Rely on certainties, not predictions.'}
+                    {language === 'nl' ? ' Een bewezen strategie die inspeelt op afwijkingen tussen verschillende gecorreleerde valutaparen.' : 'A proven strategy that capitalizes on deviations between various correlated currency pairs.'}
                   </p>
                 </div>
               </li>
@@ -60,7 +60,7 @@ const HeroSection = () => {
                 <div className="feature-text">
                   <p>
                     <span className="bold-text">{language === 'nl' ? 'Riskmanagement' : 'Managed Risk'}</span>
-                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 2.7%' : '- Controlled risk for large-scale investments.'}
+                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 2.7%' : '- Lowest monthly drawdown over the past 3.5 years of just 2.7%.'}
                   </p>
                 </div>
               </li>

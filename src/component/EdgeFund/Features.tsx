@@ -38,17 +38,10 @@ const Feature = () => {
         description: 'Sophisticated approaches to maximize returns with managed risk',
         items: [
           {
-            title: 'Volatility Premium',
-            description: 'Market-neutral strategy to capitalize on market volatility'
+            title: 'Correlation Arbitrage',
+            description: 'An advanced trading method with a proven track record.'
           },
-          {
-            title: 'Interest Rate Arbitrage',
-            description: 'Market-neutral profit from interest rate differentials'
-          },
-          {
-            title: 'FX Arbitrage',
-            description: 'Exploiting discrepancies within the currency markets — a modern and improved version of the well-known index arbitrage.'
-          }
+         
         ]
       },
       keyInformation: {
@@ -61,11 +54,11 @@ const Feature = () => {
           },
           {
             title: 'Secure Custody',
-            description: 'Edge Capital EdgeFund Custody Foundation ensures asset safety'
+            description: 'Edge Capital EdgeFund Custody Foundation is the legal owner of the fund, ensuring your assets are separated from our company funds.'
           },
           {
             title: 'Banking Partner',
-            description: 'Northern Trust provides banking infrastructure'
+            description: 'CitiBank is our partner for banking services.'
           },
           {
             title: 'Administration',
@@ -127,16 +120,8 @@ const Feature = () => {
         description: 'Geavanceerde benaderingen om rendement te maximaliseren met een beheerst risico',
         items: [
           {
-            title: 'Volatility Premium Risk',
-            description: 'Marktneutrale strategie om in te spelen op de marktvolatiliteit'
-          },
-          {
-            title: 'Rente-arbitrage',
-            description: 'Marktneutraal profiteren van renteverschillen'
-          },
-          {
-            title: 'FX-arbitrage',
-            description: 'Benutten van discrepanties binnen de valautamarkten, een moderne en verbeterde versie van het wel bekende index-arbitrage'
+            title: 'Correlatie Arbitrage',
+            description: 'Een geavanceerde trading methode, met een bewezen trackrecord'
           }
         ]
       },
@@ -150,11 +135,11 @@ const Feature = () => {
           },
           {
             title: 'Veilige bewaring',
-            description: 'Edge Capital EdgeFund Custody Foundation zorgt voor activaveiligheid'
+            description: 'Stichting Bewaring Edge Capital EdgeFund is juridisch eigenaar van het fonds, zo worden uw gelden gescheiden van onze bedrijfsgelden.'
           },
           {
             title: 'Bank',
-            description: 'Nothern Trust is onze partner voor onze banking services'
+            description: 'CitiBank is onze partner voor banking services'
           },
           {
             title: 'Administratie',
@@ -223,8 +208,7 @@ const Feature = () => {
       ),
       items: [
         { id: 'volatility-premium' },
-        { id: 'interest-rate-arbitrage' },
-        { id: 'fx-arbitrage' }
+       
       ]
     },
     {

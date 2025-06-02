@@ -18,13 +18,13 @@ const StrategySection = () => {
       popupTitle: t.volatilityRiskPremiumPopupTitle,
       popupContent: t.volatilityRiskPremiumPopupContent,
     },
-    {
-      id: "interest-rate-arbitrage",
-      title: t.interestRateArbitrageTitle,
-      description: t.interestRateArbitrageDescription,
-      popupTitle: t.marketNeutralSwapArbitragePopupTitle,
-      popupContent: t.marketNeutralSwapArbitragePopupContent,
-    },
+    // {
+    //   id: "interest-rate-arbitrage",
+    //   title: t.interestRateArbitrageTitle,
+    //   description: t.interestRateArbitrageDescription,
+    //   popupTitle: t.marketNeutralSwapArbitragePopupTitle,
+    //   popupContent: t.marketNeutralSwapArbitragePopupContent,
+    // },
   ];
 
   const openPopup = (id: string) => {
@@ -50,7 +50,7 @@ const StrategySection = () => {
 </div>
 
         {/* Desktop layout */}
-        <div className="hidden lg:grid grid-cols-2">
+        <div className="hidden lg:grid grid-cols-1">
           {strategies.map((strategy, index) => (
             <div
               key={strategy.id}

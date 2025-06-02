@@ -75,21 +75,21 @@ const WhatSetsUsApart = () => {
       features: [
         {
           icon: <Target className="w-12 h-12 text-white text-left" />,
-          title: "Market Certainty",
+          title: "Results Regardless of Market Direction",
           backText:
-            "We don't rely on predictions—we use predefined parameters like interest rates and options premiums to drive our strategies.",
+            "By strategically trading based on measurable market data, we achieve results independent of market direction. It's not about the trend—it's about capitalizing on movement.",
         },
         {
           icon: <Shield className="w-12 h-12 text-white" />,
           title: "Risk Management",
           backText:
-            "Every position we take is fully hedged, ensuring minimized risk and stable returns.",
+            "Risk is mitigated through systematic hedging and dynamic position sizing. Our systems automatically adjust position sizes based on real-time market data and volatility, aiming for stable performance under all conditions.",
         },
         {
           icon: <Castle className="w-12 h-12 text-white" />,
-          title: "Quantitative Trading",
+          title: "Quantitative Systems",
           backText:
-            "Our strategies leverage advanced trading systems across options and futures markets for precision and efficiency.",
+            "Emotion plays no role in our strategy. Our quantitative systems follow predefined rules and data-driven logic, ensuring every decision is consistent, repeatable, and free from subjective influence.",
         },
       ],
     },

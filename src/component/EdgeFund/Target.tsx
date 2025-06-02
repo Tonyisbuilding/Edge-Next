@@ -74,15 +74,15 @@ const Target = () => {
   // Metrics data with translations
   const metrics = {
     en: [
-      { title: "Annual Target", value: "20%", id: 1 },
+      { title: "Annual Target", value: "8-12%", id: 1 },
       { title: "Total cumulative result", value: "129.99%", id: 2 },
-      { title: "Monthly net return target", value: "1.66%", id: 3 },
+      { title: "Monthly net return target", value: "0.67-1%", id: 3 },
       { title: "Best month", value: "8.15%", id: 4 },
     ],
     nl: [
-      { title: "Jaarlijks netto rendementsdoel", value: "20%", id: 1 },
+      { title: "Jaarlijks netto rendementsdoel", value: "8-12%", id: 1 },
       { title: "Totaal cumlatief resultaat", value: "129.99%", id: 2 },
-      { title: "Maandelijks netto rendementsdoel", value: "1.66%", id: 3 },
+      { title: "Maandelijks netto rendementsdoel", value: "0.67-1%", id: 3 },
       { title: "Beste maand", value: "8.15%", id: 4 },
     ]
   };

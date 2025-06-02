@@ -3,12 +3,10 @@ import NavBar from "@/common/NavBar";
 import {
   teamMembers,
   teamMembersDutch,
-  advisoryBoard,
-  advisoryBoardDutch,
   SupportAndCommercial,
   SupportAndCommercialDutch,
-    edgeNextTeam,
-  edgeNextTeamDutch,
+  //   edgeNextTeam,
+  // edgeNextTeamDutch,
 } from "@/constant/data";
 import Contact from "@/component/landingPage/Contact";
 import Footer from "@/common/Footer";
@@ -43,14 +41,16 @@ const Teams = () => {
 />
 
 <TeamMemberCards
-  teamMembers={language === 'nl' ? teamMembersDutch : teamMembers}
-  department={language === 'nl' ? 'Raad van Advies' : 'Advisory Board'}
-/>
-
-<TeamMemberCards
   teamMembers={language === 'nl' ? SupportAndCommercialDutch : SupportAndCommercial}
   department={language === 'nl' ? 'Support en Commercieel' : 'Support and Commercial'}
 />
+
+<TeamMemberCards
+  teamMembers={language === 'nl' ? teamMembersDutch : teamMembers}
+  department={language === 'nl' ? 'Advies en Supervisie' : 'Advisory and Oversight'}
+/>
+
+
 
 {/* <TeamMemberCards
   teamMembers={language === 'nl' ? edgeNextTeamDutch : edgeNextTeam}

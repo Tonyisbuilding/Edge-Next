@@ -47,15 +47,11 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/edge-fund">
-                  {language === "nl" ? "EdgeFund" : "EdgeFund"}
+                  {language === "nl" ? "EdgeNext Fund" : "EdgeNext Fund"}
                 </a>
               </li>
               {/* <li><a href="/impact">Edge Impact</a></li> */}
-              <li>
-                <a href="/institutional">
-                  {language === "nl" ? "Institutioneel" : "Institutional"}
-                </a>
-              </li>
+            
               <li>
                 <a href="/contact">
                   {language === "nl" ? "Contact" : "Contact"}

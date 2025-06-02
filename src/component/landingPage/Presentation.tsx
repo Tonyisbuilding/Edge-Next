@@ -231,16 +231,17 @@ const Presentation = () => {
 
           {/* Testimonial Section */}
           <div className="bg-[#f8fafc] border-l-4 border-[#008487] p-4 sm:p-5 mb-6 sm:mb-7 md:mb-8 rounded-lg">
-          <p className="italic text-[#475569] text-[0.95rem] sm:text-base">
+         <p className="italic text-[#475569] text-[0.95rem] sm:text-base">
   {language === 'nl'
-    ? '"Ondanks dat EdgeNext een nieuw label is, heeft de presentatie me de inzichten gegeven dat er een gedegen achtergrond is onder supervisie van Edge Capital. Hierdoor heb ik besloten in zee te gaan met EdgeNext, ik kijk uit naar een mooie toekomst samen!"' 
-    : '"The presentation was incredibly valuable. It helped me make informed decisions about my financial future."'}
+    ? '"Ondanks dat EdgeNext een nieuw label is, heeft de presentatie me de inzichten gegeven dat er een gedegen achtergrond is onder supervisie van Edge Capital. Hierdoor heb ik besloten in zee te gaan met EdgeNext, ik kijk uit naar een mooie toekomst samen!"'
+    : '"Although EdgeNext is a new label, the presentation gave me the insight that it operates with a solid foundation under the supervision of Edge Capital. That gave me the confidence to move forward with EdgeNext — I look forward to a great future together!"'}
 </p>
+
 
            <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#008487] text-[0.9rem] sm:text-[0.95rem]">
   {language === 'nl'
     ? '— Johan Bergen, klant sinds 1 juni 2025'
-    : '— Mark van den Waal, client since 2024'}
+    : '— Johan Bergen, client since June 1, 2025'}
 </p>
 
           </div>

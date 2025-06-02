@@ -31,9 +31,9 @@ const RiskCard = ({ title, description, measures, icon, index }: RiskCardType) =
 
       <h3 className="font-bold mb-3 md:text-[21.89px] text-[#000C0C] text-[18.71px] inter">{title}</h3>
 
-      <p className="font-normal mb-4 text-[14.92px] md:text-[17.45px] text-[#1A1A1A]">{description}</p>
+      <p className="font-normal mb-4 text-[14.92px] md:text-[15px] text-[#1A1A1A]">{description}</p>
 
-      <div className="text-[14.92px] md:text-[17.45px] text-[#1A1A1A] font-normal">
+      <div className="text-[14.92px] md:text-[15px] text-[#1A1A1A] font-normal">
         {measures}
       </div>
     </motion.div>
@@ -46,73 +46,81 @@ const WhatSetsUsApart = () => {
   const content = {
     en: {
       sectionTitle: "Risk",
-      riskItems: [
-        {
-          title: "Liquidity Risk",
-          description: "The inability to easily exit a position due to the lack of liquidity of the investment instrument being used.",
-          measures: (
-            <>
-              <strong>Measures:</strong> Trading in the most liquid markets (S&P 500). Trading across various exchanges and brokers.
-            </>
-          ),
-          icon: <BarChart size={24} className="text-white" />
-        },
-        {
-          title: "Execution Risk",
-          description: "The risk of your order not being fully or not executed at all due to a technical issue.",
-          measures: (
-            <>
-              <strong>Measures:</strong> Automated risk management scenarios, 24/7 human monitoring, backups, testing periods.
-            </>
-          ),
-          icon: <Settings size={24} className="text-white" />
-        },
-        {
-          title: "Counterparty Risk",
-          description: "The probability that a particular exchange will not be able to make the required payments for their debt obligations.",
-          measures: (
-            <>
-              <strong>Measures:</strong> Diversification across the largest and safest exchanges.
-            </>
-          ),
-          icon: <AlertTriangle size={24} className="text-white" />
-        }
-      ]
+   riskItems: [
+  {
+    title: "Correlation Breakdown",
+    description:
+      "The strategy assumes that currency pairs sharing a common base tend to move according to historical patterns. In extreme market conditions (e.g., geopolitical shocks, central bank interventions), these correlations can temporarily break down.",
+    measures: (
+      <>
+        <strong>Measures:</strong> Use of dynamic models that detect deviations and measure their intensity. When correlations structurally diverge, the system can reduce, neutralize, or switch to alternative currency pairs. Real-time monitoring also enables timely intervention.
+      </>
+    ),
+    icon: <BarChart size={24} className="text-white" />,
+  },
+  {
+    title: "Delayed Correlation",
+    description:
+      "Sometimes, the return to the mean takes longer than expected, leading to prolonged exposure to market fluctuations and increased risk of loss.",
+    measures: (
+      <>
+        <strong>Measures:</strong> Time-based exit rules (time stops) and maximum drawdown limits are implemented. A position is closed if movement does not occur within a reasonable period or risk increases beyond acceptable thresholds. Most positions are actively hedged, partially offsetting potential negative outcomes. This helps lower portfolio volatility and keeps risks manageable even during unexpected market shifts.
+      </>
+    ),
+    icon: <Settings size={24} className="text-white" />,
+  },
+  {
+    title: "Technical Failure",
+    description:
+      "If the automated system fails or lags, it may not respond accurately to market fluctuations, leading to missed opportunities or uncontrolled losses.",
+    measures: (
+      <>
+        <strong>Measures:</strong> Use of redundant VPS hosting with 99.99% uptime, automatic backups, and failover systems. Multiple alert levels are also in place to detect technical or market-related anomalies for immediate manual or automated response.
+      </>
+    ),
+    icon: <AlertTriangle size={24} className="text-white" />,
+  },
+]
+
     },
     nl: {
       sectionTitle: "Risico",
-      riskItems: [
-        {
-          title: "Liquiditeit Risico",
-          description: "Het onvermogen om gemakkelijk uit een positie te stappen vanwege het gebrek aan liquiditeit van het gebruikte beleggingsinstrument.",
-          measures: (
-            <>
-              <strong>Maatregelen:</strong> Handelen in de meest liquide markten (S&P 500). Handelen via verschillende beurzen en brokers.
-            </>
-          ),
-          icon: <BarChart size={24} className="text-white" />
-        },
-        {
-          title: "Executie Risico",
-          description: "Het risico van uw order wordt door een technisch probleem niet geheel of helemaal niet uitgevoerd.",
-          measures: (
-            <>
-              <strong>Maatregelen:</strong> Geautomatiseerde risicobeheerscenario's, 24/7 menselijke monitoring, back-ups, test periodes.
-            </>
-          ),
-          icon: <Settings size={24} className="text-white" />
-        },
-        {
-          title: "Tegenpartij Risico",
-          description: "De kans dat een bepaalde beurs niet in staat zal zijn om de vereiste betalingen voor hun schuldverplichtingen te doen.",
-          measures: (
-            <>
-              <strong>Maatregelen:</strong> Verspreiding tussen de grootste en veiligste beurzen.
-            </>
-          ),
-          icon: <AlertTriangle size={24} className="text-white" />
-        }
-      ]
+   riskItems: [
+  {
+    title: "Correlatiebreuk",
+    description:
+      "De strategie gaat uit van de veronderstelling dat valutaparen met een gedeelde munt zich volgens een historisch patroon bewegen. Bij extreme marktomstandigheden (bijv. geopolitieke schokken, centrale bankinterventies) kunnen deze correlaties tijdelijk wegvallen.",
+    measures: (
+      <>
+        <strong>Maatregelen:</strong> Gebruik van dynamische modellen die afwijkingen herkennen én de intensiteit ervan meten. Wanneer correlaties structureel afwijken, kan het systeem posities verlagen, neutraliseren of overschakelen naar andere valutaparen. Daarnaast helpt real-time monitoring om tijdig in te grijpen.
+      </>
+    ),
+    icon: <BarChart size={24} className="text-white" />,
+  },
+  {
+    title: "Late correlatie",
+    description:
+      "Soms kan het herstel naar het gemiddelde langer duren dan verwacht, wat leidt tot een langere blootstelling aan marktfluctuaties en verhoogde kans op verlies.",
+    measures: (
+      <>
+        <strong>Maatregelen:</strong> Er zijn tijdsgebonden exitregels (time stops) en maximum drawdown-limieten geïmplementeerd. Zo wordt een positie gesloten wanneer de beweging niet binnen een redelijke termijn optreedt of het risico te hoog oploopt. Daarnaast worden posities voor een groot deel actief afgedekt (hedging), waardoor potentiële negatieve resultaten deels worden gecompenseerd. Dit helpt om de volatiliteit van de portefeuille te verlagen en risico’s beheersbaar te houden, zelfs bij onverwachte marktbewegingen.
+      </>
+    ),
+    icon: <Settings size={24} className="text-white" />,
+  },
+  {
+    title: "Technisch falen",
+    description:
+      "Als het geautomatiseerde systeem uitvalt of vertraagd is, kan het niet accuraat reageren op marktschommelingen. Dit kan leiden tot gemiste kansen of ongecontroleerde verliezen.",
+    measures: (
+      <>
+        <strong>Maatregelen:</strong> Gebruik redundant VPS-hosting met 99,99% uptime, automatische backups en failover-systemen. Daarnaast zijn meerdere waarschuwingsniveaus geïmplementeerd om technische of markgerelateerde afwijkingen direct te signaleren en handmatig of automatisch in te kunnen grijpen.
+      </>
+    ),
+    icon: <AlertTriangle size={24} className="text-white" />,
+  },
+]
+
     }
   };
 

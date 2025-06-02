@@ -12,15 +12,15 @@ const OpenPositions = () => {
       jobs: [
         {
           id: 1,
-          title: "Business Development Manager",
-          description: "We are looking for an experienced account manager.",
+          title: "Sales & Relationship Management",
+          description: "We are looking for a proactive sales professional who thrives on building long-term relationships with clients and partners. You value collaboration and enjoy working closely with other teams.",
           remote: "Noordwijkerhout",
           type: "Full-time",
         },
         {
           id: 2,
-          title: "Customer Support Manager",
-          description: "Due to our expanding client base, we are looking for a support manager.",
+          title: "Marketing Manager / Lead Generation Specialist",
+          description: "Are you a strategically minded marketer who sees opportunities to generate leads and strengthen our brand presence in the market? Then this role is tailor-made for you.",
           remote: "Noordwijkerhout",
           type: "Full-time",
         },
@@ -47,32 +47,19 @@ const OpenPositions = () => {
       jobs: [
         {
           id: 1,
-          title: "Business Development Manager",
-          description: "Wij zijn opzoek naar een ervaren accountmanager.",
+          title: "Sales en Relatiebeheer",
+          description: "Voor ons team zoeken we een proactieve sales professional die energie krijgt van het opbouwen van langdurige relaties met klanten en partners. Samenwerken met andere teams staat bij jou centraal.",
           remote: "Noordwijkerhout",
           type: "Voltijd",
         },
         {
           id: 2,
-          title: "Customer Support Manager",
-          description: "Wegens het uitbreidende klantenbestand zijn wij op zoek naar een support manager.",
+          title: "Marketing Manager / Lead Generation Specialist",
+          description: "Ben jij een strategisch ingestelde marketeer die kansen ziet om leads te genereren en ons merk sterker in de markt te zetten? Dan is deze rol op jouw lijf geschreven.",
           remote: "Noordwijkerhout",
           type: "Voltijd",
         },
-        {
-          id: 3,
-          title: "Hoofdontwerper",
-          description: "We zoeken een Senior Ontwerper om ons team te versterken.",
-          remote: "Noordwijkerhout",
-          type: "Voltijd",
-        },
-        {
-          id: 4,
-          title: "ML Ingenieur",
-          description: "We zoeken een mid-level ML-ingenieur om ons team te versterken.",
-          remote: "Noordwijkerhout",
-          type: "Voltijd",
-        },
+       
       ],
       applyLabel: "Solliciteren",
       applyAriaLabel: (title: string) => `Solliciteren voor de positie van ${title}`,
