@@ -40,7 +40,7 @@ const RiskCard = ({ title, description, measures, icon, index }: RiskCardType) =
   );
 };
 
-const WhatSetsUsApart = () => {
+const WhatSetsusApart = () => {
   const { language } = useChangeLanguageContext();
 
   const content = {
@@ -53,7 +53,7 @@ const WhatSetsUsApart = () => {
       "The strategy assumes that currency pairs sharing a common base tend to move according to historical patterns. In extreme market conditions (e.g., geopolitical shocks, central bank interventions), these correlations can temporarily break down.",
     measures: (
       <>
-        <strong>Measures:</strong> Use of dynamic models that detect deviations and measure their intensity. When correlations structurally diverge, the system can reduce, neutralize, or switch to alternative currency pairs. Real-time monitoring also enables timely intervention.
+        <strong>Measures:</strong> use of dynamic models that detect deviations and measure their intensity. When correlations structurally diverge, the system can reduce, neutralize, or switch to alternative currency pairs. Real-time monitoring also enables timely intervention.
       </>
     ),
     icon: <BarChart size={24} className="text-white" />,
@@ -75,7 +75,7 @@ const WhatSetsUsApart = () => {
       "If the automated system fails or lags, it may not respond accurately to market fluctuations, leading to missed opportunities or uncontrolled losses.",
     measures: (
       <>
-        <strong>Measures:</strong> Use of redundant VPS hosting with 99.99% uptime, automatic backups, and failover systems. Multiple alert levels are also in place to detect technical or market-related anomalies for immediate manual or automated response.
+        <strong>Measures:</strong> use of redundant VPS hosting with 99.99% uptime, automatic backups, and failover systems. Multiple alert levels are also in place to detect technical or market-related anomalies for immediate manual or automated response.
       </>
     ),
     icon: <AlertTriangle size={24} className="text-white" />,
@@ -114,7 +114,7 @@ const WhatSetsUsApart = () => {
       "Als het geautomatiseerde systeem uitvalt of vertraagd is, kan het niet accuraat reageren op marktschommelingen. Dit kan leiden tot gemiste kansen of ongecontroleerde verliezen.",
     measures: (
       <>
-        <strong>Maatregelen:</strong> Gebruik redundant VPS-hosting met 99,99% uptime, automatische backups en failover-systemen. Daarnaast zijn meerdere waarschuwingsniveaus geïmplementeerd om technische of markgerelateerde afwijkingen direct te signaleren en handmatig of automatisch in te kunnen grijpen.
+        <strong>Maatregelen:</strong> We maken gebruik redundant VPS-hosting met 99,99% uptime, automatische backups en failover-systemen. Daarnaast zijn meerdere waarschuwingsniveaus geïmplementeerd om technische of markgerelateerde afwijkingen direct te signaleren en handmatig of automatisch in te kunnen grijpen.
       </>
     ),
     icon: <AlertTriangle size={24} className="text-white" />,
@@ -164,4 +164,4 @@ const WhatSetsUsApart = () => {
   );
 };
 
-export default WhatSetsUsApart;
+export default WhatSetsusApart;

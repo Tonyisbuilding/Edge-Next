@@ -17,7 +17,7 @@ const WhyEdgeCapital = () => {
           </h1>
           <p
             className=" md:text-[17.45px] text-[12px] font-normal text-[#FFFFFF] my-1 
-          lg:w-[50rem] montserrat md:px-[1rem] leading-6 py-[.5rem]"
+          lg:w-[50rem] montserrat md:px-[1rem] leading-6 py-[.1rem]"
           >
             { language === 'nl' ? 'Hieronder vindt u de belangrijkste redenen waarom EdgeNext de juiste partner is voor uw beleggingen. We beantwoorden veelgestelde vragen met duidelijke en transparante inzichten, zodat u precies weet waar u aan toe bent.'
              : 'Below are the key reasons why EdgeNext is the right partner for your investments. We answer frequently asked questions with clear and transparent insights, so you know exactly what to expect.'

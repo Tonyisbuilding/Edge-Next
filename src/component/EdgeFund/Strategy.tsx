@@ -70,7 +70,7 @@ const StrategySection = () => {
                   >
                     <div className="flex-shrink-0 flex items-center justify-center relative top-[-1rem]">
                       <img
-                        src={images.edgefund.scaleUp}
+                        src={images.edgefund.scaleup}
                         alt={language === 'nl' ? "Onderzoeksteam dat marktgegevens analyseert" : "Research team analyzing market data"}
                         className="w-full h-full object-cover"
                       />
@@ -107,7 +107,7 @@ const StrategySection = () => {
                 <motion.div whileHover={{ scale: 1.05 }} className="w-12 h-10">
                   <div className="flex-shrink-0 flex items-center justify-center relative top-[-1rem]">
                     <img
-                      src={images.edgefund.scaleUp}
+                      src={images.edgefund.scaleup}
                       alt={language === 'nl' ? "Onderzoeksteam dat marktgegevens analyseert" : "Research team analyzing market data"}
                       className="w-full h-full object-cover"
                     />

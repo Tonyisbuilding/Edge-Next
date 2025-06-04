@@ -64,7 +64,7 @@ const JoinTheTeam = () => {
               variants={itemVariants}
             >
               {language === `nl`
-                ? `SluitU aan bij het team`
+                ? `Sluitu aan bij het team`
                 : `Join the team`}
             </motion.h2>
             <motion.p
@@ -103,7 +103,7 @@ const JoinTheTeam = () => {
               <img
                 src={images.form.career}
                 alt="Research team analyzing market data"
-                className="w-[50%] md:w-full h-full object-cover mt-[2rem] md:mt-0"
+                className="w-[50%] md:w-full max-w-[700px] h-auto  object-cover mt-[2rem] md:mt-0"
               />
             </div>
           </motion.div>

@@ -52,17 +52,17 @@ const ContactInformation = () => {
         title: "Contact Information",
         description:
           "Looking to collaborate or have questions about our services? We'd love to connect and explore how Edge Capital can help you achieve your financial goals.",
-        callUs: "Call Us",
-        emailUs: "Email Us",
+        callus: "Call us",
+        emailus: "Email us",
         visit: "Visit",
         workingHours: "Working Hours",
-        phone: "+31 252 781 777",
+        phone: "+31 252 781 778",
         email: "info@edgenext.nl",
-        address: "Walserij 15-I2211 SJ, Noordwijkerhout",
+        address: "Walserij 15-I 2211 SJ, Noordwijkerhout",
         hours: "Mon - Fri: 9AM - 6PM",
       },
       form: {
-        title: "Send Us a Message",
+        title: "Send us a Message",
         description:
           "Fill out the form below and we'll get back to you as soon as possible.",
         firstNameLabel: "First name",
@@ -90,14 +90,14 @@ const ContactInformation = () => {
       contactInfo: {
         title: "Contactgegevens",
         description:
-          "Wilt u samenwerken of heeft u vragen over onze diensten? We maken graag contact om te ontdekken hoe Edge Capital u kan helpen uw financiële doelen te bereiken.",
-        callUs: "Bel Ons",
-        emailUs: "Mail ons",
+          "Wilt u samenwerken of heeft u vragen over onze diensten? We maken graag contact om te ontdekken hoe Edge Next u kan helpen uw financiële doelen te bereiken.",
+        callus: "Bel Ons",
+        emailus: "Mail ons",
         visit: "Bezoekadres",
         workingHours: "Openingstijden",
-        phone: "+31 252 781 777",
+        phone: "+31 252 781 778",
         email: "info@edgenext.nl",
-        address: "Walserij 15-I2211 SJ, Noordwijkerhout",
+        address: "Walserij 15-I 2211 SJ, Noordwijkerhout",
         hours: "Ma - Vr: 9:00 - 18:00",
       },
       form: {
@@ -181,7 +181,7 @@ const ContactInformation = () => {
 
     if (validateForm()) {
       try {
-        const response = await axiosInstance.post("/contactUs", formData);
+        const response = await axiosInstance.post("/contactus", formData);
 
         if (!response) {
           const errorData: { message?: string } = await response;
@@ -286,7 +286,7 @@ const ContactInformation = () => {
               </div>
               <div>
                 <p className="text-sm text-teal-100">
-                  {content.contactInfo.callUs}
+                  {content.contactInfo.callus}
                 </p>
                 <p className="font-bold">{content.contactInfo.phone}</p>
               </div>
@@ -298,7 +298,7 @@ const ContactInformation = () => {
               </div>
               <div>
                 <p className="text-sm text-teal-100">
-                  {content.contactInfo.emailUs}
+                  {content.contactInfo.emailus}
                 </p>
                 <p className="font-bold">{content.contactInfo.email}</p>
               </div>

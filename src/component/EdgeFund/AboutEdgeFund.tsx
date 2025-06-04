@@ -9,16 +9,16 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 // Translations object
 const translations = {
   en: {
-    title: "About EdgeNext Fund",
+    title: "About Correlation Arbitrage Fund",
     description:
-      "The EdgeNext Fund is an advanced variation of the classic index arbitrage strategy. We have carefully selected over 30 currency combinations, consisting of strong and liquid currencies such as the Euro (EUR), US Dollar (USD), Canadian Dollar (CAD), New Zealand Dollar (NZD), and Australian Dollar (AUD). Our strategy specifically targets currency pairs that share a common currency, such as EUR/CAD or USD/CAD. These pairs historically exhibit strong intercorrelations and predictable price patterns. The trading approach is based on the principle of mean reversion — the idea that exchange rates tend to revert to their average ratio. When our models detect a significant deviation from this historical pattern, a position is automatically taken to anticipate a correction toward the mean.",
-    minimumInvestment: "Minimum investment: €100,000.",
+      "The Correlation Arbitrage Fund is an advanced variation of the classic index arbitrage strategy. We have carefully selected over 30 currency combinations, consisting of strong and liquid currencies such as the Euro (EuR), uS Dollar (uSD), Canadian Dollar (CAD), New Zealand Dollar (NZD), and Australian Dollar (AuD). Our strategy specifically targets currency pairs that share a common currency, such as EuR/CAD or uSD/CAD. These pairs historically exhibit strong intercorrelations and predictable price patterns. The trading approach is based on the principle of mean reversion — the idea that exchange rates tend to revert to their average ratio. When our models detect a significant deviation from this historical pattern, a position is automatically taken to anticipate a correction toward the mean.",
+    minimumInvestment: "Minimum investment: €100,000",
     participateButton: "Participate"
   },
   nl: {
-    title: "Over EdgeNext Fund",
+    title: "Over Correlation Arbitrage Fund",
     description:
-      "Het EdgeNext Fund is een geavanceerde variant op de klassieke index-arbitragestrategie. We hebben zorgvuldig meer dan 30 valutacombinaties geselecteerd, bestaande uit sterke en liquide valuta zoals de Euro (EUR), Amerikaanse dollar (USD), Canadese dollar (CAD), Nieuw-Zeelandse dollar (NZD) en Australische dollar (AUD). Onze strategie richt zich specifiek op valutaparen die een gemeenschappelijke munt delen, zoals EUR/CAD of USD/CAD. Deze paren vertonen historisch sterke onderlinge correlaties en voorspelbare prijspatronen. De handelsaanpak is gebaseerd op het principe van mean reversion – het idee dat wisselkoersen de neiging hebben terug te keren naar hun gemiddelde verhouding. Wanneer onze modellen een significante afwijking van dit historische patroon detecteren, wordt automatisch een positie ingenomen die inspeelt op een verwachte correctie richting het gemiddelde.",
+      "Het Correlation Arbitrage Fund is een geavanceerde variant op de klassieke index-arbitragestrategie. We hebben zorgvuldig meer dan 30 valutacombinaties geselecteerd, bestaande uit sterke en liquide valuta zoals de Euro (EuR), Amerikaanse dollar (uSD), Canadese dollar (CAD), Nieuw-Zeelandse dollar (NZD) en Australische dollar (AuD). Onze strategie richt zich specifiek op valutaparen die een gemeenschappelijke munt delen, zoals EuR/CAD of uSD/CAD. Deze paren vertonen historisch sterke onderlinge correlaties en voorspelbare prijspatronen. De handelsaanpak is gebaseerd op het principe van mean reversion – het idee dat wisselkoersen de neiging hebben terug te keren naar hun gemiddelde verhouding. Wanneer onze modellen een significante afwijking van dit historische patroon detecteren, wordt automatisch een positie ingenomen die inspeelt op een verwachte correctie richting het gemiddelde.",
     minimumInvestment: "Minimale investering: €100.000.",
     participateButton: "Deelnemen"
   }

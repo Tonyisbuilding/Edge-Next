@@ -60,7 +60,7 @@ const HeroSection = () => {
                 <div className="feature-text">
                   <p>
                     <span className="bold-text">{language === 'nl' ? 'Riskmanagement' : 'Managed risk'}</span>
-                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 5.15%' : '- Lowest monthly drawdown over the past 3.5 years of just 5.15%'}
+                    { language === 'nl' ? ' -  Hoogste drawdown op maandniveau in de afgelopen 5 jaar van 5.05%' : '- Highest monthly drawdown in the past 5 years: 5.05%'}
                   </p>
                 </div>
               </li>
@@ -73,7 +73,7 @@ const HeroSection = () => {
                   className="block "
                   // onClick={toggleNav}
                 >
-                  { language === 'nl' ? 'Neem contact op' : 'Get in touch'}
+                  { language === 'nl' ? 'Neem Contact op' : 'Get in touch'}
                 </Link>
               </button>
               <button

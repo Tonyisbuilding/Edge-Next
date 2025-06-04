@@ -35,32 +35,32 @@ const Navbar = () => {
   const translations = {
     en: {
       home: "Home",
-      aboutUs: "About Us",
+      aboutus: "About us",
       about: "About",
       team: "Team",
-      edgeFund: "EdgeNext Fund",
+      edgeFund: "Correlation Arbitrage Fund",
       company: "Company",
       contact: "Contact",
       media: "Media",
       documents: "Documents",
       careers: "Careers",
-      contactUs: "Contact Us",
+      contactus: "Contact us",
       english: "English",
       dutch: "Dutch",
     },
     nl: {
       home: "Home",
-      aboutUs: "Over Ons",
+      aboutus: "Over Ons",
       about: "Over",
       team: "Team",
-      edgeFund: "EdgeNext Fund",
+      edgeFund: "Correlation Arbitrage Fund",
       institutional: "Institutioneel",
       company: "Bedrijf",
       contact: "Contact",
       media: "Media",
       documents: "Documenten",
       careers: "Vacatures",
-      contactUs: "Neem Contact Op",
+      contactus: "Neem Contact op",
       english: "Engels",
       dutch: "Dutch",
     }
@@ -105,7 +105,7 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 w-full bg-[#256D7B] text-white text-center px-4 py-2 z-[9999] flex justify-center items-center gap-2">
           <p className="text-[10px] sm:text-sm leading-snug max-w-[90%] text-white">
   {language === "nl"
-    ? "Let op! U belegt buiten toezicht van de AFM (Autoriteit Financiële Markten). Voor deze activiteit geldt geen vergunnings- of prospectusplicht."
+    ? "Let op! u belegt buiten toezicht van de AFM (Autoriteit Financiële Markten). Voor deze activiteit geldt geen vergunnings- of prospectusplicht."
     : "Attention! You are investing outside the supervision of the AFM (Authority for the Financial Markets). There is no requirement for licensing or prospectus for this activity."}
 </p>
         <img
@@ -167,7 +167,7 @@ const Navbar = () => {
                     className="text-[#000C0C] font-semibold flex justify-between items-center w-full"
                     onClick={(e) => toggleDropdown(1, e)}
                   >
-                    {t("aboutUs")}
+                    {t("aboutus")}
                     <FontAwesomeIcon
                       icon={activeDropdowns[1] ? faChevronUp : faChevronDown}
                       className="text-xs"
@@ -285,7 +285,7 @@ const Navbar = () => {
                   </div>
                 </div>
                 <button className="bg-[#000C0C] text-white rounded-md px-6 py-3 font-semibold w-full">
-                  <Link to="/contact">{t("contactUs")}</Link>
+                  <Link to="/contact">{t("contactus")}</Link>
                 </button>
               </div>
             </div>
@@ -306,7 +306,7 @@ const Navbar = () => {
                 href="#"
                 className="text-[#000C0C] font-semibold hover:text-[#008487] transition-colors flex items-center"
               >
-                {t("aboutUs")}
+                {t("aboutus")}
                 <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
               </a>
               <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
@@ -417,7 +417,7 @@ const Navbar = () => {
               className="bg-[#000C0C] text-white rounded-4xl px-6 py-3 font-semibold
            hover:bg-[#0e1417] transition-colors relative right-[1rem] w-auto"
             >
-              <Link to="/contact">{t("contactUs")}</Link>
+              <Link to="/contact">{t("contactus")}</Link>
             </button>
           </div>
 

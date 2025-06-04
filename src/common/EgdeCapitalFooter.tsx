@@ -34,7 +34,7 @@ const EdgeCapitalFooter = () => {
           <div className="md:pl-8">
             <h3 className="font-medium text-white mb-4">Home</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="hover:text-gray-300 transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-gray-300 transition-colors">About us</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">EdgeFund</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">Edge Impact</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">Institutional</a></li>

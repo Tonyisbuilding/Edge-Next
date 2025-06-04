@@ -32,7 +32,7 @@ const InvestmentPerformance = () => {
       participationFrom: "participatie vanaf",
       metrics: {
         netReturn2024: "Nettorendement 2024:",
-        netReturnSinceInception: "Nettorendement sinds start strategie:",
+        netReturnSinceInception: "Nettorendement sinds start  strategie:",
         averageAnnualReturn: "Gemiddeld jaarlijks rendement sinds oprichting:"
       },
       downloadFactsheet: "Download onze factsheet voor een gedetailleerd overzicht.",

@@ -68,7 +68,7 @@ const EdgeCareHero = () => {
               whileTap={{ scale: 0.95 }}
               aria-label="Partner with Edge Capital"
             >
-              <a href="mailto:info@edgenext.nl">{ language === 'nl' ? 'Werk met ons samen' : 'Partner With Us'}</a>
+              <a href="mailto:info@edgenext.nl">{ language === 'nl' ? 'Werk met ons samen' : 'Partner With us'}</a>
             </motion.button>
           </motion.div>
         </div>

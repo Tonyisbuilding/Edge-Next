@@ -8,7 +8,7 @@ export const initialState: CounterState = {
     status: 'pending...',
 };
 
-type UpdateCountAction = {
+type updateCountAction = {
     type: 'increment' | 'decrement' | 'reset';
   };
   type SetStatusAction = {
@@ -17,7 +17,7 @@ type UpdateCountAction = {
   };
   
   // Extend the union type for all possible actions
-  type CounterAction = UpdateCountAction | SetStatusAction;
+  type CounterAction = updateCountAction | SetStatusAction;
 
 
 export const counterReducer = (state: CounterState, action: CounterAction): CounterState =>{

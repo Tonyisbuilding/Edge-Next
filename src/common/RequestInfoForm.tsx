@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   Mail,
   Phone,
-  User,
+  user,
   MessageSquare,
   Send,
   ChevronDown,
@@ -70,7 +70,7 @@ const RequestInfoForm = () => {
         firstNameLabel: "Voornaam",
         lastNameLabel: "Achternaam",
         emailLabel: "Email",
-        phoneLabel: "Uw telefoonnummer",
+        phoneLabel: "uw telefoonnummer",
         preferenceLabel: "Waar wilt u informatie over ontvangen?",
         preferenceOptions: [
           { value: "", label: "- Selecteer -" },
@@ -256,7 +256,7 @@ const RequestInfoForm = () => {
                 </label>
                 <div className="relative">
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
-                    <User size={18} />
+                    <user size={18} />
                   </span>
                   <input
                     type="text"
@@ -284,7 +284,7 @@ const RequestInfoForm = () => {
                 </label>
                 <div className="relative">
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
-                    <User size={18} />
+                    <user size={18} />
                   </span>
                   <input
                     type="text"

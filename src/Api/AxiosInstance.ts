@@ -2,11 +2,11 @@ import axios from "axios";
 
 
 
-const BASE_URL = `http://localhost:3000/api/v1/edgefund`;
-// const BASE_URL = `https://edge-capital-backend.onrender.com/api/v1/edgefund`;
+const BASE_uRL = `http://localhost:3000/api/v1/edgefund`;
+// const BASE_uRL = `https://edge-capital-backend.onrender.com/api/v1/edgefund`;
 
 const axiosInstance = axios.create({
-  baseURL: BASE_URL,
+  baseuRL: BASE_uRL,
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",

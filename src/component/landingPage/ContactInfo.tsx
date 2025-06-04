@@ -22,7 +22,7 @@ const ContactInfo = () => {
           </h1>
           <p className=" pt-[1rem] text-[#3D3D3D] text-[16.59px] font-normal">
             {language === "nl"
-              ? `Neem contact met ons op en schrijf U in voor onze nieuwsbrief voor vragen, ondersteuning of feedback. We staan klaar om U bij elke stap te helpen.`
+              ? `Neem contact met ons op en schrijf u in voor onze nieuwsbrief voor vragen, ondersteuning of feedback. We staan klaar om u bij elke stap te helpen.`
               : `Contact us and suscribe to our news letter for inquiries, support,
             or feedback. We're here to assist you every step of the way.`}
           </p>
@@ -30,16 +30,16 @@ const ContactInfo = () => {
         <div className="">
           <ContactInput 
             placeholder="info@edgenext.nl"
-            CTAButton={ language === 'nl'? 'Mail ons' : 'Mail Us'}
+            CTAButton={ language === 'nl'? 'Mail ons' : 'Mail us'}
             icon={images.landingPage.email}
           />
           <ContactInput
-            placeholder="+31 252 781 777"
-            CTAButton={ language === 'nl' ? 'Bel ons' : 'Call Us'}
+            placeholder="+31 252 781 778"
+            CTAButton={ language === 'nl' ? 'Bel ons' : 'Call us'}
             icon={images.landingPage.email}
           />
           <ContactInput
-            placeholder="Walserij 15-I2211 SJ, Noordwijkerhout"
+            placeholder="Walserij 15-I 2211 SJ, Noordwijkerhout"
             CTAButton={ language === 'nl' ? 'Richting' : 'Get Direction'}
             icon={images.landingPage.email}
           />

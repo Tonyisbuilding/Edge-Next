@@ -270,7 +270,7 @@ const Presentation = () => {
             </button>
           </div>
 
-          {/* Urgency Text */}
+          {/* urgency Text */}
           <p className="text-[0.85rem] sm:text-[0.9rem] text-[#64748b] mt-4 sm:mt-5 flex items-center gap-2">
             <span className="text-[#008487] flex-shrink-0">
               <svg

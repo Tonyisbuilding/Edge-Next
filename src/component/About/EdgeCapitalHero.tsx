@@ -22,7 +22,7 @@ const EdgeCapitalHero = () => {
     nl: {
       heading: "Next staat voor vooruitgang. Voor innovatie. Voor het volgende niveau in beleggen. EdgeNext combineert geavanceerde data-analyse, realtime risicobeheersing en adaptieve systemen om optimaal te presteren in markten die steeds sneller bewegen en steeds volatieler worden.",
       subheading: "EdgeNext is geen evolutie van bestaande methodes, het is een fundamenteel andere manier van denken over rendement, risico en resultaat.",
-      getInTouch: "Neem Contact Op",
+      getInTouch: "Neem Contact op",
       altText: "Edge Capital Team"
     }
   };

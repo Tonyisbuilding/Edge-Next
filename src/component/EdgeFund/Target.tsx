@@ -87,7 +87,7 @@ const Target = () => {
     ]
   };
 
-  // Use the appropriate language
+  // use the appropriate language
   const currentMetrics = metrics[language] || metrics.en;
 
   return (

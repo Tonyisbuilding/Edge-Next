@@ -14,7 +14,7 @@ import Forth from "../../src/assets/images/landingPage/fourth_logo.png";
 import Logo_five from "../../src/assets/images/landingPage/Logo_five.png";
 import Citibank from "../../src/assets/images/landingPage/citibank_logo.svg.svg";
 import Bolderlogo from "../../src/assets/images/landingPage/Page-1.svg";
-import GBEBroker from "../../src/assets/images/landingPage/gbe_brokers_ltd_logo.svg.svg";
+import GBEBroker from "../../src/assets/images/landingPage/GBE-broker.svg";
 import NewEC from "../../src/assets/images/landingPage/New_EC.svg";
 
 import Afm_disclaimer from "../../src/assets/images/landingPage/Afm_disclaimer.png";
@@ -62,7 +62,7 @@ import edgehero from "../../src/assets/images/edgefund/Edgenextfundhero.jpg";
 import edgehorizon from "../../src/assets/images/edgefund/edgehorizon.png";
 import edgecare from "../../src/assets/images/edgefund/edgecare.png";
 import effect from "../../src/assets/images/edgefund/effect.png";
-import scaleUp from "../../src/assets/images/edgefund/scale.png";
+import scaleup from "../../src/assets/images/edgefund/scale.png";
 import ECLogo from "../../src/assets/images/ECLogo.png";
 import ECLogoSVG from "../../src/assets/images/ECLogo.svg";
 import EdgeCapitalLogo from "../../src/assets/images/EdgeCapitalLogo.png";
@@ -117,7 +117,7 @@ import inbox from "../../src/assets/images/form/inbox.png";
 import send_mail from "../../src/assets/images/form/send_mail.png";
 import flare from "../../src/assets/images/form/flare.png";
 import download from "../../src/assets/images/form/download.png";
-import career from "../../src/assets/images/form/career.png";
+import career from "../../src/assets/images/form/Careersimg.png";
 import inHouse from "../../src/assets/images/institution/inHouse.svg";
 import ml from "../../src/assets/images/institution/ml.svg";
 import proprietary from "../../src/assets/images/institution/proprietary.svg";
@@ -198,7 +198,7 @@ const images = {
     edgefund: {
         edgehero,
         effect,
-        scaleUp,
+        scaleup,
         edgehorizon,
         edgecare
     },

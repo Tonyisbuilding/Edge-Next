@@ -42,12 +42,12 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/about">
-                  {language === "nl" ? "Over ons" : "About Us"}
+                  {language === "nl" ? "Over ons" : "About us"}
                 </a>
               </li>
               <li>
                 <a href="/edge-fund">
-                  {language === "nl" ? "EdgeNext Fund" : "EdgeNext Fund"}
+                  {language === "nl" ? "Correlation Arbitrage Fund" : "Correlation Arbitrage Fund"}
                 </a>
               </li>
               {/* <li><a href="/impact">Edge Impact</a></li> */}
@@ -69,11 +69,7 @@ const Footer = () => {
                   {language === "nl" ? "Kennisbank" : "Knowledge Base"}
                 </a>
               </li> */}
-              <li>
-                <a href="/contact">
-                  {language === "nl" ? "Ondersteuning" : "Support"}
-                </a>
-              </li>
+             
               <li>
                 <a href="/privacy">
                   {language === "nl" ? "Privacybeleid" : "Privacy policy"}
@@ -153,17 +149,17 @@ Edge Capital Management B.V. is registered with the Dutch Authority for the Fina
       <div className="footer-bottom">
         <div className="footer-copyright">
           {language === "nl"
-            ? "© 2025 Edge Capital. Alle rechten voorbehouden."
-            : "© 2025 Edge Capital. All rights reserved."}
+            ? "© 2025 Edge Next. Alle rechten voorbehouden."
+            : "© 2025 Edge Next. All rights reserved."}
         </div>
-        <div className="footer-status">
+        {/* <div className="footer-status">
           <span className="status-dot"></span>
           {language === "nl" ? (
             <span>Alle systemen operationeel</span>
           ) : (
             <span>All systems operational</span>
           )}
-        </div>
+        </div> */}
         <a href="/privacy" className="footer-policy">
           {language === "nl" ? "Privacybeleid" : "Privacy policy"}
         </a>

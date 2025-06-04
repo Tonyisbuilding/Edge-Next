@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
-const WhyWorkWithUs = () => {
+const WhyWorkWithus = () => {
   const { language } = useChangeLanguageContext();
 
   // Define translations for English and Dutch
@@ -61,7 +61,7 @@ const WhyWorkWithUs = () => {
           iconColor: "text-teal-600",
           title: "Gedreven om te Presteren",
           description:
-            "Bij Edge Capital streven we onwrikbaar naar uitmuntende beleggingsresultaten. Door diepgaand onderzoek, geavanceerde kwantitatieve technieken en een focus op rendement, creëren we strategieën die het verschil maken voor onze cliënten.",
+            "Bij Edge Next streven we onwrikbaar naar uitmuntende beleggingsresultaten. Door diepgaand onderzoek, geavanceerde kwantitatieve technieken en een focus op rendement, creëren we strategieën die het verschil maken voor onze cliënten.",
         },
         {
           id: 2,
@@ -293,4 +293,4 @@ const WhyWorkWithUs = () => {
   );
 };
 
-export default WhyWorkWithUs;
+export default WhyWorkWithus;

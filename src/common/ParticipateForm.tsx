@@ -7,7 +7,7 @@ import {
   MapPin,
   Flag,
   Globe,
-  User,
+  user,
   FileText,
   Calendar,
   DollarSign,
@@ -164,18 +164,18 @@ const ParticipantForm: React.FC = () => {
         dateOfBirthPlaceholder: "Select date of birth", // New field
         initialDepositPlaceholder: "Enter amount", // New field
         countries: [
-          { code: "US", name: "United States" },
+          { code: "uS", name: "united States" },
           { code: "CA", name: "Canada" },
-          { code: "UK", name: "United Kingdom" },
-          { code: "AU", name: "Australia" },
+          { code: "uK", name: "united Kingdom" },
+          { code: "Au", name: "Australia" },
           { code: "DE", name: "Germany" },
           { code: "FR", name: "France" },
           { code: "JP", name: "Japan" },
         ],
         phonePrefixes: [
-          { code: "+1", country: "US/CA" },
-          { code: "+44", country: "UK" },
-          { code: "+61", country: "AU" },
+          { code: "+1", country: "uS/CA" },
+          { code: "+44", country: "uK" },
+          { code: "+61", country: "Au" },
           { code: "+49", country: "DE" },
           { code: "+33", country: "FR" },
           { code: "+81", country: "JP" },
@@ -236,10 +236,10 @@ const ParticipantForm: React.FC = () => {
         dateOfBirthPlaceholder: "Selecteer geboortedatum", // New field
         initialDepositPlaceholder: "Voer bedrag in", // New field
         countries: [
-          { code: "US", name: "Verenigde Staten" },
+          { code: "uS", name: "Verenigde Staten" },
           { code: "CA", name: "Canada" },
-          { code: "UK", name: "Verenigd Koninkrijk" },
-          { code: "AU", name: "Australië" },
+          { code: "uK", name: "Verenigd Koninkrijk" },
+          { code: "Au", name: "Australië" },
           { code: "DE", name: "Duitsland" },
           { code: "FR", name: "Frankrijk" },
           { code: "JP", name: "Japan" },
@@ -247,7 +247,7 @@ const ParticipantForm: React.FC = () => {
         phonePrefixes: [
           { code: "+1", country: "VS/CA" },
           { code: "+44", country: "VK" },
-          { code: "+61", country: "AU" },
+          { code: "+61", country: "Au" },
           { code: "+49", country: "DE" },
           { code: "+33", country: "FR" },
           { code: "+81", country: "JP" },
@@ -437,7 +437,7 @@ const ParticipantForm: React.FC = () => {
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                  <user className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <input
                     id="name"
                     type="text"
@@ -619,7 +619,7 @@ const ParticipantForm: React.FC = () => {
                   {content.form.onBehalfOfLabel}
                 </label>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                  <user className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <input
                     id="onBehalfOf"
                     type="text"

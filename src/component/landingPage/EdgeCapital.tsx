@@ -76,7 +76,7 @@ export default EdgeCapital;
 // // Define props interface (even if empty) for better type consistency
 // interface EdgeCapitalProps {}
 
-// // Use explicit typing for the component
+// // use explicit typing for the component
 // const EdgeCapital: React.FC<EdgeCapitalProps> = () => {
 //   // Type the ref explicitly
 //   const containerRef = useRef<HTMLDivElement>(null);
@@ -124,7 +124,7 @@ export default EdgeCapital;
 //   }, []); // Empty dependency array is fine since we only need this effect once
 
 //   const originalText: string =
-//     "At Edge Capital, we revolutionize investing with quantitative, fact-based strategies, not traditional predictions. Using predetermined parameters like interest rates and option premiums, we mitigate risks through hedging across options and futures markets. Our diverse products, tailored for large and small investors, offer optimized risk-return profiles, giving you a market edge.";
+//     "At Edge Capital, we revolutionize investing with quantitative, fact-based strategies, not traditional predictions. using predetermined parameters like interest rates and option premiums, we mitigate risks through hedging across options and futures markets. Our diverse products, tailored for large and small investors, offer optimized risk-return profiles, giving you a market edge.";
 
 //   // Type the words array explicitly
 //   const words: string[] = originalText.split(/\s+/);

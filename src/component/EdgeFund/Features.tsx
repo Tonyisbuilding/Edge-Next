@@ -159,7 +159,7 @@ const Feature = () => {
           },
           {
             title: 'Flexibel uitstappen',
-            description: 'U kunt maandelijks uitstappen'
+            description: 'u kunt maandelijks uitstappen'
           },
           {
             title: 'Geen kosten',

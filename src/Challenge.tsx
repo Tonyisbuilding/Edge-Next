@@ -1,4 +1,4 @@
-import { UseContext } from "./BasicContext";
+import { useContext } from "./BasicContext";
 
 type BasicProfileCardProps = {
     type: 'basic';
@@ -14,7 +14,7 @@ type BasicProfileCardProps = {
   
   function Challenge(props: ProfileCardProps) {
     const { type, name } = props;
-    const myName = UseContext();
+    const myName = useContext();
   
     if (type === 'basic') {
       return (

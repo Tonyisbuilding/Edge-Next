@@ -41,17 +41,17 @@ const GetStartedSection = () => {
         {
           number: "1",
           title: "Verwijs nieuwe klanten",
-          content: "DeelU unieke verwijzingslink of neem contact op metU relatiemanager om nieuwe klanten te introduceren."
+          content: "Deelu unieke verwijzingslink of Neem Contact op metu relatiemanager om nieuwe klanten te introduceren."
         },
         {
           number: "2",
-          title: "VerdienU beloningen",
-          content: "ZodraU klanten actief blijven, ontvangU een beloning om in te wisselen."
+          title: "Verdienu beloningen",
+          content: "Zodrau klanten actief blijven, ontvangu een beloning om in te wisselen."
         },
         {
           number: "3",
           title: "Maak impact",
-          content: "Help bedrijven groeien terwijlU beloningen verdient voorU waardevolle verwijzingen."
+          content: "Help bedrijven groeien terwijlu beloningen verdient vooru waardevolle verwijzingen."
         }
       ],
       prevButtonLabel: "Vorige stap",
@@ -63,7 +63,7 @@ const GetStartedSection = () => {
   // Get the appropriate language translations
   const t = translations[language as keyof typeof translations] || translations.en;
   
-  // Use the translated steps
+  // use the translated steps
   const steps = t.steps;
 
   const nextSlide = () => {

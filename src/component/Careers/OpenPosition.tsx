@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+import images from "@/constant/images";
+
 
 const OpenPositions = () => {
   const { language } = useChangeLanguageContext();
@@ -104,11 +106,20 @@ const OpenPositions = () => {
           className="text-4xl font-bold text-gray-900 mb-2 inline-block"
         >
           {content.heading.split(" ")[0]}{" "}
-          <span className="relative">
+          <span
+            className="relative inline-block"
+            style={{
+              backgroundImage: `url(${images.landingPage.Brush})`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "0 100%",
+              backgroundSize: "100% 4px",
+              paddingBottom: "0.2rem",
+            }}
+          >
             {content.heading.split(" ")[1]}
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400"></span>
           </span>
         </h2>
+
       </div>
 
       <motion.div

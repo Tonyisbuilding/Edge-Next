@@ -1,5 +1,5 @@
 import  {type PropsWithChildren} from 'react';
-import { UseContext } from './BasicContext';
+import { useContext } from './BasicContext';
 
 // type ComponentProps ={
 //     name: string,
@@ -13,7 +13,7 @@ type ComponentProps = PropsWithChildren<{
 }> 
 
 const Props = ({name,id, children}: ComponentProps) => {
-  const myName = UseContext();
+  const myName = useContext();
   const setName = myName.setName;
 
 

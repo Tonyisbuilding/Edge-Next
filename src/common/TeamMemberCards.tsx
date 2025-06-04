@@ -177,7 +177,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
               </h1>
               <img
                 src={images.landingPage.Brush}
-                alt="Underline brush"
+                alt="underline brush"
                 className="absolute left-0 bottom-0 w-auto h-[8px] pointer-events-none"
               />
             </div>
@@ -188,7 +188,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
             className={`text-3xl md:text-5xl font-bold text-center mb-12  text-black
              ${pathname.slice(1) === "team" ? "hidden" : "block"}`}
           >
-            {language === 'nl' ? 'Ons management team' : 'Our management team'}
+            {language === 'nl' ? 'Ons managementteam' : 'Our management team'}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

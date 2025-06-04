@@ -7,7 +7,7 @@ import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 import axiosInstance from "@/Api/AxiosInstance";
 import axios from "axios";
 
-// Stuur onsU vraag
+// Stuur onsu vraag
 const ContactForm = () => {
   const { language } = useChangeLanguageContext();
   const [formData, setFormData] = useState({

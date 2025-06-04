@@ -19,11 +19,11 @@ const PrivacyPolicy = () => {
         <h2 className="text-2xl font-semibold mb-4">Benefits of Cookies / Voordelen van cookies</h2>
         <ul className="list-disc list-inside space-y-2">
           <li><strong>English:</strong> A well-functioning website that lets you log in and use forms.</li>
-          <li><strong>Dutch:</strong> Een goed werkende website. U kunt bijvoorbeeld inloggen en gebruikmaken van webformulieren.</li>
+          <li><strong>Dutch:</strong> Een goed werkende website. u kunt bijvoorbeeld inloggen en gebruikmaken van webformulieren.</li>
           <li><strong>English:</strong> More relevant information based on your visit.</li>
-          <li><strong>Dutch:</strong> U ziet (meer) relevante informatie op basis van uw bezoek.</li>
+          <li><strong>Dutch:</strong> u ziet (meer) relevante informatie op basis van uw bezoek.</li>
           <li><strong>English:</strong> Personalized offers and user-friendly experience.</li>
-          <li><strong>Dutch:</strong> U profiteert van interessante aanbiedingen en een gebruiksvriendelijke website.</li>
+          <li><strong>Dutch:</strong> u profiteert van interessante aanbiedingen en een gebruiksvriendelijke website.</li>
         </ul>
       </section>
 

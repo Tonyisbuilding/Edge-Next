@@ -25,7 +25,7 @@ const HowDoesItWork = () => {
     en: {
       sectionTitle: "How does it work?",
       subtitle: "Earn Rewards by Introducing New Clients!",
-      description: "At Edge Capital, we recognize the power of personal recommendations. That's why we're excited to introduce our new referral program! When you refer new clients to us, you'll receive a cash reward based on the assets under management (AUM) they bring in, provided they remain clients for at least 3 months.",
+      description: "At Edge Capital, we recognize the power of personal recommendations. That's why we're excited to introduce our new referral program! When you refer new clients to us, you'll receive a cash reward based on the assets under management (AuM) they bring in, provided they remain clients for at least 3 months.",
       cardTitles: [
         "Earn tiered rewards",
         "Invest in your network",
@@ -37,9 +37,9 @@ const HowDoesItWork = () => {
         "7+ Referred Clients:"
       ],
       rewardValues: [
-        "Receive 0.75% of the referred AUM",
-        "Receive 1.00% of the referred AUM",
-        "Receive 1.25% of the referred AUM"
+        "Receive 0.75% of the referred AuM",
+        "Receive 1.00% of the referred AuM",
+        "Receive 1.25% of the referred AuM"
       ],
       networkContent: [
         "Share Edge Capital with friends, family, and colleagues who could benefit from our exceptional wealth management services.",
@@ -59,7 +59,7 @@ const HowDoesItWork = () => {
     nl: {
       sectionTitle: "Hoe werkt het?",
       subtitle: "Verdien beloningen door nieuwe klanten voor te stellen!",
-      description: "Bij Edge Capital erkennen we de kracht van persoonlijke aanbevelingen. Daarom zijn we verheugd om ons nieuwe verwijzingsprogramma te introduceren! Wanneer u nieuwe klanten naar ons verwijst, ontvangt u een geldelijke beloning op basis van de beheerde activa (AUM) die zij inbrengen, mits zij minimaal 3 maanden klant blijven.",
+      description: "Bij Edge Capital erkennen we de kracht van persoonlijke aanbevelingen. Daarom zijn we verheugd om ons nieuwe verwijzingsprogramma te introduceren! Wanneer u nieuwe klanten naar ons verwijst, ontvangt u een geldelijke beloning op basis van de beheerde activa (AuM) die zij inbrengen, mits zij minimaal 3 maanden klant blijven.",
       cardTitles: [
         "Verdien getrapte beloningen",
         "Investeer in uw netwerk",
@@ -71,9 +71,9 @@ const HowDoesItWork = () => {
         "7+ Verwezen klanten:"
       ],
       rewardValues: [
-        "Ontvang 0,75% van de verwezen AUM",
-        "Ontvang 1,00% van de verwezen AUM",
-        "Ontvang 1,25% van de verwezen AUM"
+        "Ontvang 0,75% van de verwezen AuM",
+        "Ontvang 1,00% van de verwezen AuM",
+        "Ontvang 1,25% van de verwezen AuM"
       ],
       networkContent: [
         "Deel Edge Capital met vrienden, familie en collega's die baat kunnen hebben bij onze uitzonderlijke vermogensbeheerservices.",

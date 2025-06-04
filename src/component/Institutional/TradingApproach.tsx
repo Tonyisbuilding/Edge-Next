@@ -12,7 +12,7 @@ import {
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 interface TradingApproachCardProps {
-  icon: LucideIcon; // Use LucideIcon type for icon components
+  icon: LucideIcon; // use LucideIcon type for icon components
   title: string;
   description: string;
 }

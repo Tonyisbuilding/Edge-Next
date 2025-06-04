@@ -61,7 +61,7 @@ const RoadmapSection = () => {
     }
   };
 
-  // Use the appropriate content based on language
+  // use the appropriate content based on language
   const content = translations[language] || translations.en;
   const roadmapData = content.roadmapData;
 
@@ -73,7 +73,7 @@ const RoadmapSection = () => {
     offset: ["start start", "end end"]
   });
 
-  // Update viewport height on resize
+  // update viewport height on resize
   useEffect(() => {
     const updateHeight = () => {
       setViewportHeight(window.innerHeight);

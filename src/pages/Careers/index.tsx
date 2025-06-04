@@ -1,6 +1,6 @@
 import JoinTheTeam from "@/component/Careers/CareersHeroSection";
 import OpenPositions from "@/component/Careers/OpenPosition";
-import WhyWorkWithUs from "@/component/Careers/WhyWorkWithUs";
+import WhyWorkWithus from "@/component/Careers/WhyWorkWithus";
 import NavBar from "@/common/NavBar";
 import Contact from "@/component/landingPage/Contact";
 import Footer from "@/common/Footer";
@@ -17,7 +17,7 @@ const Careers = () => {
         }}
       >
         <JoinTheTeam />
-        <WhyWorkWithUs />
+        <WhyWorkWithus />
         <OpenPositions />
         <Contact />
         <Footer />

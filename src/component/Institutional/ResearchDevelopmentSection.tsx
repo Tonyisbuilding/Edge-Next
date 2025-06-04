@@ -25,7 +25,7 @@ const ResearchDevelopmentSection = () => {
           content: "We've developed hedgers that can operate on multiple exchanges, providing unparalleled flexibility and efficiency.",
         },
       ],
-      contactUs: "Contact Us",
+      contactus: "Contact us",
       imageAlt: "Research team analyzing market data",
     },
     nl: {
@@ -44,7 +44,7 @@ const ResearchDevelopmentSection = () => {
           content: "We hebben hedgers ontwikkeld die op meerdere beurzen kunnen opereren — met ongeëvenaarde flexibiliteit en efficiëntie.",
         },
       ],
-      contactUs: "Neem Contact Op",
+      contactus: "Neem Contact op",
       imageAlt: "Onderzoeksteam dat marktgegevens analyseert",
     },
   };
@@ -168,7 +168,7 @@ const ResearchDevelopmentSection = () => {
             <Link to="/contact">
               <motion.div className="mt-8" variants={itemVariants}>
                 <button className="bg-[#000C0C] hover:bg-gray-700 text-white py-2 px-6 rounded-4xl transition duration-300 hover:cursor-pointer">
-                  {content.contactUs}
+                  {content.contactus}
                 </button>
               </motion.div>
             </Link>

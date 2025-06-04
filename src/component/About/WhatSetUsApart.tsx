@@ -65,7 +65,7 @@ const FeatureCard = ({
   );
 };
 
-const WhatSetsUsApart = () => {
+const WhatSetsusApart = () => {
   const { language } = useChangeLanguageContext();
 
   // Translation dictionary
@@ -148,4 +148,4 @@ const WhatSetsUsApart = () => {
   );
 };
 
-export default WhatSetsUsApart;
+export default WhatSetsusApart;

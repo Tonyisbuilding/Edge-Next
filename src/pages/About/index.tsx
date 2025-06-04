@@ -2,7 +2,7 @@ import NavBar from "@/common/NavBar";
 import TeamMemberCards from "@/common/TeamMemberCards";
 import CompanyTimeline from "@/component/About/CompanyTimeLine";
 import EdgeCapitalHero from "@/component/About/EdgeCapitalHero";
-import WhatSetsUsApart from "@/component/About/WhatSetUsApart";
+import WhatSetsusApart from "@/component/About/WhatSetusApart";
 import React from "react";
 import Footer from "@/common/Footer";
 import Contact from "@/component/landingPage/Contact";
@@ -25,7 +25,7 @@ const About = () => {
         }}
       >
         <EdgeCapitalHero />
-        <WhatSetsUsApart />
+        <WhatSetsusApart />
         <CompanyTimeline />
         <TeamMemberCards
           teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData} />
