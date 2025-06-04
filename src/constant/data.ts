@@ -110,7 +110,7 @@ export const theTeamYouCanTrustData: teamMemberCardstDataType[] = [
 {
     name: "Tom Meulemans",
     position: "Head of relationships and sales EdgeNext",
-    bio: "Tom Meulemans is responsible for managing relationships and sales for the fund. With a strong commercial background and sharp eye for investor needs, he plays a key role in growing and maintaining the fund’s network. As a main point of contact for (potential) investors, Tom is known for his ability to communicate complex financial topics with clarity. His personal approach and deep market understanding foster long-term partnerships and strong investor trust.",
+    bio: "Tom Meulemans manages relationships and sales for the fund. With a strong commercial background and clear insight into investor needs, he helps grow and support the fund’s network. As the main contact for (potential) investors, Tom is known for explaining complex financial topics clearly and building long-term, trusted partnerships.",
     linkedin: "https://www.linkedin.com/in/label10/",
     image: images.landingPage.Tom,
   },
@@ -134,7 +134,7 @@ export const theTeamYouCanTrustDataDutch: teamMemberCardstDataType[] = [
   {
     name: "Tom Meulemans",
     position: "Hoofd relaties en verkoop EdgeNext",
-    bio: "Tom Meulemans is verantwoordelijk voor relaties en sales van het fonds. Met een sterke commerciële achtergrond en een scherp oog voor de behoeften van investeerders, speelt hij een sleutelrol in het uitbreiden en onderhouden van het netwerk van het fonds. Tom is een vast aanspreekpunt voor (potentiële) investeerders en weet complexe financiële informatie helder en toegankelijk over te brengen. Zijn persoonlijke benadering, gecombineerd met diepgaande marktkennis, zorgt voor duurzame samenwerkingen en een solide vertrouwensbasis met onze partners.",
+    bio: "Tom Meulemans is verantwoordelijk voor relatiebeheer en verkoop van het fonds. Met een sterke commerciële achtergrond en scherp inzicht in de behoeften van investeerders helpt hij bij het opbouwen en onderhouden van het netwerk. Als hoofdcontact voor (potentiële) investeerders staat Tom bekend om zijn vermogen om complexe financiële onderwerpen helder uit te leggen en duurzame, vertrouwensvolle relaties op te bouwen.",
     linkedin: "https://www.linkedin.com/in/label10/",
     image: images.landingPage.Tom,
   },
@@ -291,7 +291,7 @@ export const edgeNextTeam: teamMemberCardstDataType[] = [
   {
     name: "Tom Meulemans",
     position: "Head of relationships and sales EdgeNext",
-    bio: "Tom Meulemans is responsible for managing relationships and sales for the fund. With a strong commercial background and sharp eye for investor needs, he plays a key role in growing and maintaining the fund’s network. As a main point of contact for (potential) investors, Tom is known for his ability to communicate complex financial topics with clarity. His personal approach and deep market understanding foster long-term partnerships and strong investor trust.",
+    bio: "Tom Meulemans manages relationships and sales for the fund. With a strong commercial background and clear insight into investor needs, he helps grow and support the fund’s network. As the main contact for (potential) investors, Tom is known for explaining complex financial topics clearly and building long-term, trusted partnerships.",
     linkedin: "",
     image: images.landingPage.Tom,
   },
@@ -324,7 +324,7 @@ export const edgeNextTeamDutch: teamMemberCardstDataType[] = [
   {
     name: "Tom Meulemans",
     position: "Hoofd relaties en verkoop EdgeNext",
-    bio: "Tom Meulemans is verantwoordelijk voor relaties en sales van het fonds. Met een sterke commerciële achtergrond en een scherp oog voor de behoeften van investeerders, speelt hij een sleutelrol in het uitbreiden en onderhouden van het netwerk van het fonds. Tom is een vast aanspreekpunt voor (potentiële) investeerders en weet complexe financiële informatie helder en toegankelijk over te brengen. Zijn persoonlijke benadering, gecombineerd met diepgaande marktkennis, zorgt voor duurzame samenwerkingen en een solide vertrouwensbasis met onze partners.",
+    bio: "Tom Meulemans is verantwoordelijk voor relatiebeheer en verkoop van het fonds. Met een sterke commerciële achtergrond en scherp inzicht in de behoeften van investeerders helpt hij bij het opbouwen en onderhouden van het netwerk. Als hoofdcontact voor (potentiële) investeerders staat Tom bekend om zijn vermogen om complexe financiële onderwerpen helder uit te leggen en duurzame, vertrouwensvolle relaties op te bouwen.",
     linkedin: "",
     image: images.landingPage.Tom,
   },
