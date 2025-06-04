@@ -33,7 +33,7 @@ const historyData = [
   },
   {
     year: "Future",
-    front: "At EdgeNext, we have ambitious goals. Our aim is to grow into a leading multi-strategy fund within the next few years. We place high priority on further developing our systems and expanding our team. Together with Edge Capital, we have a clear growth objective: to reach €100 million in assets under management within five years.",
+    front: "Edge Capital remains committed to innovation and growth. In 2024, the company will focus on obtaining a full AFM license, enabling it to serve a broader audience and compete more effectively in the investment industry.",
     back: "Additional details or insights for the future."
   }
 ];
@@ -42,10 +42,24 @@ const FlipCard = ({ year, front, back }: historyDataType) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="relative w-full sm:w-1/3 p-4 cursor-pointer" onClick={() => setIsFlipped(!isFlipped)}>
-      <div className={`w-full h-60 bg-blue-100 rounded-lg shadow-lg transition-transform duration-500 transform ${isFlipped ? 'rotate-y-180' : ''}`}>
+    <div
+      className="relative w-full sm:w-1/3 p-4 cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div
+        className={`w-full h-60 bg-blue-100 rounded-lg shadow-lg transition-transform duration-500 transform ${
+          isFlipped ? "rotate-y-180" : ""
+        }`}
+      >
         <div className="absolute w-full h-full backface-hidden flex flex-col justify-center items-center p-4">
-          <h2 className="text-3xl font-bold text-blue-500">{year}</h2>
+          <div
+            className="w-[60px] h-[60px] border-2 border-[#0E7C84] rounded-full flex items-center justify-center mb-2"
+            style={{ lineHeight: "1" }}
+          >
+            <span className="text-[#0E7C84] font-bold text-sm leading-none">
+              {year}
+            </span>
+          </div>
           <p className="text-sm mt-2 text-center">{front}</p>
         </div>
         <div className="absolute w-full h-full backface-hidden flex flex-col justify-center items-center p-4 rotate-y-180 bg-blue-200 rounded-lg">
@@ -60,7 +74,9 @@ export default function OurHistory() {
   return (
     <section className="py-10 bg-gray-100 text-center">
       <h2 className="text-3xl font-bold">Our History</h2>
-      <p className="text-gray-600 mb-6">We're building a platform that gives investors an edge.</p>
+      <p className="text-gray-600 mb-6">
+        We're building a platform that gives investors an edge.
+      </p>
       <div className="flex flex-wrap justify-center">
         {historyData.map((item, index) => (
           <FlipCard key={index} {...item} />
