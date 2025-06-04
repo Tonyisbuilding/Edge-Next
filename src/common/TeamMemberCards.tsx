@@ -72,7 +72,7 @@ const TeamCard = ({
           <h1 className="inter text-[13.14px] md:text-[22.58px] font-medium">
             {name}
           </h1>
-          <h1 className="inter text-[8.15px] md:text-[14px] font-medium">
+          <h1 className="inter text-[⁠8.45px] md:text-[14px] font-medium">
             {position}
           </h1>
         </div>
@@ -185,7 +185,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
             {/* <div className=" bg-[#F9A600] h-[2px] w-[5rem]"></div> */}
           </div>
           <h2
-            className={`text-3xl md:text-5xl font-bold text-center mb-12 text-black
+            className={`text-3xl md:text-5xl font-bold text-center mb-12  text-black
              ${pathname.slice(1) === "team" ? "hidden" : "block"}`}
           >
             {language === 'nl' ? 'Ons management team' : 'Our management team'}

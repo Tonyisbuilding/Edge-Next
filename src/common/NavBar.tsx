@@ -139,7 +139,7 @@ const Navbar = () => {
               <div className="flex-shrink-0">
                 <Link to="/" onClick={toggleNav}>
                   <img
-                    src={images.landingPage.EdgeCapitalLogoSVG}
+                    src={images.landingPage.Edgenext}
                     alt="Edge Capital"
                     className="w-[202px] h-[54px]"
                   />

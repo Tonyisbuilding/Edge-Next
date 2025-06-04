@@ -60,7 +60,7 @@ const HeroSection = () => {
                 <div className="feature-text">
                   <p>
                     <span className="bold-text">{language === 'nl' ? 'Riskmanagement' : 'Managed risk'}</span>
-                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 2.7%' : '- Lowest monthly drawdown over the past 3.5 years of just 5.15%'}
+                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 5.15%' : '- Lowest monthly drawdown over the past 3.5 years of just 5.15%'}
                   </p>
                 </div>
               </li>

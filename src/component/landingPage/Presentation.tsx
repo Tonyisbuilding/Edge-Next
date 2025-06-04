@@ -193,7 +193,7 @@ const Presentation = () => {
           </h2>
           <p className="text-[#64748b] mb-6 sm:mb-7 md:mb-8 text-[0.95rem] sm:text-base md:text-[1.05rem]">
             {language === "nl"
-              ? `Het starten van een nieuwe investering is een belangrijke stap!Voordat u die beslissing neemt, is het essentieel om goed geïnformeerd te zijn. Via een online presentatie (duur: ongeveer 30 minuten) geven wij u een duidelijk en volledig overzicht van onze organisatie en producten.`
+              ? `Het starten van een nieuwe investering is een belangrijke stap! Voordat u die beslissing neemt, is het essentieel om goed geïnformeerd te zijn. Via een online presentatie (duur: ongeveer 30 minuten) geven wij u een duidelijk en volledig overzicht van onze organisatie en producten.`
               : `Starting a new investment is a significant step! Before you make
             that decision, it's important to get well-informed. Through an
             online presentation (duration: approximately 30 minutes), we provide
@@ -258,7 +258,7 @@ const Presentation = () => {
               }
               className="bg-[#008487] text-white border-none py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out shadow-md shadow-[#008487]/20 w-full sm:w-auto hover:bg-[#185a69] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#008487]/30"
             >
-  {language === 'nl' ? 'Plan uw prestentatie' : 'Schedule a presentation'}
+  {language === 'nl' ? 'Plan uw presentatie' : 'Schedule a presentation'}
             </button>
             <button
               // onClick={()=> window.open('/requestinfo')}

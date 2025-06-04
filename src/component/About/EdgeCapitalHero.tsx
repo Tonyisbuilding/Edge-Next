@@ -77,7 +77,7 @@ const EdgeCapitalHero = () => {
   }, []);
 
   return (
-    <div className="max-w-7.5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 mt-[5rem]">
+    <div className="max-w-7.5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 mt-[6rem]">
       <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
         <div className="lg:w-1/2 space-y-6 mb-8 lg:mb-0">
           <motion.div

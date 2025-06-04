@@ -111,7 +111,7 @@ const DocumentCard = ({
   return (
     <motion.div
       className={`bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4 
-      reltaive ${language === 'nl' ? 'lg:h-[20rem] ' : 'lg:h-[19rem] ' }`}
+      relative ${language === 'nl' ? 'lg:h-[20rem] ' : 'lg:h-[19rem] '}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
@@ -120,15 +120,17 @@ const DocumentCard = ({
       <div className="flex-shrink-0">
         <Icon type={document.icon} imageAlt={imageAlt} />
       </div>
-      <div className="flex flex-col md:flex-row gap-4 mt-5">
-        <div className="flex-grow">
-          <h3 className="text-lg font-medium text-gray-900 mb-1">
-            {document.title}
-          </h3>
-          <p className="text-sm text-gray-600 mb-4">{document.description}</p>
-        </div>
+
+      <div className="mt-5">
+        <h3 className="text-lg font-medium text-gray-900 mb-1">
+          {document.title}
+        </h3>
+        <p className="text-sm text-gray-600 leading-snug whitespace-normal break-words">
+          {document.description}
+        </p>
       </div>
-      <div className="flex justify-between items-center relative md:top-[20%] ">
+
+      <div className="flex justify-between items-center mt-4 lg:absolute lg:bottom-6 lg:left-6 lg:right-6">
         <span className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded">
           PDF
         </span>
@@ -145,7 +147,7 @@ const DocumentCard = ({
               className="w-full h-full object-cover"
             />
           </div>{" "}
-            {downloadLabel}
+          {downloadLabel}
         </a>
       </div>
     </motion.div>
@@ -555,7 +557,7 @@ const DocumentCardSections = () => {
 
   return (
     <section
-      className="py-8 w-[1550px] px-4 md:px-[5rem] bg-[#F8F9FA] max-w[1440px]"
+      className="py-8 w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#F8F9FA]"
       aria-labelledby="documents-heading"
     >
       <h2 id="documents-heading" className="sr-only">
@@ -563,17 +565,16 @@ const DocumentCardSections = () => {
       </h2>
 
       {/* Tabs */}
-      <div className="flex overflow-x-scroll md:overflow-x-auto pb-4 mb-6 scrollbar-hide w-full">
-        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg md:w-full w-[1440px]">
+      <div className="flex overflow-x-auto pb-4 mb-6 scrollbar-hide">
+        <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg min-w-full">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as DocumentCategory)}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors w-[12rem] md:w-[25%] ${
-                activeTab === tab.id
+              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors flex-1 whitespace-nowrap ${activeTab === tab.id
                   ? "bg-white shadow-md text-gray-900"
                   : "text-gray-500 hover:text-gray-900"
-              }`}
+                }`}
               aria-current={activeTab === tab.id ? "page" : undefined}
             >
               {tab.label}

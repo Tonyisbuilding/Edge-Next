@@ -23,11 +23,11 @@ const FeatureCard = ({
 
   return (
     <div
-      className="relative w-full md:h-[60vh] h-[45vh] perspective-1000"
+      className="relative w-full md:h-[60vh] h-[55vh] perspective-1000"
       onClick={handleFlip}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
-      style={{ perspective: '1000px'}}
+      style={{ perspective: '1000px' }}
       key={index}
     >
       {/* Front Card */}
@@ -48,18 +48,18 @@ const FeatureCard = ({
       </motion.div>
 
       {/* Back Card */}
-     <motion.div
-  className="absolute w-full h-[400px] max-h-[400px] bg-[#008487] rounded-lg p-8 
+      <motion.div
+        className="absolute w-full h-[400px] max-h-[400px] bg-[#008487] rounded-lg p-8 
     text-white overflow-hidden"
-  initial={false}
-  animate={{ rotateY: isFlipped ? 0 : -180 }}
-  transition={{ duration: 0.6, ease: "easeInOut" }}
-  style={{ backfaceVisibility: "hidden" }}
->
-  <div className="flex flex-col justify-end items-center text-left h-full">
-    <p className="text-base">{backText}</p>
-  </div>
-</motion.div>
+        initial={false}
+        animate={{ rotateY: isFlipped ? 0 : -180 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        style={{ backfaceVisibility: "hidden" }}
+      >
+        <div className="flex flex-col justify-end items-center text-left h-full mb-1.5 ">
+          <p className="text-base">{backText}</p>
+        </div>
+      </motion.div>
 
     </div>
   );

@@ -119,7 +119,7 @@ export const theTeamYouCanTrustData: teamMemberCardstDataType[] = [
 export const theTeamYouCanTrustDataDutch: teamMemberCardstDataType[] = [
      {
     name: "Aron Broeken",
-    position: "Algemeen directeur EdgeNext",
+    position: "General manager",
     bio: "Aron Broeken combineert visie, leiderschap en executiekracht in zijn rol als General Manager. Met jarenlange ervaring in asset management en trading, stuurt hij met strategisch inzicht, besluitvaardigheid en verantwoordelijkheid de organisatie richting duurzame groei en schaalbare bedrijfsvoering.",
     linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
     image: images.landingPage.Aron,
@@ -255,14 +255,14 @@ export const teamMembersDutch: teamMemberCardstDataType[] = [
   {
     name: "Teagan de Groot",
     position: "Partner en Raad van Bestuur",
-    bio: `Teagan de Groot is sinds 2021 directeur van Edge Capital. Teagan heeft jarenlange ervaring in beleggen en was als actieve handelaar betrokken bij het ontwikkelen van succesvolle handelsstrategieën. Daarnaast bekleedde Teagan diverse managementfuncties. Dankzij zijn helikopterview is hij bij uitstek geschikt voor het dagelijks bestuur van het bedrijf.`,
+    bio: `⁠Teagan is directeur van Edge Capital en speelt een waardevolle rol als adviseur voor het team van EdgeNext – zowel gevraagd als ongevraagd. Met zijn ervaring en strategisch inzicht ondersteunt hij de verdere ontwikkeling van het label. Daarnaast ziet Teagan erop toe dat de support- en commerciële afdelingen opereren binnen de vastgestelde protocollen en kwaliteitsstandaarden van Edge Capital.`,
     linkedin: "https://www.linkedin.com/in/teagan-de-groot-9b512616a/",
     image: images.landingPage.teagan,
   },
   {
     name: "Paul Lamain",
     position: "Oprichter en Raad van Bestuur",
-    bio: `Paul Lamain is de oprichter van Edge Capital. Voordat hij Edge Capital oprichtte, werkte hij bij diverse gerenommeerde bedrijven, waaronder een grote online broker met wereldwijde activiteiten en een Europese institutionele vermogensbeheerder, waar hij waardevolle kennis en ervaring opdeed. Samen met Teagan is Paul verantwoordelijk voor het beleid van Edge Capital en nauw betrokken bij alle aspecten van het bedrijf.`,
+    bio: `Paul Lamain, oprichter van Edge Capital, brengt meer dan 20 jaar ervaring mee in het aansturen van teams en het bouwen van organisaties. Vanuit zijn strategische rol voorziet hij EdgeNext van waardevol advies om verdere groei te realiseren. Daarnaast ziet Paul erop toe dat alle activiteiten van EdgeNext in lijn blijven met de geldende wet- en regelgeving.`,
     linkedin: "https://www.linkedin.com/in/paul-lamain-72a079135/",
     image: images.landingPage.paul,
   },
@@ -309,7 +309,7 @@ export const edgeNextTeam: teamMemberCardstDataType[] = [
 export const edgeNextTeamDutch: teamMemberCardstDataType[] = [
   {
     name: "Aron Broeken",
-    position: "Algemeen directeur EdgeNext",
+    position: "General manager",
     bio: "Aron Broeken combineert visie, leiderschap en executiekracht in zijn rol als General Manager. Met jarenlange ervaring in asset management en trading, stuurt hij met strategisch inzicht, besluitvaardigheid en verantwoordelijkheid de organisatie richting duurzame groei en schaalbare bedrijfsvoering.",
     linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
     image: images.landingPage.Aron,
