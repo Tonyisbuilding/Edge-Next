@@ -1,29 +1,63 @@
-.marquee {
-    display: flex;
-    animation: marquee 20s linear infinite;
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: scroll 30s linear infinite;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  margin: 0 1rem;
+  width: 12rem;
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .marquee-content {
+    animation-duration: 20s;
   }
   
-  @media (max-width: 768px) {
-    .marquee {
-      animation: marquee 15s linear infinite;
-    }
+  .marquee-item {
+    width: 8rem;
+    margin: 0 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-content {
+    animation-duration: 15s;
   }
   
-  @media (max-width: 480px) {
-    .marquee {
-      animation: marquee 10s linear infinite;
-    }
+  .marquee-item {
+    width: 7rem;
+    margin: 0 0.5rem;
   }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  .marquee:hover {
-    animation-play-state: paused;
-  }
+}
+
+/* Pause on hover */
+.marquee-content:hover {
+  animation-play-state: paused;
+}

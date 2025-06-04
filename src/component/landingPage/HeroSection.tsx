@@ -33,8 +33,8 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">{language === 'nl' ? 'Geavanceerde Strategieën' : 'Advanced Strategies'}</span> -
-                    {language === 'nl' ? ' Correlatie Arbitrage, een afgeleide van Index Arbitrage uitgevoerd op de meest liquide markt ter wereld (FX)' : 'Correlation Arbitrage, a derivative of Index Arbitrage executed on the most liquid market in the world (FX).'}
+                    <span className="bold-text">{language === 'nl' ? 'Geavanceerde strategieën' : 'Advanced strategies'}</span> -
+                    {language === 'nl' ? ' Correlatie arbitrage, een afgeleide van Index Arbitrage uitgevoerd op de meest liquide markt ter wereld (FX)' : 'Correlation arbitrage, a derivative of Index Arbitrage executed on the most liquid market in the world (FX).'}
                   </p>
                 </div>
               </li>
@@ -46,7 +46,7 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">{language === 'nl' ? 'Op feiten gebaseerd' : 'Fact-Based Expertise'}</span> -
+                    <span className="bold-text">{language === 'nl' ? 'Op feiten gebaseerd' : 'Fact-based expertise'}</span> -
                     {language === 'nl' ? ' Een bewezen strategie die inspeelt op afwijkingen tussen verschillende gecorreleerde valutaparen.' : 'A proven strategy that capitalizes on deviations between various correlated currency pairs.'}
                   </p>
                 </div>
@@ -59,8 +59,8 @@ const HeroSection = () => {
 
                 <div className="feature-text">
                   <p>
-                    <span className="bold-text">{language === 'nl' ? 'Riskmanagement' : 'Managed Risk'}</span>
-                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 2.7%' : '- Lowest monthly drawdown over the past 3.5 years of just 2.7%.'}
+                    <span className="bold-text">{language === 'nl' ? 'Riskmanagement' : 'Managed risk'}</span>
+                    { language === 'nl' ? ' -  Laagste drawdown op maandniveau in de afgelopen 3,5 jaar van slechts 2.7%' : '- Lowest monthly drawdown over the past 3.5 years of just 5.15%'}
                   </p>
                 </div>
               </li>
@@ -73,14 +73,14 @@ const HeroSection = () => {
                   className="block "
                   // onClick={toggleNav}
                 >
-                  { language === 'nl' ? 'Neem contact op' : 'Get in Touch'}
+                  { language === 'nl' ? 'Neem contact op' : 'Get in touch'}
                 </Link>
               </button>
               <button
                 // onClick={()=> window.open('/requestinfo','_blank')}
                 className="btn btn-secondary"
               >
-                <Link to="/requestinfo">{ language === 'nl' ? 'Brochure aanvragen' : 'Request Brochure'}</Link>
+                <Link to="/requestinfo">{ language === 'nl' ? 'Brochure aanvragen' : 'Request brochure'}</Link>
               </button>
             </div>
           </div>
@@ -91,7 +91,7 @@ const HeroSection = () => {
               loop
               muted
               playsInline
-              src={images.landingPage.heroSectionVideo}
+              src={images.landingPage.Edgenext_anim}
               className="w-full h-full  object-cover opacity-75"
             />
             {/* <img

@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+import images from "@/constant/images";
+
 
 const InvestmentPerformance = () => {
   const { language } = useChangeLanguageContext();
@@ -9,11 +11,11 @@ const InvestmentPerformance = () => {
   const translations = {
     en: {
       returns: "Returns",
-      february: "February",
+      May: "May",
       participationFrom: "participation from",
       metrics: {
         netReturn2024: "Net return 2024:",
-        netReturnSinceInception: "Net return since inception (2021):",
+        netReturnSinceInception: "Net return since inception :",
         averageAnnualReturn: "Average annual return since inception:"
       },
       downloadFactsheet: "Download our factsheet for a detailed overview.",
@@ -26,11 +28,11 @@ const InvestmentPerformance = () => {
     },
     nl: {
       returns: "Rendementen",
-      february: "Februari",
+      May: "Mei",
       participationFrom: "participatie vanaf",
       metrics: {
         netReturn2024: "Nettorendement 2024:",
-        netReturnSinceInception: "Nettorendement sinds oprichting (2021):",
+        netReturnSinceInception: "Nettorendement sinds start strategie:",
         averageAnnualReturn: "Gemiddeld jaarlijks rendement sinds oprichting:"
       },
       downloadFactsheet: "Download onze factsheet voor een gedetailleerd overzicht.",
@@ -63,41 +65,50 @@ const InvestmentPerformance = () => {
   const performanceData = [
     {
       participation: "€100,000",
-      percentage: " 2,77%",
+      percentage: " 0.25%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "+18.47%" },
-        { label: t.metrics.netReturnSinceInception, value: "129,99%" },
-        { label: t.metrics.averageAnnualReturn, value: "22,62%" },
+        { label: t.metrics.netReturn2024, value: "5.15%" },
+        { label: t.metrics.netReturnSinceInception, value: "91.36%" },
+        { label: t.metrics.averageAnnualReturn, value: "12.55%" },
       ],
     },
     {
       participation: "€250,000",
-      percentage: "2,89%",
+      percentage: "0.29%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "+19.76%" },
-        { label: t.metrics.netReturnSinceInception, value: "144,34%" },
-        { label: t.metrics.averageAnnualReturn, value: "24,44%" },
+        { label: t.metrics.netReturn2024, value: "5.83%" },
+        { label: t.metrics.netReturnSinceInception, value: "101.62%" },
+        { label: t.metrics.averageAnnualReturn, value: "13.66%" },
       ],
     },
     {
       participation: "€500,000",
-      percentage: "2,93%",
+      percentage: "0.32%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "+21.28%" },
-        { label: t.metrics.netReturnSinceInception, value: "158,96%" },
-        { label: t.metrics.averageAnnualReturn, value: "26,37%" },
+        { label: t.metrics.netReturn2024, value: "6.54%" },
+        { label: t.metrics.netReturnSinceInception, value: "112.71%" },
+        { label: t.metrics.averageAnnualReturn, value: "14.81%" },
       ],
     },
   ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <motion.h2
+      <motion.div
         variants={cardVariants}
-        className="text-3xl lg:text-[3rem] font-bold text-gray-900 mb-6 text-left underline"
+        className="mb-6"
       >
-        {t.returns}
-      </motion.h2>
+        <div className="relative inline-block text-left">
+          <h2 className="text-3xl lg:text-[3rem] font-bold text-gray-900 relative z-10">
+            {t.returns}
+          </h2>
+          <img
+            src={images.landingPage.Brush}
+            alt="Brush underline"
+            className="absolute bottom-[-3px] left-0 h-[5px] z-0"
+          />
+        </div>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {performanceData.map((card, index) => (
           <motion.div
@@ -130,7 +141,7 @@ const InvestmentPerformance = () => {
                   </svg>
                 </div>
                 <span className="text-lg font-semibold text-[#008487]">
-                  {language === 'nl' ? t.february : 'February'}
+                  {language === 'nl' ? t.May : 'May'}
                 </span>
               </div>
               <span className="text-base font-bold text-emerald-600 bg-emerald-50 px-3.5 py-1.5 rounded-full">

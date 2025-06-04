@@ -20,10 +20,11 @@ const logos: Logo[] = [
   { id: 'logo4', src: images.landingPage.NewEC, alt: 'Logo 4' },
 ];
 
-//  Bekend van:
-const Marquee: React.FC<MarqueeProps> = ({ speed = 20 }) => {
-
+const Marquee: React.FC<MarqueeProps> = ({ speed = 30 }) => {
   const { language } = useChangeLanguageContext();
+
+  // Create multiple copies to ensure smooth endless scrolling
+  const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
     <section className="py-6 bg-[#EEF4F5] max-h-[150px]">
@@ -32,33 +33,27 @@ const Marquee: React.FC<MarqueeProps> = ({ speed = 20 }) => {
           {language === 'nl' ? 'Bekend van:' : 'Known from:'}
         </h2>
 
-        <div className="overflow-hidden">
-          <div className="marquee flex" style={{ animationDuration: `${speed}s` }}>
-            {logos.map((logo) => (
+        <div className="marquee-container">
+          <div 
+            className="marquee-content"
+            style={{ 
+              animationDuration: `${speed}s`,
+              animationTimingFunction: 'linear',
+              animationIterationCount: 'infinite',
+              animationName: 'scroll'
+            }}
+          >
+            {repeatedLogos.map((logo, index) => (
               <div
-                key={logo.id}
-                className="flex-shrink-0 sm:mx-4 md:mx-6 w-[9rem] md:w-[10rem] min-w-[120px] h-[40px] md:h-[55px]"
+                key={`${logo.id}-${index}`}
+                className="marquee-item"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-full w-full object-contain"
+                  className="logo-image"
                 />
               </div>
-
-            ))}
-            {logos.map((logo) => (
-              <div
-                key={`${logo.id}-duplicate`}
-                className="flex-shrink-0 mx-2 sm:mx-4 md:mx-6 min-w-[120px] h-[40px] md:h-[55px]"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-full w-full object-contain"
-                />
-              </div>
-
             ))}
           </div>
         </div>

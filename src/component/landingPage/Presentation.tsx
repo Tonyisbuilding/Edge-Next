@@ -57,7 +57,7 @@
 //         </div>
 //         <div className=" lg:w-[50%] ">
 //           <h2 className=" text-left  text-[#000C0C] text-[30px] montserrat font-bold lg:w-[30rem]">
-//             Secure Your Exclusive Presentation
+//             Secure your exclusive presentation
 //           </h2>
 //           <p className=" font-normal text-[17.45px] text-[#1A1A1A] montserrat py-5 lg:w-[30rem]">
 //             Starting a new investment is a significant step! Before you make
@@ -132,8 +132,8 @@ const Presentation = () => {
 
   return (
     <section
-      className="max-w-[1200px] w-[100%] md:w-full mx-auto px-[1rem] my-10 
-    rounded-lg overflow-hidden  pb-[1rem]"
+      className="max-w-[1440px] w-[100%] md:w-full mx-auto px-[1rem] my-10 
+    rounded-lg overflow-hidden  pb-[0.2rem]"
     >
       <div className="flex flex-col md:flex-row gap-[2rem] justify-center">
         {/* Video Section */}
@@ -188,8 +188,8 @@ const Presentation = () => {
           mb-4 sm:mb-5 tracking-tight"
           >
             {language === "nl"
-              ? "Vraag uw Exclusieve Presentatie aan"
-              : "Secure Your Exclusive Presentation"}
+              ? "Vraag uw exclusieve presentatie aan"
+              : "Secure your exclusive presentation"}
           </h2>
           <p className="text-[#64748b] mb-6 sm:mb-7 md:mb-8 text-[0.95rem] sm:text-base md:text-[1.05rem]">
             {language === "nl"
@@ -265,7 +265,7 @@ const Presentation = () => {
               className="bg-transparent text-[#008487]  border-[#008487] border-[1.5px] py-3 sm:py-3.5 md:py-3.5 px-6 sm:px-6.5 md:px-7 rounded-4xl font-medium text-[0.95rem] sm:text-base cursor-pointer transition-all duration-300 ease-in-out w-full sm:w-auto hover:bg-[#008487]/5 hover:-translate-y-0.5"
             >
               <Link to="/requestinfo">
-                {language === 'nl' ? 'Vraag onze brochure aan' : 'Request Brochure'}
+                {language === 'nl' ? 'Vraag onze brochure aan' : 'Request brochure'}
               </Link>
             </button>
           </div>

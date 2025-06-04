@@ -49,7 +49,7 @@ const EdgeCapitalFooter = () => {
             <ul className="space-y-3">
               <li><a href="#" className="hover:text-gray-300 transition-colors">Knowledge Base</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">Support</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-gray-300 transition-colors">Privacy policy</a></li>
               <li><a href="#" className="hover:text-gray-300 transition-colors">404</a></li>
             </ul>
           </div>
@@ -92,7 +92,7 @@ const EdgeCapitalFooter = () => {
             </div>
             
             <a href="#" className="text-sm hover:text-gray-300 transition-colors">
-              Privacy Policy
+              Privacy policy
             </a>
           </div>
         </div>

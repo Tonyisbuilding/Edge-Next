@@ -42,7 +42,7 @@ const FeatureCard = ({
         }}
       >
         <div className="mb-6">{icon}</div>
-        <h3 className="text-2xl font-semibold text-left mt-[60%]   md:mt-[65%]">
+        <h3 className="text-[18px] font-bold text-left mt-[60%]   md:mt-[65%]">
           {title}
         </h3>
       </motion.div>
@@ -75,19 +75,19 @@ const WhatSetsUsApart = () => {
       features: [
         {
           icon: <Target className="w-12 h-12 text-white text-left" />,
-          title: "Results Regardless of Market Direction",
+          title: "Results regardless of market direction",
           backText:
             "By strategically trading based on measurable market data, we achieve results independent of market direction. It's not about the trend—it's about capitalizing on movement.",
         },
         {
           icon: <Shield className="w-12 h-12 text-white" />,
-          title: "Risk Management",
+          title: "Risk management",
           backText:
             "Risk is mitigated through systematic hedging and dynamic position sizing. Our systems automatically adjust position sizes based on real-time market data and volatility, aiming for stable performance under all conditions.",
         },
         {
           icon: <Castle className="w-12 h-12 text-white" />,
-          title: "Quantitative Systems",
+          title: "Quantitative systems",
           backText:
             "Emotion plays no role in our strategy. Our quantitative systems follow predefined rules and data-driven logic, ensuring every decision is consistent, repeatable, and free from subjective influence.",
         },

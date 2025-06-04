@@ -17,6 +17,9 @@ import Bolderlogo from "../../src/assets/images/landingPage/Page-1.svg";
 import GBEBroker from "../../src/assets/images/landingPage/gbe_brokers_ltd_logo.svg.svg";
 import NewEC from "../../src/assets/images/landingPage/New_EC.svg";
 
+import Afm_disclaimer from "../../src/assets/images/landingPage/Afm_disclaimer.png";
+
+
 
 
 
@@ -29,6 +32,8 @@ import NewEC from "../../src/assets/images/landingPage/New_EC.svg";
 
 import B_class from "../../src/assets/images/landingPage/class.png";
 import heroSectionVideo from "../../src/assets/images/landingPage/Home-left.mp4";
+import Edgenext_anim from "../../src/assets/images/landingPage/Edgenext_anim.mp4";
+
 import management from "../../src/assets/images/landingPage/management.svg";
 import handshake from "../../src/assets/images/landingPage/handshake.png";
 import schedule from "../../src/assets/images/landingPage/schedule.png";
@@ -36,7 +41,7 @@ import dots_one from "../../src/assets/images/landingPage/dots_one.png";
 import dots_updated from "../../src/assets/images/landingPage/Dot_updated.png";
 
 import presentationPreview from "../../src/assets/images/landingPage/presentationPreview.png";
-import Edgenext_presentation from "../../src/assets/images/landingPage/Presentatie.jpg";
+import Edgenext_presentation from "../../src/assets/images/landingPage/Edgenextpresentation.jpg";
 
 import presentationVid from "../../src/assets/images/landingPage/presentation.mp4";
 import teagan from "../../src/assets/images/landingPage/teagan.png";
@@ -53,7 +58,7 @@ import Bernard from "../../src/assets/images/landingPage/Bernard.jpg";
 
 import money_briefcase from "../../src/assets/images/landingPage/money-briefcase.png";
 import herosectionforabout from "../../src/assets/images/about/herosectionforabout.png";
-import edgehero from "../../src/assets/images/edgefund/edgehero.png";
+import edgehero from "../../src/assets/images/edgefund/Edgenextfundhero.jpg";
 import edgehorizon from "../../src/assets/images/edgefund/edgehorizon.png";
 import edgecare from "../../src/assets/images/edgefund/edgecare.png";
 import effect from "../../src/assets/images/edgefund/effect.png";
@@ -65,9 +70,14 @@ import EdgeCapitalLogoSVG from "../../src/assets/images/EdgeCapitalLogo.svg";
 import Edgenext from "../../src/assets/images/Edgenext.svg";
 import Edgenext_white from "../../src/assets/images/Edgenext-white.png";
 
+
+
+
+import Heroforedgenextabout from "../../src/assets/images/about/Heroforedgenextabout.jpg";
+
 // import Edgecap from "../../src/assets/images/Edgecap.svg";
 import New_Cap from "../../src/assets/images/landingPage/New_cap.svg";
-import Brush from "../../src/assets/images/landingPage/Brush.png";
+import Brush from "../../src/assets/images/landingPage/BrushEN.png";
 
 
 
@@ -120,7 +130,7 @@ import csrvid from "../../src/assets/images/csr/csrvid.mp4";
 import vector from "../../src/assets/images/Vector.svg";
 
 const images = {
-    landingPage:{
+    landingPage: {
         Edgenext,
         Edgenext_white,
         vector,
@@ -173,24 +183,26 @@ const images = {
         EdgeCapitalLogo,
         EdgeCapitalLogoSVG,
         // EdgeCap,
-        // Edgecap,
+        Edgenext_anim,
         profit,
-        heroSectionVideo, 
+        heroSectionVideo,
         New_Cap,
         Brush,
-        Edgenext_presentation
+        Edgenext_presentation,
+        Afm_disclaimer
     },
-    about:{
+    about: {
         herosectionforabout,
+        Heroforedgenextabout
     },
-    edgefund:{
+    edgefund: {
         edgehero,
         effect,
         scaleUp,
         edgehorizon,
         edgecare
     },
-    edgeConnect:{
+    edgeConnect: {
         Edge_Connect,
         hartstiching,
         fork,
@@ -203,10 +215,10 @@ const images = {
         money_icon
 
     },
-    edgeCare:{
+    edgeCare: {
         edgecarehero,
     },
-    institution:{
+    institution: {
         heroImageinstitution,
         researchdevelopment,
         inHouse,
@@ -224,21 +236,21 @@ const images = {
         handshake_white,
         medal_award_badge,
     },
-    form:{
+    form: {
         inbox,
         send_mail,
         flare,
         download,
         career,
     },
-    edgeDoc:{
+    edgeDoc: {
         document,
         person,
         discount_email,
         form_submission,
         security,
     },
-    csr:{
+    csr: {
         csrvid
     },
 }

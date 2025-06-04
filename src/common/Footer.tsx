@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/privacy">
-                  {language === "nl" ? "Privacybeleid" : "Privacy Policy"}
+                  {language === "nl" ? "Privacybeleid" : "Privacy policy"}
                 </a>
               </li>
               {/* <li><a href="/404">404</a></li> */}
@@ -135,7 +135,7 @@ const Footer = () => {
       {/* Disclaimer Section */}
       <div className="footer-disclaimer">
         <h3>
-          {language === "nl" ? "Algemene Disclaimer – EdgeNext (handelsnaam van Edge Capital Management B.V.):" : "General Disclaimer:"}
+          {language === "nl" ? "Algemene disclaimer – EdgeNext (handelsnaam van Edge Capital Management B.V.):" : "General disclaimer:"}
         </h3>
         <p>
   {language === "nl"
@@ -165,7 +165,7 @@ Edge Capital Management B.V. is registered with the Dutch Authority for the Fina
           )}
         </div>
         <a href="/privacy" className="footer-policy">
-          {language === "nl" ? "Privacybeleid" : "Privacy Policy"}
+          {language === "nl" ? "Privacybeleid" : "Privacy policy"}
         </a>
       </div>
     </footer>

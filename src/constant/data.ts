@@ -51,7 +51,7 @@ export const whyEdgeCapitalData: whyEdgeCapitalType[] = [
   {
     icon: images.landingPage.handshake,
     title: "What is the most important part of the strategy?",
-    desc: "Our strategy is built on a fully integrated system where every step is crucial. From data analysis to determining entry and exit points—everything works in sync. What truly sets us apart is the continuous optimization of our parameters. This keeps us agile in fast-changing markets and ensures both performance and long-term stability.",
+    desc: "Our strategy is built on a fully integrated system where every step is crucial. From data analysis to determining Entry and exit points—everything works in sync. What truly sets us apart is the continuous optimization of our parameters. This keeps us agile in fast-changing markets and ensures both performance and long-term stability.",
     id: 4,
   },
 
@@ -94,14 +94,14 @@ export const whyEdgeCapitalDataDutch: whyEdgeCapitalType[] = [
 export const theTeamYouCanTrustData: teamMemberCardstDataType[] = [
      {
     name: "Aron Broeken",
-    position: "General Manager EdgeNext",
+    position: "General manager EdgeNext",
     bio: "Aron Broeken combines vision, leadership, and execution power in his role as General Manager. With years of experience in asset management and trading, he guides the organization toward sustainable growth and scalable operations with strategic insight, decisiveness, and accountability.",
     linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
     image: images.landingPage.Aron,
   },
    {
     name: "Pepijn van den Hurk",
-    position: "Head of Finance and Technology EdgeNext",
+    position: "Head of finance and technology EdgeNext",
     bio: "Pepijn van den Hurk plays a central role in shaping the fund’s financial and technological strategy. He oversees financial operations including capital allocation, risk management, and reporting, while also driving the long-term shift toward scalable, tech-driven processes.",
     linkedin: "https://www.linkedin.com/in/pepijn-van-den-hurk-ba457a20a/",
     image: images.landingPage.Pepijn,
@@ -109,7 +109,7 @@ export const theTeamYouCanTrustData: teamMemberCardstDataType[] = [
 
 {
     name: "Tom Meulemans",
-    position: "Head of Relationships and Sales EdgeNext",
+    position: "Head of relationships and sales EdgeNext",
     bio: "Tom Meulemans is responsible for managing relationships and sales for the fund. With a strong commercial background and sharp eye for investor needs, he plays a key role in growing and maintaining the fund’s network. As a main point of contact for (potential) investors, Tom is known for his ability to communicate complex financial topics with clarity. His personal approach and deep market understanding foster long-term partnerships and strong investor trust.",
     linkedin: "https://www.linkedin.com/in/label10/",
     image: images.landingPage.Tom,
@@ -119,21 +119,21 @@ export const theTeamYouCanTrustData: teamMemberCardstDataType[] = [
 export const theTeamYouCanTrustDataDutch: teamMemberCardstDataType[] = [
      {
     name: "Aron Broeken",
-    position: "Algemeen Directeur EdgeNext",
+    position: "Algemeen directeur EdgeNext",
     bio: "Aron Broeken combineert visie, leiderschap en executiekracht in zijn rol als General Manager. Met jarenlange ervaring in asset management en trading, stuurt hij met strategisch inzicht, besluitvaardigheid en verantwoordelijkheid de organisatie richting duurzame groei en schaalbare bedrijfsvoering.",
     linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
     image: images.landingPage.Aron,
   },
   {
     name: "Pepijn van den Hurk",
-    position: "Hoofd Financiën en Technologie EdgeNext",
+    position: "Hoofd financiën en technologie EdgeNext",
     bio: "Pepijn van den Hurk speelt een centrale rol in zowel de financiële als technologische strategie van het fonds. Hij is verantwoordelijk voor de financiële operatie, waaronder kapitaalallocatie, risicobeheer en rapportage, en stuurt tegelijkertijd de langetermijnontwikkeling aan richting schaalbare, technologiegedreven processen.",
     linkedin: "https://www.linkedin.com/in/pepijn-van-den-hurk-ba457a20a/",
     image: images.landingPage.Pepijn,
   },
   {
     name: "Tom Meulemans",
-    position: "Hoofd Relaties en Verkoop EdgeNext",
+    position: "Hoofd relaties en verkoop EdgeNext",
     bio: "Tom Meulemans is verantwoordelijk voor relaties en sales van het fonds. Met een sterke commerciële achtergrond en een scherp oog voor de behoeften van investeerders, speelt hij een sleutelrol in het uitbreiden en onderhouden van het netwerk van het fonds. Tom is een vast aanspreekpunt voor (potentiële) investeerders en weet complexe financiële informatie helder en toegankelijk over te brengen. Zijn persoonlijke benadering, gecombineerd met diepgaande marktkennis, zorgt voor duurzame samenwerkingen en een solide vertrouwensbasis met onze partners.",
     linkedin: "https://www.linkedin.com/in/label10/",
     image: images.landingPage.Tom,
@@ -213,14 +213,14 @@ export const timelineDataDutch: timelineDataType[] = [
 export const teamMembers: teamMemberCardstDataType[] = [
  {
   name: "Teagan de Groot",
-  position: "Partner and Board of Directors",
+  position: "Partner and board of directors",
   bio: `Teagan is the director of Edge Capital and plays a valuable role as an advisor to the EdgeNext team — both solicited and unsolicited. With his experience and strategic insight, he supports the further development of the label. In addition, Teagan ensures that the support and commercial departments operate within the established protocols and quality standards of Edge Capital.`,
   linkedin: "https://www.linkedin.com/in/teagan-de-groot-9b512616a/",
   image: images.landingPage.teagan,
 },
 {
   name: "Paul Lamain",
-  position: "Founder and Board of Directors",
+  position: "Founder and board of directors",
   bio: `Paul Lamain, founder of Edge Capital, brings over 20 years of experience in leading teams and building organizations. In his strategic role, he provides valuable guidance to EdgeNext to support further growth. Paul also ensures that all EdgeNext activities remain compliant with applicable laws and regulations.`,
   linkedin: "https://www.linkedin.com/in/paul-lamain-72a079135/",
   image: images.landingPage.paul,
@@ -232,7 +232,7 @@ export const teamMembers: teamMemberCardstDataType[] = [
 export const SupportAndCommercial: teamMemberCardstDataType[] = [
   {
     name: "Bernard Beerding",
-    position: "Manager Business Development",
+    position: "Manager business development",
     bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
     linkedin: "",
     image: images.landingPage.Bernard,
@@ -242,7 +242,7 @@ export const SupportAndCommercial: teamMemberCardstDataType[] = [
 export const SupportAndCommercialDutch: teamMemberCardstDataType[] = [
   {
     name: "Bernard Beerding",
-    position: "Manager Business Development",
+    position: "Manager business development",
     bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
     linkedin: "",
     image: images.landingPage.Bernard,
@@ -276,21 +276,21 @@ export const teamMembersDutch: teamMemberCardstDataType[] = [
 export const edgeNextTeam: teamMemberCardstDataType[] = [
   {
     name: "Aron Broeken",
-    position: "General Manager EdgeNext",
+    position: "General manager EdgeNext",
     bio: "Aron Broeken combines vision, leadership, and execution power in his role as General Manager. With years of experience in asset management and trading, he guides the organization toward sustainable growth and scalable operations with strategic insight, decisiveness, and accountability.",
     linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
     image: images.landingPage.Aron,
   },
   {
     name: "Pepijn van den Hurk",
-    position: "Head of Finance and Technology EdgeNext",
+    position: "Head of finance and technology EdgeNext",
     bio: "Pepijn van den Hurk plays a central role in shaping the fund’s financial and technological strategy. He oversees financial operations including capital allocation, risk management, and reporting, while also driving the long-term shift toward scalable, tech-driven processes.",
     linkedin: "https://www.linkedin.com/in/pepijn-van-den-hurk-ba457a20a/",
     image: images.landingPage.Pepijn,
   },
   {
     name: "Tom Meulemans",
-    position: "Head of Relationships and Sales EdgeNext",
+    position: "Head of relationships and sales EdgeNext",
     bio: "Tom Meulemans is responsible for managing relationships and sales for the fund. With a strong commercial background and sharp eye for investor needs, he plays a key role in growing and maintaining the fund’s network. As a main point of contact for (potential) investors, Tom is known for his ability to communicate complex financial topics with clarity. His personal approach and deep market understanding foster long-term partnerships and strong investor trust.",
     linkedin: "",
     image: images.landingPage.Tom,
@@ -298,7 +298,7 @@ export const edgeNextTeam: teamMemberCardstDataType[] = [
 
     {
     name: "Bernard Beerding",
-    position: "Manager Business Development",
+    position: "Manager business development",
     bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
     linkedin: "",
     image: images.landingPage.Bernard,
@@ -309,28 +309,28 @@ export const edgeNextTeam: teamMemberCardstDataType[] = [
 export const edgeNextTeamDutch: teamMemberCardstDataType[] = [
   {
     name: "Aron Broeken",
-    position: "Algemeen Directeur EdgeNext",
+    position: "Algemeen directeur EdgeNext",
     bio: "Aron Broeken combineert visie, leiderschap en executiekracht in zijn rol als General Manager. Met jarenlange ervaring in asset management en trading, stuurt hij met strategisch inzicht, besluitvaardigheid en verantwoordelijkheid de organisatie richting duurzame groei en schaalbare bedrijfsvoering.",
     linkedin: "https://www.linkedin.com/in/aron-broeken-52b876171",
     image: images.landingPage.Aron,
   },
   {
     name: "Pepijn van den Hurk",
-    position: "Hoofd Financiën en Technologie EdgeNext",
+    position: "Hoofd financiën en technologie EdgeNext",
     bio: "Pepijn van den Hurk speelt een centrale rol in zowel de financiële als technologische strategie van het fonds. Hij is verantwoordelijk voor de financiële operatie, waaronder kapitaalallocatie, risicobeheer en rapportage, en stuurt tegelijkertijd de langetermijnontwikkeling aan richting schaalbare, technologiegedreven processen.",
     linkedin: "https://www.linkedin.com/in/pepijn-van-den-hurk-ba457a20a/",
     image: images.landingPage.Pepijn,
   },
   {
     name: "Tom Meulemans",
-    position: "Hoofd Relaties en Verkoop EdgeNext",
+    position: "Hoofd relaties en verkoop EdgeNext",
     bio: "Tom Meulemans is verantwoordelijk voor relaties en sales van het fonds. Met een sterke commerciële achtergrond en een scherp oog voor de behoeften van investeerders, speelt hij een sleutelrol in het uitbreiden en onderhouden van het netwerk van het fonds. Tom is een vast aanspreekpunt voor (potentiële) investeerders en weet complexe financiële informatie helder en toegankelijk over te brengen. Zijn persoonlijke benadering, gecombineerd met diepgaande marktkennis, zorgt voor duurzame samenwerkingen en een solide vertrouwensbasis met onze partners.",
     linkedin: "",
     image: images.landingPage.Tom,
   },
     {
     name: "Bernard Beerding",
-    position: "AManager Business Development",
+    position: "AManager business development",
     bio: "Bernard Beerding brengt jarenlange ervaring mee in het opzetten en aansturen van salesteams. Binnen EdgeNext is hij verantwoordelijk voor de opbouw van ons commerciële team — een rol die perfect aansluit bij zijn expertise, gedrevenheid en oog voor detail.",
     linkedin: "",
     image: images.landingPage.Bernard,

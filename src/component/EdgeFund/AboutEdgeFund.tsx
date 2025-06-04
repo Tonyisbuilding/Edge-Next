@@ -47,7 +47,7 @@ const AboutEdgeFund = () => {
             <h2 className="text-3xl font-black md:text-[35px] text-[20.86px] text-gray-900 mb-4 relative inline-block">
               {content.title}
               <img
-                src={images.landingPage.Brush} // Update path if different
+                src={images.landingPage.Brush} 
                 alt="Brush underline"
                 className="absolute left-0 bottom-[-8px] w-auto h-[6px] pointer-events-none"
               />
@@ -82,7 +82,7 @@ const AboutEdgeFund = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          <div className="w-full h-full relative">
+          <div className="w-full h-full relative pt-[40px]">
             <img
               src={images.edgefund.edgehero}
               alt="Edge Capital team meeting"

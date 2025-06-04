@@ -48,7 +48,7 @@ const WhatSetsUsApart = () => {
       sectionTitle: "Risk",
    riskItems: [
   {
-    title: "Correlation Breakdown",
+    title: "Correlation breakdown",
     description:
       "The strategy assumes that currency pairs sharing a common base tend to move according to historical patterns. In extreme market conditions (e.g., geopolitical shocks, central bank interventions), these correlations can temporarily break down.",
     measures: (
@@ -59,7 +59,7 @@ const WhatSetsUsApart = () => {
     icon: <BarChart size={24} className="text-white" />,
   },
   {
-    title: "Delayed Correlation",
+    title: "Delayed correlation",
     description:
       "Sometimes, the return to the mean takes longer than expected, leading to prolonged exposure to market fluctuations and increased risk of loss.",
     measures: (
@@ -70,7 +70,7 @@ const WhatSetsUsApart = () => {
     icon: <Settings size={24} className="text-white" />,
   },
   {
-    title: "Technical Failure",
+    title: "Technical failure",
     description:
       "If the automated system fails or lags, it may not respond accurately to market fluctuations, leading to missed opportunities or uncontrolled losses.",
     measures: (

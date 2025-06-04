@@ -67,7 +67,7 @@ const EdgeDocuments = () => {
               }}
             >
               {language === "nl"
-                ? `Alle benodigde documenten van Edge Capital.`
+                ? `Alle benodigde document van EdgeNext`
                 : `Everything you need for your investment journey, all in one place. Download, sign, and submit with ease.`}
             </motion.p>
           </div>

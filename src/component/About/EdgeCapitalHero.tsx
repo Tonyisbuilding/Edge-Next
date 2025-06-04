@@ -16,7 +16,7 @@ const EdgeCapitalHero = () => {
     en: {
       heading: "Next stands for progress. For innovation. For the next level in investing. EdgeNext combines advanced data analytics, real-time risk control, and adaptive systems to deliver optimal performance in markets that are moving faster and becoming more volatile than ever.",
       subheading: "EdgeNext is not an evolution of existing methods — it is a fundamentally different way of thinking about return, risk, and results.",
-      getInTouch: "Get in Touch",
+      getInTouch: "Get in touch",
       altText: "Edge Capital Team"
     },
     nl: {
@@ -119,7 +119,7 @@ transition-all duration-300">
           </motion.div>
         </div>
 
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 pt-[40px]">
           <motion.div className="rounded-lg overflow-hidden shadow-lg">
             <motion.img
               initial={{
@@ -133,7 +133,7 @@ transition-all duration-300">
                 delay: 0.3,
                 ease: "easeOut",
               }}
-              src={images.about.herosectionforabout}
+              src={images.about.Heroforedgenextabout}
               alt={t("altText")}
               className="w-full h-auto object-cover"
             />
