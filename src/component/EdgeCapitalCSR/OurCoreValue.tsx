@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Recycle, BookOpen, users, Rocket, Shield } from 'lucide-react';
+import { Recycle, BookOpen, Users, Rocket, Shield } from 'lucide-react';
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 
 const OurCoreValues = () => {
@@ -24,7 +24,7 @@ const OurCoreValues = () => {
         },
         {
           title: "Social Impact",
-          icon: <users size={32} className='text-[#000C0C]' />,
+          icon: <Users size={32} className='text-[#000C0C]' />,
           description: "We are determined to make a positive contribution to the communities in which we operate. Through our Edge Impact label and initiatives, such as Edge Cares (mid-2025) and the Edge Horizon Foundation (2026), we support charities and projects that create impact both locally and globally.",
           measures: "Measures: Diversification across the largest and safest exchanges."
         },
@@ -59,7 +59,7 @@ const OurCoreValues = () => {
         },
         {
           title: "Sociale Impact",
-          icon: <users size={32} className='text-[#000C0C]' />,
+          icon: <Users size={32} className='text-[#000C0C]' />,
           description: "We zijn vastbesloten om een positieve bijdrage te leveren aan de gemeenschappen waarin we actief zijn. Door middel van onze Edge Impact-label en -initiatieven, zoals Edge Cares (mid-2025) en de Edge Horizon Foundation (2026), ondersteunen we goede doelen en projecten die zowel lokaal als wereldwijd impact maken.",
           measures: "Maatregelen: Diversificatie over de grootste en veiligste beurzen."
         },

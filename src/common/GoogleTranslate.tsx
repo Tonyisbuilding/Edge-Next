@@ -44,18 +44,22 @@ const GoogleTranslate = () => {
     // Add Google Translate script only if it doesn't exist
     if (!document.getElementById('google-translate-script')) {
       // Define the callback function first
-      window.googleTranslateElementInit = function() {
+      window.googleTranslateElementInit = function () {
         new window.google.translate.TranslateElement(
           {
             pageLanguage: 'en',
             includedLanguages: 'en,nl', // Add more languages as needed, comma-separated
-            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+            // layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+            // @ts-ignore
+            layout: google.translate.TranslateElement['Layout'].SIMPLE,
+
+
             autoDisplay: false
           },
           'google_translate_element'
         );
       };
-      
+
       // Create and append the script
       const script = document.createElement('script');
       script.id = 'google-translate-script';
@@ -63,7 +67,7 @@ const GoogleTranslate = () => {
       script.async = true;
       document.body.appendChild(script);
     }
-    
+
     // Clean up function for useEffect
     return () => {
       // Only remove the init function, not the script

@@ -6,7 +6,7 @@ const BASE_uRL = `http://localhost:3000/api/v1/edgefund`;
 // const BASE_uRL = `https://edge-capital-backend.onrender.com/api/v1/edgefund`;
 
 const axiosInstance = axios.create({
-  baseuRL: BASE_uRL,
+baseURL: BASE_uRL, // ✅
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",

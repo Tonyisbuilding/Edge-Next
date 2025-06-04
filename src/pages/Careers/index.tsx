@@ -1,6 +1,6 @@
 import JoinTheTeam from "@/component/Careers/CareersHeroSection";
 import OpenPositions from "@/component/Careers/OpenPosition";
-import WhyWorkWithus from "@/component/Careers/WhyWorkWithus";
+import WhyWorkWithus from "@/component/Careers/WhyWorkWithUs";
 import NavBar from "@/common/NavBar";
 import Contact from "@/component/landingPage/Contact";
 import Footer from "@/common/Footer";

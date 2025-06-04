@@ -7,7 +7,7 @@ import {
   MapPin,
   Flag,
   Globe,
-  user,
+  User,
   FileText,
   Calendar,
   DollarSign,
@@ -45,6 +45,8 @@ interface FormData {
   idNumber: string; // New field
   dateOfBirth: string; // New field
   initialDeposit: string; // New field
+    tin: string; // ✅ add this
+
 }
 
 // Type guard function to validate the form data
@@ -437,7 +439,7 @@ const ParticipantForm: React.FC = () => {
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
-                  <user className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <input
                     id="name"
                     type="text"
@@ -619,7 +621,7 @@ const ParticipantForm: React.FC = () => {
                   {content.form.onBehalfOfLabel}
                 </label>
                 <div className="relative">
-                  <user className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <input
                     id="onBehalfOf"
                     type="text"
