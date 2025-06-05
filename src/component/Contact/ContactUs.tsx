@@ -53,7 +53,7 @@ const ContactInformation = () => {
         description:
           "Looking to collaborate or have questions about our services? We'd love to connect and explore how Edge Capital can help you achieve your financial goals.",
         callus: "Call us",
-        emailus: "Email us",
+        emailus: "E-mail us",
         visit: "Visit",
         workingHours: "Working Hours",
         phone: "+31 252 781 778",
@@ -68,7 +68,7 @@ const ContactInformation = () => {
         firstNameLabel: "First name",
         lastNameLabel: "Last name",
         phoneLabel: "Phone/Mobile",
-        emailLabel: "Email",
+        emailLabel: "E-mail",
         messageLabel: "Message",
         firstNamePlaceholder: "Enter your name",
         lastNamePlaceholder: "Enter your name",
@@ -90,7 +90,7 @@ const ContactInformation = () => {
       contactInfo: {
         title: "Contactgegevens",
         description:
-          "Wilt u samenwerken of heeft u vragen over onze diensten? We maken graag contact om te ontdekken hoe Edge Next u kan helpen uw financiële doelen te bereiken.",
+          "Wilt u samenwerken of heeft u vragen over onze diensten? We maken graag contact om te ontdekken hoe EdgeNext u kan helpen uw financiële doelen te bereiken.",
         callus: "Bel Ons",
         emailus: "Mail ons",
         visit: "Bezoekadres",
@@ -114,11 +114,11 @@ const ContactInformation = () => {
         phonePlaceholder: "Voer uw telefoonnummer in",
         emailPlaceholder: "Voer uw werkemailadres in",
         messagePlaceholder: "Voer uw bericht in",
-        sendButton: "Verzend bericht",
+        sendButton: "Verzend uw bericht",
         errors: {
           firstNameRequired: "Voornaam is verplicht",
           lastNameRequired: "Achternaam is verplicht",
-          emailRequired: "Email is verplicht",
+          emailRequired: "E-mail is verplicht",
           emailInvalid: "Email is ongeldig",
         },
         successMessage: "Bericht succesvol verzonden!",
@@ -330,14 +330,14 @@ const ContactInformation = () => {
           </div>
 
           <motion.div className="flex space-x-4 mt-12" variants={itemVariants}>
-            <a
+            {/* <a
               href="https://www.facebook.com/tradealot/?locale=nl_NL"
               className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
             >
               <FaFacebookF />
-            </a>
+            </a> */}
             <a
-              href="https://www.linkedin.com/company/edgecapital1/"
+              href="https://www.linkedin.com/company/edgenext-investing/"
               className="w-10 h-10 bg-[#42ABBC] rounded-full flex items-center justify-center hover:bg-teal-400 transition-colors"
             >
               <FaLinkedinIn />

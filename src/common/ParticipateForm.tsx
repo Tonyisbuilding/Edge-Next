@@ -40,12 +40,12 @@ interface FormData {
   mail: string;
   iban: string; // New field
   onBehalfOf: string; // New field
- tin: string; // New field
+  tin: string; // New field
   idType: string; // New field
   idNumber: string; // New field
   dateOfBirth: string; // New field
   initialDeposit: string; // New field
-  
+
 }
 
 // Type guard function to validate the form data
@@ -156,7 +156,7 @@ const ParticipantForm: React.FC = () => {
         countryPlaceholder: "Select Country",
         nationalityPlaceholder: "Select Nationality",
         phonePlaceholder: "Phone Number",
-        emailPlaceholder: "Email",
+        emailPlaceholder: "E-mail",
         ibanPlaceholder: "Enter your IBAN", // New field
         onBehalfOfPlaceholder: "Enter name of person/organization", // New field
         tinPlaceholder: "Enter your TIN", // New field
@@ -165,22 +165,26 @@ const ParticipantForm: React.FC = () => {
         dateOfBirthPlaceholder: "Select date of birth", // New field
         initialDepositPlaceholder: "Enter amount", // New field
         countries: [
+          { code: "NL", name: "Netherlands" },
           { code: "US", name: "United States" },
           { code: "CA", name: "Canada" },
           { code: "UK", name: "United Kingdom" },
           { code: "AU", name: "Australia" },
           { code: "DE", name: "Germany" },
           { code: "FR", name: "France" },
-          { code: "JP", name: "Japan" },
+          { code: "JP", name: "Japan" }
         ],
+
         phonePrefixes: [
+          { code: "+31", country: "NL" },
           { code: "+1", country: "US/CA" },
           { code: "+44", country: "UK" },
           { code: "+61", country: "AU" },
           { code: "+49", country: "DE" },
           { code: "+33", country: "FR" },
-          { code: "+81", country: "JP" },
+          { code: "+81", country: "JP" }
         ],
+
         idTypes: [
           { value: "", label: "Select Document Type" },
           { value: "passport", label: "Passport" },
@@ -237,22 +241,26 @@ const ParticipantForm: React.FC = () => {
         dateOfBirthPlaceholder: "Selecteer geboortedatum", // New field
         initialDepositPlaceholder: "Voer bedrag in", // New field
         countries: [
+          { code: "NL", name: "Nederland" },
           { code: "US", name: "Verenigde Staten" },
           { code: "CA", name: "Canada" },
           { code: "UK", name: "Verenigd Koninkrijk" },
           { code: "AU", name: "Australië" },
           { code: "DE", name: "Duitsland" },
           { code: "FR", name: "Frankrijk" },
-          { code: "JP", name: "Japan" },
+          { code: "JP", name: "Japan" }
         ],
+
         phonePrefixes: [
+          { code: "+31", country: "NL" },
           { code: "+1", country: "VS/CA" },
           { code: "+44", country: "VK" },
           { code: "+61", country: "AU" },
           { code: "+49", country: "DE" },
           { code: "+33", country: "FR" },
-          { code: "+81", country: "JP" },
+          { code: "+81", country: "JP" }
         ],
+
         idTypes: [
           { value: "", label: "Selecteer Documenttype" },
           { value: "passport", label: "Paspoort" },
@@ -370,7 +378,7 @@ const ParticipantForm: React.FC = () => {
           ? error.message
           : content.form.errors.defaultError
       );
-     
+
       if (
         error &&
         typeof error === "object" &&

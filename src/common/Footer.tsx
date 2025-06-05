@@ -85,7 +85,7 @@ const Footer = () => {
           <h3>{language === "nl" ? "Sociaal" : "Social"}</h3>
           <div className="social-icons">
             <a
-              href="https://www.linkedin.com/company/edgecapital1/"
+              href="https://www.linkedin.com/company/edgenext-investing/"
               target="_blank"
               className="social-icon"
             >
@@ -100,22 +100,7 @@ const Footer = () => {
 
               LinkedIn
             </a>
-            <a
-              href="https://www.facebook.com/tradealot/?locale=nl_NL"
-              target="_blank"
-              className="social-icon"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="white"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M22.675 0H1.325C0.59325 0 0 0.59325 0 1.325V22.675C0 23.4068 0.59325 24 1.325 24H12.82V14.709H9.692V11.077H12.82V8.413C12.82 5.348 14.717 3.672 17.467 3.672C18.774 3.672 19.931 3.768 20.256 3.813V7.002H18.339C16.821 7.002 16.511 7.769 16.511 8.807V11.077H20.123L19.662 14.709H16.511V24H22.675C23.4068 24 24 23.4068 24 22.675V1.325C24 0.59325 23.4068 0 22.675 0Z" />
-              </svg>
-              Facebook
-            </a>
+           
             {/* <a href="#" className="social-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -149,8 +134,8 @@ Edge Capital Management B.V. is registered with the Dutch Authority for the Fina
       <div className="footer-bottom">
         <div className="footer-copyright">
           {language === "nl"
-            ? "© 2025 Edge Next. Alle rechten voorbehouden."
-            : "© 2025 Edge Next. All rights reserved."}
+            ? "© 2025 EdgeNext. Alle rechten voorbehouden."
+            : "© 2025 EdgeNext. All rights reserved."}
         </div>
         {/* <div className="footer-status">
           <span className="status-dot"></span>

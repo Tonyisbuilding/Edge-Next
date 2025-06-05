@@ -40,7 +40,7 @@ const ContactInput = ({ placeholder, CTAButton, icon }: contactInputType) => {
         break;
       case 'Get Direction':
         window.open(
-          'https://www.google.com/maps/search/?api=1&query=Walserij%2015-I%2C%202211%20SJ%20Noordwijkerhout',
+          'https://maps.app.goo.gl/vNU3NqiVvpRw1cSB8',
           '_blank'
         );
         break;

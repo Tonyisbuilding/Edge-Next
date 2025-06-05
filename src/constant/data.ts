@@ -234,7 +234,7 @@ export const SupportAndCommercial: teamMemberCardstDataType[] = [
     name: "Bernard Beerding",
     position: "Manager business development",
     bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/bernard-beerding-599a0a247/",
     image: images.landingPage.Bernard,
   },
 ];
@@ -244,7 +244,7 @@ export const SupportAndCommercialDutch: teamMemberCardstDataType[] = [
     name: "Bernard Beerding",
     position: "Manager business development",
     bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/bernard-beerding-599a0a247/",
     image: images.landingPage.Bernard,
   },
 ];
@@ -300,7 +300,7 @@ export const edgeNextTeam: teamMemberCardstDataType[] = [
     name: "Bernard Beerding",
     position: "Manager business development",
     bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/bernard-beerding-599a0a247/",
     image: images.landingPage.Bernard,
   },
 ];
@@ -332,7 +332,7 @@ export const edgeNextTeamDutch: teamMemberCardstDataType[] = [
     name: "Bernard Beerding",
     position: "AManager business development",
     bio: "Bernard Beerding brengt jarenlange ervaring mee in het opzetten en aansturen van salesteams. Binnen EdgeNext is hij verantwoordelijk voor de opbouw van ons commerciële team — een rol die perfect aansluit bij zijn expertise, gedrevenheid en oog voor detail.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/bernard-beerding-599a0a247/",
     image: images.landingPage.Bernard,
   },
 ];

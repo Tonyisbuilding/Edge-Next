@@ -50,7 +50,7 @@ const ReachOut = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               {language === "nl"
-                ? `Wilt u samenwerken of heeft u vragen over onze diensten? We komen graag met u in contact om te ontdekken hoe Edge Next u kan helpen
+                ? `Wilt u samenwerken of heeft u vragen over onze diensten? We komen graag met u in contact om te ontdekken hoe EdgeNext u kan helpen
 uw financiële doelen te bereiken.`
                 : `Looking to collaborate or have questions about our services? We'd
               love to connect and explore how Edge Capital can help you achieve

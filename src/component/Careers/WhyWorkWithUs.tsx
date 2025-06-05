@@ -61,7 +61,7 @@ const WhyWorkWithus = () => {
           iconColor: "text-teal-600",
           title: "Gedreven om te Presteren",
           description:
-            "Bij Edge Next streven we onwrikbaar naar uitmuntende beleggingsresultaten. Door diepgaand onderzoek, geavanceerde kwantitatieve technieken en een focus op rendement, creëren we strategieën die het verschil maken voor onze cliënten.",
+            "Bij EdgeNext streven we onwrikbaar naar uitmuntende beleggingsresultaten. Door diepgaand onderzoek, geavanceerde kwantitatieve technieken en een focus op rendement, creëren we strategieën die het verschil maken voor onze cliënten.",
         },
         {
           id: 2,

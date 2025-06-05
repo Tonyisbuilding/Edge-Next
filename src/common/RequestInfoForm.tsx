@@ -39,7 +39,7 @@ const RequestInfoForm = () => {
       form: {
         firstNameLabel: "First Name",
         lastNameLabel: "Last Name",
-        emailLabel: "Email",
+        emailLabel: "E-mail",
         phoneLabel: "Your phone number",
         preferenceLabel: "What would you like to receive information about?",
         preferenceOptions: [
@@ -52,7 +52,7 @@ const RequestInfoForm = () => {
         messageLabel: "Message",
         firstNamePlaceholder: "First Name",
         lastNamePlaceholder: "Last Name",
-        emailPlaceholder: "Email",
+        emailPlaceholder: "E-mail",
         phonePlaceholder: "0802 123 4567",
         newsletterLabel: "I would like to receive the Edge Capital newsletter.",
         submitButton: "Submit",
@@ -69,7 +69,7 @@ const RequestInfoForm = () => {
       form: {
         firstNameLabel: "Voornaam",
         lastNameLabel: "Achternaam",
-        emailLabel: "Email",
+        emailLabel: "E-mail",
         phoneLabel: "uw telefoonnummer",
         preferenceLabel: "Waar wilt u informatie over ontvangen?",
         preferenceOptions: [
@@ -82,7 +82,7 @@ const RequestInfoForm = () => {
         messageLabel: "Bericht",
         firstNamePlaceholder: "Voornaam",
         lastNamePlaceholder: "Achternaam",
-        emailPlaceholder: "Email",
+        emailPlaceholder: "E-mail",
         phonePlaceholder: "0802 123 4567",
         newsletterLabel: "Ik wil graag de Edge Capital nieuwsbrief ontvangen.",
         submitButton: "Verzenden",

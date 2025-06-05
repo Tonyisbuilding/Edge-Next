@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 import images from "@/constant/images";
 
-
 const OpenPositions = () => {
   const { language } = useChangeLanguageContext();
 
@@ -26,23 +25,9 @@ const OpenPositions = () => {
           remote: "Noordwijkerhout",
           type: "Full-time",
         },
-        // {
-        //   id: 3,
-        //   title: "Lead Designer",
-        //   description: "We're looking for a Senior Designer to join our team.",
-        //   remote: "Noordwijkerhout",
-        //   type: "Full-time",
-        // },
-        // {
-        //   id: 4,
-        //   title: "ML Engineer",
-        //   description: "We're looking for a mid-level ML engineer to join our team.",
-        //   remote: "Noordwijkerhout",
-        //   type: "Full-time",
-        // },
       ],
       applyLabel: "Apply",
-      applyAriaLabel: (title: string) => `Apply for ${title} position`,
+      applyAriaLabel: (title) => `Apply for ${title} position`,
     },
     nl: {
       heading: "Openstaande Vacatures",
@@ -61,10 +46,9 @@ const OpenPositions = () => {
           remote: "Noordwijkerhout",
           type: "Voltijd",
         },
-       
       ],
       applyLabel: "Solliciteren",
-      applyAriaLabel: (title: string) => `Solliciteren voor de positie van ${title}`,
+      applyAriaLabel: (title) => `Solliciteren voor de positie van ${title}`,
     },
   };
 
@@ -94,6 +78,13 @@ const OpenPositions = () => {
     },
   };
 
+  const handleApplyClick = (jobTitle) => {
+    const subject = `Application for ${jobTitle} position`;
+    const emailUrl = `mailto:info@edgenext.nl?subject=${encodeURIComponent(subject)}`;
+    console.log('Opening email:', emailUrl);
+    window.location.href = emailUrl;
+  };
+
   return (
     <section
       className="w-full max-w-5xl mx-auto px-4 py-12"
@@ -119,7 +110,6 @@ const OpenPositions = () => {
             {content.heading.split(" ")[1]}
           </span>
         </h2>
-
       </div>
 
       <motion.div
@@ -138,9 +128,9 @@ const OpenPositions = () => {
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
               <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
-              <a
-                href="#"
-                className="text-teal-600 font-medium hover:text-teal-700 transition-colors inline-flex items-center mt-2 md:mt-0"
+              <button
+                onClick={() => handleApplyClick(job.title)}
+                className="text-teal-600 font-medium hover:text-teal-700 transition-colors inline-flex items-center mt-2 md:mt-0 bg-transparent border-none cursor-pointer p-0"
                 aria-label={content.applyAriaLabel(job.title)}
               >
                 {content.applyLabel}
@@ -156,7 +146,7 @@ const OpenPositions = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </button>
             </div>
 
             <p className="text-gray-600 mb-4">{job.description}</p>

@@ -64,7 +64,7 @@ const JoinTheTeam = () => {
               variants={itemVariants}
             >
               {language === `nl`
-                ? `Sluitu aan bij het team`
+                ? `Sluit u aan bij het team`
                 : `Join the team`}
             </motion.h2>
             <motion.p
