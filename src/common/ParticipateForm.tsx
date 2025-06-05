@@ -45,8 +45,6 @@ interface FormData {
   idNumber: string; // New field
   dateOfBirth: string; // New field
   initialDeposit: string; // New field
-    tin: string; // ✅ add this
-
 }
 
 // Type guard function to validate the form data
@@ -166,18 +164,18 @@ const ParticipantForm: React.FC = () => {
         dateOfBirthPlaceholder: "Select date of birth", // New field
         initialDepositPlaceholder: "Enter amount", // New field
         countries: [
-          { code: "uS", name: "united States" },
+          { code: "US", name: "United States" },
           { code: "CA", name: "Canada" },
-          { code: "uK", name: "united Kingdom" },
-          { code: "Au", name: "Australia" },
+          { code: "UK", name: "United Kingdom" },
+          { code: "AU", name: "Australia" },
           { code: "DE", name: "Germany" },
           { code: "FR", name: "France" },
           { code: "JP", name: "Japan" },
         ],
         phonePrefixes: [
-          { code: "+1", country: "uS/CA" },
-          { code: "+44", country: "uK" },
-          { code: "+61", country: "Au" },
+          { code: "+1", country: "US/CA" },
+          { code: "+44", country: "UK" },
+          { code: "+61", country: "AU" },
           { code: "+49", country: "DE" },
           { code: "+33", country: "FR" },
           { code: "+81", country: "JP" },
@@ -238,10 +236,10 @@ const ParticipantForm: React.FC = () => {
         dateOfBirthPlaceholder: "Selecteer geboortedatum", // New field
         initialDepositPlaceholder: "Voer bedrag in", // New field
         countries: [
-          { code: "uS", name: "Verenigde Staten" },
+          { code: "US", name: "Verenigde Staten" },
           { code: "CA", name: "Canada" },
-          { code: "uK", name: "Verenigd Koninkrijk" },
-          { code: "Au", name: "Australië" },
+          { code: "UK", name: "Verenigd Koninkrijk" },
+          { code: "AU", name: "Australië" },
           { code: "DE", name: "Duitsland" },
           { code: "FR", name: "Frankrijk" },
           { code: "JP", name: "Japan" },
@@ -249,7 +247,7 @@ const ParticipantForm: React.FC = () => {
         phonePrefixes: [
           { code: "+1", country: "VS/CA" },
           { code: "+44", country: "VK" },
-          { code: "+61", country: "Au" },
+          { code: "+61", country: "AU" },
           { code: "+49", country: "DE" },
           { code: "+33", country: "FR" },
           { code: "+81", country: "JP" },

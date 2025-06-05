@@ -10,41 +10,41 @@ const ResearchDevelopmentSection = () => {
   // Define translations for English and Dutch
   const translations = {
     en: {
-      title: "Research & Development – The Engine Behind Our Success",
+      title: "Research & development – The engine behind our success",
       sections: [
         {
-          title: "In-House Research for Continuous Adaptation",
+          title: "In-House research for continuous adaptation",
           content: "Thorough research forms the basis for a successful and sustainable trading strategy. We continuously expand our platform based on input from our research department.",
         },
         {
-          title: "Machine Learning Integration",
+          title: "Machine learning integration",
           content: "We adapt to new technologies, such as implementing machine learning to enhance our trading parameters and improve prediction accuracy.",
         },
         {
-          title: "Proprietary Trading Engine",
+          title: "Proprietary trading engine",
           content: "We've developed hedgers that can operate on multiple exchanges, providing unparalleled flexibility and efficiency.",
         },
       ],
-      contactus: "Contact us",
+      contactUs: "Contact Us",
       imageAlt: "Research team analyzing market data",
     },
     nl: {
       title: "Research & Development – De motor achter ons succes",
       sections: [
         {
-          title: "Intern Onderzoek voor Continue Aanpassing",
+          title: "Intern onderzoek voor continue aanpassing",
           content: "Grondig onderzoek vormt de basis voor een succesvolle en duurzame handelsstrategie. Wij breiden ons platform continu uit op basis van input uit ons onderzoeksteam.",
         },
         {
-          title: "Machine Learning Integratie",
+          title: "Machine learning integratie",
           content: "Wij passen ons aan nieuwe technologieën aan, zoals machine learning, om handelsparameters te verbeteren en nauwkeuriger te voorspellen.",
         },
         {
-          title: "Eigen Handelsengine",
+          title: "Eigen handelsengine",
           content: "We hebben hedgers ontwikkeld die op meerdere beurzen kunnen opereren — met ongeëvenaarde flexibiliteit en efficiëntie.",
         },
       ],
-      contactus: "Neem Contact op",
+      contactUs: "Neem Contact op",
       imageAlt: "Onderzoeksteam dat marktgegevens analyseert",
     },
   };
@@ -167,8 +167,8 @@ const ResearchDevelopmentSection = () => {
             </motion.div>
             <Link to="/contact">
               <motion.div className="mt-8" variants={itemVariants}>
-                <button className="bg-[#000C0C] hover:bg-gray-700 text-white py-2 px-6 rounded-4xl transition duration-300 hover:cursor-pointer">
-                  {content.contactus}
+                <button className="bg-[#192227] hover:bg-gray-700 text-white py-2 px-6 rounded-4xl transition duration-300 hover:cursor-pointer">
+                  {content.contactUs}
                 </button>
               </motion.div>
             </Link>
