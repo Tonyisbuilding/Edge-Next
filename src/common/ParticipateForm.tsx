@@ -40,11 +40,12 @@ interface FormData {
   mail: string;
   iban: string; // New field
   onBehalfOf: string; // New field
- BSN: string; // New field
+ tin: string; // New field
   idType: string; // New field
   idNumber: string; // New field
   dateOfBirth: string; // New field
   initialDeposit: string; // New field
+  
 }
 
 // Type guard function to validate the form data
