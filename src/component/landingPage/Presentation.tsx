@@ -252,7 +252,7 @@ const Presentation = () => {
               // https://calendar.notion.so/meet/edgecapitalmanagementbv/ar4ym4lr7
               onClick={() =>
                 window.open(
-                  "https://calendar.notion.so/meet/edgecapitalmanagementbv/ar4ym4lr7",
+                  "https://calendar.notion.so/meet/tommeulemans/e76zg4oeo",
                   "_blank"
                 )
               }
