@@ -58,7 +58,7 @@ const FundCostStructure = () => {
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
           "1.5% Management fee (per year)",
-          "22.5% Profit sharing (per month) high",
+          "22.5% Profit sharing (per month)",
           "High watermark protection",
           "Monthly performance reports",
         ],
@@ -110,7 +110,7 @@ const FundCostStructure = () => {
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
           "1,5% Beheervergoeding (per jaar)",
-          "22,5% Winstdeling (per maand) Hoog",
+          "22,5% Winstdeling (per maand) ",
           "High watermark-bescherming",
           "Maandelijkse prestatieoverzichten",
         ],

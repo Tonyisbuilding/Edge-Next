@@ -164,16 +164,20 @@ const ParticipantForm: React.FC = () => {
         idNumberPlaceholder: "Enter document number", // New field
         dateOfBirthPlaceholder: "Select date of birth", // New field
         initialDepositPlaceholder: "Enter amount", // New field
-        countries: [
-          { code: "NL", name: "Netherlands" },
-          { code: "US", name: "United States" },
-          { code: "CA", name: "Canada" },
-          { code: "UK", name: "United Kingdom" },
-          { code: "AU", name: "Australia" },
-          { code: "DE", name: "Germany" },
-          { code: "FR", name: "France" },
-          { code: "JP", name: "Japan" }
-        ],
+    countries: [
+  { code: "AU", name: "Australia" },
+  { code: "BE", name: "Belgium" },
+  { code: "CA", name: "Canada" },
+  { code: "DE", name: "Germany" },
+  { code: "FR", name: "France" },
+  { code: "JP", name: "Japan" },
+  { code: "NL", name: "Netherlands" },
+  { code: "ES", name: "Spain" },
+  { code: "AE", name: "United Arab Emirates" },
+  { code: "US", name: "United States" },
+  { code: "UK", name: "United Kingdom" }
+],
+
 
         phonePrefixes: [
           { code: "+31", country: "NL" },
@@ -241,15 +245,19 @@ const ParticipantForm: React.FC = () => {
         dateOfBirthPlaceholder: "Selecteer geboortedatum", // New field
         initialDepositPlaceholder: "Voer bedrag in", // New field
         countries: [
-          { code: "NL", name: "Nederland" },
-          { code: "US", name: "Verenigde Staten" },
-          { code: "CA", name: "Canada" },
-          { code: "UK", name: "Verenigd Koninkrijk" },
           { code: "AU", name: "Australië" },
+          { code: "BE", name: "België" },
+          { code: "CA", name: "Canada" },
           { code: "DE", name: "Duitsland" },
           { code: "FR", name: "Frankrijk" },
-          { code: "JP", name: "Japan" }
+          { code: "JP", name: "Japan" },
+          { code: "NL", name: "Nederland" },
+          { code: "ES", name: "Spanje" },
+          { code: "AE", name: "Verenigde Arabische Emiraten" },
+          { code: "US", name: "Verenigde Staten" },
+          { code: "UK", name: "Verenigd Koninkrijk" }
         ],
+
 
         phonePrefixes: [
           { code: "+31", country: "NL" },

@@ -3,11 +3,9 @@ import { motion } from "framer-motion";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 import images from "@/constant/images";
 
-
 const OpenPositions = () => {
   const { language } = useChangeLanguageContext();
 
-  // Define translations for English and Dutch
   const translations = {
     en: {
       heading: "Open Positions",
@@ -15,31 +13,19 @@ const OpenPositions = () => {
         {
           id: 1,
           title: "Sales & Relationship Management",
-          description: "We are looking for a proactive sales professional who thrives on building long-term relationships with clients and partners. You value collaboration and enjoy working closely with other teams.",
+          description:
+            "We are looking for a proactive sales professional who thrives on building long-term relationships with clients and partners. You value collaboration and enjoy working closely with other teams.",
           remote: "Noordwijkerhout",
           type: "Full-time",
         },
         {
           id: 2,
           title: "Marketing Manager / Lead Generation Specialist",
-          description: "Are you a strategically minded marketer who sees opportunities to generate leads and strengthen our brand presence in the market? Then this role is tailor-made for you.",
+          description:
+            "Are you a strategically minded marketer who sees opportunities to generate leads and strengthen our brand presence in the market? Then this role is tailor-made for you.",
           remote: "Noordwijkerhout",
           type: "Full-time",
         },
-        // {
-        //   id: 3,
-        //   title: "Lead Designer",
-        //   description: "We're looking for a Senior Designer to join our team.",
-        //   remote: "Noordwijkerhout",
-        //   type: "Full-time",
-        // },
-        // {
-        //   id: 4,
-        //   title: "ML Engineer",
-        //   description: "We're looking for a mid-level ML engineer to join our team.",
-        //   remote: "Noordwijkerhout",
-        //   type: "Full-time",
-        // },
       ],
       applyLabel: "Apply",
       applyAriaLabel: (title: string) => `Apply for ${title} position`,
@@ -50,25 +36,26 @@ const OpenPositions = () => {
         {
           id: 1,
           title: "Sales en Relatiebeheer",
-          description: "Voor ons team zoeken we een proactieve sales professional die energie krijgt van het opbouwen van langdurige relaties met klanten en partners. Samenwerken met andere teams staat bij jou centraal.",
+          description:
+            "Voor ons team zoeken we een proactieve sales professional die energie krijgt van het opbouwen van langdurige relaties met klanten en partners. Samenwerken met andere teams staat bij jou centraal.",
           remote: "Noordwijkerhout",
           type: "Voltijd",
         },
         {
           id: 2,
           title: "Marketing Manager / Lead Generation Specialist",
-          description: "Ben jij een strategisch ingestelde marketeer die kansen ziet om leads te genereren en ons merk sterker in de markt te zetten? Dan is deze rol op jouw lijf geschreven.",
+          description:
+            "Ben jij een strategisch ingestelde marketeer die kansen ziet om leads te genereren en ons merk sterker in de markt te zetten? Dan is deze rol op jouw lijf geschreven.",
           remote: "Noordwijkerhout",
           type: "Voltijd",
         },
-       
       ],
       applyLabel: "Solliciteren",
-      applyAriaLabel: (title: string) => `Solliciteren voor de positie van ${title}`,
+      applyAriaLabel: (title: string) =>
+        `Solliciteren voor de positie van ${title}`,
     },
   };
 
-  // Select the appropriate content based on language, with fallback to English
   const content = translations[language] || translations.en;
   const jobs = content.jobs;
 
@@ -76,9 +63,7 @@ const OpenPositions = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -87,10 +72,7 @@ const OpenPositions = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -119,7 +101,6 @@ const OpenPositions = () => {
             {content.heading.split(" ")[1]}
           </span>
         </h2>
-
       </div>
 
       <motion.div
@@ -139,7 +120,11 @@ const OpenPositions = () => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
               <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
               <a
-                href={`mailto:info@edgenext.nl?subject=Application for ${job.title} position`}
+                href={`mailto:info@edgenext.nl?subject=${encodeURIComponent(
+                  language === "nl"
+                    ? `Sollicitatie voor de functie: ${job.title}`
+                    : `Application for the position: ${job.title}`
+                )}`}
                 className="text-teal-600 font-medium hover:text-teal-700 transition-colors inline-flex items-center mt-2 md:mt-0"
                 aria-label={content.applyAriaLabel(job.title)}
               >

@@ -44,17 +44,18 @@ const RequestInfoForm = () => {
         preferenceLabel: "What would you like to receive information about?",
         preferenceOptions: [
           { value: "", label: "- Select -" },
-          { value: "investment", label: "Investment Options" },
-          { value: "services", label: "Financial Services" },
-          { value: "consultation", label: "Personal Consultation" },
-          { value: "other", label: "Other" },
+          { value: "investment", label: "Factsheet Correlation Arbitrage Fund" },
+          { value: "services", label: "Information Memorandum Correlation Arbitrage Fund" },
+          { value: "consultation", label: "Registration Forms Correlation Arbitrage Fund" },
+          { value: "other", label: "1-on-1 Presentation" },
         ],
+
         messageLabel: "Message",
         firstNamePlaceholder: "First Name",
         lastNamePlaceholder: "Last Name",
         emailPlaceholder: "E-mail",
         phonePlaceholder: "0802 123 4567",
-        newsletterLabel: "I would like to receive the Edge Capital newsletter.",
+        newsletterLabel: "I would like to receive the EdgeNext newsletter.",
         submitButton: "Submit",
         submittingText: "Submitting...",
         successMessage: "Form submitted successfully!",
@@ -74,9 +75,9 @@ const RequestInfoForm = () => {
         preferenceLabel: "Waar wilt u informatie over ontvangen?",
         preferenceOptions: [
           { value: "", label: "- Selecteer -" },
-          { value: "investment", label: "Factsheet EdgeFund" },
-          { value: "services", label: "Informatiememorandum EdgeFund" },
-          { value: "consultation", label: "Inschrijfformulieren EdgeFund" },
+          { value: "investment", label: "Factsheet Correlation Arbitrage Fund" },
+          { value: "services", label: "Informatiememorandum Correlation Arbitrage Fund" },
+          { value: "consultation", label: "Inschrijfformulieren Correlation Arbitrage Fund" },
           { value: "other", label: "1 op 1 presentatie" },
         ],
         messageLabel: "Bericht",
@@ -84,7 +85,7 @@ const RequestInfoForm = () => {
         lastNamePlaceholder: "Achternaam",
         emailPlaceholder: "E-mail",
         phonePlaceholder: "0802 123 4567",
-        newsletterLabel: "Ik wil graag de Edge Capital nieuwsbrief ontvangen.",
+        newsletterLabel: "Ik wil graag de EdgeNext nieuwsbrief ontvangen.",
         submitButton: "Verzenden",
         submittingText: "Bezig met verzenden...",
         successMessage: "Formulier succesvol verzonden!",
@@ -449,11 +450,10 @@ const RequestInfoForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white transition-all duration-200 shadow-lg ${
-                  isSubmitting
-                    ? "bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50%  cursor-not-allowed"
-                    : "bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50%  hover:bg-[#219EB2]"
-                }`}
+                className={`w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white transition-all duration-200 shadow-lg ${isSubmitting
+                  ? "bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50%  cursor-not-allowed"
+                  : "bg-gradient-to-br from-[#206D80] from-20% to-[#219EB2] to-50%  hover:bg-[#219EB2]"
+                  }`}
               >
                 {isSubmitting ? (
                   content.form.submittingText

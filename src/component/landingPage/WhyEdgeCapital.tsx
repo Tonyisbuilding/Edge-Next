@@ -12,7 +12,7 @@ const WhyEdgeCapital = () => {
     <>
       <div className=" bg-[#000C0C] py-[1.5rem] md:rounded-[1rem] rounded-[1rem] px-[1rem] relative">
         <div className=" p-[.1rem]">
-          <h1 className=" text-[#FFFFFF] font-bold md:text-[48px] text-[25px] montserrat md:px-[.1rem]">
+          <h1 className=" text-[#FFFFFF] font-bold md:text-[48px] text-[25px] md:px-[1rem]">
             {language === 'nl' ? 'Waarom EdgeNext?' : 'Why EdgeNext?'}
           </h1>
           <p

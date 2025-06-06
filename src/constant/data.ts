@@ -242,8 +242,8 @@ export const SupportAndCommercial: teamMemberCardstDataType[] = [
 export const SupportAndCommercialDutch: teamMemberCardstDataType[] = [
   {
     name: "Bernard Beerding",
-    position: "Manager business development",
-    bio: "Bernard Beerding brings years of experience in building and leading sales teams. At EdgeNext, he is responsible for developing our commercial team — a role that perfectly aligns with his expertise, drive, and attention to detail.",
+    position: "Manager bedrijfsontwikkeling",
+    bio: "Bernard Beerding heeft jarenlange ervaring in het bouwen en leiden van verkoopteams. Bij EdgeNext is hij verantwoordelijk voor het ontwikkelen van ons commerciële team – een rol die perfect aansluit bij zijn expertise, gedrevenheid en aandacht voor detail.",
     linkedin: "https://www.linkedin.com/in/bernard-beerding-599a0a247/",
     image: images.landingPage.Bernard,
   },

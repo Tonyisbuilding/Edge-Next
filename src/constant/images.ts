@@ -15,7 +15,7 @@ import Logo_five from "../../src/assets/images/landingPage/Logo_five.png";
 import Citibank from "../../src/assets/images/landingPage/citibank_logo.svg.svg";
 import Bolderlogo from "../../src/assets/images/landingPage/Page-1.svg";
 import GBEBroker from "../../src/assets/images/landingPage/GBE-broker.svg";
-import NewEC from "../../src/assets/images/landingPage/New_EC.svg";
+import NewEC from "../../src/assets/images/landingPage/New_EC (1).svg";
 
 import Afm_disclaimer from "../../src/assets/images/landingPage/Afm_disclaimer.png";
 
@@ -76,7 +76,7 @@ import Edgenext_white from "../../src/assets/images/Edgenext-white.png";
 import Heroforedgenextabout from "../../src/assets/images/about/Heroforedgenextabout.jpg";
 
 // import Edgecap from "../../src/assets/images/Edgecap.svg";
-import New_Cap from "../../src/assets/images/landingPage/New_cap.svg";
+import New_Cap from "../../src/assets/images/landingPage/New_EC (1).svg";
 import Brush from "../../src/assets/images/landingPage/BrushEN.png";
 
 
