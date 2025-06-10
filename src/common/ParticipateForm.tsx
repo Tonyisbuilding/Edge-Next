@@ -10,6 +10,7 @@ import {
   User,
   FileText,
   Calendar,
+  Euro,
   DollarSign,
 } from "lucide-react";
 import axiosInstance from "@/Api/AxiosInstance";
@@ -224,7 +225,7 @@ const ParticipantForm: React.FC = () => {
         emailLabel: "E-mail",
         ibanLabel: "IBAN", // New field
         onBehalfOfLabel: "Namens", // New field
-        tinLabel: "Belastingidentificatienummer (BSN)", // New field
+        tinLabel: "Burgerservicenummer", // New field
         idTypeLabel: "Type Identificatiedocument", // New field
         idNumberLabel: "Documentnummer", // New field
         dateOfBirthLabel: "Geboortedatum", // New field
@@ -730,7 +731,7 @@ const ParticipantForm: React.FC = () => {
                   <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                  <Euro className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <input
                     id="initialDeposit"
                     type="number"
