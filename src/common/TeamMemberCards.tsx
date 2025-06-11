@@ -151,7 +151,7 @@ const TeamMemberCards = ({ teamMembers, department }: TeamMemberCardsProps) => {
             <img
               src={images.landingPage.dots_updated}
               alt=""
-              className="absolute left-0 top-[18rem] lg:block hidden"
+              className="absolute left-0 top-[19rem] lg:block hidden"
             />
           </div>
           <div>

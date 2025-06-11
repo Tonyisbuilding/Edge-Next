@@ -107,12 +107,12 @@ const ContactInformation = () => {
         firstNameLabel: "Voornaam",
         lastNameLabel: "Achternaam",
         phoneLabel: "Telefoon/Mobiel",
-        emailLabel: "Email",
+        emailLabel: "E-mail",
         messageLabel: "Bericht",
         firstNamePlaceholder: "Voer uw naam in",
         lastNamePlaceholder: "Voer uw naam in",
         phonePlaceholder: "Voer uw telefoonnummer in",
-        emailPlaceholder: "Voer uw werkemailadres in",
+        emailPlaceholder: "Vul uw email-adres in",
         messagePlaceholder: "Voer uw bericht in",
         sendButton: "Verzend uw bericht",
         errors: {
@@ -136,10 +136,10 @@ const ContactInformation = () => {
     const { name, value } = e.target;
     setFormData(
       (prev) =>
-        ({
-          ...prev,
-          [name]: value,
-        } as FormDataType)
+      ({
+        ...prev,
+        [name]: value,
+      } as FormDataType)
     );
 
     // Clear error when user types
@@ -191,7 +191,12 @@ const ContactInformation = () => {
         }
 
         setSubmitSuccess(true);
-        toast.success("Form submitted successfully!");
+        toast.success(
+          language === "nl"
+            ? "Formulier succesvol verzonden!"
+            : "Form submitted successfully!",
+          { autoClose: 3000 }  // disappears after 3 seconds
+        );
         setFormData({
           firstName: "",
           lastName: "",
@@ -342,8 +347,8 @@ const ContactInformation = () => {
             >
               <FaLinkedinIn />
             </a>
-           
-           
+
+
           </motion.div>
         </motion.div>
 
@@ -373,9 +378,8 @@ const ContactInformation = () => {
                   value={formData.firstName}
                   onChange={handleChange}
                   placeholder={content.form.firstNamePlaceholder}
-                  className={`w-full p-3 border rounded-md ${
-                    errors.firstName ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full p-3 border rounded-md ${errors.firstName ? "border-red-500" : "border-gray-300"
+                    }`}
                   aria-required="true"
                 />
                 {errors.firstName && (
@@ -397,9 +401,8 @@ const ContactInformation = () => {
                   value={formData.lastName}
                   onChange={handleChange}
                   placeholder={content.form.lastNamePlaceholder}
-                  className={`w-full p-3 border rounded-md ${
-                    errors.lastName ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full p-3 border rounded-md ${errors.lastName ? "border-red-500" : "border-gray-300"
+                    }`}
                   aria-required="true"
                 />
                 {errors.lastName && (
@@ -435,9 +438,8 @@ const ContactInformation = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={content.form.emailPlaceholder}
-                className={`w-full p-3 border rounded-md ${
-                  errors.email ? "border-red-500" : "border-gray-300"
-                }`}
+                className={`w-full p-3 border rounded-md ${errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
                 aria-required="true"
               />
               {errors.email && (
@@ -473,16 +475,16 @@ const ContactInformation = () => {
                   />
                 </div>{" "}
                 {isSubmitting ? (
-                <>
-                  {language === "nl"
-                    ? "Bezig met verzenden..."
-                    : "Submitting..."}
-                </>
-              ) : (
-                <>
-                  {content.form.sendButton}
-                </>
-              )}
+                  <>
+                    {language === "nl"
+                      ? "Bezig met verzenden..."
+                      : "Submitting..."}
+                  </>
+                ) : (
+                  <>
+                    {content.form.sendButton}
+                  </>
+                )}
               </button>
             </div>
           </form>

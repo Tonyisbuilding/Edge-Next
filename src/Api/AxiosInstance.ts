@@ -11,7 +11,7 @@ baseURL: BASE_uRL, // ✅
     "Content-Type": "application/json",
     Accept: "application/json",
   },
-  timeout: 10000, // Timeout after 10s
+  timeout: 30000, // Timeout after 10s
 //   withCredentials: true, // Optional: for cookie-based sessions : This will cause a cors error if the cors origin is "*" on the backend it has to be specific. 
 });
 
