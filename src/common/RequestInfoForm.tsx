@@ -132,7 +132,12 @@ const RequestInfoForm = () => {
       }
 
       setSubmitSuccess(true);
-      toast.success('Form submitted successfully!')
+      toast.success(
+        language === "nl"
+          ? "Formulier succesvol verzonden!"
+          : "Form submitted successfully!",
+        { autoClose: 3000 }  // disappears after 3 seconds
+      );
       setFormData({
         firstName: "",
         lastName: "",
@@ -198,7 +203,7 @@ const RequestInfoForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100
-     p-6 flex items-center justify-center pt-[8rem]">
+     p-6 flex items-center justify-center pt-[8rem] mt-[50px]">
       <ToastContainer />
       <motion.div
         className="w-full max-w-5xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row"

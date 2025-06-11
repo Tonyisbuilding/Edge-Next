@@ -46,7 +46,7 @@ const Navbar = () => {
       careers: "Careers",
       contactus: "Contact us",
       english: "English",
-      dutch: "Dutch",
+      dutch: "Nederlands",
     },
     nl: {
       home: "Home",
@@ -62,7 +62,7 @@ const Navbar = () => {
       careers: "Vacatures",
       contactus: "Neem Contact op",
       english: "Engels",
-      dutch: "Dutch",
+      dutch: "Nederlands",
     }
   };
 
@@ -229,7 +229,7 @@ const Navbar = () => {
                           {t("contact")}
                         </Link>
                       </li>
-                      <li className="py-2">
+                      {/* <li className="py-2">
                         <Link
                           to="/documents"
                           className="block text-[#000C0C]"
@@ -237,7 +237,7 @@ const Navbar = () => {
                         >
                           {t("documents")}
                         </Link>
-                      </li>
+                      </li> */}
                       <li className="py-2">
                         <Link
                           to="/careers"
@@ -259,7 +259,7 @@ const Navbar = () => {
                     name="selectLanguage"
                     id="selectLanguage"
                     className="bg-[#D4DFDF40] border-2 border-white h-auto w-full py-[.69rem]
-              rounded-lg px-3 outline-none text-black appearance-none pr-10 lg:text-[18px] font-bold"
+              rounded-lg px-3 outline-none text-black appearance-none pr-10 lg:text-[18px] font-medium"
                     value={language}
                   >
                     <option value="en" className="text-black">
@@ -356,14 +356,14 @@ const Navbar = () => {
                     {t("contact")}
                   </Link>
                 </li>
-                <li className="p-3">
+                {/* <li className="p-3">
                   <Link
                     to="/documents"
                     className="block text-[#000C0C] font-medium hover:text-[#008487]"
                   >
                     {t("documents")}
                   </Link>
-                </li>
+                </li> */}
                 <li className="p-3">
                   <Link
                     to="/careers"

@@ -1,4 +1,5 @@
 import "./common.css";
+import { Link } from "react-router-dom";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 import images from "@/constant/images";
 
@@ -21,14 +22,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* <div className="flex-shrink-0  flex items-center justify-center">
-            <img
-              src={images.landingPage.EdgeCapitalLogoSVG}
-              alt="Research team analyzing market data"
-              className="w-full h-full object-cover"
-            />
-          </div> */}
-
           <div className="footer-email">
             <a href="mailto:info@edgenext.nl">info@edgenext.nl</a>
             <span className="arrow">→</span>
@@ -39,26 +32,30 @@ const Footer = () => {
         <div className="middle-middle">
           <div className="footer-nav">
             <h3>{language === "nl" ? "Home" : "Home"}</h3>
+
             <ul>
               <li>
-                <a href="/about">
+                <Link to="/about">
                   {language === "nl" ? "Over ons" : "About us"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/edge-fund">
+                <Link to="/edge-fund">
                   {language === "nl" ? "Correlation Arbitrage Fund" : "Correlation Arbitrage Fund"}
-                </a>
+                </Link>
               </li>
-              {/* <li><a href="/impact">Edge Impact</a></li> */}
-            
               <li>
-                <a href="/contact">
+                <Link to="/contact">
                   {language === "nl" ? "Contact" : "Contact"}
-                </a>
+                </Link>
               </li>
-              {/* <li><a href="/faqs">FAQ's</a></li> */}
+              <li>
+                <Link to="/privacy">
+                  {language === "nl" ? "Privacybeleid" : "Privacy policy"}
+                </Link>
+              </li>
             </ul>
+
           </div>
 
           <div className="footer-nav">
@@ -69,7 +66,7 @@ const Footer = () => {
                   {language === "nl" ? "Kennisbank" : "Knowledge Base"}
                 </a>
               </li> */}
-             
+
               <li>
                 <a href="/privacy">
                   {language === "nl" ? "Privacybeleid" : "Privacy policy"}
@@ -100,15 +97,6 @@ const Footer = () => {
 
               LinkedIn
             </a>
-           
-            {/* <a href="#" className="social-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M17.5 6.5H17.51" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              Instagram
-            </a> */}
           </div>
         </div>
       </div>
@@ -119,14 +107,14 @@ const Footer = () => {
           {language === "nl" ? "Algemene disclaimer – EdgeNext (handelsnaam van Edge Capital Management B.V.):" : "General disclaimer:"}
         </h3>
         <p>
-  {language === "nl"
-    ? `De informatie op deze website van EdgeNext, een handelsnaam van Edge Capital Management B.V., is uitsluitend bedoeld voor algemene informatieve doeleinden. Hoewel wij ernaar streven de informatie actueel, volledig en correct te houden, geven wij geen enkele garantie of verklaring van welke aard dan ook – expliciet of impliciet – over de volledigheid, juistheid, betrouwbaarheid, geschiktheid of beschikbaarheid met betrekking tot deze website of de informatie, producten, diensten of gerelateerde grafische weergaven op deze website, voor welk doel dan ook. Elk vertrouwen dat u stelt in dergelijke informatie is dan ook strikt op eigen risico.
+          {language === "nl"
+            ? `De informatie op deze website van EdgeNext, een handelsnaam van Edge Capital Management B.V., is uitsluitend bedoeld voor algemene informatieve doeleinden. Hoewel wij ernaar streven de informatie actueel, volledig en correct te houden, geven wij geen enkele garantie of verklaring van welke aard dan ook – expliciet of impliciet – over de volledigheid, juistheid, betrouwbaarheid, geschiktheid of beschikbaarheid met betrekking tot deze website of de informatie, producten, diensten of gerelateerde grafische weergaven op deze website, voor welk doel dan ook. Elk vertrouwen dat u stelt in dergelijke informatie is dan ook strikt op eigen risico.
 
 Edge Capital Management B.V. is geregistreerd bij de Autoriteit Financiële Markten (AFM) als een AIFM (Alternative Investment Fund Manager) onder het AIFMD-registratieregime van Artikel 2:66a Wft en is opgenomen in het register voor vrijgestelde beheerders van beleggingsinstellingen op de website van de AFM, zoals bedoeld in Artikel 1:107 Wft met registratienummer 50027774.`
-    : `The information on this website of EdgeNext, a trade name of Edge Capital Management B.V., is intended solely for general informational purposes. While we strive to keep the information current, complete, and accurate, we make no guarantees or representations of any kind — express or implied — about the completeness, accuracy, reliability, suitability, or availability of this website or the information, products, services, or related graphics contained on it, for any purpose whatsoever. Any reliance you place on such information is therefore strictly at your own risk.
+            : `The information on this website of EdgeNext, a trade name of Edge Capital Management B.V., is intended solely for general informational purposes. While we strive to keep the information current, complete, and accurate, we make no guarantees or representations of any kind — express or implied — about the completeness, accuracy, reliability, suitability, or availability of this website or the information, products, services, or related graphics contained on it, for any purpose whatsoever. Any reliance you place on such information is therefore strictly at your own risk.
 
 Edge Capital Management B.V. is registered with the Dutch Authority for the Financial Markets (AFM) as an AIFM (Alternative Investment Fund Manager) under the AIFMD registration regime of Article 2:66a Wft and is listed in the register for exempt managers of investment institutions on the AFM website, as referred to in Article 1:107 Wft with registration number 50027774.`}
-</p>
+        </p>
 
       </div>
 
@@ -137,14 +125,6 @@ Edge Capital Management B.V. is registered with the Dutch Authority for the Fina
             ? "© 2025 EdgeNext. Alle rechten voorbehouden."
             : "© 2025 EdgeNext. All rights reserved."}
         </div>
-        {/* <div className="footer-status">
-          <span className="status-dot"></span>
-          {language === "nl" ? (
-            <span>Alle systemen operationeel</span>
-          ) : (
-            <span>All systems operational</span>
-          )}
-        </div> */}
         <a href="/privacy" className="footer-policy">
           {language === "nl" ? "Privacybeleid" : "Privacy policy"}
         </a>

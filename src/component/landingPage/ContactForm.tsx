@@ -48,7 +48,12 @@ const ContactForm = () => {
       }
 
       setSubmitSuccess(true);
-      toast.success("Form submitted successfully!");
+      toast.success(
+        language === "nl"
+          ? "Formulier succesvol verzonden!"
+          : "Form submitted successfully!",
+        { autoClose: 3000 }  // disappears after 3 seconds
+      );
       setFormData({
         name: "",
         mail: "",
@@ -158,7 +163,7 @@ const ContactForm = () => {
               placeholder={
                 language === "nl" ? "Vul uw e-mailadres in" : "Enter your email"
               }
-    className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
+              className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
 
               required
             />
@@ -204,7 +209,7 @@ const ContactForm = () => {
                   : "Enter your message"
               }
               rows={4}
-             className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
+              className="w-full px-3 py-3 border border-gray-300 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-gray-300 text-black bg-[#F0F0F0]"
               required
             ></textarea>
           </div>
