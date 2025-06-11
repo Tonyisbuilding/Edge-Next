@@ -189,15 +189,18 @@ const InvestmentPerformance = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mb-12">
-        <motion.button
-          whileHover={{ y: -2, backgroundColor: "#185663" }}
-          transition={{ duration: 0.3 }}
-          className="bg-[#008487] text-white px-9 py-4.5 rounded-[40px] font-semibold flex items-center gap-3 shadow-md max-w-md w-full justify-center"
-        >
-          {t.receiveInfoMemorandum}
-        </motion.button>
-      </div>
+      
+<div className="flex justify-center mb-12">
+  <Link to="/requestinfo" className="max-w-md w-full flex justify-center">
+    <motion.button
+      whileHover={{ y: -2, backgroundColor: "#185663" }}
+      transition={{ duration: 0.3 }}
+      className="bg-[#008487] text-white px-9 py-4.5 rounded-[40px] font-semibold flex items-center gap-3 shadow-md w-full justify-center"
+    >
+      {t.receiveInfoMemorandum}
+    </motion.button>
+  </Link>
+</div>
 
       <motion.div
         initial={{ opacity: 0 }}

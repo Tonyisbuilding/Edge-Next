@@ -34,11 +34,12 @@ const ContactInput = ({ placeholder, CTAButton, icon }: contactInputType) => {
         console.log('hi');
         break;
       case 'Call us':
-            case 'Bel ons': // <-- Add this line
+      case 'Bel ons': // <-- Add this line
 
         handleCopyClick('+31 252 781 778');
         break;
       case 'Get Direction':
+      case 'Locatie': // <== ✅ Add this line
         window.open(
           'https://maps.app.goo.gl/vNU3NqiVvpRw1cSB8',
           '_blank'
