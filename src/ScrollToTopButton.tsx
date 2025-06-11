@@ -35,8 +35,8 @@ const ScrollToTopButton = () => {
         onClick={scrollToTop}
          style={{
           position: "fixed",
-          bottom: "40px",
-          right: "30px",
+          bottom: "80px",
+          right: "10px",
           height: "50px",
           width: "50px",
           borderRadius: "50%",
