@@ -152,43 +152,50 @@ const DocumentCardSections = () => {
       tabs: [
         { id: "all", label: "All Documents" },
         { id: "fund", label: "Fund Documents" },
-        { id: "bond", label: "Bond Documents" },
+        // { id: "bond", label: "Bond Documents" },
         { id: "privacy", label: "Privacy & Legal" },
       ],
       downloadLabel: "Download",
       imageAlt: "Document icon",
       all: [
+        // 1. Information Memorandum / Correlation Arbitrage Fund IM
         {
-          id: "essentiële-informatie",
-          title: "Essentiële informatie document",
-          description:
-            "Key investor information document with all the essential details about Correlation Arbitrage Fund investment opportunities and risk factors.",
-          icon: "document",
-          category: "fund",
-          pdf:
-            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:6e4436d6-7887-40a2-8ff8-9b892eb1d2eb",
+          id: "info-memorandum",
+          title: language === "nl"
+            ? "Correlation Arbitrage Fund IM"
+            : "Correlation Arbitrage Fund IM",
+          description: language === "nl"
+            ? "Belangrijk informatiedocument met alle essentiële details over het Correlation Arbitrage Fund."
+            : "Key investor information document with all the essential details about the Correlation Arbitrage Fund.",
+          icon: "document" as IconType,
+          category: "fund" as CategoryType,
+          pdf: "https://acrobat.adobe.com/id/urn:aaid:sc:EU:76d708e3-e020-49fe-a67b-c99f21109794"
         },
+        // 2. Natural-person subscription
         {
-          id: "inschrijf-natuurlijk",
-          title:
-            "Inschrijfformulier natuurlijk persoon Correlation Arbitrage Fund",
-          description:
-            "Complete subscription form for individual investors looking to participate in the Correlation Arbitrage Fund.",
-          icon: "person",
-          category: "fund",
-          pdf:
-            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:7a0cca16-092d-4e1d-ae44-d55e2fab29c4",
+          id: "subscription-natural",
+          title: language === "nl"
+            ? "Inschrijfformulier (Natuurlijke Personen)"
+            : "Subscription Form (Natural Persons)",
+          description: language === "nl"
+            ? "Volledig inschrijfformulier voor individuele beleggers die willen deelnemen aan het Correlation Arbitrage Fund."
+            : "Complete subscription form for individual investors looking to participate in the Correlation Arbitrage Fund.",
+          icon: "person" as IconType,
+          category: "fund" as CategoryType,
+          pdf: "https://acrobat.adobe.com/id/urn:aaid:sc:EU:bb1f14aa-0852-4a21-9639-2dbbc84efedf"
         },
+        // 3. Rechts-persoon subscription (unchanged)
         {
-          id: "inschrijf-rechtspersoon",
-          title:
-            "Inschrijfformulier rechtspersoon Correlation Arbitrage Fund",
-          description:
-            "Subscription form for corporate investors (BVs) interested in the Correlation Arbitrage Fund.",
-          icon: "discount_email",
-          category: "fund",
-          pdf:
-            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:7a0cca16-092d-4e1d-ae44-d55e2fab29c4",
+          id: "subscription-bvs",
+          title: language === "nl"
+            ? "Inschrijfformulier (BVs)"
+            : "Subscription Form (BVs)",
+          description: language === "nl"
+            ? "Inschrijfformulier voor besloten vennootschappen (BVs) die geïnteresseerd zijn in het Correlation Arbitrage Fund."
+            : "Subscription form for private limited companies (BVs) interested in the Correlation Arbitrage Fund.",
+          icon: "discount_email" as IconType,
+          category: "fund" as CategoryType,
+          pdf: "https://acrobat.adobe.com/id/urn:aaid:sc:EU:7a0cca16-092d-4e1d-ae44-d55e2fab29c4"
         },
         {
           id: "mutatieformulier",
@@ -222,7 +229,7 @@ const DocumentCardSections = () => {
         },
         {
           id: "edge-capital-kid",
-          title: "Edge Capital KID",
+          title: "Essential Information Document",
           description:
             "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
           icon: "document",
@@ -230,16 +237,16 @@ const DocumentCardSections = () => {
           pdf:
             "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
         },
-        {
-          id: "bond-subscription-natural",
-          title: "Bond Subscription (Natural Persons)",
-          description:
-            "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
-          icon: "person",
-          category: "bond",
-          pdf:
-            "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
-        },
+        // {
+        //   id: "bond-subscription-natural",
+        //   title: "Bond Subscription (Natural Persons)",
+        //   description:
+        //     "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
+        //   icon: "person",
+        //   category: "bond",
+        //   pdf:
+        //     "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
+        // },
         {
           id: "privacy-cookies",
           title: "Privacy and Cookies Policy",
@@ -267,7 +274,7 @@ const DocumentCardSections = () => {
       tabs: [
         { id: "all", label: "Alle Documenten" },
         { id: "fund", label: "Fondsdocumenten" },
-        { id: "bond", label: "Obligatiedocumenten" },
+        // { id: "bond", label: "Obligatiedocumenten" },
         { id: "privacy", label: "Privacy & Juridisch" },
       ],
       downloadLabel: "Downloaden",
@@ -275,7 +282,7 @@ const DocumentCardSections = () => {
       all: [
         {
           id: "essentiële-informatie",
-          title: "Essentiële informatie document",
+          title: "Correlation Arbitrage Fund IM",
           description:
             "Belangrijk informatiedocument voor beleggers met alle essentiële details over Correlation Arbitrage Fund-investeringsmogelijkheden en risicofactoren.",
           icon: "document",
@@ -337,7 +344,7 @@ const DocumentCardSections = () => {
         },
         {
           id: "edge-capital-kid",
-          title: "Edge Capital KID",
+          title: "Essentiële informatie document",
           description:
             "Belangrijk informatiedocument voor beleggers met alle essentiële details over Edge Capital-obligatieaanbiedingen.",
           icon: "document",
@@ -345,16 +352,16 @@ const DocumentCardSections = () => {
           pdf:
             "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
         },
-        {
-          id: "bond-subscription-natural",
-          title: "Obligatie-inschrijving (Natuurlijke Personen)",
-          description:
-            "Volledige inschrijfformulieren voor individuele beleggers die geïnteresseerd zijn in Edge Capital-obligatiemogelijkheden.",
-          icon: "person",
-          category: "bond",
-          pdf:
-            "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
-        },
+        // {
+        //   id: "bond-subscription-natural",
+        //   title: "Obligatie-inschrijving (Natuurlijke Personen)",
+        //   description:
+        //     "Volledige inschrijfformulieren voor individuele beleggers die geïnteresseerd zijn in Edge Capital-obligatiemogelijkheden.",
+        //   icon: "person",
+        //   category: "bond",
+        //   pdf:
+        //     "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
+        // },
         {
           id: "privacy-cookies",
           title: "Privacy- en Cookiesbeleid",
@@ -387,7 +394,7 @@ const DocumentCardSections = () => {
     privacy: locale.all.filter((d: DocumentItem) => d.category === "privacy"),
   };
 
-    return (
+  return (
     <section
       className="py-8 w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#F8F9FA]"
       aria-labelledby="documents-heading"
@@ -403,11 +410,10 @@ const DocumentCardSections = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors flex-1 whitespace-nowrap ${
-                activeTab === tab.id
-                  ? "bg-white shadow-md text-gray-900"
-                  : "text-gray-500 hover:text-gray-900"
-              }`}
+              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors flex-1 whitespace-nowrap ${activeTab === tab.id
+                ? "bg-white shadow-md text-gray-900"
+                : "text-gray-500 hover:text-gray-900"
+                }`}
               aria-current={activeTab === tab.id ? "page" : undefined}
             >
               {tab.label}

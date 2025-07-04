@@ -28,7 +28,7 @@ const InvestmentPerformance = () => {
     },
     nl: {
       returns: "Rendementen",
-      May: "Mei",
+      May: "Juni",
       participationFrom: "participatie vanaf",
       metrics: {
         netReturn2024: "Nettorendement 2024:",
@@ -65,28 +65,28 @@ const InvestmentPerformance = () => {
   const performanceData = [
     {
       participation: "€100,000",
-      percentage: " 0.25%",
+      percentage: " 0.22%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "5.15%" },
-        { label: t.metrics.netReturnSinceInception, value: "91.36%" },
+        { label: t.metrics.netReturn2024, value: "6.39%" },
+        { label: t.metrics.netReturnSinceInception, value: "94.56%" },
         { label: t.metrics.averageAnnualReturn, value: "12.55%" },
       ],
     },
     {
       participation: "€250,000",
-      percentage: "0.29%",
+      percentage: "0.27%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "5.83%" },
-        { label: t.metrics.netReturnSinceInception, value: "101.62%" },
+        { label: t.metrics.netReturn2024, value: "7.07%" },
+        { label: t.metrics.netReturnSinceInception, value: "103.44%" },
         { label: t.metrics.averageAnnualReturn, value: "13.66%" },
       ],
     },
     {
       participation: "€500,000",
-      percentage: "0.32%",
+      percentage: "0.31%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "6.54%" },
-        { label: t.metrics.netReturnSinceInception, value: "112.71%" },
+        { label: t.metrics.netReturn2024, value: "7.18%" },
+        { label: t.metrics.netReturnSinceInception, value: "112.83%" },
         { label: t.metrics.averageAnnualReturn, value: "14.81%" },
       ],
     },

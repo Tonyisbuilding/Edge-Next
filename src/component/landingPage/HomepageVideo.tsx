@@ -40,7 +40,7 @@ const HomepageVideo = () => {
       previous: "Previous",
     },
     nl: {
-      title: "EdgeCapital in de Media",
+      title: "EdgeNext en EdgeCapital in de media",
       subtitle:
         "Ontdek hoe Edge Capital in het nieuws komt — bekijk mediaberichtgeving en evenementen die onze innovatie, strategie en mensen belichten.",
       next: "Volgende",

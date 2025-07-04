@@ -75,13 +75,13 @@ const Target = () => {
   const metrics = {
     en: [
       { title: "Annual target", value: "8-12%", id: 1 },
-      { title: "Total cumulative result", value: "91.36%", id: 2 },
+      { title: "Total cumulative result", value: "94.56%", id: 2 },
       { title: "Monthly net return target", value: "0.67-1%", id: 3 },
       { title: "Best month", value: "⁠8.45%", id: 4 },
     ],
     nl: [
       { title: "Jaarlijks netto rendementsdoel", value: "8-12%", id: 1 },
-      { title: "Totaal cumlatief resultaat", value: "91.36%", id: 2 },
+      { title: "Totaal cumlatief resultaat", value: "94.56%", id: 2 },
       { title: "Maandelijks netto rendementsdoel", value: "0.67-1%", id: 3 },
       { title: "Beste maand", value: "⁠8.45%", id: 4 },
     ]
