@@ -198,7 +198,7 @@ export const timelineDataDutch: timelineDataType[] = [
   {
     year: "2023",
     content:
-      "Tradealot veranderd haar naam in Edge Capital. De nieuwe naam sluit perfect aan bij de bedrijfsactiviteiten en weerspiegelt ons motto; Beleggen met een voorsprong!",
+      "Tradealot verandert haar naam in Edge Capital. De nieuwe naam sluit perfect aan bij de bedrijfsactiviteiten en weerspiegelt ons motto; Beleggen met een voorsprong!",
   },
   {
     year: "Future",

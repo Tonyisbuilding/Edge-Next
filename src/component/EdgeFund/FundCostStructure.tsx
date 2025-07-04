@@ -21,7 +21,7 @@ const FundCostStructure = () => {
   const translations = {
     en: {
       fundCostStructure: "Participation requirements",
-      minimumInvestment: "minimum investment",
+      minimumInvestment: "Minimum participation",
       requestInformation: "Request information",
       bookConsultation: "Book a consultation",
       learnMore: "Learn more",
@@ -74,11 +74,10 @@ const FundCostStructure = () => {
         buttonClass:
           "bg-gradient-to-r from-[#5A7B8D] to-[#192227] hover:bg-slate-700",
         features: [
-          "Everything in class I +",
           "1.25% Management fee (per year)",
           "17.5% Profit sharing (per month)",
-          "Dedicated account manager",
-          "Priority support channel",
+          "High watermark protection",
+          "Monthly performance reports",
         ],
       },
       {
@@ -91,11 +90,10 @@ const FundCostStructure = () => {
         buttonText: "Sign up now!",
         buttonClass: "bg-gray-900 hover:bg-gray-800",
         features: [
-          "Everything in class II +",
           "1% Management fee (per year)",
           "12.5% Profit sharing (per month)",
-          "Custom investment strategy",
-          "Quarterly strategy reviews",
+          "High watermark protection",
+          "Monthly performance reports",
         ],
       },
     ],

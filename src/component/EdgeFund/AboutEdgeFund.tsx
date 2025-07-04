@@ -12,7 +12,7 @@ const translations = {
     title: "About Correlation Arbitrage Fund",
     description:
       "The Correlation Arbitrage Fund is an advanced variation of the classic index arbitrage strategy. We have carefully selected over 30 currency combinations, consisting of strong and liquid currencies such as the Euro (EUR), uS Dollar (USD), Canadian Dollar (CAD), New Zealand Dollar (NZD), and Australian Dollar (AUD). Our strategy specifically targets currency pairs that share a common currency, such as EUR/CAD or USD/CAD. These pairs historically exhibit strong intercorrelations and predictable price patterns. The trading approach is based on the principle of mean reversion — the idea that exchange rates tend to revert to their average ratio. When our models detect a significant deviation from this historical pattern, a position is automatically taken to anticipate a correction toward the mean.",
-    minimumInvestment: "Minimum investment: €100,000",
+    minimumInvestment: "Minimum participation: €100,000",
     participateButton: "Participate"
   },
   nl: {

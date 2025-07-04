@@ -229,7 +229,7 @@ const Navbar = () => {
                           {t("contact")}
                         </Link>
                       </li>
-                      {/* <li className="py-2">
+                      <li className="py-2">
                         <Link
                           to="/documents"
                           className="block text-[#000C0C]"
@@ -237,7 +237,7 @@ const Navbar = () => {
                         >
                           {t("documents")}
                         </Link>
-                      </li> */}
+                      </li>
                       <li className="py-2">
                         <Link
                           to="/careers"
@@ -356,14 +356,14 @@ const Navbar = () => {
                     {t("contact")}
                   </Link>
                 </li>
-                {/* <li className="p-3">
+                <li className="p-3">
                   <Link
                     to="/documents"
                     className="block text-[#000C0C] font-medium hover:text-[#008487]"
                   >
                     {t("documents")}
                   </Link>
-                </li> */}
+                </li>
                 <li className="p-3">
                   <Link
                     to="/careers"
@@ -430,6 +430,12 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+
+
+
+
+      
     </>
   );
 };

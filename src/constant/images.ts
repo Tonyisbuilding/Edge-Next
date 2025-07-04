@@ -33,6 +33,8 @@ import Afm_disclaimer from "../../src/assets/images/landingPage/Afm_disclaimer.p
 import B_class from "../../src/assets/images/landingPage/class.png";
 import heroSectionVideo from "../../src/assets/images/landingPage/Home-left.mp4";
 import Edgenext_anim from "../../src/assets/images/landingPage/Edgenext_anim.mp4";
+import EC_businessclassThumbnail from "../../src/assets/images/landingPage/Thumbnail.jpg";
+
 
 import management from "../../src/assets/images/landingPage/management.svg";
 import handshake from "../../src/assets/images/landingPage/handshake.png";
@@ -189,6 +191,7 @@ const images = {
         New_Cap,
         Brush,
         Edgenext_presentation,
+        EC_businessclassThumbnail,
         Afm_disclaimer
     },
     about: {

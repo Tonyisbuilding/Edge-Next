@@ -6,11 +6,14 @@ import EdgeCapital from "@/component/landingPage/EdgeCapital";
 import HeroSection from "@/component/landingPage/HeroSection";
 import Marquee from "@/component/landingPage/Marquee";
 import Presentation from "@/component/landingPage/Presentation";
+import HomepageVideo from "@/component/landingPage/HomepageVideo";
 // import TheTeamYouCanTrust from "@/component/landingPage/TheTeamYouCanTrust";
 import WhyEdgeCapital from "@/component/landingPage/WhyEdgeCapital";
 // import OurHistory from "@/component/About/OurHistory";
 import { theTeamYouCanTrustData, theTeamYouCanTrustDataDutch } from "@/constant/data";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
+
+
 
 
 const LandingPage = () => {
@@ -30,11 +33,13 @@ const LandingPage = () => {
           <Marquee speed={15} />
           <EdgeCapital />
           <WhyEdgeCapital />
-          <TeamMemberCards 
-          teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData} />
+          <TeamMemberCards
+            teamMembers={language === 'nl' ? theTeamYouCanTrustDataDutch : theTeamYouCanTrustData} />
+          <HomepageVideo />
+
           <Presentation />
           <Contact />
-        <Footer />
+          <Footer />
         </div>
       </div>
     </>

@@ -22,13 +22,6 @@ type IconType =
   | "security";
 type DocumentCategory = "all" | "fund" | "bond" | "privacy";
 
-interface Documents {
-  all: DocumentItem[];
-  fund: DocumentItem[];
-  bond: DocumentItem[];
-  privacy: DocumentItem[];
-}
-
 // Icons component
 const Icon = ({ type, imageAlt }: { type: IconType; imageAlt: string }) => {
   switch (type) {
@@ -105,27 +98,21 @@ const DocumentCard = ({
   downloadLabel: string;
   imageAlt: string;
 }) => {
-
-  const { language } = useChangeLanguageContext();
-
   return (
     <motion.div
-      className={`bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4 
-      relative ${language === 'nl' ? 'lg:h-[20rem] ' : 'lg:h-[19rem] '}`}
+      className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-4 relative lg:h-[20rem]"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex-shrink-0">
-        <Icon type={document.icon} imageAlt={imageAlt} />
-      </div>
+      <Icon type={document.icon} imageAlt={imageAlt} />
 
       <div className="mt-5">
         <h3 className="text-lg font-medium text-gray-900 mb-1">
           {document.title}
         </h3>
-        <p className="text-sm text-gray-600 leading-snug whitespace-normal break-words">
+        <p className="text-sm text-gray-600 leading-snug break-words">
           {document.description}
         </p>
       </div>
@@ -137,16 +124,15 @@ const DocumentCard = ({
         <a
           href={document.pdf}
           target="_blank"
+          rel="noreferrer"
           className="flex items-center text-sm text-gray-700 hover:text-blue-600"
           aria-label={`${downloadLabel} ${document.title}`}
         >
-          <div className="flex-shrink-0 flex items-center justify-center">
-            <img
-              src={images.form.download}
-              alt={imageAlt}
-              className="w-full h-full object-cover"
-            />
-          </div>{" "}
+          <img
+            src={images.form.download}
+            alt={imageAlt}
+            className="w-5 h-5 object-cover mr-2"
+          />
           {downloadLabel}
         </a>
       </div>
@@ -159,8 +145,8 @@ const DocumentCardSections = () => {
   const { language } = useChangeLanguageContext();
   const [activeTab, setActiveTab] = useState<DocumentCategory>("all");
 
-  // Define translations for English and Dutch
-  const translations = {
+  // Final document definitions
+  const docs: Record<"en" | "nl", any> = {
     en: {
       heading: "Edge Documents",
       tabs: [
@@ -169,180 +155,112 @@ const DocumentCardSections = () => {
         { id: "bond", label: "Bond Documents" },
         { id: "privacy", label: "Privacy & Legal" },
       ],
-      documents: {
-        all: [
-          {
-            id: "edgefund-kid",
-            title: "EdgeFund KID",
-            description:
-              "Key investor information document with all the essential details about EdgeFund investment opportunities and risk factors.",
-            icon: "document",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/001_-EDGECAPITAL_EdgeFund_EID.pdf",
-          },
-          {
-            id: "subscription-natural",
-            title: "Subscription Forms (Natural Persons)",
-            description:
-              "Complete subscription forms for individual investors looking to participate in EdgeFund opportunities.",
-            icon: "person",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf",
-          },
-          {
-            id: "subscription-bvs",
-            title: "Subscription Forms (BVs)",
-            description:
-              "Subscription forms for private limited companies (BVs) interested in EdgeFund investment opportunities.",
-            icon: "discount_email",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf",
-          },
-          {
-            id: "edgefund-change",
-            title: "EdgeFund Change Form",
-            description:
-              "Update your EdgeFund account details, investment preferences, or personal information with this change form.",
-            icon: "form_submission",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/004_EDGECAPITAL_Obligatie_III_EID.pdf",
-          },
-          {
-            id: "edge-capital-kid",
-            title: "Edge Capital KID",
-            description:
-              "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
-            icon: "document",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
-          },
-          {
-            id: "bond-subscription-natural",
-            title: "Bond Subscription (Natural Persons)",
-            description:
-              "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
-            icon: "person",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
-          },
-          {
-            id: "bond-subscription-bvs",
-            title: "Bond Subscription (BVs)",
-            description:
-              "Subscription forms for private limited companies (BVs) interested in Edge Capital Bond investments.",
-            icon: "discount_email",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/007_EDGECAPITAL_Privacy_en_Cookies_Policy.pdf",
-          },
-          {
-            id: "privacy-cookies",
-            title: "Privacy and Cookies Policy",
-            description:
-              "Comprehensive overview of how Edge Capital handles your personal data and information privacy.",
-            icon: "security",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf",
-          },
-          {
-            id: "data-rights",
-            title: "Data and Rights",
-            description:
-              "Information about your rights regarding your personal data and how to exercise those rights with Edge Capital.",
-            icon: "discount_email",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf",
-          },
-        ],
-        fund: [
-          {
-            id: "subscription-natural",
-            title: "Subscription Forms (Natural Persons)",
-            description:
-              "Complete subscription forms for individual investors looking to participate in EdgeFund opportunities.",
-            icon: "person",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf",
-          },
-          {
-            id: "subscription-bvs",
-            title: "Subscription Forms (BVs)",
-            description:
-              "Subscription forms for private limited companies (BVs) interested in EdgeFund investment opportunities.",
-            icon: "discount_email",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf",
-          },
-          {
-            id: "edgefund-kid",
-            title: "EdgeFund KID",
-            description:
-              "Key investor information document with all the essential details about EdgeFund investment opportunities and risk factors.",
-            icon: "document",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/001_-EDGECAPITAL_EdgeFund_EID.pdf",
-          },
-          {
-            id: "edgefund-change",
-            title: "EdgeFund Change Form",
-            description:
-              "Update your EdgeFund account details, investment preferences, or personal information with this change form.",
-            icon: "form_submission",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/004_EDGECAPITAL_Obligatie_III_EID.pdf",
-          },
-        ],
-        bond: [
-          {
-            id: "bond-subscription-natural",
-            title: "Bond Subscription (Natural Persons)",
-            description:
-              "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
-            icon: "person",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf",
-          },
-          {
-            id: "bond-subscription-bvs",
-            title: "Bond Subscription (BVs)",
-            description:
-              "Subscription forms for private limited companies (BVs) interested in Edge Capital Bond investments.",
-            icon: "discount_email",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf",
-          },
-          {
-            id: "edge-capital-kid",
-            title: "Edge Capital KID",
-            description:
-              "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
-            icon: "document",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
-          },
-        ],
-        privacy: [
-          {
-            id: "privacy-cookies",
-            title: "Privacy and Cookies Policy",
-            description:
-              "Comprehensive overview of how Edge Capital handles your personal data and information privacy.",
-            icon: "security",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf",
-          },
-          {
-            id: "data-rights",
-            title: "Data and Rights",
-            description:
-              "Information about your rights regarding your personal data and how to exercise those rights with Edge Capital.",
-            icon: "discount_email",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf",
-          },
-        ],
-      },
       downloadLabel: "Download",
-      imageAlt: "Research team analyzing market data",
+      imageAlt: "Document icon",
+      all: [
+        {
+          id: "essentiële-informatie",
+          title: "Essentiële informatie document",
+          description:
+            "Key investor information document with all the essential details about Correlation Arbitrage Fund investment opportunities and risk factors.",
+          icon: "document",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:6e4436d6-7887-40a2-8ff8-9b892eb1d2eb",
+        },
+        {
+          id: "inschrijf-natuurlijk",
+          title:
+            "Inschrijfformulier natuurlijk persoon Correlation Arbitrage Fund",
+          description:
+            "Complete subscription form for individual investors looking to participate in the Correlation Arbitrage Fund.",
+          icon: "person",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:7a0cca16-092d-4e1d-ae44-d55e2fab29c4",
+        },
+        {
+          id: "inschrijf-rechtspersoon",
+          title:
+            "Inschrijfformulier rechtspersoon Correlation Arbitrage Fund",
+          description:
+            "Subscription form for corporate investors (BVs) interested in the Correlation Arbitrage Fund.",
+          icon: "discount_email",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:7a0cca16-092d-4e1d-ae44-d55e2fab29c4",
+        },
+        {
+          id: "mutatieformulier",
+          title: "Mutatieformulier",
+          description:
+            "Use this form to update your Correlation Arbitrage Fund account details, investment preferences or personal information.",
+          icon: "form_submission",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:5a3f4ac7-3454-418e-aba9-ad63bdd6521d",
+        },
+        {
+          id: "fondsvoorwaarden",
+          title: "Fondsvoorwaarden",
+          description:
+            "The official fund terms & conditions for the Correlation Arbitrage Fund.",
+          icon: "document",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:76d708e3-e020-49fe-a67b-c99f21109794",
+        },
+        {
+          id: "strategie-omschrijving",
+          title: "Strategie omschrijving",
+          description:
+            "Detailed description of the fund’s quantitative strategy and investment approach.",
+          icon: "document",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:44bbdb17-c28b-4dc9-9617-fa941e8ccc23",
+        },
+        {
+          id: "edge-capital-kid",
+          title: "Edge Capital KID",
+          description:
+            "Key investor information document outlining all essential details about Edge Capital Bond offerings.",
+          icon: "document",
+          category: "bond",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
+        },
+        {
+          id: "bond-subscription-natural",
+          title: "Bond Subscription (Natural Persons)",
+          description:
+            "Complete subscription forms for individual investors interested in Edge Capital Bond opportunities.",
+          icon: "person",
+          category: "bond",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
+        },
+        {
+          id: "privacy-cookies",
+          title: "Privacy and Cookies Policy",
+          description:
+            "Comprehensive overview of how Edge Capital handles your personal data and information privacy.",
+          icon: "security",
+          category: "privacy",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf",
+        },
+        {
+          id: "data-rights",
+          title: "Data and Rights",
+          description:
+            "Information about your rights regarding your personal data and how to exercise those rights with Edge Capital.",
+          icon: "discount_email",
+          category: "privacy",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf",
+        },
+      ],
     },
     nl: {
       heading: "Edge Documenten",
@@ -352,229 +270,144 @@ const DocumentCardSections = () => {
         { id: "bond", label: "Obligatiedocumenten" },
         { id: "privacy", label: "Privacy & Juridisch" },
       ],
-      documents: {
-        all: [
-          {
-            id: "edgefund-kid",
-            title: "EdgeFund KID",
-            description:
-              "Belangrijk informatiedocument voor beleggers met alle essentiële details over EdgeFund-investeringsmogelijkheden en risicofactoren.",
-            icon: "document",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/001_-EDGECAPITAL_EdgeFund_EID.pdf",
-          },
-          {
-            id: "subscription-natural",
-            title: "Inschrijfformulieren (Natuurlijke Personen)",
-            description:
-              "Volledige inschrijfformulieren voor individuele beleggers die willen deelnemen aan EdgeFund-mogelijkheden.",
-            icon: "person",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf",
-          },
-          {
-            id: "subscription-bvs",
-            title: "Inschrijfformulieren (BVs)",
-            description:
-              "Inschrijfformulieren voor besloten vennootschappen (BVs) die geïnteresseerd zijn in EdgeFund-investeringsmogelijkheden.",
-            icon: "discount_email",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf",
-          },
-          {
-            id: "edgefund-change",
-            title: "EdgeFund Wijzigingsformulier",
-            description:
-              "Werk uw EdgeFund-accountgegevens, investeringsvoorkeuren of persoonlijke informatie bij met dit wijzigingsformulier.",
-            icon: "form_submission",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/004_EDGECAPITAL_Obligatie_III_EID.pdf",
-          },
-          {
-            id: "edge-capital-kid",
-            title: "Edge Capital KID",
-            description:
-              "Belangrijk informatiedocument voor beleggers met alle essentiële details over Edge Capital-obligatieaanbiedingen.",
-            icon: "document",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
-          },
-          {
-            id: "bond-subscription-natural",
-            title: "Obligatie-inschrijving (Natuurlijke Personen)",
-            description:
-              "Volledige inschrijfformulieren voor individuele beleggers die geïnteresseerd zijn in Edge Capital-obligatiemogelijkheden.",
-            icon: "person",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
-          },
-          {
-            id: "bond-subscription-bvs",
-            title: "Obligatie-inschrijving (BVs)",
-            description:
-              "Inschrijfformulieren voor besloten vennootschappen (BVs) die geïnteresseerd zijn in Edge Capital-obligatie-investeringen.",
-            icon: "discount_email",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/007_EDGECAPITAL_Privacy_en_Cookies_Policy.pdf",
-          },
-          {
-            id: "privacy-cookies",
-            title: "Privacy- en Cookiesbeleid",
-            description:
-              "Uitgebreid overzicht van hoe Edge Capital omgaat met uw persoonlijke gegevens en informatieprivacy.",
-            icon: "security",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf",
-          },
-          {
-            id: "data-rights",
-            title: "Gegevens en Rechten",
-            description:
-              "Informatie over uw rechten met betrekking tot uw persoonlijke gegevens en hoe u deze rechten kunt uitoefenen bij Edge Capital.",
-            icon: "discount_email",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf",
-          },
-        ],
-        fund: [
-          {
-            id: "subscription-natural",
-            title: "Inschrijfformulieren (Natuurlijke Personen)",
-            description:
-              "Volledige inschrijfformulieren voor individuele beleggers die willen deelnemen aan EdgeFund-mogelijkheden.",
-            icon: "person",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf",
-          },
-          {
-            id: "subscription-bvs",
-            title: "Inschrijfformulieren (BVs)",
-            description:
-              "Inschrijfformulieren voor besloten vennootschappen (BVs) die geïnteresseerd zijn in EdgeFund-investeringsmogelijkheden.",
-            icon: "discount_email",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf",
-          },
-          {
-            id: "edgefund-kid",
-            title: "EdgeFund KID",
-            description:
-              "Belangrijk informatiedocument voor beleggers met alle essentiële details over EdgeFund-investeringsmogelijkheden en risicofactoren.",
-            icon: "document",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/001_-EDGECAPITAL_EdgeFund_EID.pdf",
-          },
-          {
-            id: "edgefund-change",
-            title: "EdgeFund Wijzigingsformulier",
-            description:
-              "Werk uw EdgeFund-accountgegevens, investeringsvoorkeuren of persoonlijke informatie bij met dit wijzigingsformulier.",
-            icon: "form_submission",
-            category: "fund",
-            pdf: "https://edge-capital.nl/media/2023/05/004_EDGECAPITAL_Obligatie_III_EID.pdf",
-          },
-        ],
-        bond: [
-          {
-            id: "bond-subscription-natural",
-            title: "Obligatie-inschrijving (Natuurlijke Personen)",
-            description:
-              "Volledige inschrijfformulieren voor individuele beleggers die geïnteresseerd zijn in Edge Capital-obligatiemogelijkheden.",
-            icon: "person",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/002_EDGECAPITAL_Inschrijfformulier_-Natuurlijkpersoon.pdf",
-          },
-          {
-            id: "bond-subscription-bvs",
-            title: "Obligatie-inschrijving (BVs)",
-            description:
-              "Inschrijfformulieren voor besloten vennootschappen (BVs) die geïnteresseerd zijn in Edge Capital-obligatie-investeringen.",
-            icon: "discount_email",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/003_EDGECAPITAL_Inschrijfformulier_Rechtspersoon.pdf",
-          },
-          {
-            id: "edge-capital-kid",
-            title: "Edge Capital KID",
-            description:
-              "Belangrijk informatiedocument voor beleggers met alle essentiële details over Edge Capital-obligatieaanbiedingen.",
-            icon: "document",
-            category: "bond",
-            pdf: "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
-          },
-        ],
-        privacy: [
-          {
-            id: "privacy-cookies",
-            title: "Privacy- en Cookiesbeleid",
-            description:
-              "Uitgebreid overzicht van hoe Edge Capital omgaat met uw persoonlijke gegevens en informatieprivacy.",
-            icon: "security",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf",
-          },
-          {
-            id: "data-rights",
-            title: "Gegevens en Rechten",
-            description:
-              "Informatie over uw rechten met betrekking tot uw persoonlijke gegevens en hoe u deze rechten kunt uitoefenen bij Edge Capital.",
-            icon: "discount_email",
-            category: "privacy",
-            pdf: "https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf",
-          },
-        ],
-      },
       downloadLabel: "Downloaden",
-      imageAlt: "Onderzoeksteam dat marktgegevens analyseert",
+      imageAlt: "Document pictogram",
+      all: [
+        {
+          id: "essentiële-informatie",
+          title: "Essentiële informatie document",
+          description:
+            "Belangrijk informatiedocument voor beleggers met alle essentiële details over Correlation Arbitrage Fund-investeringsmogelijkheden en risicofactoren.",
+          icon: "document",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:6e4436d6-7887-40a2-8ff8-9b892eb1d2eb",
+        },
+        {
+          id: "inschrijf-natuurlijk",
+          title:
+            "Inschrijfformulier natuurlijk persoon Correlation Arbitrage Fund",
+          description:
+            "Volledig inschrijfformulier voor individuele beleggers die willen deelnemen aan het Correlation Arbitrage Fund.",
+          icon: "person",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:7a0cca16-092d-4e1d-ae44-d55e2fab29c4",
+        },
+        {
+          id: "inschrijf-rechtspersoon",
+          title:
+            "Inschrijfformulier rechtspersoon Correlation Arbitrage Fund",
+          description:
+            "Inschrijfformulier voor bedrijfsbeleggers (BVs) die geïnteresseerd zijn in het Correlation Arbitrage Fund.",
+          icon: "discount_email",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:7a0cca16-092d-4e1d-ae44-d55e2fab29c4",
+        },
+        {
+          id: "mutatieformulier",
+          title: "Mutatieformulier",
+          description:
+            "Gebruik dit formulier om uw Correlation Arbitrage Fund-accountgegevens, investeringsvoorkeuren of persoonlijke informatie bij te werken.",
+          icon: "form_submission",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:5a3f4ac7-3454-418e-aba9-ad63bdd6521d",
+        },
+        {
+          id: "fondsvoorwaarden",
+          title: "Fondsvoorwaarden",
+          description:
+            "De officiële fondsvoorwaarden voor het Correlation Arbitrage Fund.",
+          icon: "document",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:76d708e3-e020-49fe-a67b-c99f21109794",
+        },
+        {
+          id: "strategie-omschrijving",
+          title: "Strategie omschrijving",
+          description:
+            "Gedetailleerde beschrijving van de kwantitatieve strategie en beleggingsaanpak van het fonds.",
+          icon: "document",
+          category: "fund",
+          pdf:
+            "https://acrobat.adobe.com/id/urn:aaid:sc:EU:44bbdb17-c28b-4dc9-9617-fa941e8ccc23",
+        },
+        {
+          id: "edge-capital-kid",
+          title: "Edge Capital KID",
+          description:
+            "Belangrijk informatiedocument voor beleggers met alle essentiële details over Edge Capital-obligatieaanbiedingen.",
+          icon: "document",
+          category: "bond",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/005_EDGECAPITAL_Obligatie_III_-Natuurlijk_persoon.pdf",
+        },
+        {
+          id: "bond-subscription-natural",
+          title: "Obligatie-inschrijving (Natuurlijke Personen)",
+          description:
+            "Volledige inschrijfformulieren voor individuele beleggers die geïnteresseerd zijn in Edge Capital-obligatiemogelijkheden.",
+          icon: "person",
+          category: "bond",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/006_EDGECAPITAL_Obligatie_III_Rechtspersoon.pdf",
+        },
+        {
+          id: "privacy-cookies",
+          title: "Privacy- en Cookiesbeleid",
+          description:
+            "Uitgebreid overzicht van hoe Edge Capital omgaat met uw persoonlijke gegevens en informatieprivacy.",
+          icon: "security",
+          category: "privacy",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/008_EDGECAPITAL_Cookies.pdf",
+        },
+        {
+          id: "data-rights",
+          title: "Gegevens en Rechten",
+          description:
+            "Informatie over uw rechten met betrekking tot uw persoonlijke gegevens en hoe u deze rechten kunt uitoefenen bij Edge Capital.",
+          icon: "discount_email",
+          category: "privacy",
+          pdf:
+            "https://edge-capital.nl/media/2023/05/009_EDGECAPITAL_Persoonsgegevens_en_uw_rechten.pdf",
+        },
+      ],
     },
   };
 
-  // Select the appropriate content based on language, with fallback to English
-  const content = translations[language] || translations.en;
-  const documents: Documents = {
-    all: content.documents.all.map((doc) => ({
-      ...doc,
-      icon: doc.icon as IconType,
-      category: doc.category as CategoryType,
-    })),
-    fund: content.documents.fund.map((doc) => ({
-      ...doc,
-      icon: doc.icon as IconType,
-      category: doc.category as CategoryType,
-    })),
-    bond: content.documents.bond.map((doc) => ({
-      ...doc,
-      icon: doc.icon as IconType,
-      category: doc.category as CategoryType,
-    })),
-    privacy: content.documents.privacy.map((doc) => ({
-      ...doc,
-      icon: doc.icon as IconType,
-      category: doc.category as CategoryType,
-    })),
+  const locale = docs[language] || docs.en;
+  const documents = {
+    all: locale.all,
+    fund: locale.all.filter((d: DocumentItem) => d.category === "fund"),
+    bond: locale.all.filter((d: DocumentItem) => d.category === "bond"),
+    privacy: locale.all.filter((d: DocumentItem) => d.category === "privacy"),
   };
-  const tabs = content.tabs;
 
-  return (
+    return (
     <section
       className="py-8 w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#F8F9FA]"
       aria-labelledby="documents-heading"
     >
       <h2 id="documents-heading" className="sr-only">
-        {content.heading}
+        {locale.heading}
       </h2>
 
       {/* Tabs */}
       <div className="flex overflow-x-auto pb-4 mb-6 scrollbar-hide">
         <div className="inline-flex bg-[#F1F5F9] p-1 rounded-lg min-w-full">
-          {tabs.map((tab) => (
+          {locale.tabs.map((tab: { id: DocumentCategory; label: string }) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as DocumentCategory)}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors flex-1 whitespace-nowrap ${activeTab === tab.id
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors flex-1 whitespace-nowrap ${
+                activeTab === tab.id
                   ? "bg-white shadow-md text-gray-900"
                   : "text-gray-500 hover:text-gray-900"
-                }`}
+              }`}
               aria-current={activeTab === tab.id ? "page" : undefined}
             >
               {tab.label}
@@ -586,21 +419,13 @@ const DocumentCardSections = () => {
       {/* Document Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatePresence mode="wait">
-          {documents[activeTab].map((doc) => (
-            <motion.div
+          {documents[activeTab].map((doc: DocumentItem) => (
+            <DocumentCard
               key={doc.id}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <DocumentCard
-                document={doc}
-                downloadLabel={content.downloadLabel}
-                imageAlt={content.imageAlt}
-              />
-            </motion.div>
+              document={doc}
+              downloadLabel={locale.downloadLabel}
+              imageAlt={locale.imageAlt}
+            />
           ))}
         </AnimatePresence>
       </div>
