@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesoJunicon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faXmark,
@@ -146,7 +146,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <button className="text-2xl text-black" onClick={toggleNav}>
-                <FontAwesoJunicon icon={faXmark} />
+                <FontAwesomeIcon icon={faXmark} />
               </button>
             </div>
 
@@ -168,7 +168,7 @@ const Navbar = () => {
                     onClick={(e) => toggleDropdown(1, e)}
                   >
                     {t("aboutus")}
-                    <FontAwesoJunicon
+                    <FontAwesomeIcon
                       icon={activeDropdowns[1] ? faChevronUp : faChevronDown}
                       className="text-xs"
                     />
@@ -213,7 +213,7 @@ const Navbar = () => {
                     onClick={(e) => toggleDropdown(2, e)}
                   >
                     {t("company")}
-                    <FontAwesoJunicon
+                    <FontAwesomeIcon
                       icon={activeDropdowns[2] ? faChevronUp : faChevronDown}
                       className="text-xs"
                     />
@@ -307,7 +307,7 @@ const Navbar = () => {
                 className="text-[#000C0C] font-semibold hover:text-[#008487] transition-colors flex items-center"
               >
                 {t("aboutus")}
-                <FontAwesoJunicon icon={faChevronDown} className="ml-1 text-xs" />
+                <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
               </a>
               <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
                 <li className="p-3">
@@ -345,7 +345,7 @@ const Navbar = () => {
                 className="text-[#000C0C] font-semibold hover:text-[#008487] transition-colors flex items-center"
               >
                 {t("company")}
-                <FontAwesoJunicon icon={faChevronDown} className="ml-1 text-xs" />
+                <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
               </a>
               <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all">
                 <li className="p-3">
@@ -426,7 +426,7 @@ const Navbar = () => {
             className="lg:hidden text-2xl cursor-pointer text-black mr-[.5rem]"
             onClick={toggleNav}
           >
-            <FontAwesoJunicon icon={faBars} />
+            <FontAwesomeIcon icon={faBars} />
           </div>
         </div>
       </nav>
