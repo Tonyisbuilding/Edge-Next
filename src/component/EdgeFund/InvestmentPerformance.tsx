@@ -28,7 +28,7 @@ const InvestmentPerformance = () => {
     },
     nl: {
       returns: "Rendementen",
-      May: "Juni",
+      May: "Juli",
       participationFrom: "participatie vanaf",
       metrics: {
         netReturn2024: "Nettorendement 2024:",
@@ -40,7 +40,7 @@ const InvestmentPerformance = () => {
       receiveInfoMemorandum: "Ontvang het informatiememorandum",
       disclaimer: {
         title: "Algemene disclaimer rendementen:",
-        content: "Bolder Funds Services B.V. (administrateur) berekent maandelijks de resultaten van het fonds. Bovenstaande resultaten zijn na aftrek van de winstdeling en de jaarlijkse beheervergoeding. De rendementen vanaf 1 juni 2025 vertegenwoordigen de werkelijke resultaten van het fonds. De rendementen vóór 1 juni 2025 zijn gebaseerd op forward testing (live rekening) en niet op basis van backtesting. Deze rendementen dienen niet als indicatie voor toekomstige resultaten."
+        content: "Bolder Funds Services B.V. (administrateur) berekent maandelijks de resultaten van het fonds. Bovenstaande resultaten zijn na aftrek van de winstdeling en de jaarlijkse beheervergoeding. De rendementen vanaf 1 Juli 2025 vertegenwoordigen de werkelijke resultaten van het fonds. De rendementen vóór 1 Juli 2025 zijn gebaseerd op forward testing (live rekening) en niet op basis van backtesting. Deze rendementen dienen niet als indicatie voor toekomstige resultaten."
       }
     }
   };
@@ -65,28 +65,28 @@ const InvestmentPerformance = () => {
   const performanceData = [
     {
       participation: "€100,000",
-      percentage: " 0.22%",
+      percentage: " 1.09%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "6.39%" },
-        { label: t.metrics.netReturnSinceInception, value: "94.56%" },
-        { label: t.metrics.averageAnnualReturn, value: "12.55%" },
+        { label: t.metrics.netReturn2024, value: "5.19%" },
+        { label: t.metrics.netReturnSinceInception, value: "94.02%" },
+        { label: t.metrics.averageAnnualReturn, value: "12.60%" },
       ],
     },
     {
       participation: "€250,000",
-      percentage: "0.27%",
+      percentage: "1.18%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "7.07%" },
-        { label: t.metrics.netReturnSinceInception, value: "103.44%" },
-        { label: t.metrics.averageAnnualReturn, value: "13.66%" },
+        { label: t.metrics.netReturn2024, value: "5.84%" },
+        { label: t.metrics.netReturnSinceInception, value: "105.84%" },
+        { label: t.metrics.averageAnnualReturn, value: "13.80%" },
       ],
     },
     {
       participation: "€500,000",
-      percentage: "0.31%",
+      percentage: "1.27%",
       metrics: [
-        { label: t.metrics.netReturn2024, value: "7.18%" },
-        { label: t.metrics.netReturnSinceInception, value: "112.83%" },
+        { label: t.metrics.netReturn2024, value: "6.55%" },
+        { label: t.metrics.netReturnSinceInception, value: "116.20%" },
         { label: t.metrics.averageAnnualReturn, value: "14.81%" },
       ],
     },
