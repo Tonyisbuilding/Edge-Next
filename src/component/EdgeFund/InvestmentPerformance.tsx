@@ -11,7 +11,7 @@ const InvestmentPerformance = () => {
   const translations = {
     en: {
       returns: "Returns",
-      May: "May",
+      July: "July",
       participationFrom: "participation from",
       metrics: {
         netReturn2024: "Net return 2024:",
@@ -28,7 +28,7 @@ const InvestmentPerformance = () => {
     },
     nl: {
       returns: "Rendementen",
-      May: "Juli",
+      July: "Juli",
       participationFrom: "participatie vanaf",
       metrics: {
         netReturn2024: "Nettorendement 2024:",
@@ -141,7 +141,7 @@ const InvestmentPerformance = () => {
                   </svg>
                 </div>
                 <span className="text-lg font-semibold text-[#008487]">
-                  {language === 'nl' ? t.May : 'May'}
+                  {language === 'nl' ? t.July : 'July'}
                 </span>
               </div>
               <span className="text-base font-bold text-emerald-600 bg-emerald-50 px-3.5 py-1.5 rounded-full">
