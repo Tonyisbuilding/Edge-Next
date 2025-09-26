@@ -13,11 +13,10 @@ import {
   Euro,
   DollarSign,
 } from "lucide-react";
-import axiosInstance from "@/Api/AxiosInstance";
+import { submitToGoogleSheet } from "@/Api/googleSheetsClient";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
 
 // Define interfaces for our data structures
 // interface Country {
@@ -725,14 +724,13 @@ const ParticipantForm: React.FC = () => {
       phone: formData.phone,
     };
 
-    console.log(payload, "payload");
     try {
-      const response = await axiosInstance.post("/participate", payload);
+      await submitToGoogleSheet({
+        formSlug: "participate",
+        payload,
+      });
 
-      // alert(content.form.successMessage);
       toast.success(content.form.successMessage);
-      console.log(response);
-      // Reset form after successful submission
       setFormData({
         name: "",
         street: "",
@@ -751,24 +749,18 @@ const ParticipantForm: React.FC = () => {
         initialDeposit: "",
       });
     } catch (error) {
-      setFormError(
-        error instanceof Error
-          ? error.message
-          : content.form.errors.defaultError
-      );
+      const fallbackMessage =
+        language === "nl"
+          ? "Versturen is mislukt. Controleer uw verbinding en probeer opnieuw."
+          : "Submission failed. Please check your connection and try again.";
 
-      if (
-        error &&
-        typeof error === "object" &&
-        "response" in error &&
-        error.response &&
-        typeof error.response === "object" &&
-        "data" in error.response
-      ) {
-        if (axios.isAxiosError(error) && error.response?.data?.error) {
-          toast.error(error.response.data.error);
-        }
-      }
+      const message =
+        error instanceof Error
+          ? error.message || content.form.errors.defaultError
+          : fallbackMessage;
+
+      setFormError(message);
+      toast.error(message);
     } finally {
       setIsSubmitting(false);
     }

@@ -240,7 +240,7 @@ const Presentation = () => {
 
            <p className="mt-2 sm:mt-3 font-semibold normal-case text-[#008487] text-[0.9rem] sm:text-[0.95rem]">
   {language === 'nl'
-    ? '— Johan Bergen, klant sinds 1 Juli 2025'
+    ? '— Johan Bergen, klant sinds 1 Augustus 2025'
     : '— Johan Bergen, client since June 1, 2025'}
 </p>
 

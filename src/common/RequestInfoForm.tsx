@@ -8,11 +8,10 @@ import {
   Send,
   ChevronDown,
 } from "lucide-react";
-import axiosInstance from "@/Api/AxiosInstance";
+import { submitToGoogleSheet } from "@/Api/googleSheetsClient";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
 
 const RequestInfoForm = () => {
   const { language } = useChangeLanguageContext();
@@ -122,21 +121,18 @@ const RequestInfoForm = () => {
     setSubmitSuccess(null);
     setErrorMessage("");
 
-    console.log(formData)
     try {
-      const response = await axiosInstance.post("/requestinfo", formData);
-
-      if (!response) {
-        const errorData: { message?: string } = await response;
-        throw new Error(errorData.message || content.form.defaultError);
-      }
+      await submitToGoogleSheet({
+        formSlug: "request-info",
+        payload: formData,
+      });
 
       setSubmitSuccess(true);
       toast.success(
         language === "nl"
           ? "Formulier succesvol verzonden!"
           : "Form submitted successfully!",
-        { autoClose: 3000 }  // disappears after 3 seconds
+        { autoClose: 3000 }
       );
       setFormData({
         firstName: "",
@@ -147,31 +143,19 @@ const RequestInfoForm = () => {
         message: "",
         newsletter: false,
       });
-    } catch (error: unknown) {
-      console.log(error)
+    } catch (error) {
       setSubmitSuccess(false);
-      if (error instanceof Error) {
-        setErrorMessage(error.message || content.form.defaultError);
-      } else {
-        setErrorMessage(content.form.defaultError);
-      }
-      //
-      setErrorMessage(
-        error instanceof Error ? error.message : content.form.defaultError
-      );
+      const fallbackMessage =
+        language === "nl"
+          ? "Versturen is mislukt. Controleer uw verbinding en probeer opnieuw."
+          : "Submission failed. Please check your connection and try again.";
 
-      if (
-        error &&
-        typeof error === "object" &&
-        "response" in error &&
-        error.response &&
-        typeof error.response === "object" &&
-        "data" in error.response
-      ) {
-        if (axios.isAxiosError(error) && error.response?.data?.error) {
-          toast.error(error.response.data.error);
-        }
-      }
+      const message = error instanceof Error
+        ? error.message || content.form.defaultError
+        : fallbackMessage;
+
+      setErrorMessage(message);
+      toast.error(message);
     } finally {
       setIsSubmitting(false);
     }

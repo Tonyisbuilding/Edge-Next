@@ -4,8 +4,7 @@ import "./component.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useChangeLanguageContext } from "@/context/ChangeLanguage";
-import axiosInstance from "@/Api/AxiosInstance";
-import axios from "axios";
+import { submitToGoogleSheet } from "@/Api/googleSheetsClient";
 
 // Stuur onsu vraag
 const ContactForm = () => {
@@ -17,8 +16,6 @@ const ContactForm = () => {
     number: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState<null | boolean>(null);
-  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,25 +31,17 @@ const ContactForm = () => {
     e.preventDefault();
 
     setIsSubmitting(true);
-    setSubmitSuccess(null);
-    setErrorMessage("");
-
     try {
-      const response = await axiosInstance.post("/query", formData);
+      await submitToGoogleSheet({
+        formSlug: "landing-contact",
+        payload: formData,
+      });
 
-      if (!response) {
-        const errorData: { message?: string } = await response;
-        throw new Error(
-          errorData.message || "Er is een onverwachte fout opgetreden."
-        );
-      }
-
-      setSubmitSuccess(true);
       toast.success(
         language === "nl"
           ? "Formulier succesvol verzonden!"
           : "Form submitted successfully!",
-        { autoClose: 3000 }  // disappears after 3 seconds
+        { autoClose: 3000 }
       );
       setFormData({
         name: "",
@@ -60,40 +49,20 @@ const ContactForm = () => {
         message: "",
         number: "",
       });
-    } catch (error: unknown) {
-      console.log(error);
-      setSubmitSuccess(false);
-      if (error instanceof Error) {
-        setErrorMessage(
-          error.message || "Er is een onverwachte fout opgetreden."
-        );
-      } else {
-        setErrorMessage("Er is een onverwachte fout opgetreden.");
-      }
-      //
-      setErrorMessage(
-        error instanceof Error
-          ? error.message
-          : "Er is een onverwachte fout opgetreden."
-      );
+    } catch (error) {
+      const fallbackMessage =
+        language === "nl"
+          ? "Versturen is mislukt. Controleer uw verbinding en probeer opnieuw."
+          : "Submission failed. Please check your connection and try again.";
 
-      if (
-        error &&
-        typeof error === "object" &&
-        "response" in error &&
-        error.response &&
-        typeof error.response === "object" &&
-        "data" in error.response
-      ) {
-        if (axios.isAxiosError(error) && error.response?.data?.error) {
-          toast.error(error.response.data.error);
-        }
-      }
+      const message = error instanceof Error
+        ? error.message || fallbackMessage
+        : fallbackMessage;
+
+      toast.error(message);
     } finally {
       setIsSubmitting(false);
     }
-    console.log(submitSuccess)
-    console.log(errorMessage)
   };
 
   return (
